@@ -1,0 +1,19 @@
+﻿.experience-renovai .title {
+	line-height: 60px;
+}
+
+.without-bg.product-header:after {
+	content: none;
+}
+
+.lp-col-content p {
+	height: 100%;
+}
+
+.lp-col-content img {
+	min-height: 75px;
+}
+
+.lp-col-content h3 {
+	min-height: 80px;
+}
