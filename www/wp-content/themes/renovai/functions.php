@@ -1,0 +1,1 @@
+<?php/** * @author Armen * @copyright 2020 */defined('ABSPATH') || die();require_once "inc/init.php";#include('login-editor.php');#\Digidez\Helper::_log(extension_loaded('openssl')?'SSL loaded':'SSL not loaded');

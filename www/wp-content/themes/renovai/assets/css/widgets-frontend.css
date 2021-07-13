@@ -1,0 +1,65 @@
+.social_icons_widget {margin: auto;}
+/*@media all and (min-width: 1199px){
+	.social_icons_widget {max-width: 314px;}
+}
+@media all and (max-width: 767px){
+	.social_icons_widget {max-width: 270px;}
+}*/
+.social_icons_widget ul,
+.social_icons_widget ul li,
+.social_icons_widget ul a {list-style: none; margin: 0; padding: 0; border: 0; float: none; text-decoration: none;}
+.social_icons_widget ul {display: flex; flex-flow: row nowrap; justify-content: center; align-items: center;}
+.social_icons_widget ul li {margin: 0 3px;}
+
+/*@media all and (min-width: 768px) and (max-width: 991px) {
+	.social_icons_widget ul {flex-wrap: wrap;}
+	.social_icons_widget ul li {flex: 1 1 33.33%; margin-bottom: 10px;}
+}*/
+.social_icons_widget .screen-reader-text {display: none;}
+
+.social_icons_widget ul .cswi-icon {display: block; height: 34px; line-height: 34px; width: 34px; text-align: center;}
+.social_icons_widget ul a svg {width: 100%; height: 100%;}
+
+.social_icons_widget ul.siw-type-font a:hover,
+.social_icons_widget ul.siw-type-font a:focus,
+.social_icons_widget ul.siw-type-font a:active {opacity: 0.8;}
+
+.social_icons_widget ul.siw-type-svg a:hover svg *,
+.social_icons_widget ul.siw-type-svg a:focus svg *,
+.social_icons_widget ul.siw-type-svg a:active svg * {fill: #28aae1;}
+
+.social_icons_widget ul.siw-shape-rounded a {}
+.social_icons_widget ul.siw-shape-round a {}
+
+.social_icons_widget ul.siw-type-font li.siw-android a {background: #a4c639;}
+.social_icons_widget ul.siw-type-font li.siw-amazon a {background: #ff9900;}
+.social_icons_widget ul.siw-type-font li.siw-buffer a {background: #59626a;}
+.social_icons_widget ul.siw-type-font li.siw-dribbble a {background: #ea4c89;}
+.social_icons_widget ul.siw-type-font li.siw-email a {background: #239ab9;}
+.social_icons_widget ul.siw-type-font li.siw-rss a {background: #f26522;}
+.social_icons_widget ul.siw-type-font li.siw-facebook a {background: #3b5998;}
+.social_icons_widget ul.siw-type-font li.siw-flickr a {background: #ff0084;}
+.social_icons_widget ul.siw-type-font li.siw-google_plus a {background: #dd4b39;}
+.social_icons_widget ul.siw-type-font li.siw-linkedin a {background: #0077b5;}
+.social_icons_widget ul.siw-type-font li.siw-paypal a {background: #003087;}
+.social_icons_widget ul.siw-type-font li.siw-pocket a {background: #ef4056;}
+.social_icons_widget ul.siw-type-font li.siw-pinterest a {background: #bd081c;}
+.social_icons_widget ul.siw-type-font li.siw-reddit a {background: #ff4500;}
+.social_icons_widget ul.siw-type-font li.siw-steam a {background: #000;}
+.social_icons_widget ul.siw-type-font li.siw-stripe a {background: #00afe1;}
+.social_icons_widget ul.siw-type-font li.siw-stumbleupon a {background: #eb4924;}
+.social_icons_widget ul.siw-type-font li.siw-twitter a {background: #1da1f2;}
+.social_icons_widget ul.siw-type-font li.siw-tumblr a {background: #35465c;}
+.social_icons_widget ul.siw-type-font li.siw-vimeo a {background: #1ab7ea;}
+.social_icons_widget ul.siw-type-font li.siw-yelp a {background: #af0606;}
+.social_icons_widget ul.siw-type-font li.siw-vk a {background: #45668e;}
+.social_icons_widget ul.siw-type-font li.siw-wordpress a {background: #21759b;}
+.social_icons_widget ul.siw-type-font li.siw-xing a {background: #026466;}
+.social_icons_widget ul.siw-type-font li.siw-youtube a {background: #ff0000;}
+
+.social_icons_widget ul.siw-type-svg li.siw-facebook a:hover svg * {fill: #3b5998;}
+.social_icons_widget ul.siw-type-svg li.siw-linkedin a:hover svg * {fill: #0077b5;}
+.social_icons_widget ul.siw-type-svg li.siw-twitter a:hover svg * {fill: #1da1f2;}
+.social_icons_widget ul.siw-type-svg li.siw-youtube a:hover svg * {fill: #ff0000;}
+.social_icons_widget ul.siw-type-svg li.siw-instagram a:hover svg * {fill: #a136b8;}
+.social_icons_widget ul.siw-type-svg li.siw-email a:hover svg * {fill: #a4c639;}
