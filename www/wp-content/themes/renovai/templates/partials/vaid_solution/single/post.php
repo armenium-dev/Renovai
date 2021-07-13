@@ -67,11 +67,20 @@ while(have_posts()):
 								<?php foreach($cf['section_items'] as $k => $item):?>
 									<?php if($k % 2 == 1):?>
 										<div class="col-12 col-md-6 col-chessboard">
-											<?php if(!empty($item['big_image'])):?>
-											<img class="img-fluid" src="<?=$item['big_image'];?>" alt="" title="">
+											<?php if($item['big_media_type'] == 'image'):?>
+												<?php if(!empty($item['big_image'])):?>
+													<img class="img-fluid" src="<?=$item['big_image'];?>" alt="" title="">
+												<?php endif;?>
+											<?php elseif($item['big_media_type'] == 'video'):?>
+												<?php if(!empty($item['big_video'])):?>
+													<video class="w-100" autoplay muted loop>
+														<source src="<?=$item['big_video'];?>">
+													</video>
+												<?php endif;?>
 											<?php endif;?>
 										</div>
 									<?php endif;?>
+								
 									<div id="item_<?=$k;?>" class="col-12 col-md-6 col-chessboard">
 										<h3 class="h3"><?=$item['title'];?>
 											<?php if(!empty($item['sub_title'])):?>
@@ -83,10 +92,19 @@ while(have_posts()):
 											<?=Functions::render_section_button($item['button'], ['class' => 'btn '.$btn_style]);?>
 										</div>
 									</div>
+								
 									<?php if($k % 2 == 0):?>
 										<div class="col-12 col-md-6 col-chessboard">
-											<?php if(!empty($item['big_image'])):?>
-											<img class="img-fluid" src="<?=$item['big_image'];?>" alt="" title="">
+											<?php if($item['big_media_type'] == 'image'):?>
+												<?php if(!empty($item['big_image'])):?>
+													<img class="img-fluid" src="<?=$item['big_image'];?>" alt="" title="">
+												<?php endif;?>
+											<?php elseif($item['big_media_type'] == 'video'):?>
+												<?php if(!empty($item['big_video'])):?>
+													<video class="w-100" autoplay muted loop>
+														<source src="<?=$item['big_video'];?>">
+													</video>
+												<?php endif;?>
 											<?php endif;?>
 										</div>
 									<?php endif;?>
