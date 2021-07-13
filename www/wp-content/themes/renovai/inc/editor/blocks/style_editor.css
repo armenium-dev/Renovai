@@ -1,0 +1,124 @@
+@font-face {
+	font-family: 'moderat-bold';
+	src: url(../../../assets/fonts/moderat-bold.eot);
+	src: local('moderat bold'), local('moderat-bold'),
+	url(../../../assets/fonts/moderat-bold.eot?#iefix) format('embedded-opentype'),
+	url(../../../assets/fonts/moderat-bold.woff2) format('woff2'),
+	url(../../../assets/fonts/moderat-bold.woff) format('woff'),
+	url(../../../assets/fonts/moderat-bold.ttf) format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'moderat-regular';
+	src: url(../../../assets/fonts/moderat-regular.eot);
+	src: local('moderat regular'), local('moderat-regular'),
+	url(../../../assets/fonts/moderat-regular.eot?#iefix) format('embedded-opentype'),
+	url(../../../assets/fonts/moderat-regular.woff2) format('woff2'),
+	url(../../../assets/fonts/moderat-regular.woff) format('woff'),
+	url(../../../assets/fonts/moderat-regular.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'moderat-mono-regular';
+	src: url(../../../assets/fonts/moderat-mono-regular.eot);
+	src: local('moderat mono regular'), local('moderat-mono-regular'),
+	url(../../../assets/fonts/moderat-mono-regular.eot?#iefix) format('embedded-opentype'),
+	url(../../../assets/fonts/moderat-mono-regular.woff2) format('woff2'),
+	url(../../../assets/fonts/moderat-mono-regular.woff) format('woff'),
+	url(../../../assets/fonts/moderat-mono-regular.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'moderat-mono-light';
+	src: url(../../../assets/fonts/moderat-mono-light.eot);
+	src: local('moderat mono light'), local('moderat-mono-light'),
+	url(../../../assets/fonts/moderat-mono-light.eot?#iefix) format('embedded-opentype'),
+	url(../../../assets/fonts/moderat-mono-light.woff2) format('woff2'),
+	url(../../../assets/fonts/moderat-mono-light.woff) format('woff'),
+	url(../../../assets/fonts/moderat-mono-light.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'moderat-mono-bold';
+	src: url(../../../assets/fonts/moderat-mono-bold.eot);
+	src: local('moderat mono bold'), local('moderat-mono-bold'),
+	url(../../../assets/fonts/moderat-mono-bold.eot?#iefix) format('embedded-opentype'),
+	url(../../../assets/fonts/moderat-mono-bold.woff2) format('woff2'),
+	url(../../../assets/fonts/moderat-mono-bold.woff) format('woff'),
+	url(../../../assets/fonts/moderat-mono-bold.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'moderat-thin';
+	src: url(../../../assets/fonts/moderat-thin.eot);
+	src: local('moderat thin'), local('moderat-thin'),
+	url(../../../assets/fonts/moderat-thin.eot?#iefix) format('embedded-opentype'),
+	url(../../../assets/fonts/moderat-thin.woff2) format('woff2'),
+	url(../../../assets/fonts/moderat-thin.woff) format('woff'),
+	url(../../../assets/fonts/moderat-thin.ttf) format('truetype');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'moderat-medium';
+	src: url(../../../assets/fonts/moderat-medium.eot);
+	src: local('moderat medium'), local('moderat-medium'),
+	url(../../../assets/fonts/moderat-medium.eot?#iefix) format('embedded-opentype'),
+	url(../../../assets/fonts/moderat-medium.woff2) format('woff2'),
+	url(../../../assets/fonts/moderat-medium.woff) format('woff'),
+	url(../../../assets/fonts/moderat-medium.ttf) format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'moderat-black';
+	src: url(../../../assets/fonts/moderat-black.eot);
+	src: local('moderat black'), local('moderat-black'),
+	url(../../../assets/fonts/moderat-black.eot?#iefix) format('embedded-opentype'),
+	url(../../../assets/fonts/moderat-black.woff2) format('woff2'),
+	url(../../../assets/fonts/moderat-black.woff) format('woff'),
+	url(../../../assets/fonts/moderat-black.ttf) format('truetype');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'moderat-light';
+	src: url(../../../assets/fonts/moderat-light.eot);
+	src: local('moderat light'), local('moderat-light'),
+	url(../../../assets/fonts/moderat-light.eot?#iefix) format('embedded-opentype'),
+	url(../../../assets/fonts/moderat-light.woff2) format('woff2'),
+	url(../../../assets/fonts/moderat-light.woff) format('woff'),
+	url(../../../assets/fonts/moderat-light.ttf) format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+.text-secondary {color: #61C0FA !important;}
+a.text-secondary:hover,
+a.text-secondary:focus {color: #17a2f8 !important;}
+
+.block-editor-writing-flow h3 {font-family: 'comfortaa'; font-weight: 700 !important; font-size: 50px !important; line-height: 75px !important; color: #61C0FA !important;}
+.block-editor-writing-flow h4 {font-family: 'moderat-bold'; font-weight: normal; font-size: 20px; line-height: 30px;}
+
