@@ -131,9 +131,16 @@ class Caches{
 		);
 		
 		// something went wrong
-		if ( strlen( $minified_html ) <= 1 ) {
+		if(strlen($minified_html) <= 1){
 			return $content;
 		}
+		
+		// fixing some js errors
+		$minified_html = str_replace(
+			["} if"],
+			["};if"],
+			$minified_html
+		);
 		
 		return $minified_html;
 	}

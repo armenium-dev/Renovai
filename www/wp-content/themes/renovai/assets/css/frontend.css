@@ -63,3 +63,18 @@
 .lp-col-content p {height: 100%;}
 .lp-col-content img {min-height: 75px;}
 .lp-col-content h3 {min-height: 80px;}
+
+@media all and (min-width: 992px){
+	body.case-studies #caseStudiesGotItModal .modal-content {padding: 20px;}
+	body.case-studies #caseStudiesGotItModal .modal-header {padding-top: 0;}
+}
+
+.header-nav .dropdown-menu li.dropdown .submenu {opacity: 0; visibility: hidden; position: absolute; left: 100%; transform: translateY(-43px); padding: 0 10px;}
+.header-nav .dropdown-menu li.dropdown:hover .submenu {opacity: 1; visibility: visible;}
+.header-nav .dropdown-menu li.dropdown .submenu .dropdown-menu {position: relative; top: auto !important;}
+@media all and (min-width: 768px){
+	.header-nav .dropdown-item:first-child,
+	.header-nav .dropdown a.dropdown-item:first-child {border-radius: 0;}
+	.header-nav .dropdown-menu li:first-child a.dropdown-item {border-radius: 18px 18px 0 0;}
+	.header-nav .dropdown-menu li:last-child a.dropdown-item {border-radius: 0 0 18px 18px;}
+}

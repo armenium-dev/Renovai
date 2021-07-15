@@ -50,18 +50,6 @@ echo Functions::render_modal_custom([
 ]);
 
 echo Functions::render_modal_custom([
-	'template'     => MODALS_PATH.'/case-studies-gotit',
-	'size'         => 4, // 1,2,3,4
-	'id'           => 'caseStudiesGotItModal',
-	'class'        => 'case-studies-item-modal',
-	'modal_params' => [],
-	'title'        => $section_data['got_it_popup']['popup_title'],
-	'content'      => $section_data['got_it_popup']['popup_content'],
-	'button'       => $section_data['got_it_popup']['popup_button'],
-	'logo'         => $section_data['got_it_popup']['popup_logo'],
-]);
-
-echo Functions::render_modal_custom([
 	'template'     => MODALS_PATH.'/case-studies-download',
 	'size'         => 4, // 1,2,3,4
 	'id'           => 'caseStudiesDownloadModal',
@@ -70,4 +58,16 @@ echo Functions::render_modal_custom([
 	'image'        => $section_data['download_popup']['popup_image'],
 	'content'      => $section_data['download_popup']['popup_content'],
 	'logo'         => $section_data['download_popup']['popup_logo'],
+]);
+
+echo Functions::render_modal_custom([
+	'template'     => MODALS_PATH.'/case-studies-gotit',
+	'size'         => 3, // 1,2,3,4
+	'id'           => 'caseStudiesGotItModal',
+	'class'        => 'case-studies-item-modal',
+	'modal_params' => [],
+	'title'        => $section_data['got_it_popup']['popup_title'],
+	'content'      => $section_data['got_it_popup']['popup_content'],
+	'button'       => $section_data['got_it_popup']['popup_button'],
+	'logo'         => $section_data['got_it_popup']['popup_logo'],
 ]);

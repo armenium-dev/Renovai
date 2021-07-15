@@ -38,8 +38,8 @@ if(isset($params['modal_params'])){
 				<div class="text-center">
 					<h1 class="h1"><?=$params['title'];?></h1>
 					<p class="mb-5"><?=$params['content'];?></p>
-					<div class="mb-10"><?=Functions::render_section_button($params['button'], ['class' => 'btn btn-secondary btn-icon', 'icon' => '<i class="i i-sm i-right-arrow"></i>']);?></div>
-					<img src="<?=$params['logo'];?>" alt="" title="">
+					<div class="mb-8"><?=Functions::render_section_button($params['button'], ['class' => 'btn btn-secondary btn-icon', 'icon' => '<i class="i i-sm i-right-arrow"></i>']);?></div>
+					<img src="<?=$params['logo'];?>" alt="" title="" class="mb-5">
 				</div>
 			</div>
 		</div>

@@ -50,11 +50,22 @@ $menu = Theme::get_menu_tree('primary');
 						<a class="<?=$level_1_item_a_class;?>" href="<?=$level_1_item['url'];?>" target="<?=$level_1_item['target'];?>"><?=$level_1_item['name'];?></a>
 		
 						<?php if($has_dropdown):?>
-							<div class="dropdown-menu">
+							<ul class="dropdown-menu">
 								<?php foreach($level_1_item['items'] as $level_2_item):?>
-									<a href="<?=$level_2_item['url'];?>" class="dropdown-item <?=$level_2_item['classes'];?> <?php #=$level_2_item['active_class'];?>"><?=$level_2_item['name'];?></a>
+									<li class="<?php if(isset($level_2_item['items']) && count($level_2_item['items']) > 0):?>dropdown<?php endif;?>">
+										<a href="<?=$level_2_item['url'];?>" class="dropdown-item <?=$level_2_item['classes'];?> <?php #=$level_2_item['active_class'];?>"><?=$level_2_item['name'];?></a>
+										<?php if(isset($level_2_item['items']) && count($level_2_item['items']) > 0):?>
+										<div class="submenu">
+											<ul class="dropdown-menu">
+												<?php foreach($level_2_item['items'] as $level_3_item):?>
+													<li><a href="<?=$level_3_item['url'];?>" class="dropdown-item <?=$level_3_item['classes'];?> <?php #=$level_3_item['active_class'];?>"><?=$level_3_item['name'];?></a></li>
+												<?php endforeach;?>
+											</ul>
+										</div>
+										<?php endif;?>
+									</li>
 								<?php endforeach;?>
-							</div>
+							</ul>
 						<?php endif;?>
 		
 					</li>

@@ -439,15 +439,19 @@ class Functions {
 		return $posts;
 	}
 	
-	public static function calc_post_read_time($post){
+	public static function calc_post_read_time($_post){
 		
-		if("post" != $post->post_type) return;
+		if("post" != $_post->post_type) return;
 		
-		$text = strip_tags($post->post_content);
+		$e = chr(13).chr(10);
+		$text = $_post->post_content;
+		$text = Caches::minify_html($text);
+		$text = strip_tags($text);
+		$text = str_replace([' ', PHP_EOL, $e, '\n\r', '\n', '\r', '.', ',', '!', '’', '”', '-', '_', '"', "'"], '', $text);
 		$text = trim($text);
-		$text = str_replace(' ', '', $text);
 		$lenght = mb_strlen($text, 'utf-8');
 		$time = round($lenght / self::$blog_post_read_time_coefficient, 0, PHP_ROUND_HALF_DOWN);
+		#Helper::_debug([$_post->ID, $_post->post_title, $text, $lenght, $time]);
 		
 		if($time < 60){
 			$t = 'min';
