@@ -90,6 +90,9 @@ jQuery(function($){
 				case "toggle_mobile_nav":
 					FJS.Common.toggleMobileNav($this);
 					break;
+				case "toggle_submenu":
+					FJS.Common.toggleMobileSubmenu($this);
+					break;
 				default:
 					break;
 			}
@@ -145,6 +148,7 @@ jQuery(function($){
 				if($('nav'+target).hasClass('show')){
 					$(target).removeClass('collapse show');
 					$(nav_target).removeClass('show');
+					$('body').removeClass('nav-mob-opened');
 					$obj.addClass('collapsed').attr('aria-expanded', false);
 					setTimeout(function(){
 						$('#site_header').removeClass('nav-show');
@@ -153,8 +157,12 @@ jQuery(function($){
 					$('#site_header').addClass('nav-show');
 					$(target).addClass('collapse show');
 					$(nav_target).addClass('show');
+					$('body').addClass('nav-mob-opened');
 					$obj.removeClass('collapsed').attr('aria-expanded', true);
 				}
+			},
+			toggleMobileSubmenu: function($obj){
+
 			},
 			setCookies: function(cname, cvalue, exdays){
 				var d = new Date();

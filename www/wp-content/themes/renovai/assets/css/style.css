@@ -16299,11 +16299,7 @@ header {
     margin-bottom: 24px;
     border-bottom: 2px solid transparent;
     transition: border-bottom-color linear 500ms; }
-    .header-nav .nav-link:hover {
-      border-bottom-color: #61C0FA;
-      transition: border-bottom-color linear 300ms; }
   .header-nav .dropdown:hover .dropdown-menu {
-    display: block;
     border: 0; }
   .header-nav .dropdown-toggle:after {
     display: none; }
@@ -16323,9 +16319,7 @@ header {
     .header-nav .dropdown a.dropdown-item:hover {
       background-color: #61C0FA;
       color: #fff;
-      transition: color linear 300ms, background-color linear 300ms;
-      padding-top: 15px;
-      padding-bottom: 15px; }
+      transition: color linear 300ms, background-color linear 300ms; }
 
 .sm-toggle-menu .navbar {
   display: flex !important; }
@@ -16421,42 +16415,38 @@ header {
     .header-nav .nav-link {
       padding: 5px 0 3px 0 !important;
       margin-bottom: 0; }
-    .header-nav .dropdown {
-      height: 100%;
-      display: flex;
-      align-items: center; }
-      .header-nav .dropdown:hover .dropdown-menu {
-        display: block; }
-      .header-nav .dropdown-toggle:after {
-        display: none; }
-      .header-nav .dropdown-menu {
-        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
-        border-radius: 20px;
-        padding: 0;
-        min-width: 280px;
-        top: 58px !important; }
-      .header-nav .dropdown-item,
-      .header-nav .dropdown a.dropdown-item {
-        text-align: left;
-        font-size: 15px;
-        line-height: 18px;
-        font-family: 'moderat-medium';
+    .header-nav .dropdown:hover > .dropdown-menu {
+      display: block; }
+    .header-nav .dropdown-toggle:after {
+      display: none; }
+    .header-nav .dropdown-menu {
+      box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+      border-radius: 20px;
+      padding: 0;
+      min-width: 280px;
+      top: 58px !important; }
+    .header-nav .dropdown-item,
+    .header-nav .dropdown a.dropdown-item {
+      text-align: left;
+      font-size: 15px;
+      line-height: 18px;
+      font-family: 'moderat-medium';
+      padding: 12px 16px;
+      margin-bottom: 0;
+      color: #0D0D30 !important;
+      transition: color linear 500ms, background-color linear 500ms; }
+      .header-nav .dropdown-item:hover,
+      .header-nav .dropdown a.dropdown-item:hover {
+        background-color: #61C0FA;
+        color: #fff !important;
         padding: 12px 16px;
-        margin-bottom: 0;
-        color: #0D0D30 !important;
-        transition: color linear 500ms, background-color linear 500ms; }
-        .header-nav .dropdown-item:hover,
-        .header-nav .dropdown a.dropdown-item:hover {
-          background-color: #61C0FA;
-          color: #fff !important;
-          padding: 12px 16px;
-          transition: color linear 300ms, background-color linear 300ms; }
-        .header-nav .dropdown-item:first-child,
-        .header-nav .dropdown a.dropdown-item:first-child {
-          border-radius: 18px 18px 0 0; }
-        .header-nav .dropdown-item:last-child,
-        .header-nav .dropdown a.dropdown-item:last-child {
-          border-radius: 0 0 18px 18px; }
+        transition: color linear 300ms, background-color linear 300ms; }
+      .header-nav .dropdown-item:first-child,
+      .header-nav .dropdown a.dropdown-item:first-child {
+        border-radius: 18px 18px 0 0; }
+      .header-nav .dropdown-item:last-child,
+      .header-nav .dropdown a.dropdown-item:last-child {
+        border-radius: 0 0 18px 18px; }
   .slick-logos .slick-slide div img {
     height: 26px; } }
 

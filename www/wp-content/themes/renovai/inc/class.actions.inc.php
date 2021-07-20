@@ -218,9 +218,9 @@ class Actions{
 			'lang' => [],
 		];
 
-		if(WP_PRODUCTION_MODE){
 			wp_enqueue_script(THEME_SHORT.'-index', JS_URI.'/index.js', [], $script_version, true);
 			wp_localize_script(THEME_SHORT.'-index', 'globals', $globals_atts);
+		/*if(WP_PRODUCTION_MODE){
 		}else{
 			wp_enqueue_script(THEME_SHORT.'-index', JS_URI.'/index.js', ['jquery'], $script_version, true);
 			wp_enqueue_script(THEME_SHORT.'-bootstrap', JS_URI.'/bootstrap.min.js', ['jquery'], $script_version, true);
@@ -228,7 +228,7 @@ class Actions{
 			wp_enqueue_script(THEME_SHORT.'-inputmask', JS_URI.'/jquery.inputmask.min.js', ['jquery'], $script_version, true);
 			wp_enqueue_script(THEME_SHORT.'-theme', JS_URI.'/frontend.js', ['jquery', THEME_SHORT.'-index'], $script_version, true);
 			wp_localize_script(THEME_SHORT.'-theme', 'globals', $globals_atts);
-		}
+		}*/
 	}
 
 	public function enqueueCssAndJavascriptAdmin(){

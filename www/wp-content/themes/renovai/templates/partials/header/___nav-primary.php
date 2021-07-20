@@ -50,8 +50,8 @@ $menu = Theme::get_menu_tree('primary');
 					$level_1_item_a_class = implode(' ', $level_1_item_a_class);
 					$level_1_item_li_class = implode(' ', $level_1_item_li_class);
 					?>
-					<li id="dropdown_<?=$k;?>" class="<?=$level_1_item_li_class;?>">
-						<a class="<?=$level_1_item_a_class;?>" href="<?=$level_1_item['url'];?>" target="<?=$level_1_item['target'];?>" <?php if(!$is_button && $has_dropdown):?>data-trigger="js_action_click" data-action="toggle_submenu" data-target="#dropdown_<?=$k;?>"<?php endif;?>>
+					<li class="<?=$level_1_item_li_class;?>">
+						<a class="<?=$level_1_item_a_class;?>" href="<?=$level_1_item['url'];?>" target="<?=$level_1_item['target'];?>" data-toggle="dropdown">
 							<span><?=$level_1_item['name'];?></span>
 							<?php if(!$is_button && $has_dropdown):?>
 							<span class="caret"></span>
@@ -59,29 +59,28 @@ $menu = Theme::get_menu_tree('primary');
 						</a>
 		
 						<?php if($has_dropdown):?>
-							<div class="dropdown-menu">
-								<?php foreach($level_1_item['items'] as $k2 => $level_2_item):?>
-								
-									<?php if(isset($level_2_item['items']) && count($level_2_item['items']) > 0):?>
-										<div id="dropdown_<?=$k2;?>" class="dropdown-item">
-											<a href="<?=$level_2_item['url'];?>" class="submenu-label" data-trigger="js_action_click" data-action="toggle_submenu" data-target="#dropdown_<?=$k2;?>">
-												<span><?=$level_2_item['name'];?></span>
+							<ul class="dropdown-menu">
+								<?php foreach($level_1_item['items'] as $level_2_item):
+									$has_dropdown = (isset($level_2_item['items']) && count($level_2_item['items']) > 0) ? true : false;?>
+									<li class="nav-item <?=($has_dropdown ? 'dropdown' : '');?>">
+										<a href="<?=$level_2_item['url'];?>" class="nav-link <?=($has_dropdown ? 'dropdown-toggle' : '');?> <?=$level_2_item['classes'];?>" data-toggle="<?=($has_dropdown ? 'dropdown' : '');?>">
+											<span><?=$level_2_item['name'];?></span>
+											<?php if($has_dropdown):?>
 												<span class="caret"></span>
-											</a>
-											<div class="dropdown-wrap">
-												<div class="dropdown-submenu">
-													<?php foreach($level_2_item['items'] as $k3 => $level_3_item):?>
-														<a href="<?=$level_3_item['url'];?>" class="dropdown-item dropdown-item-mobile <?=$level_3_item['classes'];?>"><?=$level_3_item['name'];?></a>
-													<?php endforeach;?>
-												</div>
-											</div>
-										</div>
-									<?php else:?>
-										<a href="<?=$level_2_item['url'];?>" class="dropdown-item <?=$level_2_item['classes'];?> <?php #=$level_2_item['active_class'];?>"><?=$level_2_item['name'];?></a>
-									<?php endif;?>
+											<?php endif;?>
+										</a>
+										
+										<?php if($has_dropdown):?>
+											<ul class="dropdown-menu">
+												<?php foreach($level_2_item['items'] as $level_3_item):?>
+													<li class="nav-item"><a href="<?=$level_3_item['url'];?>" class="nav-link <?=$level_3_item['classes'];?>"><?=$level_3_item['name'];?></a></li>
+												<?php endforeach;?>
+											</ul>
+										<?php endif;?>
+									</li>
 								
 								<?php endforeach;?>
-							</div>
+							</ul>
 						<?php endif;?>
 		
 					</li>

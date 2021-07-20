@@ -12,6 +12,7 @@ use Digidez\Functions;
 	    <?php Functions::render_modals();?>
 		<a role="button" class="scroll-top trans_me"></a>
 		<a role="button" class="scroll-bottom trans_me"></a>
+		<div class="mob-overlay"></div>
 		<div class="main-overlay" style="display: none;"></div>
 		<div class="user-overlay" style="display: none;"></div>
 		<div class="filter-overlay" style="display: none;"></div>
