@@ -51,12 +51,14 @@ $menu = Theme::get_menu_tree('primary');
 					$level_1_item_li_class = implode(' ', $level_1_item_li_class);
 					?>
 					<li id="dropdown_<?=$k;?>" class="<?=$level_1_item_li_class;?>">
-						<a class="<?=$level_1_item_a_class;?>" href="<?=$level_1_item['url'];?>" target="<?=$level_1_item['target'];?>" <?php if(!$is_button && $has_dropdown):?>data-trigger="js_action_click" data-action="toggle_submenu" data-target="#dropdown_<?=$k;?>"<?php endif;?>>
+						<a class="<?=$level_1_item_a_class;?>" href="<?=$level_1_item['url'];?>" target="<?=$level_1_item['target'];?>">
 							<span><?=$level_1_item['name'];?></span>
-							<?php if(!$is_button && $has_dropdown):?>
-							<span class="caret"></span>
-							<?php endif;?>
 						</a>
+						<?php if(!$is_button && $has_dropdown):?>
+						<span class="caret" <?php if(!$is_button && $has_dropdown):?>data-trigger="js_action_click" data-action="toggle_submenu" data-target="#dropdown_<?=$k;?>"<?php endif;?>>
+							<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 8L0.803849 0.799999L11.1962 0.8L6 8Z" fill="#0D0D30"/></svg>
+						</span>
+						<?php endif;?>
 		
 						<?php if($has_dropdown):?>
 							<div class="dropdown-menu">
@@ -64,10 +66,12 @@ $menu = Theme::get_menu_tree('primary');
 								
 									<?php if(isset($level_2_item['items']) && count($level_2_item['items']) > 0):?>
 										<div id="dropdown_<?=$k2;?>" class="dropdown-item">
-											<a href="<?=$level_2_item['url'];?>" class="submenu-label" data-trigger="js_action_click" data-action="toggle_submenu" data-target="#dropdown_<?=$k2;?>">
+											<a href="<?=$level_2_item['url'];?>" class="submenu-label">
 												<span><?=$level_2_item['name'];?></span>
-												<span class="caret"></span>
 											</a>
+											<span class="caret" data-trigger="js_action_click" data-action="toggle_submenu" data-target="#dropdown_<?=$k2;?>">
+												<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 8L0.803849 0.799999L11.1962 0.8L6 8Z" fill="#0D0D30"/></svg>
+											</span>
 											<div class="dropdown-wrap">
 												<div class="dropdown-submenu">
 													<?php foreach($level_2_item['items'] as $k3 => $level_3_item):?>
