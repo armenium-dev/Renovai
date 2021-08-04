@@ -173,6 +173,12 @@
 	body.case-studies #caseStudiesGotItModal .modal-header {padding-top: 0;}
 }
 
+.siriyp-section .display-h2 {font-size: 20px; line-height: 30px; font-family: 'moderat-bold';}
+@media (min-width: 768px) {
+	.siriyp-section .display-h2 {font-size: 64px; line-height: 80px; }
+}
+.bg-pink5 {background-color: #fff2ff !important; }
+
 
 /* submenu  */
 
@@ -259,3 +265,4 @@
 	}
 */
 }
+
