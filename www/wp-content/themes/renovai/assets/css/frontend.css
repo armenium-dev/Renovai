@@ -187,6 +187,9 @@
 @media all and (min-width: 768px){
 }
 @media all and (max-width: 767px){
+	.m-logo {margin: 2px 0;}
+	.siriyp-section .display-h2 {margin-bottom: 10px;}
+
 /*
 	.dropdown-menu > .dropdown-item {
 		background-color: #ffffff !important;
