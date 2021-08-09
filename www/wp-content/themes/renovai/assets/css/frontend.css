@@ -174,7 +174,7 @@
 }
 
 
-.siriyp-section .display-h2 {font-size: 22px; line-height: 26px; letter-spacing: -1px; font-family: 'moderat-bold';}
+.siriyp-section .display-h2 {font-size: 24px; line-height: 32px; letter-spacing: -1px; font-family: 'moderat-bold';}
 @media (min-width: 768px) {
 	.siriyp-section .display-h2 {font-size: 58px; line-height: 70px;}
 }
@@ -187,7 +187,7 @@
 @media all and (min-width: 768px){
 }
 @media all and (max-width: 767px){
-	.m-logo {margin: 2px 0;}
+	/*.m-logo {margin: 2px 0;}*/
 	.siriyp-section .display-h2 {margin-bottom: 10px;}
 
 /*

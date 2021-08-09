@@ -14,7 +14,7 @@ use Digidez\Helper;
 		</div>
 		<div class="row row-cols-lg-4 row-cols-2 justify-content-center text-center">
 			<?php foreach($section_data['section_items'] as $k => $url):?>
-				<div class="col py-lg-4 py-2"><img class="img-fluid m-logo" src="<?=$url;?>" alt="" title=""></div>
+				<div class="col py-lg-4 py-4"><img class="img-fluid m-logo" src="<?=$url;?>" alt="" title=""></div>
 			<?php endforeach;?>
 		</div>
 	</div>
