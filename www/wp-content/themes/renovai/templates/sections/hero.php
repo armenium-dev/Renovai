@@ -9,9 +9,14 @@ use Digidez\Helper;
 	<div class="container position-relative">
 		<div class="animation-header-text">
 			<?=$section_data['section_title'];?><br>
-			<?=Functions::render_section_button($section_data['section_button'], ['class' => 'btn btn-secondary shadow mt-2']);?>
+			<?php if($section_data['media_response_type'] == 'form'):?>
+				<?=do_shortcode($section_data['section_form']);?>
+			<?php elseif($section_data['media_response_type'] == 'button'):?>
+				<?=Functions::render_section_button($section_data['section_button'], ['class' => 'btn btn-secondary shadow']);?>
+			<?php endif;?>
 		</div>
 	</div>
+
 	<div class="animation-header-container">
 		<div class="pillar-container w-100 h-100 animation-header-slide">
 			<div class="pillar-left"></div>

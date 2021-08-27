@@ -181,6 +181,27 @@
 .bg-pink5 {background-color: #fff2ff !important; }
 
 
+.form-custom-response {display: none; font-size: 0.8rem; padding: 0 25px; line-height: 1.3; margin-top: 5px;}
+
+.header-form {max-width: 500px; /*min-width: 440px; width: 34%;*/ position: relative;}
+.header-form .btn {position: absolute; right: 1px; top: 1px; height: 52px; z-index: 1;}
+.header-form .btn:disabled {background-color: #61C0FA !important; border-color: #61C0FA !important; color: #fff !important;}
+.header-form .form-control.is-valid {background-position: right 190px center;}
+@media all and (max-width: 767px){
+	.header-form .form-control {font-size: 1rem;}
+	.header-form .btn {height: 48px;}
+}
+@media all and (max-width: 480px){
+	.header-form .btn {padding: 12px 30px;}
+	.header-form .form-control.is-valid {background-position: right 154px center;}
+}
+@media all and (max-width: 440px){
+	.header-form .form-control {font-size: 0.8rem;}
+	.header-form .btn {font-size: 0.8rem; height: 45px; padding: 12px 20px;}
+	.header-form .form-control.is-valid {background-position: right 134px center;}
+}
+
+
 /* submenu  */
 
 /* submenu for mobile */
