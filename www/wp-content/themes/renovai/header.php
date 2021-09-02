@@ -31,6 +31,7 @@ $favicons = get_field('favicons', 'option');
 	    <link rel="apple-touch-icon-precomposed" href="<?=$favicons['size_180x180'];?>">
 	    <meta name="msapplication-TileImage" content="<?=$favicons['size_270x270'];?>">
 	    <?php Functions::render_cookiebox(true, false);?>
+	    <?php Functions::render_tracker_scripts(true);?>
 	    <?php wp_head();?>
     </head>
     <body <?php body_class();?>>

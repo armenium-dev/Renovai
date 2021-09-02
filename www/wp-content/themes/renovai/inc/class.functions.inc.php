@@ -667,6 +667,22 @@ class Functions {
 		}
 	}
 	
+	public static function render_tracker_scripts($echo = true){
+		
+		$html = get_field('tracker_scripts', 'option');
+		
+		if(!empty($html)){
+		
+		}
+		
+		if(!$echo){
+			return $html;
+		}else{
+			echo $html;
+		}
+		
+	}
+	
 	public static function render_cookiebox($echo = true, $in_footer = true){
 		$html = '';
 		
