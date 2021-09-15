@@ -938,13 +938,53 @@ class Functions {
 		
 		$html = '<div class="social-sharing trans_all '.$wrap_class.'">';
 		foreach($sharing_options as $option){
+			$class = '';
+			$action = 'social_shraing_service';
+			if(empty($option['icon'])){
+				switch($option['service']){
+					case "facebook":
+						$class = 'i-fb';
+						break;
+					case "linkedin":
+						$class = 'i-in';
+						break;
+					case "twitter":
+						$class = 'i-tw';
+						break;
+					case "email":
+						$class = 'i-ml';
+						break;
+					case "instagram":
+						$class = 'i-ig';
+						break;
+					case "pinterest":
+						$class = 'i-pt';
+						break;
+					case "youtube":
+						$class = 'i-yt';
+						break;
+					case "google-plus":
+						$class = 'i-gp';
+						break;
+					case "reddit":
+						$class = 'i-rd';
+					case "copy":
+						$class = 'i-copy';
+						$action = 'social_shraing_copy_link';
+						break;
+				}
+				$icon = '<i class="i '.$class.' i-reverse i-social"></i>';
+			}else{
+				$icon = '<img class="icon" src="'.$option['icon'].'" />';
+			}
 			$link = str_replace(['%POST_URL%', '%POST_TITLE%', '%POST_EXCERPT%'], [$post_link, $popst_title, $post_excerpt], $option['link']);
 			if($option['type'] == 'repost'){
-				$html .= '<a class="shraing-service" href="'.$link.'" data-url="'.$link.'" data-service="'.$option['service'].'"><img class="icon" src="'.$option['icon'].'"></a>';
+				$html .= '<a class="mr-2 shraing-service" href="javascript:;" data-trigger="js_action_click" data-action="'.$action.'" data-url="'.$link.'" data-service="'.$option['service'].'">'.$icon.'</a>';
 			}elseif($option['type'] == 'direct'){
-				$html .= '<a href="'.$link.'" title="'.$option['service'].'" target="_blank"><img class="icon" src="'.$option['icon'].'"></a>';
+				$html .= '<a class="mr-2" href="'.$link.'" title="'.$option['service'].'" target="_blank">'.$icon.'</a>';
 			}
 		}
+		$html .= '<div class="c-share__copied-message text-white rounded custom-toast">URL copied to your clipboard!</div>';
 		$html .= '</div>';
 		
 		return $html;

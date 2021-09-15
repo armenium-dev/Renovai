@@ -43,13 +43,14 @@ if(has_post_thumbnail($post)){
 						<div class="avatar d-inline-block mr-4 mb-3 mb-md-0">
 							<img src="<?=$author['avatar_src'];?>" alt="" title=""><b><?=$author['name'];?></b> |<span> <?=get_post_time('F jS, Y');?></span>
 						</div>
-						<?php if(!empty($author['social_links'])):?>
+						<?=Functions::get_social_shareing_html($post);?>
+						<?php /*if(!empty($author['social_links'])):?>
 							<div>
 								<?php foreach($author['social_links'] as $social_link):?>
 									<a class="mr-2" href="<?=$social_link['link'];?>" target="_blank" title="<?=$social_link['service'];?>"><?=$social_link['icon'];?></a>
 								<?php endforeach;?>
 							</div>
-						<?php endif;?>
+						<?php endif;*/?>
 					</div>
 					<?php the_content();?>
 				</div>

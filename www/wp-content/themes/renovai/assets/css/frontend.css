@@ -180,6 +180,9 @@
 }
 .bg-pink5 {background-color: #fff2ff !important; }
 
+@media all and (max-width: 320px){
+	.animation-header-text {top:55px;}
+}
 
 .form-custom-response {display: none; font-size: 0.8rem; padding: 0 25px; line-height: 1.3; margin-top: 5px;}
 
@@ -199,6 +202,26 @@
 	.header-form .form-control {font-size: 0.8rem;}
 	.header-form .btn {font-size: 0.8rem; height: 45px; padding: 12px 20px;}
 	.header-form .form-control.is-valid {background-position: right 134px center;}
+}
+
+.social-sharing {position: relative;}
+.i-reverse.i-copy {background-image: url(../images/icon-copy.svg);}
+.c-share__copied-message {
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 58px;
+	top: 52px;
+	z-index: 9;
+	background-color: #0D0D30;
+	font-size: 10px;
+	letter-spacing: 0.5px;
+	padding: 4px 10px;
+	text-align: center;
+	text-transform: uppercase;
+	-webkit-transform: translateY(-130%);
+	-ms-transform: translateY(-130%);
+	transform: translateY(-130%);
 }
 
 
@@ -369,3 +392,110 @@
 */
 }
 
+
+
+/* 10.09.2021 Stas */
+.s-wooman {position: absolute; bottom: 0; left: -45px;}
+.s-wooman > img {width: 100%; max-width: 350px;}
+.s-properties {position: absolute; bottom: 20px; left: 40%;}
+.s-properties > img {width: 180px;}
+.s-chair-img {position: absolute; bottom: 30%; max-width: 200px; right: 100px;}
+.s-pillar-center {width: 186px; bottom: 151px; right: 120px;}
+.s-pillar-right {width: 186px; bottom: 292px; right: -15px;}
+@media screen and (max-width: 640px) {
+	.s-wooman > img {max-width: 320px;}
+	.s-properties {left: 50%;}
+	.s-chair-img {max-width: 170px; right: 124px;}
+  	.s-pillar-center {bottom: 186px;}
+}
+@media screen and (max-width: 575px) {
+	.s-wooman > img {max-width: 290px;}
+}
+@media screen and (max-width: 480px) {
+	.s-wooman > img {max-width: 230px;}
+	.s-properties > img {/*width: 150px;*/}
+	.s-properties {left: 40%;}
+	.s-chair-img {max-width: 130px;}
+	.s-pillar-center {width: 125px; right: 75px;}
+	.s-pillar-right {width: 125px;}
+	.s-chair-img {right: 50px;}
+}
+@media screen and (max-width: 360px) {
+	.s-properties > img {/*width: 130px;*/}
+	.s-wooman > img {max-width: 205px;}
+	.s-pillar-center {bottom: 133px;}
+}
+
+@media all and (max-width: 414px){
+	.animation-header-text {max-width: 265px; left: 25px; top: 53px;}
+}
+/* Google Pixel 2 XL */
+@media all and (width: 411px) and (height: 823px){
+	.s-pillar-center {width: 131px; right: 65px; bottom: 263px;}
+	.s-pillar-right {width: 131px; right: -12px; bottom: 362px;}
+	.s-wooman {left: -35px;}
+	.s-wooman > img {max-width: 265px;}
+	.s-properties {left: 45%; bottom: 78px;}
+	.s-properties > img {width: 188px;}
+	.s-chair-img {right: 18px; max-width: 167px; top: auto; bottom: 297px;}
+}
+/* Google Pixel 2 */
+@media all and (width: 411px) and (height: 731px){
+	.s-pillar-center {width: 123px; right: 66px; bottom: 215px;}
+	.s-pillar-right {width: 123px; right: -5px; bottom: 307px;}
+	.s-wooman {left: -21px;}
+	.s-wooman > img {max-width: 261px;}
+	.s-properties {left: 38%; bottom: 52px;}
+	.s-properties > img {width: 185px;}
+	.s-chair-img {right: 23px; max-width: 157px; top: auto; bottom: 244px;}
+}
+/* iPhone 11 Pro Max */
+@media all and (width: 414px) and (height: 896px){
+	.s-pillar-center {width: 131px; right: 67px; bottom: 294px;}
+	.s-pillar-right {width: 131px; right: -9px; bottom: 407px;}
+	.s-wooman {left: -34px;}
+	.s-wooman > img {max-width: 265px;}
+	.s-properties {left: 45%; bottom: 84px;}
+	.s-properties > img {width: 188px;}
+	.s-chair-img {right: 20px; max-width: 167px; top: auto; bottom: 369px;}
+}
+/* iPhone 11 Pro / X */
+@media all and (width: 375px) and (height: 812px){
+	.s-pillar-center {width: 130px; right: 63px; bottom: 259px;}
+	.s-pillar-right {width: 130px; right: -12px; bottom: 357px;}
+	.s-wooman {left: -27px;}
+	.s-wooman > img {max-width: 268px;}
+	.s-properties {left: 156px; bottom: 52px;}
+	.s-properties > img {width: 190px;}
+	.s-chair-img {right: 17px; max-width: 165px; top: auto; bottom: 297px;}
+}
+/* iPhone 8 Plus */
+@media all and (width: 414px) and (height: 736px){
+	.s-pillar-center {width: 123px; right: 69px; bottom: 220px;}
+	.s-pillar-right {width: 123px; right: -3px; bottom: 312px;}
+	.s-wooman {left: -21px; bottom: -5px;}
+	.s-wooman > img {max-width: 261px;}
+	.s-properties {left: 157px; bottom: 45px;}
+	.s-properties > img {width: 186px;}
+	.s-chair-img {right: 25px; max-width: 157px; top: auto; bottom: 248px;}
+}
+/* iPhone 8 */
+@media all and (width: 375px) and (height: 667px){
+	.s-pillar-center {width: 127px; right: 65px; bottom: 238px;}
+	.s-pillar-right {width: 127px; right: -9px; bottom: 352px;}
+	.s-wooman {left: -17px; bottom: -1px;}
+	.s-wooman > img {max-width: 234px;}
+	.s-properties {left: 179px; bottom: 72px;}
+	.s-properties > img {width: 166px;}
+	.s-chair-img {right: 28px; max-width: 133px; top: auto; bottom: 256px;}
+}
+/* iPhone SE */
+@media all and (width: 320px) and (height: 568px){
+	.s-pillar-center {width: 124px; right: 41px; bottom: 132px;}
+	.s-pillar-right {width: 124px; right: -31px; bottom: 225px;}
+	.s-wooman {left: -29px;}
+	.s-wooman > img {max-width: 211px;}
+	.s-properties {left: 115px; bottom: 33px;}
+	.s-properties > img {width: 150px;}
+	.s-chair-img {right: 19px; max-width: 122px; top: auto; bottom: 166px;}
+}

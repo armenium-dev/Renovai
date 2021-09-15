@@ -93,6 +93,9 @@ jQuery(function($){
 				case "toggle_submenu":
 					FJS.Common.toggleMobileSubmenu($this);
 					break;
+				case "social_shraing_service":
+					FJS.Blog.actionOpenSocialShare($this);
+					break;
 				default:
 					break;
 			}
@@ -268,6 +271,17 @@ jQuery(function($){
 					$obj.attr('disabled', false);
 				});
 
+			},
+			actionOpenSocialShare: function(e){
+				e.preventDefault();
+
+				var $this = $(this),
+					url = $this.data('url'),
+					service = $this.data('service');
+
+				window.open(url, service + "Window", "height=380,width=660,resizable=0,toolbar=0,menubar=0,status=0,location=0,scrollbars=0");
+
+				return false;
 			},
 		},
 		News: {

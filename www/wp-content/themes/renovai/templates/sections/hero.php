@@ -4,11 +4,16 @@ use Digidez\Helper;
 
 #Helper::_debug($section_data);
 
+$class = 'video';
+if($section_data['hero_animation_type'] == 'css'){
+	$class = 'css-animation';
+}
 ?>
-<section id="<?=$section_name;?>-section" class="animation-header-section bg-primary position-relative overflow-hidden">
+<section id="<?=$section_name;?>-section" class="animation-header-section bg-primary position-relative overflow-hidden <?=$class;?>">
 	<div class="container position-relative">
 		<div class="animation-header-text">
-			<?=$section_data['section_title'];?><br>
+ 			<span class="d-none d-sm-block"><?=$section_data['section_title'];?></span>
+			<span class="d-lg-none d-md-none d-sm-none"><?=strip_tags($section_data['section_title']);?></span>
 			<?php if($section_data['media_response_type'] == 'form'):?>
 				<?=do_shortcode($section_data['section_form']);?>
 			<?php elseif($section_data['media_response_type'] == 'button'):?>
@@ -17,48 +22,41 @@ use Digidez\Helper;
 		</div>
 	</div>
 	
-	<?php if($section_data['hero_animation_type'] == 'video' && Helper::$device != 'mobile'):?>
+	<?php if($section_data['hero_animation_type'] == 'video'):?>
+		<?php if(Helper::$device != 'mobile'):?>
 		<video class="hero-video r16-9" autoplay muted loop preload="auto">
 			<source src="<?=$section_data['video_file_16_10'];?>" type="video/mp4">
 		</video>
 		<video class="hero-video r4-3" autoplay muted loop preload="auto">
 			<source src="<?=$section_data['video_file_4_3'];?>" type="video/mp4">
 		</video>
+		<?php endif;?>
 		<div class="animation-header-container">
 			<div class="pillar-container w-100 h-100 animation-header-slide">
 				<div class="pillar-left"></div>
-				<div class="pillar-center"></div>
-				<div class="pillar-right"></div>
+				<div class="pillar-center s-pillar-center"></div>
+				<div class="pillar-right s-pillar-right"></div>
 			</div>
 			<div class="animation-scenes">
 				<div class="animation-scene overflow-hidden w-100 h-100 animation-header-slide-02 animation">
-					<div class="woman"></div>
-					<div class="properties-container">
-						<div class="property"><i class="i i-demographic"></i>
-							<div class="property-text"><b>Demographic:</b><span> 32/single</span></div>
-						</div>
-						<div class="property"><i class="i i-retro"></i>
-							<div class="property-text"><b>Style:</b><span> Retro</span></div>
-						</div>
-						<div class="property"><i class="i i-plush-velvet"></i>
-							<div class="property-text"><b>Materials:</b><span> Plush Velvet</span></div>
-						</div>
-						<div class="property"><i class="i i-dollar"></i>
-							<div class="property-text"><b>Budget:</b><span> $100-$400</span></div>
-						</div>
+					<div class="s-wooman">
+						<img src="<?=IMAGES_URI?>/happy-afro-american-lady.png" alt="">
+					</div>
+					<div class="s-properties">
+						<img src="<?=IMAGES_URI?>/Group-1619.svg">
 					</div>
 					<div class="scene-02">
 						<div class="phone-animation-slide-02"></div>
-						<img class="scene-02-img-02" src="<?=IMAGES_URI?>/scene-02-img-02.png" alt="" title=""><img class="scene-02-img-03" src="<?=IMAGES_URI?>/scene-02-img-03.png" alt="" title=""><img class="scene-02-img-04" src="<?=IMAGES_URI?>/scene-02-img-04.png" alt="" title=""><img class="scene-02-img-05" src="<?=IMAGES_URI?>/scene-02-img-05.png" alt="" title=""><img class="scene-02-img-01" src="<?=IMAGES_URI?>/scene-02-img-01.png" alt="" title="">
+						<img class="s-chair-img" src="<?=IMAGES_URI?>/Group-1604.png">
 					</div>
 				</div>
 			</div>
 			<div class="animation-plus-container">
-				<div class="animation-plus s-1"></div>
+				<!-- <div class="animation-plus s-1"></div>
 				<div class="animation-plus s-2"></div>
 				<div class="animation-plus s-3"></div>
 				<div class="animation-plus s-4"></div>
-				<div class="animation-plus s-5"></div>
+				<div class="animation-plus s-5"></div> -->
 			</div>
 		</div>
 	<?php endif;?>
@@ -109,7 +107,11 @@ use Digidez\Helper;
 				</div>
 				<div class="scene-02">
 					<div class="phone-animation-slide-02"></div>
-					<img class="scene-02-img-02" src="<?=IMAGES_URI?>/scene-02-img-02.png" alt="" title=""><img class="scene-02-img-03" src="<?=IMAGES_URI?>/scene-02-img-03.png" alt="" title=""><img class="scene-02-img-04" src="<?=IMAGES_URI?>/scene-02-img-04.png" alt="" title=""><img class="scene-02-img-05" src="<?=IMAGES_URI?>/scene-02-img-05.png" alt="" title=""><img class="scene-02-img-01" src="<?=IMAGES_URI?>/scene-02-img-01.png" alt="" title="">
+					<img class="scene-02-img-02" src="<?=IMAGES_URI?>/scene-02-img-02.png" alt="" title="">
+					<img class="scene-02-img-03" src="<?=IMAGES_URI?>/scene-02-img-03.png" alt="" title="">
+					<img class="scene-02-img-04" src="<?=IMAGES_URI?>/scene-02-img-04.png" alt="" title="">
+					<img class="scene-02-img-05" src="<?=IMAGES_URI?>/scene-02-img-05.png" alt="" title="">
+					<img class="scene-02-img-01" src="<?=IMAGES_URI?>/scene-02-img-01.png" alt="" title="">
 				</div>
 			</div>
 			<div class="overflow-hidden w-100 h-100 animation-header-slide-03 d-none d-md-block">
