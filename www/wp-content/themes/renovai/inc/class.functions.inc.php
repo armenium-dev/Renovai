@@ -1180,6 +1180,7 @@ class Functions {
 	public static function render_section_button($section_button, $atts = []){
 		
 		$atts = wp_parse_args($atts, [
+			'data' => [],
 			'class' => 'btn',
 			'icon' => '',
 		]);
@@ -1190,19 +1191,33 @@ class Functions {
 			if($section_button['style'] == 'link'){
 				$atts['class'] = '';
 			}
+			
 			switch($section_button['type']){
 				case "custom":
-					$data_anchore = '';
 					if(substr($section_button['custom_link'], 0, 1) == '#'){
-						$data_anchore = 'data-trigger="js_action_click" data-action="scroll_to_el" data-target="'.$section_button['custom_link'].'"';
+						$atts['data'][] = [
+							'trigger' => 'js_action_click',
+							'action' => 'scroll_to_el',
+							'target' => $section_button['custom_link'],
+						];
+						#$data_anchore = 'data-trigger="js_action_click" data-action="scroll_to_el" data-target="'.$section_button['custom_link'].'"';
 						$section_button['custom_link'] = 'javascript:void(0);';
 					}
+					$data_anchore = self::create_button_data_attributes($atts['data']);
 					#$data_anchore = (substr($section_button['custom_link'], 0, 1) == '#') ? 'data-trigger="js_action_click" data-action="scroll_to_el" data-target="'.$section_button['custom_link'].'"' : '';
 					#$section_button['custom_link'] = 'javascript:void(0);';
-					$button       = '<a role="button" class="'.$atts['class'].'" '.$data_anchore.' href="'.$section_button['custom_link'].'" target="'.$section_button['target'].'"><span>'.$section_button['text'].'</span>'.$atts['icon'].'</a>';
+					$button = '<a role="button" class="'.$atts['class'].'" '.$data_anchore.' href="'.$section_button['custom_link'].'" target="'.$section_button['target'].'"><span>'.$section_button['text'].'</span>'.$atts['icon'].'</a>';
 					break;
 				case "internal":
-					$button = '<a role="button" class="'.$atts['class'].'" href="'.$section_button['internal_link'].'" target="'.$section_button['target'].'"><span>'.$section_button['text'].'</span>'.$atts['icon'].'</a>';
+					if(strstr($section_button['internal_link'], '/book-a-demo/') !== false){
+						$atts['data'][] = [
+							'trigger' => 'js_action_click',
+							'action' => 'save_to_storage',
+							'referer' => get_permalink(get_queried_object()),
+						];
+					}
+					$data_anchore = self::create_button_data_attributes($atts['data']);
+					$button = '<a role="button" class="'.$atts['class'].'" '.$data_anchore.' href="'.$section_button['internal_link'].'" target="'.$section_button['target'].'"><span>'.$section_button['text'].'</span>'.$atts['icon'].'</a>';
 					break;
 				case "shortcode":
 					$button = do_shortcode($section_button['shortcode']);
@@ -1214,6 +1229,25 @@ class Functions {
 		}
 		
 		return $button;
+	}
+	
+	public static function create_button_data_attributes($data){
+		$data_anchore = '';
+
+		if(!empty($data)){
+			$data_anchore = [];
+			foreach($data as $data_attr){
+				foreach($data_attr as $k => $v){
+					$data_anchore[] = 'data-'.$k.'="'.$v.'"';
+				}
+			}
+			
+			if(!empty($data_anchore)){
+				$data_anchore = implode(' ', $data_anchore);
+			}
+		}
+		
+		return $data_anchore;
 	}
 	
 	public static function render_section_item_link($section_item){

@@ -9266,12 +9266,12 @@ pre code {
 	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
 
 .wpcf7-form-control-wrap.your-email > .form-control {
-	height: 37px;
+	/*height: 37px;*/
 	padding: 10px 17px;
 }
 
 .wpcf7-form-control-wrap.your-email + .btn.btn-secondary.shadow {
-	height: 35px;
+	/*height: 35px;*/
 	padding: 0 20px;
 }
 
