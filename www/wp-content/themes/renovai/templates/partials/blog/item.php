@@ -26,7 +26,8 @@ $link = get_permalink($_post);
 			</div>
 			<div class="mt-auto d-flex justify-content-between align-items-center">
 				<div class="avatar"><img src="<?=$_post->post_author['avatar_src'];?>" alt="" title=""><b><?=$_post->post_author['name'];?></b></div>
-				<a class="text-decoration-underline blog-carousel-item-link" href="<?=$link;?>">Read more</a>
+				<a class="text-decoration-underline blog-carousel-item-link" href="<?=$link;?>" title="<?=$_post->post_title;?>" data-trigger="-ga"
+				   onclick="ga('send', 'event', 'Blog Post View', 'click', '<?=$_post->post_title;?>');">Read more</a>
 			</div>
 		</div>
 		<div class="slide-item-white"></div>

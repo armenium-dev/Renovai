@@ -18,8 +18,8 @@ $link = get_permalink($_post);
 				<p><?=$_post->cf['post_excerpt'];?></p>
 			</div>
 			<div class="mt-auto">
-				<a class="text-decoration-underline blog-carousel-item-link d-xl-none" href="<?=$link;?>">Read more</a>
-				<a class="btn btn-secondary shadow btn-icon d-none d-xl-inline-block" href="<?=$link;?>"><span>Read more</span><i class="i i-sm i-right-arrow"></i></a>
+				<a class="text-decoration-underline blog-carousel-item-link d-xl-none" href="<?=$link;?>" title="<?=$_post->post_title;?>" data-trigger="ga">Read more</a>
+				<a class="btn btn-secondary shadow btn-icon d-none d-xl-inline-block" href="<?=$link;?>" title="<?=$_post->post_title;?>" data-trigger="ga"><span>Read more</span><i class="i i-sm i-right-arrow"></i></a>
 			</div>
 		</div>
 		<div class="blog-carousel-item-image order-0 order-lg-1">

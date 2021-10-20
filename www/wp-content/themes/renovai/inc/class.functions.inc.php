@@ -683,6 +683,32 @@ class Functions {
 		
 	}
 	
+	public static function render_hubspot_embed_code($echo = true){
+		$post_id = get_queried_object_id();
+		$hubspot = get_field('hubspot', 'option');
+		$html = $hubspot['embed_code'];
+		$for_pages = $hubspot['embed_code_for_pages'];
+		
+		if(!empty($html)){
+			if(!empty($for_pages)){
+				if(!in_array($post_id, $for_pages)){
+					$html = '';
+				}
+			}else{
+				$html = '';
+			}
+		}else{
+			$html = '';
+		}
+		
+		if(!$echo){
+			return $html;
+		}else{
+			echo $html;
+		}
+		
+	}
+	
 	public static function render_cookiebox($echo = true, $in_footer = true){
 		$html = '';
 		

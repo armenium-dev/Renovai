@@ -32,6 +32,7 @@ $favicons = get_field('favicons', 'option');
 	    <meta name="msapplication-TileImage" content="<?=$favicons['size_270x270'];?>">
 	    <?php Functions::render_cookiebox(true, false);?>
 	    <?php Functions::render_tracker_scripts(true);?>
+	    <?php Functions::render_hubspot_embed_code(true);?>
 	    <?php wp_head();?>
     </head>
     <body <?php body_class();?>>
