@@ -134,3 +134,18 @@
         transform: none !important;
     }
 }
+
+
+/* ROI CALC PAGE */
+
+.navbar-nav.header-nav>.nav-item>.nav-link {
+    color: #0D0D30 !important;
+}
+
+.header-logo {
+    background-image: url(../images/logo-black.svg);
+}
+
+.bg-experience-renovai__label {
+    line-height: 60px;
+}
