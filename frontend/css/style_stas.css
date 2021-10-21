@@ -149,3 +149,97 @@
 .bg-experience-renovai__label {
     line-height: 60px;
 }
+
+.roi-calc__first-screen {}
+
+.first-screen {
+    position: relative;
+    height: 100vh;
+    max-height: 900px;
+    padding-top: 175px;
+    background: linear-gradient(96.7deg, #E6F0FF 6.22%, #FFFFFF 96.06%);
+}
+
+.first-screen__info {
+    width: 100%;
+    max-width: 540px;
+}
+
+.first-screen__title {
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 84px;
+    color: #0D0D30;
+    margin-bottom: 8px;
+}
+
+.first-screen__subtitle {
+    font-family: Moderat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 40px;
+    color: #0D0D30;
+}
+
+.first-screen__backgound {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 626px;
+    width: 940px;
+}
+
+.first-screen-bg {}
+
+.first-screen-bg__vector {
+    position: absolute;
+    bottom: -100px;
+}
+
+.first-screen-bg__wooman {
+    position: absolute;
+    bottom: -100px;
+}
+
+.first-screen-bg__card {
+    position: absolute;
+    right: 35px;
+    top: 40px;
+    width: 100%;
+    max-width: 235px;
+    min-height: 305px;
+    background: #FFFFFF;
+    box-shadow: 2.82665px 2.82665px 7.06662px 1.41332px rgba(0, 185, 235, 0.1);
+    border-radius: 14px;
+}
+
+.first-screen-bg__range-decor {
+    position: absolute;
+    top: 200px;
+    left: 220px;
+}
+
+.first-screen-bg__add-all-items-wrapp {
+    position: absolute;
+    bottom: 90px;
+    right: 55px;
+    width: 100%;
+    max-width: 320px;
+    min-height: 85px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 9px;
+    padding: 8px 15px;
+}
+
+.first-screen-bg__add-all-items-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 290px;
+    height: 70px;
+    background: #FFFFFF;
+    border-radius: 9px;
+}
