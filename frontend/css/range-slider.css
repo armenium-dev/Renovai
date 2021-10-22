@@ -1,0 +1,24 @@
+/* RANGE SLIDER */
+
+.irs--round .irs-handle {
+    width: 50px !important;
+    height: 50px !important;
+    top: 19px !important;
+    cursor: pointer;
+    background-color: #0D0D30 !important;
+    border: none !important;
+}
+
+.irs--round .irs-bar {
+    height: 15px !important;
+    background-color: #0D0D30 !important;
+}
+
+.irs-single {
+    display: none !important;
+}
+
+.irs--round .irs-line {
+    height: 15px !important;
+    background-color: rgba(97, 192, 250, 0.3) !important;
+}

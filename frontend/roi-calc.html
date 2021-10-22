@@ -13,6 +13,8 @@
     <script defer src="js/index.js"></script>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style_stas.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/range-slider.css">
+    <link rel="stylesheet" href="./css/ion.rangeSlider.min.css">
 </head>
 
 <body class="d-flex flex-column">
@@ -73,18 +75,71 @@
         </section>
 
         <div class="roi-calc__calculator roi-calculator">
-            <div class="roi-calculator__row">
-                <form class="roi-calculator__form">
+            <div class="container mt-auto">
+                <div class="roi-calculator__row">
+                    <form class="roi-calculator__form roi-calculator-form">
+                        <div class="roi-calculator-form__wrapp">
+                            <h4 class="roi-calculator-form__title h4">What’s your monthly traffic?</h4>
+                            <div class="roi-calculator-form__label">
+                                <span>7000</span>
+                                <span>monthly sessions</span>
+                            </div>
+                            <div class="roi-calculator-form__range-box">
+                                <input type="text" class="roi-calculator-form__range">
+                            </div>
 
-                </form>
-                <div class="roi-calculator__result-box">
+                            <h4 class="roi-calculator-form__title">How many SKUs do you have on your site?</h4>
+                            <div class="roi-calculator-form__label">
+                                <span>500</span>
+                                <span>SKU’s</span>
+                            </div>
+                            <div class="roi-calculator-form__range-box">
+                                <input type="text" class="roi-calculator-form__range">
+                            </div>
 
+                            <h4 class="roi-calculator-form__title">What’s your Average Order Value?</h4>
+                            <div class="roi-calculator-form__label">
+                                <span>70</span>
+                                <span></span>
+                            </div>
+                            <div class="roi-calculator-form__range-box">
+                                <input type="text" class="roi-calculator-form__range">
+                            </div>
+                        </div>
+                        <button type="submit" class="roi-calculator-form__btn">Calculate</button>
+                    </form>
+                    <div class="roi-calculator__result-box roi-calculator-result">
+                        <div class="roi-calculator-result__row">
+                            <h5>Results</h5>
+                        </div>
+
+                        <div class="roi-calculator-result__row">
+                            <div class="roi-calculator-result__item">
+                                <span>AOV</span>
+                                <span>500%</span>
+                            </div>
+                            <div class="roi-calculator-result__item">
+                                <span>CVR</span>
+                                <span>500%</span>
+                            </div>
+                        </div>
+
+                        <div class="roi-calculator-result__row">
+                            <div class="roi-calculator-result__item">
+                                <span>ARPU</span>
+                                <span>500%</span>
+                            </div>
+                            <div class="roi-calculator-result__item">
+                                <span>Total Uplift</span>
+                                <span>500%</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="roi-calculator__row">
-                <h3>What's behind the results?</h3>
-                <p>We extract the performance data from the leading global retailers already leveraging renovai's solutions in the furniture and home décor verticals as the basic layer, and enrich the metrics with your provided information.</p>
+                <div class="roi-calculator__row">
+                    <h3>What's behind the results?</h3>
+                    <p>We extract the performance data from the leading global retailers already leveraging renovai's solutions in the furniture and home décor verticals as the basic layer, and enrich the metrics with your provided information.</p>
+                </div>
             </div>
         </div>
 
@@ -177,6 +232,10 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/ion.rangeSlider.min.js"></script>
+    <script type="text/javascript" src="./js/roi-calc.js"></script>
 </body>
 
 </html>
