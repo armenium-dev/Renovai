@@ -22,3 +22,14 @@
     height: 15px !important;
     background-color: rgba(97, 192, 250, 0.3) !important;
 }
+
+.irs--round .irs-min,
+.irs--round .irs-max {
+    bottom: -60px;
+    top: inherit !important;
+    background-color: transparent !important;
+    font-size: 16px;
+    line-height: 28px;
+    color: #0D0D30;
+    font-family: 'moderat-medium';
+}
