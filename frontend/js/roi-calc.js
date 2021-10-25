@@ -9,8 +9,10 @@ for (let i = 0; i <= maxValueForSessionMarks; i += stepForSessionMarks) {
     sessionsMarks.push(i)
 }
 
+// 
 const sessionValue = document.getElementById("roi-calc-session-value")
-const fromValueForSessionsMarks = 0
+const fromValueForSessionsMarks = 5
+console.log(sessionsMarks[fromValueForSessionsMarks])
 
 $(".roi-calculator-form__range--sessions").ionRangeSlider({
     skin: "round",
@@ -76,19 +78,26 @@ $(".roi-calculator-form__range--average-order").ionRangeSlider({
 
 const calcResult = document.getElementById("calc-result")
 const resultSection = document.querySelector(".roi-calculator-result")
+const loader = document.getElementById("calc-loader")
 
 const aovResultBox = document.getElementById("AOV-result")
 const cvrResultBox = document.getElementById("CVR-result")
-const arouResultBox = document.getElementById("ARPU-result")
+const arpuResultBox = document.getElementById("ARPU-result")
 const totalUpliftBox = document.getElementById("total-uplift")
 
 calcResult.addEventListener(('click'), (e) => {
     e.preventDefault()
+    resultSection.classList.remove("roi-calculator-result--active")
+    loader.classList.add("roi-calculator-result__loader--active")
 
-    alert(currentSessionsValue + " " + currentSKUValue + " " + currentAverageOrderValue)
-    resultSection.classList.add("roi-calculator-result--active")
-    aovResultBox.textContent = "111"
-    cvrResultBox.textContent = "222"
-    arouResultBox.textContent = "333"
-    totalUpliftBox.textContent = "444"
+    setTimeout(() => {
+        loader.classList.remove("roi-calculator-result__loader--active")
+        resultSection.classList.add("roi-calculator-result--active")
+    }, 1500)
+
+    let someСalculations = 1 + (0.003 * (currentSKUValue - 200) / 3000)
+    aovResultBox.textContent = Math.round((0.2 * 0.7 * someСalculations) * 100) + "%"
+    cvrResultBox.textContent = Math.round((0.2 * 0.3 * someСalculations) * 100) + "%"
+    arpuResultBox.textContent = Math.round((0.2 * someСalculations) * 100) + "%"
+    totalUpliftBox.textContent = Math.round(currentSessionsValue * 0.025 * currentAverageOrderValue * 0.2 * someСalculations)
 })
