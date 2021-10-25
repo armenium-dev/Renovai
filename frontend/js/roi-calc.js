@@ -1,6 +1,7 @@
-let currentSessionsValue = 0,
-    currentSKUValue = 0,
-    currentAverageOrderValue = 0
+// Default data values
+let currentSessionsValue = 5000,
+    currentSKUValue = 500,
+    currentAverageOrderValue = 70
 
 let sessionsMarks = []
 const stepForSessionMarks = 1000
@@ -9,10 +10,9 @@ for (let i = 0; i <= maxValueForSessionMarks; i += stepForSessionMarks) {
     sessionsMarks.push(i)
 }
 
-// 
+
 const sessionValue = document.getElementById("roi-calc-session-value")
 const fromValueForSessionsMarks = 5
-console.log(sessionsMarks[fromValueForSessionsMarks])
 
 $(".roi-calculator-form__range--sessions").ionRangeSlider({
     skin: "round",
@@ -36,7 +36,7 @@ for (let i = 0; i <= maxValueForSKUMarks; i += stepForSKUMarks) {
 }
 
 const SKUValue = document.getElementById("roi-calc-SKU-value")
-const fromValueForSKUMarks = 0
+const fromValueForSKUMarks = 5
 
 $(".roi-calculator-form__range--SKU").ionRangeSlider({
     skin: "round",
@@ -60,7 +60,7 @@ for (let i = 0; i <= maxValueAverageOrderMarks; i += stepAverageOrderMarks) {
 }
 
 const averageOrderValue = document.getElementById("average-order-value")
-const fromValueForAverageOrderMarks = 0
+const fromValueForAverageOrderMarks = 7
 
 $(".roi-calculator-form__range--average-order").ionRangeSlider({
     skin: "round",
@@ -74,12 +74,14 @@ $(".roi-calculator-form__range--average-order").ionRangeSlider({
     }
 })
 
-// ---------------------------------------------------
 
+// ---------------------------------------------------
+// Calculating Result
 const calcResult = document.getElementById("calc-result")
 const resultSection = document.querySelector(".roi-calculator-result")
 const loader = document.getElementById("calc-loader")
 
+// Boxes for result values
 const aovResultBox = document.getElementById("AOV-result")
 const cvrResultBox = document.getElementById("CVR-result")
 const arpuResultBox = document.getElementById("ARPU-result")
@@ -90,14 +92,23 @@ calcResult.addEventListener(('click'), (e) => {
     resultSection.classList.remove("roi-calculator-result--active")
     loader.classList.add("roi-calculator-result__loader--active")
 
+    // Timeout for loader
     setTimeout(() => {
         loader.classList.remove("roi-calculator-result__loader--active")
         resultSection.classList.add("roi-calculator-result--active")
     }, 1500)
 
+    // someСalculations -- какой-то общий коефициент или что-то вроде этого (спросить)
     let someСalculations = 1 + (0.003 * (currentSKUValue - 200) / 3000)
     aovResultBox.textContent = Math.round((0.2 * 0.7 * someСalculations) * 100) + "%"
     cvrResultBox.textContent = Math.round((0.2 * 0.3 * someСalculations) * 100) + "%"
     arpuResultBox.textContent = Math.round((0.2 * someСalculations) * 100) + "%"
     totalUpliftBox.textContent = Math.round(currentSessionsValue * 0.025 * currentAverageOrderValue * 0.2 * someСalculations)
+
+    // different styles/classes, for different result lengths
+    if (totalUpliftBox.textContent.length > 5) {
+        totalUpliftBox.classList.add("roi-calculator-result__total-uplift--large-value")
+    } else if (totalUpliftBox.textContent.length <= 5) {
+        totalUpliftBox.classList.remove("roi-calculator-result__total-uplift--large-value")
+    }
 })

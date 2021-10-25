@@ -143,7 +143,7 @@
 }
 
 .header-logo {
-    background-image: url(../images/logo-black.svg);
+    background-image: url("../images/logo-black.svg");
 }
 
 .bg-experience-renovai__label {
@@ -388,7 +388,8 @@
 
 .roi-calculator-result__title,
 .roi-calculator-result__subtitle,
-.roi-calculator-result__placeholder-line {
+.roi-calculator-result__placeholder-line,
+#total-uplift {
     font-style: normal;
     color: #0D0D30;
 }
@@ -401,7 +402,8 @@
     line-height: 84px;
 }
 
-.roi-calculator-result__subtitle {
+.roi-calculator-result__subtitle,
+#total-uplift {
     font-family: 'moderat-bold';
     font-weight: 700;
     text-transform: uppercase;
@@ -427,4 +429,8 @@
     width: 100%;
     max-width: 250px;
     height: auto;
+}
+
+#total-uplift.roi-calculator-result__total-uplift--large-value {
+    font-size: 32px;
 }
