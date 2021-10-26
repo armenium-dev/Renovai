@@ -209,11 +209,7 @@
     right: 35px;
     top: 40px;
     width: 100%;
-    max-width: 235px;
-    min-height: 305px;
-    background: #FFFFFF;
-    box-shadow: 2.82665px 2.82665px 7.06662px 1.41332px rgba(0, 185, 235, 0.1);
-    border-radius: 14px;
+    max-width: 230px;
 }
 
 .first-screen-bg__range-decor {
@@ -363,6 +359,10 @@
     background: linear-gradient(96.7deg, #E6F0FF 6.22%, #FFFFFF 96.06%);
 }
 
+.roi-calculator-result__row>.roi-calculator-result__item:last-child {
+    margin-right: 0;
+}
+
 .roi-calculator-result__row:last-child>.roi-calculator-result__item:last-child {
     background: linear-gradient(90deg, #E0EAFC 0%, #CFDEF3 100%);
     border: 2px solid rgba(155, 170, 192, 0.5);
@@ -433,4 +433,66 @@
 
 #total-uplift.roi-calculator-result__total-uplift--large-value {
     font-size: 32px;
+}
+
+@media screen and (max-width: 991px) {
+    .first-screen__backgound {
+        position: relative;
+    }
+    .first-screen-bg__wooman,
+    .first-screen-bg__vector {
+        bottom: 0;
+    }
+    .first-screen__info {
+        margin-bottom: 60px;
+    }
+    .first-screen {
+        height: auto;
+        max-height: 100%;
+    }
+    .first-screen-bg__range-decor {
+        top: 110px;
+    }
+    .roi-calculator__row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .roi-calculator__form {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .roi-calculator-form__title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .roi-calculator-form__label>span:first-child {
+        font-size: 32px;
+        line-height: 42px;
+    }
+    .roi-calculator-result__title {
+        font-size: 32px;
+        line-height: 42px;
+    }
+    .roi-calculator-result__subtitle,
+    #total-uplift {
+        font-size: 30px;
+        line-height: 45px;
+    }
+    .roi-calculator-result--active>.roi-calculator-result__row>.roi-calculator-result__item>span:last-child,
+    .roi-calculator-result__placeholder-line {
+        font-size: 27px;
+        line-height: 42px;
+    }
+    .roi-calculator-result__item {
+        height: 160px;
+        margin: 0 30px 40px 0;
+    }
+    .roi-calculator-form__btn {
+        font-size: 15px;
+        line-height: 60px;
+        height: 60px;
+    }
 }
