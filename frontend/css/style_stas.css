@@ -154,8 +154,8 @@
 
 .first-screen {
     position: relative;
-    height: 100vh;
-    max-height: 900px;
+    height: 100%;
+    min-height: 1000px;
     padding-top: 175px;
     background: linear-gradient(96.7deg, #E6F0FF 6.22%, #FFFFFF 96.06%);
 }
@@ -176,71 +176,13 @@
 }
 
 .first-screen__subtitle {
-    font-family: Moderat;
+    font-family: 'moderat-light';
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 40px;
     color: #0D0D30;
 }
-
-.first-screen__backgound {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 626px;
-    width: 940px;
-}
-
-.first-screen-bg {}
-
-.first-screen-bg__vector {
-    position: absolute;
-    bottom: -100px;
-}
-
-.first-screen-bg__wooman {
-    position: absolute;
-    bottom: -100px;
-}
-
-.first-screen-bg__card {
-    position: absolute;
-    right: 35px;
-    top: 40px;
-    width: 100%;
-    max-width: 230px;
-}
-
-.first-screen-bg__range-decor {
-    position: absolute;
-    top: 200px;
-    left: 220px;
-}
-
-.first-screen-bg__add-all-items-wrapp {
-    position: absolute;
-    bottom: 90px;
-    right: 55px;
-    width: 100%;
-    max-width: 320px;
-    min-height: 85px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 9px;
-    padding: 8px 15px;
-}
-
-.first-screen-bg__add-all-items-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 290px;
-    height: 70px;
-    background: #FFFFFF;
-    border-radius: 9px;
-}
-
-.roi-calc__calculator {}
 
 .roi-calculator {
     padding: 225px 0 55px 0;
@@ -261,8 +203,6 @@
     margin-right: 30px;
 }
 
-.roi-calculator-form {}
-
 .roi-calculator-form__wrapp {
     width: 100%;
     max-width: 560px;
@@ -277,8 +217,6 @@
     margin-bottom: 25px;
     font-family: 'moderat-bold';
 }
-
-.roi-calculator-form__label {}
 
 .roi-calculator-form__label>span:first-child {
     font-family: 'comfortaa';
@@ -299,16 +237,10 @@
     margin-bottom: 60px;
 }
 
-.roi-calculator-form__range {}
-
 .roi-calculator-form__btn-wrapp {
     display: flex;
     justify-content: center;
 }
-
-.roi-calculator-form__btn {}
-
-.roi-calculator__result-box {}
 
 .roi-calculator-result {
     width: 100%;
@@ -374,8 +306,6 @@
     margin-bottom: 15px;
 }
 
-.roi-calculator-result__placeholder-line {}
-
 .roi-calculator-result__item>span:last-child {
     display: none;
 }
@@ -436,22 +366,12 @@
 }
 
 @media screen and (max-width: 991px) {
-    .first-screen__backgound {
-        position: relative;
-    }
-    .first-screen-bg__wooman,
-    .first-screen-bg__vector {
-        bottom: 0;
-    }
     .first-screen__info {
         margin-bottom: 60px;
     }
     .first-screen {
         height: auto;
         max-height: 100%;
-    }
-    .first-screen-bg__range-decor {
-        top: 110px;
     }
     .roi-calculator__row {
         flex-direction: column;
@@ -491,8 +411,66 @@
         margin: 0 30px 40px 0;
     }
     .roi-calculator-form__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 15px;
-        line-height: 60px;
         height: 60px;
+    }
+}
+
+.first-screen__bg--mobile-screen {
+    display: none;
+}
+
+.first-screen-bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.first-screen__bg--large-screen {
+    transform: translateY(100px);
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 767px) {
+    .first-screen__bg--mobile-screen {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .first-screen__bg--large-screen {
+        display: none;
+    }
+    .first-screen__title {
+        font-size: 32px;
+        line-height: 42px;
+    }
+    .first-screen__subtitle {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .first-screen {
+        padding-top: 75px;
+        min-height: 700px;
+    }
+    .roi-calculator {
+        padding: 25px 0 40px 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .first-screen {
+        min-height: 600px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .first-screen {
+        min-height: 500px;
     }
 }
