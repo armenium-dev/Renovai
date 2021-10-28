@@ -7,7 +7,7 @@ use Digidez\Helper;
 
 ?>
 <section id="<?=$section_name;?>-section" class="roi-calc__calculator roi-calculator-section">
-	<div class="container mt-auto">
+	<div class="container mt-auto max-w-1140">
 		<div class="roi-calculator__row">
 			<form class="roi-calculator__form roi-calculator-form">
 				<div class="roi-calculator-form__wrapp">
