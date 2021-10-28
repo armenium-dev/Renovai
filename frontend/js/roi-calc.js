@@ -103,7 +103,7 @@ calcResult.addEventListener(('click'), (e) => {
     aovResultBox.textContent = Math.round((0.2 * 0.7 * someСalculations) * 100) + "%"
     cvrResultBox.textContent = Math.round((0.2 * 0.3 * someСalculations) * 100) + "%"
     arpuResultBox.textContent = Math.round((0.2 * someСalculations) * 100) + "%"
-    totalUpliftBox.textContent = Math.round(currentSessionsValue * 0.025 * currentAverageOrderValue * 0.2 * someСalculations)
+    totalUpliftBox.textContent = "$" + Math.round(currentSessionsValue * 0.025 * currentAverageOrderValue * 0.2 * someСalculations)
 
     // different styles/classes, for different result lengths
     if (totalUpliftBox.textContent.length > 5) {
