@@ -3,7 +3,7 @@
 use Digidez\Functions;
 use Digidez\Helper;
 
-Helper::_debug($section_data);
+#Helper::_debug($section_data);
 
 ?>
 <section id="<?=$section_name;?>-section" class="roi-calc__first-screen first-screen">
@@ -14,13 +14,8 @@ Helper::_debug($section_data);
 		</div>
 		
 		<div class="first-screen__backgound first-screen-bg">
-			<img src="./images/roi-calc/first-screen-vector.png" alt="" class="first-screen-bg__vector">
-			<img src="./images/roi-calc/first-screen-wooman.png" alt="" class="first-screen-bg__wooman">
-			<img src="./images/roi-calc/first-screen-card.png" class="first-screen-bg__card">
-			<img src="./images/roi-calc/first-screen-range-decor.png" alt="" class="first-screen-bg__range-decor">
-			<div class="first-screen-bg__add-all-items-wrapp">
-				<div class="first-screen-bg__add-all-items-body">Add all items to cart</div>
-			</div>
+			<img src="<?=$section_data['section_desktop_image'];?>" class="first-screen__bg first-screen__bg--large-screen">
+			<img src="<?=$section_data['section_mobile_image'];?>" class="first-screen__bg first-screen__bg--mobile-screen">
 		</div>
 	</div>
 </section>

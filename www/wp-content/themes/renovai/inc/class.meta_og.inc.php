@@ -33,7 +33,7 @@ class Meta_OG {
 		self::$og['image-id'] = $default_image['ID'];
 		
 		$results = DataSource::get_results("SELECT * FROM prefix_postmeta WHERE post_id = {$post_id} AND meta_key LIKE '_yoast_wpseo_%'");
-		Helper::_log($results);
+		#Helper::_log($results);
 		
 		$create_for_keys = self::$keys;
 		

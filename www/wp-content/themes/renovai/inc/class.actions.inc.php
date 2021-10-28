@@ -119,7 +119,7 @@ class Actions{
 	public function enqueueCssAndJavascript(){
 		global $post;
 		$page_template = DataSource::get_page_template();
-		
+		#Helper::_debug($page_template);
 		if(WP_PRODUCTION_MODE){
 			$script_version = '1.0.0';
 		}else{
@@ -229,6 +229,11 @@ class Actions{
 			wp_enqueue_script(THEME_SHORT.'-theme', JS_URI.'/frontend.js', ['jquery', THEME_SHORT.'-index'], $script_version, true);
 			wp_localize_script(THEME_SHORT.'-theme', 'globals', $globals_atts);
 		}*/
+		
+		if($page_template == 'roi'){
+			#wp_enqueue_script(THEME_SHORT.'-ion-rangeSlider', JS_URI.'/ion.rangeSlider.min.js', [], $script_version, true);
+			#wp_enqueue_script(THEME_SHORT.'-roi-calc', JS_URI.'/roi-calc.js', [], $script_version, true);
+		}
 	}
 
 	public function enqueueCssAndJavascriptAdmin(){
