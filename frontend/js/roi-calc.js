@@ -20,9 +20,10 @@ $(".roi-calculator-form__range--sessions").ionRangeSlider({
     grid: false,
     from: fromValueForSessionsMarks,
     hide_min_max: false,
+    prettify_separator: ',',
     onChange: (e) => {
         currentSessionsValue = e.from_value
-        sessionValue.textContent = e.from_value
+        sessionValue.textContent = addThousandsSeparator(e.from_value)
     }
 })
 
@@ -44,9 +45,10 @@ $(".roi-calculator-form__range--SKU").ionRangeSlider({
     grid: false,
     from: fromValueForSKUMarks,
     hide_min_max: false,
+    prettify_separator: ',',
     onChange: (e) => {
         currentSKUValue = e.from_value
-        SKUValue.textContent = e.from_value
+        SKUValue.textContent = addThousandsSeparator(e.from_value)
     }
 })
 
@@ -103,7 +105,7 @@ calcResult.addEventListener(('click'), (e) => {
     aovResultBox.textContent = Math.round((0.2 * 0.7 * someСalculations) * 100) + "%"
     cvrResultBox.textContent = Math.round((0.2 * 0.3 * someСalculations) * 100) + "%"
     arpuResultBox.textContent = Math.round((0.2 * someСalculations) * 100) + "%"
-    totalUpliftBox.textContent = "$" + Math.round(currentSessionsValue * 0.025 * currentAverageOrderValue * 0.2 * someСalculations)
+    totalUpliftBox.textContent = "$" + addThousandsSeparator(Math.round(currentSessionsValue * 0.025 * currentAverageOrderValue * 0.2 * someСalculations));
 
     // different styles/classes, for different result lengths
     if (totalUpliftBox.textContent.length > 5) {
@@ -112,3 +114,8 @@ calcResult.addEventListener(('click'), (e) => {
         totalUpliftBox.classList.remove("roi-calculator-result__total-uplift--large-value")
     }
 })
+
+function addThousandsSeparator(number) {
+    const separator = ','
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, separator)
+}
