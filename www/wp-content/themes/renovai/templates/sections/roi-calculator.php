@@ -13,7 +13,7 @@ use Digidez\Helper;
 				<div class="roi-calculator-form__wrapp">
 					<div class="roi-calculator-form__title h4"><?=$section_data['range_slider_1_title'];?></div>
 					<div class="roi-calculator-form__label">
-						<span id="roi-calc-session-value"><?=$section_data['range_slider_1_default_value'];?></span>
+						<span id="roi-calc-session-value"><?=number_format($section_data['range_slider_1_default_value'], 0, '.', ',');?></span>
 						<span><?=$section_data['range_slider_1_description'];?></span>
 					</div>
 					<div class="roi-calculator-form__range-box">
@@ -22,7 +22,7 @@ use Digidez\Helper;
 
 					<div class="roi-calculator-form__title h4"><?=$section_data['range_slider_2_title'];?></div>
 					<div class="roi-calculator-form__label">
-						<span id="roi-calc-SKU-value"><?=$section_data['range_slider_2_default_value'];?></span>
+						<span id="roi-calc-SKU-value"><?=number_format($section_data['range_slider_2_default_value'], 0, '.', ',');?></span>
 						<span><?=$section_data['range_slider_2_description'];?></span>
 					</div>
 					<div class="roi-calculator-form__range-box">
@@ -31,7 +31,7 @@ use Digidez\Helper;
 
 					<div class="roi-calculator-form__title h4"><?=$section_data['range_slider_3_title'];?></div>
 					<div class="roi-calculator-form__label">
-						<span id="average-order-value"><?=$section_data['range_slider_3_default_value'];?></span>
+						<span id="average-order-value"><?=number_format($section_data['range_slider_3_default_value'], 0, '.', ',');?></span>
 						<span><?=$section_data['range_slider_3_description'];?></span>
 					</div>
 					<div class="roi-calculator-form__range-box">
