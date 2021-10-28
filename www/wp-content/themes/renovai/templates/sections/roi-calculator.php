@@ -7,7 +7,7 @@ use Digidez\Helper;
 
 ?>
 <section id="<?=$section_name;?>-section" class="roi-calc__calculator roi-calculator-section">
-	<div class="container mt-auto max-w-1140">
+	<div class="container mt-auto">
 		<div class="roi-calculator__row">
 			<form class="roi-calculator__form roi-calculator-form">
 				<div class="roi-calculator-form__wrapp">
@@ -19,7 +19,7 @@ use Digidez\Helper;
 					<div class="roi-calculator-form__range-box">
 						<input type="range" class="roi-calculator-form__range roi-calculator-form__range--sessions">
 					</div>
-					
+
 					<div class="roi-calculator-form__title h4"><?=$section_data['range_slider_2_title'];?></div>
 					<div class="roi-calculator-form__label">
 						<span id="roi-calc-SKU-value"><?=$section_data['range_slider_2_default_value'];?></span>
@@ -28,7 +28,7 @@ use Digidez\Helper;
 					<div class="roi-calculator-form__range-box">
 						<input type="range" class="roi-calculator-form__range roi-calculator-form__range--SKU">
 					</div>
-					
+
 					<div class="roi-calculator-form__title h4"><?=$section_data['range_slider_3_title'];?></div>
 					<div class="roi-calculator-form__label">
 						<span id="average-order-value"><?=$section_data['range_slider_3_default_value'];?></span>
@@ -46,7 +46,7 @@ use Digidez\Helper;
 				<div class="roi-calculator-result__row">
 					<div class="roi-calculator-result__title">Results</div>
 				</div>
-				
+
 				<div class="roi-calculator-result__row">
 					<div class="roi-calculator-result__item">
 						<span class="roi-calculator-result__subtitle">AOV</span>
@@ -59,28 +59,28 @@ use Digidez\Helper;
 						<span id="CVR-result">500%</span>
 					</div>
 				</div>
-				
+
 				<div class="roi-calculator-result__row">
 					<div class="roi-calculator-result__item">
 						<span class="roi-calculator-result__subtitle">ARPU</span>
 						<div class="roi-calculator-result__placeholder-line">-</div>
 						<span id="ARPU-result">500%</span>
 					</div>
-					<div class="roi-calculator-result__item">
-						<span class="roi-calculator-result__subtitle">Total Uplift</span>
-						<div class="roi-calculator-result__placeholder-line">-</div>
+					<div id="total-uplift-box" class="roi-calculator-result__item">
+						<span class="roi-calculator-result__subtitle roi-calculator-result__subtitle--total-uplift">Total Uplift</span>
+						<div class="roi-calculator-result__placeholder-line roi-calculator-result__placeholder-line--total-uplift">-</div>
 						<span class="roi-calculator-result__total-uplift" id="total-uplift">500%</span>
 					</div>
 				</div>
-				
+
 				<div id="calc-loader" class="roi-calculator-result__loader">
-					<img src="<?=ASSETS_URI;?>/images/renovai_loader.gif" alt="loader">
+					<img src="<?=ASSETS_URI;?>/images/new-renovai-loading-roi.gif" alt="loader">
 				</div>
 			</div>
 		</div>
-		<div class="roi-calculator__row">
-			<h3><?=$section_data['section_title'];?></h3>
-			<p><?=$section_data['section_description'];?></p>
+		<div class="roi-calculator__row roi-calculator__content roi-calculator-content">
+			<h3 class="roi-calculator-content__title"><?=$section_data['section_title'];?></h3>
+			<p class="roi-calculator-content__text"><?=$section_data['section_description'];?></p>
 		</div>
 	</div>
 </section>

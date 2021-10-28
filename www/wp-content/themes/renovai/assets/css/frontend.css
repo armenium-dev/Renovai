@@ -787,6 +787,18 @@
 	color: #0D0D30;
 }
 
+@media screen and (max-width: 900px) {
+	.first-screen__bg--large-screen {
+		display: none;
+	}
+	.first-screen__bg--mobile-screen {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
 @media screen and (max-width: 991px) {
 	.first-screen__info {
 		margin-bottom: 60px;
@@ -839,15 +851,6 @@
 		font-size: 15px;
 		height: 60px;
 	}
-	.first-screen__bg--mobile-screen {
-		display: block;
-		width: 100%;
-		max-width: 100%;
-		height: auto;
-	}
-	.first-screen__bg--large-screen {
-		display: none;
-	}
 	.first-screen__title {
 		font-size: 32px;
 		line-height: 42px;
@@ -884,7 +887,6 @@
 		min-height: 500px;
 	}
 }
-
 
 /* RANGE SLIDER */
 
