@@ -12,7 +12,7 @@ use Digidez\Helper;
 			<h1 class="first-screen__title"><?=$section_data['section_title'];?></h1>
 			<div class="first-screen__subtitle"><?=$section_data['section_description'];?></div>
 		</div>
-		
+
 		<div class="first-screen__backgound first-screen-bg">
 			<img src="<?=$section_data['section_desktop_image'];?>" class="first-screen__bg first-screen__bg--large-screen">
 			<img src="<?=$section_data['section_mobile_image'];?>" class="first-screen__bg first-screen__bg--mobile-screen">
