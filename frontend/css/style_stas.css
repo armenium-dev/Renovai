@@ -225,7 +225,7 @@
 .roi-calculator-form__label>span:first-child {
     font-family: 'comfortaa';
     font-weight: 700;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 75px;
     color: #FF86DD;
 }
@@ -297,6 +297,7 @@
     /* border-image: linear-gradient(to left, rgba(236, 233, 230, 1),rgba(255, 255, 255, 1));
     border-image-slice: 1; */
 }
+
 
 /* .roi-calculator-result__item:after {
     position: absolute;
@@ -381,8 +382,13 @@
     height: auto;
 }
 
+#total-uplift {
+    font-family: 'comfortaa' !important;
+    font-size: 40px !important;
+}
+
 #total-uplift.roi-calculator-result__total-uplift--large-value {
-    font-size: 32px;
+    font-size: 32px !important;
 }
 
 .first-screen__bg--mobile-screen {
@@ -436,7 +442,7 @@
 }
 
 .roi-calculator-result {
-    background: linear-gradient(to right,#E5F0FF,#FFFFFF);
+    background: linear-gradient(to right, #E5F0FF, #FFFFFF);
     border-radius: 24px;
     padding: 0 35px;
 }
@@ -480,22 +486,23 @@
         line-height: 30px;
     }
     .roi-calculator-form__label>span:first-child {
-        font-size: 32px;
+        font-size: 27px;
         line-height: 42px;
     }
     .roi-calculator-result__title {
         font-size: 32px;
         line-height: 42px;
     }
-    .roi-calculator-result__subtitle,
-    #total-uplift {
-        font-size: 30px;
-        line-height: 45px;
+    .roi-calculator-result__subtitle {
+        font-size: 16px;
+        line-height: 19px;
     }
     .roi-calculator-result--active>.roi-calculator-result__row>.roi-calculator-result__item>span:last-child,
-    .roi-calculator-result__placeholder-line {
-        font-size: 27px;
-        line-height: 42px;
+    .roi-calculator-result__placeholder-line,
+    #total-uplift,
+    #total-uplift.roi-calculator-result__total-uplift--large-value {
+        font-size: 18px !important;
+        line-height: 21px !important;
     }
     .roi-calculator-result__item {
         height: 160px;
@@ -530,6 +537,9 @@
     .roi-calculator-content__text {
         font-size: 18px;
         line-height: 28px;
+    }
+    .roi-calculator-result {
+        padding: 0 25px;
     }
 }
 

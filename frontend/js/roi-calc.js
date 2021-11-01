@@ -108,9 +108,9 @@ calcResult.addEventListener(('click'), (e) => {
     totalUpliftBox.textContent = "$" + addThousandsSeparator(Math.round(currentSessionsValue * 0.025 * currentAverageOrderValue * 0.2 * someСalculations));
 
     // different styles/classes, for different result lengths
-    if (totalUpliftBox.textContent.length > 5) {
+    if (totalUpliftBox.textContent.length > 7) {
         totalUpliftBox.classList.add("roi-calculator-result__total-uplift--large-value")
-    } else if (totalUpliftBox.textContent.length <= 5) {
+    } else if (totalUpliftBox.textContent.length <= 7) {
         totalUpliftBox.classList.remove("roi-calculator-result__total-uplift--large-value")
     }
 })
