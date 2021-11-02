@@ -6,13 +6,14 @@ let currentSessionsValue = 5000,
 let sessionsMarks = []
 const stepForSessionMarks = 1000
 const maxValueForSessionMarks = 25000000
-for (let i = 0; i <= maxValueForSessionMarks; i += stepForSessionMarks) {
+const minValueForSessionMarks = 5000
+for (let i = minValueForSessionMarks; i <= maxValueForSessionMarks; i += stepForSessionMarks) {
     sessionsMarks.push(i)
 }
 
 
 const sessionValue = document.getElementById("roi-calc-session-value")
-const fromValueForSessionsMarks = 5
+const fromValueForSessionsMarks = 0
 
 $(".roi-calculator-form__range--sessions").ionRangeSlider({
     skin: "round",
@@ -32,12 +33,13 @@ $(".roi-calculator-form__range--sessions").ionRangeSlider({
 let SKUMarks = []
 const stepForSKUMarks = 100
 const maxValueForSKUMarks = 300000
-for (let i = 0; i <= maxValueForSKUMarks; i += stepForSKUMarks) {
+const minValueForSKUMarks = 200
+for (let i = minValueForSKUMarks; i <= maxValueForSKUMarks; i += stepForSKUMarks) {
     SKUMarks.push(i)
 }
 
 const SKUValue = document.getElementById("roi-calc-SKU-value")
-const fromValueForSKUMarks = 5
+const fromValueForSKUMarks = 0
 
 $(".roi-calculator-form__range--SKU").ionRangeSlider({
     skin: "round",
@@ -57,12 +59,13 @@ $(".roi-calculator-form__range--SKU").ionRangeSlider({
 let averageOrderMarks = []
 const stepAverageOrderMarks = 10
 const maxValueAverageOrderMarks = 500
-for (let i = 0; i <= maxValueAverageOrderMarks; i += stepAverageOrderMarks) {
+const minValueAverageOrderMarks = 50
+for (let i = minValueAverageOrderMarks; i <= maxValueAverageOrderMarks; i += stepAverageOrderMarks) {
     averageOrderMarks.push(i)
 }
 
 const averageOrderValue = document.getElementById("average-order-value")
-const fromValueForAverageOrderMarks = 7
+const fromValueForAverageOrderMarks = 0
 
 $(".roi-calculator-form__range--average-order").ionRangeSlider({
     skin: "round",
