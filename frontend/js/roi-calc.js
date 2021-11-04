@@ -1,3 +1,7 @@
+// Если добавить событие загрузки документа, все-равно не находит этот селектор
+// let resultSection23 = document.querySelector(".roi-calculator-form__range-box--avg>.irs>.irs>.irs-min");
+// resultSection23.textContent = "******";
+
 // Default data values
 let currentSessionsValue = 5000,
     currentSKUValue = 500,
@@ -21,7 +25,6 @@ $(".roi-calculator-form__range--sessions").ionRangeSlider({
     grid: false,
     from: fromValueForSessionsMarks,
     hide_min_max: false,
-    prettify_separator: ',',
     onChange: (e) => {
         currentSessionsValue = e.from_value
         sessionValue.textContent = addThousandsSeparator(e.from_value)
@@ -73,9 +76,10 @@ $(".roi-calculator-form__range--average-order").ionRangeSlider({
     grid: false,
     from: fromValueForAverageOrderMarks,
     hide_min_max: false,
+    prefix: "$",
     onChange: (e) => {
         currentAverageOrderValue = e.from_value
-        averageOrderValue.textContent = e.from_value
+        averageOrderValue.textContent = "$" + e.from_value
     }
 })
 
