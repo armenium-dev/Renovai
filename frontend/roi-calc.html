@@ -61,8 +61,8 @@
                 </div>
 
                 <div class="first-screen__backgound first-screen-bg">
-                    <img src="./images/roi-calc/first-screen-bg-large.png" class="first-screen__bg first-screen__bg--large-screen">
-                    <img src="./images/roi-calc/first-screen-bg-mobile.png" class="first-screen__bg first-screen__bg--mobile-screen">
+                    <img src="./images/roi-calc/bg-hero-section.png" class="first-screen__bg first-screen__bg--large-screen">
+                    <img src="./images/roi-calc/bg-hero-section-mobile.png" class="first-screen__bg first-screen__bg--mobile-screen">
                 </div>
             </div>
         </section>
@@ -77,8 +77,8 @@
                                 <span id="roi-calc-session-value">5,000</span>
                                 <span></span>
                             </div>
-                            <div class="roi-calculator-form__range-box">
-                                <input type="range" class="roi-calculator-form__range roi-calculator-form__range--sessions">
+                            <div class="roi-calculator-form__range-box roi-calculator-form__range-box--avg">
+                                <input type="text" class="roi-calculator-form__range roi-calculator-form__range--sessions">
                             </div>
 
                             <div class="roi-calculator-form__title h4">How many SKUs do you have on your site?</div>
@@ -86,17 +86,17 @@
                                 <span id="roi-calc-SKU-value">200</span>
                                 <span></span>
                             </div>
-                            <div class="roi-calculator-form__range-box">
-                                <input type="range" class="roi-calculator-form__range roi-calculator-form__range--SKU">
+                            <div class="roi-calculator-form__range-box roi-calculator-form__range-wrapp--SKU">
+                                <input type="text" class="roi-calculator-form__range roi-calculator-form__range--SKU">
                             </div>
 
                             <div class="roi-calculator-form__title h4">What’s your Average Order Value?</div>
                             <div class="roi-calculator-form__label">
-                                <span id="average-order-value">50</span>
+                                <span id="average-order-value">50$</span>
                                 <span></span>
                             </div>
-                            <div class="roi-calculator-form__range-box">
-                                <input type="range" class="roi-calculator-form__range roi-calculator-form__range--average-order">
+                            <div class="roi-calculator-form__range-box roi-calculator-form__range-wrapp--average-order">
+                                <input type="text" class="roi-calculator-form__range roi-calculator-form__range--average-order">
                             </div>
                         </div>
                         <div class="roi-calculator-form__btn-wrapp">
@@ -105,17 +105,17 @@
                     </form>
                     <div class="roi-calculator__result-box roi-calculator-result">
                         <div class="roi-calculator-result__row">
-                            <div class="roi-calculator-result__title">Results</div>
+                            <div class="roi-calculator-result__title">Your estimated monthly uplift using renovai’s Visual AI Design solutions</div>
                         </div>
 
                         <div class="roi-calculator-result__row">
                             <div class="roi-calculator-result__item">
-                                <span class="roi-calculator-result__subtitle">AOV</span>
+                                <span class="roi-calculator-result__subtitle">Average order value increase</span>
                                 <div class="roi-calculator-result__placeholder-line">-</div>
                                 <span id="AOV-result">500%</span>
                             </div>
                             <div class="roi-calculator-result__item">
-                                <span class="roi-calculator-result__subtitle">CVR</span>
+                                <span class="roi-calculator-result__subtitle">Conversion rate increase</span>
                                 <div class="roi-calculator-result__placeholder-line">-</div>
                                 <span id="CVR-result">500%</span>
                             </div>
@@ -123,12 +123,12 @@
 
                         <div class="roi-calculator-result__row">
                             <div class="roi-calculator-result__item">
-                                <span class="roi-calculator-result__subtitle">ARPU</span>
+                                <span class="roi-calculator-result__subtitle">Average revenue per user increase</span>
                                 <div class="roi-calculator-result__placeholder-line">-</div>
                                 <span id="ARPU-result">500%</span>
                             </div>
                             <div id="total-uplift-box" class="roi-calculator-result__item">
-                                <span class="roi-calculator-result__subtitle roi-calculator-result__subtitle--total-uplift">Total Uplift</span>
+                                <span class="roi-calculator-result__subtitle roi-calculator-result__subtitle--total-uplift">Total monthly<br> uplift</span>
                                 <div class="roi-calculator-result__placeholder-line roi-calculator-result__placeholder-line--total-uplift">-</div>
                                 <span class="roi-calculator-result__total-uplift" id="total-uplift">500%</span>
                             </div>
