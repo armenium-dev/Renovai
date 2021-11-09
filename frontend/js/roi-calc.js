@@ -24,7 +24,7 @@ $(".roi-calculator-form__range--sessions").ionRangeSlider({
     values: sessionsMarks,
     grid: false,
     from: fromValueForSessionsMarks,
-    hide_min_max: false,
+    hide_min_max: true,
     onChange: (e) => {
         currentSessionsValue = e.from_value
         sessionValue.textContent = addThousandsSeparator(e.from_value)
@@ -49,7 +49,7 @@ $(".roi-calculator-form__range--SKU").ionRangeSlider({
     values: SKUMarks,
     grid: false,
     from: fromValueForSKUMarks,
-    hide_min_max: false,
+    hide_min_max: true,
     prettify_separator: ',',
     onChange: (e) => {
         currentSKUValue = e.from_value
@@ -75,7 +75,7 @@ $(".roi-calculator-form__range--average-order").ionRangeSlider({
     values: averageOrderMarks,
     grid: false,
     from: fromValueForAverageOrderMarks,
-    hide_min_max: false,
+    hide_min_max: true,
     prefix: "$",
     onChange: (e) => {
         currentAverageOrderValue = e.from_value
