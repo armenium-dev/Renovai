@@ -1,4 +1,6 @@
-.integration__first-screen {}
+.integration__first-screen {
+    position: relative;
+}
 
 .integration-first-screen {
     display: flex;
@@ -36,12 +38,32 @@
 }
 
 .integration-steps__row {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     max-width: 864px;
     margin: 0 auto 250px auto;
+}
+
+.integration-steps__row:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -250px;
+    display: block;
+    height: 240px;
+    width: 2px;
+    background-color: #E0E0E0;
+}
+
+.integration-steps__row:last-child {
+    margin: 0 auto 0 auto;
+}
+
+.integration-steps__row:last-child:after {
+    content: none;
 }
 
 .integration-steps__row--reverse {
@@ -57,6 +79,17 @@
 
 .integration-steps__col:nth-child(2) {
     position: relative;
+    height: 200px;
+    max-width: 200px;
+    background: url("../images/integration/step-bg-icon.png");
+    background-position-x: -30px;
+    background-position-y: -2px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    /* margin-left: 125px;
+    margin-right: 85px; */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .integration-steps__step-num {
@@ -81,4 +114,57 @@
 .integration-steps__subtitle {
     width: 100%;
     max-width: 232px;
+}
+
+@media screen and (max-width: 768px) {
+    .integration-steps {
+        padding: 20px 0 110px 0;
+    }
+    .integration-steps__row:after {
+        height: 66px;
+        bottom: -85px;
+    }
+    .integration-steps__row {
+        flex-direction: column;
+        margin-bottom: 85px;
+    }
+    .integration-steps__col {
+        width: 100%;
+        text-align: center;
+    }
+    .integration-steps__col:first-child {
+        order: 3;
+    }
+    .integration-steps__col:nth-child(2) {
+        margin-bottom: 10px;
+    }
+    .integration-steps__col:last-child {
+        margin-bottom: 15px;
+    }
+    .integration-steps__row>.integration-steps__col:first-child>img {
+        max-width: 52px;
+        height: auto;
+    }
+    .integration-steps__row--reverse>.integration-steps__col:first-child>img {
+        max-width: 65px;
+    }
+    .integration-steps__title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .integration-steps__subtitle {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .integration-steps__step-num {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .integration-steps__col:nth-child(2) {
+        width: 110px;
+        height: 110px;
+        background-size: 120px 130px;
+        background-position-x: -6px;
+        background-position-y: 9px;
+    }
 }
