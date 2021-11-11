@@ -2,6 +2,8 @@
 
 namespace Digidez;
 
+use WPCF7_Submission;
+
 class Actions{
 	
 	public $blog_image_placeholder_id;
@@ -83,7 +85,9 @@ class Actions{
 		
 		
 		add_action('init', [$self, 'init'], 10);
-
+		
+		add_action('wpcf7_before_send_mail', array($self, 'wpcf7_before_send_mail'), 10, 2);
+		
 	}
 	
 	public function init(){
@@ -532,6 +536,21 @@ class Actions{
 		Meta_OG::update_post_meta_fields($post_id, $post);
 	}
 	
+	public function wpcf7_before_send_mail($contact_form, &$abort){
+		$abort = false;
+		
+		$submission = WPCF7_Submission::get_instance();
+		$submited['posted_data'] = $submission->get_posted_data();
+		#Helper::_log($submited);
+		
+		if(isset($submited['posted_data']['your-email'])){
+			if(!Functions::is_business_email($submited['posted_data']['your-email'])){
+				$abort = true;
+			}
+		}
+		
+		return $contact_form;
+	}
 
 }
 

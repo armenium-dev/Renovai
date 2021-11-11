@@ -469,6 +469,26 @@ class Functions {
 		return $value;
 	}
 	
+	public static function is_business_email($email){
+		$ret = true;
+		
+		$exclude_domains = [
+			'gmail.com',
+			'hotmail.com',
+			'yahoo.com',
+			'yandex.ru',
+			'mail.ru',
+		];
+		$email = strtolower($email);
+		
+		foreach($exclude_domains as $domain){
+			if(strstr($email, $domain) !== false){
+				$ret = false;
+			}
+		}
+		
+		return $ret;
+	}
 	
 	/** RENDERING **/
 	
