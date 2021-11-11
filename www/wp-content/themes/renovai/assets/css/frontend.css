@@ -1068,6 +1068,23 @@
 .irs.irs--round {margin-top: -27px;}
 
 /* INTEGRATION PAGE */
+.page-template-integration > main {background: linear-gradient(96.7deg, #E6F0FF 6.22%, #FFFFFF 96.06%);}
+.integration-header-section {
+	display: block;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	background: url(../images/rectangle-929.svg) no-repeat center bottom;
+	background-size: cover;
+	color: #fff;
+}
+.integration-header-container {padding: 113px 0;}
+.integration-header-content {position: relative; z-index: 2;}
+@media all and (min-width: 768px){
+	/*.integration-header-section:after {height: 525px; margin-top: -315px;}*/
+	.integration-header-container {padding: 200px 0;}
+}
+
 
 .integration__first-screen {
 	position: relative;
@@ -1100,13 +1117,7 @@
 	color: #FFFFFF;
 }
 
-.integration__steps {
-	background: linear-gradient(96.7deg, #E6F0FF 6.22%, #FFFFFF 96.06%);
-}
-
-.integration-steps {
-	padding: 100px 0 200px 0;
-}
+.integration-steps {padding: 100px 0 200px 0;}
 
 .integration-steps__row {
 	position: relative;
@@ -1152,7 +1163,7 @@
 	position: relative;
 	height: 200px;
 	max-width: 200px;
-	background: url("../images/integration/step-bg-icon.png");
+	background: url("../images/step-bg-icon.svg");
 	background-position-x: -30px;
 	background-position-y: -2px;
 	background-repeat: no-repeat;
@@ -1177,52 +1188,10 @@
 	color: #0D0D30;
 }
 
-.integration-steps__title {
-	width: 100%;
-	max-width: 232px;
-}
-
-.integration-steps__subtitle {
-	width: 100%;
-	max-width: 232px;
-}
-
-.integration-first-screen__bg {
-	position: absolute;
-	left: -3%;
-	width: 120%;
-	top: 11%;
-}
-
-@media screen and (max-width: 1350px) {
-	.integration-first-screen__bg {
-		top: 26%;
-	}
-}
-
-@media screen and (max-width: 1015px) {
-	.integration-first-screen__bg {
-		top: 37%;
-	}
-}
-
-@media screen and (max-width: 605px) {
-	.integration-first-screen__bg {
-		top: 55%;
-	}
-}
-
-@media screen and (max-width: 385px) {
-	.integration-first-screen__bg {
-		top: 55%;
-	}
-}
-
-@media screen and (max-width: 355px) {
-	.integration-first-screen__bg {
-		top: 65%;
-	}
-}
+.integration-steps__title,
+.integration-steps__subtitle {max-width: 266px; width: 100%;}
+.integration-steps__title {width: 100%; font-weight: 700;}
+.integration-steps__subtitle {}
 
 @media screen and (max-width: 768px) {
 	.integration-steps {
