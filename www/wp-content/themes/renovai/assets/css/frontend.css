@@ -204,19 +204,36 @@
 .header-form {max-width: 500px; /*min-width: 440px; width: 34%;*/ position: relative;}
 .header-form .btn {position: absolute; right: 1px; top: 1px; height: 52px; z-index: 1;}
 .header-form .btn:disabled {background-color: #61C0FA !important; border-color: #61C0FA !important; color: #fff !important;}
-.header-form .form-control.is-valid {background-position: right 190px center;}
+.header-form .form-control {border-width: 1px !important; font-family: "moderat-light"; font-weight: 300; color: #828282;}
+.header-form .form-control.is-valid {background-position: right -190px center;}
+.header-form .form-control:active,
+.header-form .form-control:focus,
+.header-form .form-control:focus-visible {font-weight: 300;}
+.wpcf7-form[data-status="init"] .header-form .form-control {border-color: #61c0fa !important;}
+.wpcf7-form[data-status="submitting"] .header-form .form-control,
+.wpcf7-form[data-status="resetting"] .header-form .form-control,
+.wpcf7-form[data-status="sent"] .header-form .form-control {border-color: #0D0D30 !important;}
+.wpcf7-form[data-status="submitting"] .header-form .btn,
+.wpcf7-form[data-status="resetting"] .header-form .btn,
+.wpcf7-form[data-status="sent"] .header-form .btn {background-color: #0D0D30; background-position: center; background-repeat: no-repeat; border-color: #0D0D30; width: 80px; overflow: hidden; white-space: nowrap; text-indent: 60px;}
+.wpcf7-form[data-status="resetting"] .header-form .btn,
+.wpcf7-form[data-status="submitting"] .header-form .btn {background-image: url(../images/loader3.gif); background-size: 48px;}
+.wpcf7-form[data-status="sent"] .header-form .btn {background-image: url(../images/check-circle.svg); background-size: 24px;}
 @media all and (max-width: 767px){
 	.header-form .form-control {font-size: 1rem;}
 	.header-form .btn {height: 48px;}
+	.wpcf7-form[data-status="submitting"] .header-form .btn,
+	.wpcf7-form[data-status="resetting"] .header-form .btn,
+	.wpcf7-form[data-status="sent"] .header-form .btn {width: 60px;}
 }
 @media all and (max-width: 480px){
 	.header-form .btn {padding: 12px 30px;}
-	.header-form .form-control.is-valid {background-position: right 154px center;}
+	.header-form .form-control.is-valid {background-position: right -154px center;}
 }
 @media all and (max-width: 440px){
 	.header-form .form-control {font-size: 0.8rem;}
 	.header-form .btn {font-size: 0.8rem; height: 45px; padding: 12px 20px;}
-	.header-form .form-control.is-valid {background-position: right 134px center;}
+	.header-form .form-control.is-valid {background-position: right -134px center;}
 }
 
 .social-sharing {position: relative;}
