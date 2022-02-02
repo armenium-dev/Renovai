@@ -23,7 +23,13 @@ $posts = DataSource::get_news_posts([
 					<div id="posts_container" class="row" data-total="<?=$posts->found_posts;?>" data-offset="<?=$section_data['posts_per_page_first'];?>" data-parent_post_id="<?=$post->ID;?>">
 						<?php foreach($posts->posts as $k => $_post):?>
 							<?php $template = ($k == 0 ? 'item-first' : 'item');?>
-							<?php Functions::get_template_part(PARTIALS_PATH.'/news/'.$template, ['section_name' => $section_name, 'section_data' => $section_data, '_post' => $_post]);?>
+							<?php Functions::get_template_part(PARTIALS_PATH.'/news/'.$template, [
+								'section_name' => $section_name,
+								'section_data' => $section_data,
+								'_post' => $_post,
+								'modal_1' => '#newsReportDownloadModal',
+								'modal_2' => '#newsReportGotItModal',
+							]);?>
 						<?php endforeach;?>
 					</div>
 					<?php if($posts->found_posts > $section_data['posts_per_page_first']):?>
@@ -39,3 +45,26 @@ $posts = DataSource::get_news_posts([
 		</div>
 	</div>
 </section>
+<?php
+echo Functions::render_modal_custom([
+	'template'     => MODALS_PATH.'/case-studies-download',
+	'size'         => 4, // 1,2,3,4
+	'id'           => 'newsReportDownloadModal',
+	'class'        => 'case-studies-item-modal',
+	'modal_params' => [],
+	'image'        => $section_data['download_popup']['popup_image'],
+	'content'      => $section_data['download_popup']['popup_content'],
+	'logo'         => $section_data['download_popup']['popup_logo'],
+]);
+
+echo Functions::render_modal_custom([
+	'template'     => MODALS_PATH.'/case-studies-gotit',
+	'size'         => 3, // 1,2,3,4
+	'id'           => 'newsReportGotItModal',
+	'class'        => 'case-studies-item-modal',
+	'modal_params' => [],
+	'title'        => $section_data['got_it_popup']['popup_title'],
+	'content'      => $section_data['got_it_popup']['popup_content'],
+	'button'       => $section_data['got_it_popup']['popup_button'],
+	'logo'         => $section_data['got_it_popup']['popup_logo'],
+]);

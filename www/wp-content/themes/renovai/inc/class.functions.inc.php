@@ -1265,6 +1265,15 @@ class Functions {
 					$data_anchore = self::create_button_data_attributes($atts['data']);
 					$button = '<a role="button" class="'.$atts['class'].'" '.$data_anchore.' href="'.$section_button['internal_link'].'" target="'.$section_button['target'].'"><span>'.$section_button['text'].'</span>'.$atts['icon'].'</a>';
 					break;
+				case "download":
+					$atts['data'][] = [
+						'trigger' => 'js_action_click',
+						'action' => 'download_file_with_modal',
+					];
+					#Helper::_debug($atts['data']);
+					$data_anchore = self::create_button_data_attributes($atts['data']);
+					$button = '<a role="button" class="'.$atts['class'].'" '.$data_anchore.' href="'.$section_button['download_file'].'" download="'.basename($section_button['download_file']).'"><span>'.$section_button['text'].'</span>'.$atts['icon'].'</a>';
+					break;
 				case "shortcode":
 					$button = do_shortcode($section_button['shortcode']);
 					break;

@@ -22,7 +22,13 @@ if(!empty($_post->cf['news_post_image'])){
 			<div class="d-none d-md-block">
 				<p><?=$_post->cf['news_post_description'];?></p>
 			</div>
-			<div class="mt-auto"><?=Functions::render_section_button($_post->cf['news_post_button'], ['class' => 'text-decoration-underline news-item-link']);?></div>
+			<div class="mt-auto"><?=Functions::render_section_button($_post->cf['news_post_button'], [
+				'class' => 'text-decoration-underline news-item-link',
+				'data' => [[
+					'modal_1' => $modal_1,
+					'modal_2' => $modal_2,
+				]]
+			]);?></div>
 		</div>
 	</div>
 </div>
