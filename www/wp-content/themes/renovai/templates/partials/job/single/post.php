@@ -25,6 +25,12 @@ while(have_posts()):
 	$post_title = get_the_title();
 	$cf = get_fields($post_id);
 	
+	$location_label = [];
+	$location_label[] = $cf['location'];
+	if(isset($cf['job_remote']) && $cf['job_remote'] == 'Yes'){
+		$location_label[] = 'Remote';
+	}
+	$location_label = implode(' / ', $location_label);
 	#Helper::_debug($cf);
 ?>
 	<section id="job-<?=$post_id;?>" class="job-application-section bg-gradient-blue">
@@ -37,7 +43,7 @@ while(have_posts()):
 							<h2 class="h2 text-purple3 mb-4"><?=$post_title;?></h2>
 							<ul class="list-vacation mb-7">
 								<li><i class="i i-time i-sm mr-md-3 mr-2"></i><?=$cf['types_of_work_schedules'];?></li>
-								<li><i class="i i-map-point i-sm mr-md-3 mr-2"></i><?=$cf['location'];?></li>
+								<li><i class="i i-map-point i-sm mr-md-3 mr-2"></i><?=$location_label;?></li>
 								<li><i class="i i-pan i-sm mr-md-3 mr-2"></i><a role="button" href="javascript:void(0);" data-trigger="js_action_click" data-action="scroll_to_el" data-target="#apply_form">Apply here</a></li>
 							</ul>
 							<div class="sm-toggle-position"></div>

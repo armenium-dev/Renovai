@@ -50,7 +50,15 @@ $active_cat_id = $section_data['selected_job_category'];
 								<p><?=$section_data['no_jobs_available_text'];?></p>
 							</div>
 						<?php else:?>
-							<?php foreach($posts->posts_by_cats[$cat->term_id] as $_post): $permalink = get_permalink($_post);?>
+							<?php foreach($posts->posts_by_cats[$cat->term_id] as $_post):
+								$location_label = [];
+								$permalink = get_permalink($_post);
+								$location_label[] = $_post->cf['location'];
+								if(isset($_post->cf['job_remote']) && $_post->cf['job_remote'] == 'Yes'){
+									$location_label[] = 'Remote';
+								}
+								$location_label = implode(' / ', $location_label);
+							?>
 								<div class="row">
 									<div class="col-12 col-md-6">
 										<a class="h4 text-decoration-none d-flex justify-content-between align-items-center" href="<?=$permalink;?>">
@@ -59,7 +67,7 @@ $active_cat_id = $section_data['selected_job_category'];
 										</a>
 										<ul class="list-vacation">
 											<li><i class="i i-time i-sm mr-3"></i><?=$_post->cf['types_of_work_schedules'];?></li>
-											<li><i class="i i-map-point i-sm mr-3"></i><?=$_post->cf['location'];?></li>
+											<li><i class="i i-map-point i-sm mr-3"></i><?=$location_label;?></li>
 											<li><i class="i i-pan i-sm mr-3"></i><a href="<?=$permalink;?>">Apply here</a></li>
 										</ul>
 										<div class="border-bottom pt-3"></div>
