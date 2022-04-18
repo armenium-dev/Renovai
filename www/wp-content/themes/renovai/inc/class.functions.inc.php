@@ -800,26 +800,29 @@ class Functions {
 		$html = '';
 		
 		if(class_exists('ACF')){
-			$footer = get_field('footer', 'option');
-			$data   = array(
-				'copyright_bar_color' => '', //$footer['copyright_bar_color'],
-				'footer_color'        => '', //$footer['footer_color'],
-				'copyright_text'      => '', //$footer['copyright_text'],
-				'creator_text'        => '', //$footer['creator_text'],
-				'nav'                 => [], //Theme::get_menu_tree('footer-menu'),
-				'col'                 => 12,
-			);
-			if(!empty($data['nav'])){
-				$data['col'] = floor(12 / count($data['nav']));
-			}
-			//Helper::_debug($data);
-			if($echo){
-				set_query_var('data', $data);
-				get_template_part(PARTIALS_PATH.'/footer');
-			}else{
-				ob_start();
-				include locate_template(PARTIALS_PATH.'/footer.php');
-				$html = ob_get_clean();
+			$page_options = get_field('page_options', $post->ID);
+			if($page_options['page_option_display_footer']){
+				$footer = get_field('footer', 'option');
+				$data   = [
+					'copyright_bar_color' => '', //$footer['copyright_bar_color'],
+					'footer_color'        => '', //$footer['footer_color'],
+					'copyright_text'      => '', //$footer['copyright_text'],
+					'creator_text'        => '', //$footer['creator_text'],
+					'nav'                 => [], //Theme::get_menu_tree('footer-menu'),
+					'col'                 => 12,
+				];
+				if(!empty($data['nav'])){
+					$data['col'] = floor(12 / count($data['nav']));
+				}
+				//Helper::_debug($data);
+				if($echo){
+					set_query_var('data', $data);
+					get_template_part(PARTIALS_PATH.'/footer');
+				}else{
+					ob_start();
+					include locate_template(PARTIALS_PATH.'/footer.php');
+					$html = ob_get_clean();
+				}
 			}
 		}
 		
@@ -846,14 +849,16 @@ class Functions {
 					break;*/
 			}
 			
-			if($echo){
-				set_query_var('single_post_main_nav_style', $single_post_main_nav_style);
-				set_query_var('page_options', $page_options);
-				get_template_part(PARTIALS_PATH.'/header');
-			}else{
-				ob_start();
-				include locate_template(PARTIALS_PATH.'/header.php');
-				$html = ob_get_clean();
+			if($page_options['page_option_display_header']){
+				if($echo){
+					set_query_var('single_post_main_nav_style', $single_post_main_nav_style);
+					set_query_var('page_options', $page_options);
+					get_template_part(PARTIALS_PATH.'/header');
+				}else{
+					ob_start();
+					include locate_template(PARTIALS_PATH.'/header.php');
+					$html = ob_get_clean();
+				}
 			}
 		}
 		

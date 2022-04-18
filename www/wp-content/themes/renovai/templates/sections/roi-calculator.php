@@ -9,7 +9,7 @@ use Digidez\Helper;
 <section id="<?=$section_name;?>-section" class="roi-calc__calculator roi-calculator-section">
 	<div class="container mt-auto max-w-1140">
 		<div class="roi-calculator__row">
-			<form class="roi-calculator__form roi-calculator-form">
+			<div class="roi-calculator__form roi-calculator-form">
 				<div class="roi-calculator-form__wrapp">
 					<div class="roi-calculator-form__title h4"><?=$section_data['range_slider_1_title'];?></div>
 					<div class="roi-calculator-form__label">
@@ -39,9 +39,13 @@ use Digidez\Helper;
 					</div>
 				</div>
 				<div class="roi-calculator-form__btn-wrapp">
-					<button type="submit" id="calc-result" class="roi-calculator-form__btn btn btn-info btn-lg">Calculate</button>
+					<?php if($section_data['calc_result_action_type'] == 'button'):?>
+					<button type="submit" data-trigger="js_action_click" data-action="roi_calc_result" class="roi-calculator-form__btn btn btn-info btn-lg"><?=$section_data['calc_button_text'];?></button>
+					<?php elseif($section_data['calc_result_action_type'] == 'subscribe'):?>
+						<?=do_shortcode($section_data['calc_result_action_form']);?>
+					<?php endif;?>
 				</div>
-			</form>
+			</div>
 			<div class="roi-calculator__result-box roi-calculator-result">
 				<div class="roi-calculator-result__row">
 					<div class="roi-calculator-result__title"><?=$section_data['results_section_title'];?></div>
