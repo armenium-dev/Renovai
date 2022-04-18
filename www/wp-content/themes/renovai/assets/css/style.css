@@ -21319,6 +21319,12 @@ textarea.form-control {
 .i-in:hover {
 	background-image: url(../images/icon-in-hover.svg); }
 
+.i-twitter {
+	background-image: url(../images/icon-twitter.svg); }
+
+.i-twitter:hover {
+	background-image: url(../images/icon-twitter-hover.svg); }
+
 .i-menu-hamburger {
 	background-image: url(../images/icon-menu-hamburger.svg); }
 
@@ -22764,9 +22770,7 @@ textarea.form-control {
 }
 
 @media (min-width: 992px) {
-	.animation-header-section {
-		height: 100vh;
-		min-height: 768px; }
+	.animation-header-section {height: 100vh; min-height: 677px;}
 
 	.animation-header-text {
 		font-size: 32px;

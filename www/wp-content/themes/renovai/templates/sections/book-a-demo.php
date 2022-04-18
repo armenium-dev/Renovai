@@ -26,3 +26,11 @@ use Digidez\Helper;
 		</div>
 	</div>
 </section>
+<?php
+echo Functions::render_modal_custom([
+	'template'     => MODALS_PATH.'/calendly',
+	'size'         => 3, // 1,2,3,4
+	'id'           => 'calendlyModal',
+	'class'        => 'calendly-modal',
+	'modal_params' => [],
+]);
