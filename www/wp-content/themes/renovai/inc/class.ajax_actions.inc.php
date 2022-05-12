@@ -51,7 +51,7 @@ class Ajax_Actions{
 			'include_custom_fields' => true,
 			'remove_post_content' => true,
 			'posts_per_page' => $parent_post_cf['posts_per_page'],
-			'orderby' => $order[0],
+			'orderby' => $order[0].($order[0] == 'menu_order' ? ' post_date' : ''),
 			'order' => strtoupper($order[1]),
 			'offset' => $offset,
 		]);

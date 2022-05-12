@@ -517,6 +517,7 @@ class Actions{
 				}
 				break;
 			case 'menu_order':
+				echo $post->menu_order;
 				break;
 			default:
 				break;

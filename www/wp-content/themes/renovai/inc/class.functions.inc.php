@@ -478,6 +478,7 @@ class Functions {
 			'yahoo.com',
 			'yandex.ru',
 			'mail.ru',
+			'aol.com',
 		];
 		$email = strtolower($email);
 		
@@ -801,6 +802,9 @@ class Functions {
 		
 		if(class_exists('ACF')){
 			$page_options = get_field('page_options', $post->ID);
+			if($post->post_type != 'page'){
+				$page_options['page_option_display_footer'] = true;
+			}
 			if($page_options['page_option_display_footer']){
 				$footer = get_field('footer', 'option');
 				$data   = [
@@ -847,6 +851,10 @@ class Functions {
 				/*case "case-studies":
 					$single_post_main_nav_style = get_field('single_case_study_main_nav_style', 'option');
 					break;*/
+			}
+			
+			if($post->post_type != 'page'){
+				$page_options['page_option_display_header'] = true;
 			}
 			
 			if($page_options['page_option_display_header']){

@@ -10,7 +10,7 @@ $posts = DataSource::get_news_posts([
 	'include_custom_fields' => true,
 	'remove_post_content' => true,
 	'posts_per_page' => $section_data['posts_per_page_first'],
-	'orderby' => $order[0],
+	'orderby' => $order[0].($order[0] == 'menu_order' ? ' post_date' : ''),
 	'order' => strtoupper($order[1]),
 ]);
 #Helper::_debug($posts->found_posts);

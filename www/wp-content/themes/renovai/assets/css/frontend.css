@@ -930,3 +930,13 @@ textarea.other-choice {max-height: 108px; line-height: 24px;}
 	.choice-about-renovai .wpcf7-list-item.last {flex: 0 0 100% !important; margin-top: 15px;}
 }
 
+.wp-block-embed__wrapper {
+	position: relative;
+	padding-bottom: 56%;
+}
+.wp-block-embed iframe {
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}

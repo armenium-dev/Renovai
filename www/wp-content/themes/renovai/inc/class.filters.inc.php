@@ -246,7 +246,7 @@ class Filters {
 			'title'       => __('Title', THEME_TD),
 			#'news_post_logo'  => __('Logo', THEME_TD),
 			'news_post_date'  => __('Custom Date', THEME_TD),
-			#'menu_order'  => __('Order', THEME_TD),
+			'menu_order'  => __('Order', THEME_TD),
 			'date'        => __('Date', THEME_TD),
 		];
 		
