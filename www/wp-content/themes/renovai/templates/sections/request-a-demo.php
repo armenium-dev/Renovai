@@ -3,9 +3,10 @@ use Digidez\Functions;
 use Digidez\Helper;
 
 #Helper::_debug($section_data);
+$section_display_image = $section_data['section_display_image'];
 ?>
-<section id="<?=$section_name;?>-section" class="bg-experience-renovai d-flex experience-renovai">
-	<?php if($section_data['section_display_image']):?>
+<section id="<?=$section_name;?>-section" class="bg-experience-renovai d-flex experience-renovai <?php if($section_display_image):?>with-image<?php endif;?>">
+	<?php if($section_display_image):?>
 		<div class="container mt-auto">
 			<div class="row">
 				<div class="col-12 col-xxl-8 offset-xxl-2">

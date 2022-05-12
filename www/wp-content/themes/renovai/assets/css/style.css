@@ -21877,32 +21877,32 @@ textarea.form-control {
 }
 
 .bg-experience-renovai {
-	/*background: #fff url(../images/bg-experience-renovai.svg) no-repeat bottom center;*/
 	background-image: url(../images/request-a-demo-bg-1.svg), url(../images/request-a-demo-bg-2.svg);
 	background-repeat: no-repeat;
 	background-position: bottom -102px left -426px, bottom -640px right -55px;
 }
+.bg-experience-renovai.with-image {background: #fff url(../images/bg-experience-renovai.svg) no-repeat bottom center;}
 .experience-renovai .wrapper {padding-top: 87px; padding-bottom: 115px;}
 .experience-renovai .h1 {font-size: 24px; line-height: 29px; font-family: 'moderat-bold'; font-weight: normal; letter-spacing: -0.02em;}
 .experience-renovai img {padding-left: 4%;}
 @media all and (min-width: 768px){
 	.experience-renovai .h1 {font-size: 40px; }
-	.bg-experience-renovai {/*min-height: 725px;*/}
+	.bg-experience-renovai.with-image {min-height: 725px;}
 }
 @media (min-width: 992px) {
 	.experience-renovai img {padding-left: 11%; }
 }
 @media all and (max-width: 1440px){
-	.bg-experience-renovai {background-position: bottom -102px left -598px, bottom -640px right -55px;}
+	.bg-experience-renovai:not(.with-image) {background-position: bottom -102px left -598px, bottom -640px right -55px;}
 }
 @media all and (max-width: 1199px){
-	.bg-experience-renovai {background-position: bottom -102px left -738px, bottom -640px right -105px;}
+	.bg-experience-renovai:not(.with-image) {background-position: bottom -102px left -738px, bottom -640px right -105px;}
 }
 @media all and (max-width: 840px){
-	.bg-experience-renovai {background-position: bottom -102px left -848px, bottom -640px right -155px;}
+	.bg-experience-renovai:not(.with-image) {background-position: bottom -102px left -848px, bottom -640px right -155px;}
 }
 @media all and (max-width: 767px){
-	.bg-experience-renovai {background-position: bottom left -420px, bottom -210px right -90px; background-size: auto 110px, auto 422px;}
+	.bg-experience-renovai:not(.with-image) {background-position: bottom left -420px, bottom -210px right -90px; background-size: auto 110px, auto 422px;}
 }
 
 .animation-header-section {
