@@ -9666,8 +9666,11 @@ textarea.form-control {
 	font-size: 0.875rem;
 	line-height: 20px;
 	border-radius: 100px;
-	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-
+	transition: all 0.15s ease-in-out !important;
+}
+@media all and (max-width: 767px){
+	.btn {padding: 13px 30px;}
+}
 @media (prefers-reduced-motion: reduce) {
 	.btn {
 		transition: none; }
@@ -9691,21 +9694,16 @@ a.btn.disabled,
 fieldset:disabled a.btn {
 	pointer-events: none; }
 
-.btn-primary {
-	color: #fff;
-	background-color: #0d0d30;
-	border-color: #0d0d30; }
+.btn-primary {color: #fff; background: #0d0d30 url(../images/btn-primary-bg.svg) no-repeat 70% 30%; border-color: #0d0d30;}
+.btn-primary:hover {color: #fff; background-color: #050512; border-color: #020208;}
 
-.btn-primary:hover {
-	color: #fff;
-	background-color: #050512;
-	border-color: #020208; }
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active {background-position: 70% 80%;}
 
-.btn-primary:focus, .btn-primary.focus {
-	color: #fff;
-	background-color: #050512;
-	border-color: #020208;
-	box-shadow: 0 0 0 0.2rem rgba(49, 49, 79, 0.5); }
+.btn-primary:focus,
+.btn-primary.focus {color: #fff; background-color: #050512; border-color: #020208; box-shadow: 0 0 0 0.2rem rgba(49, 49, 79, 0.5);}
 
 .btn-primary.disabled, .btn-primary:disabled {
 	color: #fff;
@@ -21879,29 +21877,32 @@ textarea.form-control {
 }
 
 .bg-experience-renovai {
-	background: #fff url(../images/bg-experience-renovai.svg) no-repeat bottom center; }
-
-.experience-renovai .h1 {
-	font-size: 24px;
-	line-height: 29px;
-	font-family: 'moderat-bold';
-	font-weight: normal;
-	letter-spacing: -0.02em; }
-
-.experience-renovai img {
-	padding-left: 4%; }
-
-@media (min-width: 768px) {
-	.experience-renovai .h1 {
-		font-size: 40px; }
-
-	.bg-experience-renovai {
-		min-height: 725px; }
+	/*background: #fff url(../images/bg-experience-renovai.svg) no-repeat bottom center;*/
+	background-image: url(../images/request-a-demo-bg-1.svg), url(../images/request-a-demo-bg-2.svg);
+	background-repeat: no-repeat;
+	background-position: bottom -102px left -426px, bottom -640px right -55px;
 }
-
+.experience-renovai .wrapper {padding-top: 87px; padding-bottom: 115px;}
+.experience-renovai .h1 {font-size: 24px; line-height: 29px; font-family: 'moderat-bold'; font-weight: normal; letter-spacing: -0.02em;}
+.experience-renovai img {padding-left: 4%;}
+@media all and (min-width: 768px){
+	.experience-renovai .h1 {font-size: 40px; }
+	.bg-experience-renovai {/*min-height: 725px;*/}
+}
 @media (min-width: 992px) {
-	.experience-renovai img {
-		padding-left: 11%; }
+	.experience-renovai img {padding-left: 11%; }
+}
+@media all and (max-width: 1440px){
+	.bg-experience-renovai {background-position: bottom -102px left -598px, bottom -640px right -55px;}
+}
+@media all and (max-width: 1199px){
+	.bg-experience-renovai {background-position: bottom -102px left -738px, bottom -640px right -105px;}
+}
+@media all and (max-width: 840px){
+	.bg-experience-renovai {background-position: bottom -102px left -848px, bottom -640px right -155px;}
+}
+@media all and (max-width: 767px){
+	.bg-experience-renovai {background-position: bottom left -420px, bottom -210px right -90px; background-size: auto 110px, auto 422px;}
 }
 
 .animation-header-section {
