@@ -1,0 +1,189 @@
+.slick
+	&-slide
+		//margin-bottom: 50px
+		float: none
+		height: auto
+	&-initialized
+		.slick-slide
+			display: flex
+	&-track
+		display: flex
+	&-list
+		width: 100% !important
+		overflow: initial
+	&-arrow
+		top: calc(50% + 128px)
+	&-prev
+		height: 20px
+		width: 10px
+		left: -25px
+		&:before
+			content: ""
+			height: 20px
+			display: block
+			background: url(../images/icon-prev-review.svg) no-repeat center center
+			background-size: contain
+		&:hover:before
+			background-image: url(../images/icon-prev-review-hover.svg)
+	&-next
+		height: 20px
+		width: 10px
+		right: -25px
+		&:before
+			content: ""
+			height: 20px
+			display: block
+			background: url(../images/icon-next-review.svg) no-repeat center center
+			background-size: contain
+		&:hover:before
+			background-image: url(../images/icon-next-review-hover.svg)
+
+.slick-prev, .slick-next
+	z-index: 100
+
+.carousel
+	&-reviews
+		font-size: 14px
+		line-height: 20px
+		font-family: 'moderat-light'
+		margin-top: -65px
+		height: calc(100% + 65px)
+		&.slick-dotted.slick-slider
+			margin-bottom: 55px
+		.slick-dots
+			bottom: 25px
+			li
+				width: 9px
+				height: 9px
+				button
+					background-color: #999BAC
+					width: 9px
+					height: 9px
+					border-radius: 100%
+				&.slick-active
+					button
+						background-color: $white
+		.bg-image
+			height: calc(100% - 18px)
+			width: 210%
+			position: absolute
+			top: 68px
+			bottom: 0
+			background: no-repeat bottom center
+			z-index: -1
+			background-size: cover
+			margin: 0 -55%
+		.review
+			&-img
+				position: relative
+				margin-top: 14px
+				display: inline-block
+				width: 102px
+				height: 102px
+				border-radius: 100%
+				background: #ffffff no-repeat center center
+				background-size: cover
+				box-shadow: 0 8px 24px rgba(13, 13, 48, 0.2)
+				&:after
+					content: ""
+					display: block
+					width: 100%
+					height: 100%
+					top: 0
+					left: 0
+					position: absolute
+					background: url(../images/review-circle.svg) no-repeat 0 0
+					background-size: contain
+		p
+			margin-bottom: 0
+		b
+			font-family: 'moderat-bold'
+
+
+
+.bg-reviews
+	background: $primary
+
+.reviews
+	.h2
+		font-size: 30px
+		line-height: 45px
+		font-family: 'moderat-bold'
+		font-weight: normal
+	.h4
+		font-size: 18px
+		line-height: 28px
+		font-family: 'moderat-light'
+		font-weight: normal
+	.h5
+		font-size: 18px
+		line-height: 30px
+		font-family: 'moderat-light'
+		font-weight: normal
+	.text-review-content
+		font-size: 14px
+		line-height: 20px
+		font-family: 'moderat-mono-regular'
+		flex: 1 1 auto
+		display: flex
+		align-items: center
+
+@media (min-width: 768px)
+	.slick
+		&-prev
+			height: 46px
+			width: 26px
+			left: -45px
+			&:before
+				height: 46px
+
+
+		&-next
+			height: 46px
+			width: 26px
+			right: -45px
+			&:before
+				height: 46px
+	.reviews
+		.carousel
+			&-reviews
+				font-size: 18px
+				line-height: 34px
+				margin-top: -128px
+				height: calc(100% + 128px)
+				.bg-image
+					height: calc(100% - 78px)
+					width: 210%
+					position: absolute
+					top: 128px
+					bottom: 0
+					background: no-repeat bottom center
+					z-index: -1
+					background-size: cover
+					margin: 0 -55%
+				.review
+					&-img
+						margin-top: 18px
+						width: 220px
+						height: 220px
+						min-height: 220px
+						&:after
+							top: -5px
+							left: -5px
+							width: calc(100% + 10px)
+							height: calc(100% + 10px)
+		.h2
+			font-size: 64px
+			line-height: 77px
+		.h4
+			font-size: 24px
+			line-height: 32px
+		.h5
+			font-size: 18px
+			line-height: 30px
+		.text-review-content
+			font-size: 20px
+			line-height: 35px
+			p
+				margin-top: 0
+

@@ -1,0 +1,22 @@
+mixin BlogCarouselItem(data)
+	.col-md-6
+		.media.align-items-stretch.flex-column
+			.blog-carousel-item-image
+				.img(style="background-image: url(images/news-item-background.jpg)")
+				.title
+					div= data.titleImage
+			.media-body.d-flex.flex-column
+				if (data.date)
+					.blog-carousel-item-date.d-flex.justify-content-between
+						div= data.readTime
+						div= data.date
+				.h3= data.title
+				.d-none.d-md-block
+					p= data.description
+				.mt-auto.d-flex.justify-content-between.align-items-center
+					.avatar
+						img(src="images/avatar-blog.jpg" alt="" title="")
+						b Amit Chich
+					a.text-decoration-underline.blog-carousel-item-link(href="#") Read more
+			.slide-item-white
+			.slide-item-shadow

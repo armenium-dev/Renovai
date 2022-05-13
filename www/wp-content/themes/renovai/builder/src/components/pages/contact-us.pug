@@ -1,0 +1,48 @@
+extends ../templates/layout
+include ../organisms/experience-renovai
+
+block main
+	main.overflow-hidden.position-relative
+		section.contact-us-header-section
+			.contact-us-header-container
+				.container
+					.row.justify-content-center
+						.col-12.col-xxl-9
+							.row.contact-us-header-content
+								.col-12.col-md-5.text-center.text-md-left
+									h1.h1 Contact Us
+									p.mb-md-6 If you’re interested in visual AI technology, want to see how our platform works, or to simply chat with our team, fill out the form and we’ll get back to you.
+									p You can also find us on social media:
+									.my-4
+										a.i.i-fb.i-social.mr-3.i-lg(href="#")
+										a.i.i-youtube.i-social.mr-3.i-lg(href="#")
+										a.i.i-in.i-social.i-lg(href="#")
+								.col-12.col-md-5.offset-md-1
+									form(action="case-studies-got-it.html")
+										.form-group.row
+											.col-12
+												input.form-control(type="text" placeholder="Full Name")
+										.form-group.row
+											.col-12
+												input.form-control(type="text" placeholder="Job Title")
+										.form-group.row
+											.col-12
+												input.form-control(type="text" placeholder="Company Name")
+										.form-group.row
+											.col-12
+												input.form-control(type="text" placeholder="Work Email")
+										.form-group.row
+											.col-4
+												select.custom-select
+													option(disabled=true selected=true) Country
+											.col-8
+												input.form-control(type="text" placeholder="+000")
+										.form-group.row
+											.col-12
+												textarea.form-control(placeholder="Personal note")
+										.form-group.row
+											.col-12
+												button.btn.btn-secondary.btn-lg.w-100.d-none.d-md-inline-block Send to mail
+												button.btn.btn-secondary.w-100.d-md-none Send to mail
+		section.contact-us-content-section.sm-toggle-position
+		+ExperienceRenovai()

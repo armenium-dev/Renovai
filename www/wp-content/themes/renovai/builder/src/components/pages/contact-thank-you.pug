@@ -1,0 +1,17 @@
+extends ../templates/layout
+include ../organisms/experience-renovai
+
+block main
+	main.overflow-hidden.position-relative
+		section.contact-us-header-section.thank-you
+			.contact-us-header-container
+				.container
+					.row
+						.col-12.col-xxl-8.offset-xxl-2
+							.row.contact-us-header-content.justify-content-center
+								.col-12.col-md-6.text-center
+									.h1 Thank you!
+									p.mb-6 We will contact you shortly in order to arrange a demo session in the meantime we invite you to explore our site and join the world's innovative brands.
+									a.btn.btn-light(href="/") Explore
+		section.contact-us-content-section.sm-toggle-position
+		+ExperienceRenovai()

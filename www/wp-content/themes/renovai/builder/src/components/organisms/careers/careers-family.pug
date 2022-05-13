@@ -1,0 +1,57 @@
+mixin CareersFamily()
+	section.careers-family-section.bg-gradient-blue.pt-5.pb-10
+		.container
+			.row
+				.col-12.col-xxl-8.offset-xxl-2
+					.text-center.mb-5
+						h2.h2 Want to join the renovai family?
+					.mb-9
+						img.careers-family-img.img-fluid(src="images/careers-family-bg.jpg" alt="" title="")
+					.mb-6
+						h3.h3 Check out our open positions:
+					select.custom-select.select-careers-tab.d-md-none
+						option(value="0") Marketing
+						option(value="1") Product
+						option(value="2") R&D
+						option(value="3") People & Operations
+						option(value="4") Sales
+						option(value="5") Success
+					ul.nav.nav-pills.nav-justified.d-none.d-md-flex#pillsTab(role="tablist")
+						li.nav-item(role="presentation")
+							a.nav-link(data-toggle="pill" href="#pillsMarketing" role="tab" aria-controls="pillsMarketing" aria-selected="true") Marketing
+						li.nav-item(role="presentation")
+							a.nav-link(data-toggle="pill" href="#pillsProduct" role="tab" aria-controls="pillsProduct" aria-selected="true") Product
+						li.nav-item(role="presentation")
+							a.nav-link(data-toggle="pill" href="#pillsRD" role="tab" aria-controls="pillsRD" aria-selected="true") R&D
+						li.nav-item(role="presentation")
+							a.nav-link(data-toggle="pill" href="#pillsPeopleOperations" role="tab" aria-controls="pillsPeopleOperations" aria-selected="true") People & Operations
+						li.nav-item(role="presentation")
+							a.nav-link.active(data-toggle="pill" href="#pillsSales" role="tab" aria-controls="pillsSales" aria-selected="true") Sales
+						li.nav-item(role="presentation")
+							a.nav-link(data-toggle="pill" href="#pillsSuccess" role="tab" aria-controls="pillsSuccess" aria-selected="true") Success
+					.tab-content#pillsTabContent
+						.tab-pane.fade#pillsMarketing(role="tabpanel")
+						.tab-pane.fade#pillsProduct(role="tabpanel")
+						.tab-pane.fade#pillsRD(role="tabpanel")
+						.tab-pane.fade#pillsPeopleOperations(role="tabpanel")
+							.no-vacation
+								p Unfortunately, there are no current openings in this category, please check back soon again!
+						.tab-pane.fade.show.active#pillsSales(role="tabpanel")
+							.row
+								.col-12.col-md-6
+									a.h4.text-decoration-none.d-flex.justify-content-between.align-items-center(href="job-application.html")
+										span Inside Sales Manager
+										.d-none.d-md-inline-block
+											i.i.i-double-arrow-right
+									ul.list-vacation
+										li
+											i.i.i-time.i-sm.mr-3
+											| Full Time
+										li
+											i.i.i-map-point.i-sm.mr-3
+											| Tel-Aviv
+										li
+											i.i.i-pan.i-sm.mr-3
+											a(href="job-application.html") Apply here
+									.border-bottom.pt-3
+						.tab-pane.fade#pillsSuccess(role="tabpanel")

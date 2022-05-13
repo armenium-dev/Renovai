@@ -1,0 +1,13 @@
+extends ../templates/layout
+include ../organisms/experience-renovai
+include ../organisms/blog/blog-header
+include ../organisms/blog/gtri
+include ../organisms/blog/blog-carousel
+include ../organisms/blog/blog-sign-up
+
+block main
+	main
+		+BlogHeader()
+		+BlogCarousel()
+		+BlogSignUp()
+		+ExperienceRenovai()

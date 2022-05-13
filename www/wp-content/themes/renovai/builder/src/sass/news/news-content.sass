@@ -1,0 +1,145 @@
+.news-content-section
+	&:before
+		content: ""
+		display: block
+		width: 100%
+		margin-top: -196px
+		min-height: 415px
+		margin-bottom: -173px
+		background: url(../images/mold-ligth-blue-test-top.svg) no-repeat bottom center, linear-gradient(96.7deg, #E6F0FF 6.22%, #FFFFFF 96.06%)
+	.media
+		&-body
+			padding: 16px 0
+			color: $gray-300
+			font-family: 'moderat-light'
+			font-weight: normal
+			font-size: 22px
+			line-height: 35px
+		.h3
+			font-family: 'moderat-bold'
+			font-weight: normal
+			font-size: 20px
+			line-height: 30px
+			color: $body-color
+		.news-item
+			&-image
+				max-width: 100vw
+				flex: 0 0 100%
+				min-height: 159px
+				margin-left: -15px
+				margin-right: -15px
+				position: relative
+				&:before
+					content: ""
+					display: block
+					position: absolute
+					width: 100%
+					height: 100%
+					top: 0
+					left: 0
+					background: rgba(25,25,87,0.75)
+					z-index: 1
+				.img
+					position: absolute
+					width: 100%
+					height: 100%
+					top: 0
+					left: 0
+					background: no-repeat center center
+					background-size: cover
+					z-index: 0
+				.logo
+					position: absolute
+					top: 0
+					left: 0
+					bottom: 0
+					right: 0
+					margin: auto
+					z-index: 2
+					max-height: 93px
+					max-width: 264px
+			&-date
+				font-family: 'moderat-mono-regular'
+				font-weight: normal
+				font-size: 10px
+				line-height: 24px
+				margin-bottom: 16px
+			&-link
+				font-family: 'moderat-medium'
+				font-weight: normal
+				font-size: 20px
+				line-height: 24px
+				color: $secondary
+				&:after
+					content: ""
+					display: inline-block
+					background: url(../images/read-more.svg#mobile) no-repeat 0 0
+					width: 11px
+					height: 11px
+					background-size: contain
+					margin-left: 7px
+
+@media (min-width: 768px)
+	.news-content-section
+		&:before
+			margin-top: -431px
+			min-height: 1150px
+			margin-bottom: -600px
+		.media
+			background: $white
+			box-shadow: 0 100px 80px rgba(0, 0, 0, 0.07), 0 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802)
+			border-radius: 20px
+			&-body
+				padding: 35px 40px
+				font-size: 22px
+				line-height: 35px
+			.h3
+				font-size: 35px
+				line-height: 46px
+			.news-item
+				&-image
+					max-width: 40%
+					flex: 0 0 40%
+					min-height: 459px
+					border-radius: 20px 0 0 20px
+					margin-left: 0
+					margin-right: 0
+					.img,
+					&:before
+						border-radius: 20px 0 0 20px
+					.logo
+						max-width: 381px
+						max-height: 172px
+				&-date
+					font-size: 16px
+					line-height: 28px
+					margin-bottom: 29px
+				&-link
+					color: $primary
+					font-size: 24px
+					line-height: 36px
+					&:after
+						background-image: url(../images/read-more.svg#desktop)
+			&.flex-column:not(.flex-lg-row)
+				font-size: 20px
+				line-height: 32px
+				height: 100%
+				.news-item
+					&-date
+						margin-bottom: 14px
+					&-image
+						border-radius: 20px 20px 0 0
+						max-width: 100%
+						flex: 0 0 100%
+						min-height: 259px
+						max-height: 259px
+						.img,
+						&:before
+							border-radius: 20px 20px 0 0
+					&-link
+						font-size: 20px
+						line-height: 24px
+				.h3
+					font-size: 32px
+					line-height: 42px
+					margin-bottom: 16px

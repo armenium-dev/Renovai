@@ -1,0 +1,36 @@
+.product-content
+	font-family: 'moderat-light'
+	font-size: 16px
+	line-height: 25px
+	.slick-initialized
+		.slick-slide
+			justify-content: center
+	.img-static
+		width: 287px
+		padding-left: 31px
+	.solution-carousel
+		& ~ .img-static
+			display: none
+	.h2
+		font-family: 'comfortaa'
+		font-weight: 700
+		font-size: 24px
+		line-height: 32px
+
+@media (min-width: 768px)
+	.product-content
+		.solution-carousel
+			display: none
+			& ~ .img-static
+				display: inline-block
+
+@media (min-width: 992px)
+	.product-content
+		font-size: 24px
+		line-height: 32px
+		.img-static
+			width: 502px
+			padding-left: 31px
+		.h2
+			font-size: 50px
+			line-height: 75px

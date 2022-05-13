@@ -1,0 +1,128 @@
+extends ../templates/layout
+include ../organisms/experience-renovai
+
+block main
+	main
+		section.job-application-section.bg-gradient-blue
+			.container
+				.row.justify-content-center
+					.col-12.col-xxl-9
+						.row
+							.col-12.col-md-10
+								h1.h1.mb-3 Want to join the
+									img(src="images/logo-black.svg" alt="" title="")
+									| family?
+								h2.h2.text-purple3.mb-4 Inside Sales Manager
+								ul.list-vacation.mb-7
+									li
+										i.i.i-time.i-sm.mr-md-3.mr-2
+										| Full Time
+									li
+										i.i.i-map-point.i-sm.mr-md-3.mr-2
+										| Tel-Aviv
+									li
+										i.i.i-pan.i-sm.mr-md-3.mr-2
+										a(href="job-application.html") Apply here
+								.sm-toggle-position
+								h2.h2.mb-4 Description
+								p renovai is rapidly growing and looking for an experienced, motivated, innovative, and data-driven Inside Sales Manager to structure the sales process and generate new leads.
+									br
+									| In this role, the SDM will have a significant impact in shaping renovai's growth strategy and work closely with our CEO to later hire and lead the sales team.
+								h2.h2.mb-4.mt-7 Responsibilities:
+								ul
+									li Create and drive GTM strategy
+									li Build clients' profiles and set criteria for initiating contact
+									li Establish account-based marketing methodology
+									li Creating an out-bound automatic process
+									li Proactively own and manage the process of contacting new leads
+									li Handling lead-generation process, including managing Upwork teams
+									li Creating sequences and script emails
+									li Communicate with clients in a customized and scalable manner
+									li Plan campaigns and work closely with our marketing and content managers
+									li Develop thought leadership initiatives that strengthen brand positioning
+								h2.h2.mb-4.mt-7 Requirements:
+								ul
+									li Minimum 3 years of experience in a B2B SaaS or Service customer-facing position
+									li Minimum 1 of year cold outbound experience
+									li Strong written and verbal communication skills
+									li Strong knowledge of market analytics and research tools
+									li Proven track record of planning, executing and measuring a complete sales strategy from A to Z.
+									li Excellent communication skills and methodical thinking process
+									li Strong operational capabilities - comfortable with managing multiple projects for multiple different audiences/stakeholders
+									li Early-stage start-up experience - advantage
+									li Native English speaker – advantage
+									li eCommerce experience - advantage
+									li Basic tech understanding - must
+								h2.h2.mb-4.mt-7 Apply for this position
+								form
+									.form-group.row
+										label.col-sm-3.col-form-label(for="firstName") First Name
+											small.text-pink *
+										.col-sm-9
+											input.form-control.is-valid#firstName(type="text")
+									.form-group.row
+										label.col-sm-3.col-form-label(for="lastName") Last Name
+											small.text-pink *
+										.col-sm-9
+											input.form-control#lastName(type="text")
+									.form-group.row
+										label.col-sm-3.col-form-label(for="eMail") E-mail
+											small.text-pink *
+										.col-sm-9
+											input.form-control#eMail(type="text")
+									.form-group.row
+										label.col-sm-3.col-form-label(for="phone") Phone
+											small.text-pink *
+										.col-sm-9
+											input.form-control#phone(type="text")
+									.form-group.row
+										label.col-sm-3.col-form-label Resume
+											small.text-pink *
+										.col-sm-9.custom-file
+											input.custom-file-input#resume(type="file")
+											label.custom-file-label(for="resume") Upload Resume
+									.form-group.row
+										label.col-sm-3.col-form-label(for="linkedIn") LinkedIn
+										.col-sm-9
+											input.form-control#linkedIn(type="text")
+									.form-group.row
+										label.col-sm-3.col-form-label(for="personalWebsite") Personal Website
+										.col-sm-9
+											input.form-control#personalWebsite(type="text")
+									.form-group.row.align-items-center
+										label.col-sm-3.col-form-label(for="personalNote") Personal Note
+										.col-sm-9
+											textarea.form-control#personalNote
+										.col-sm-9.offset-sm-3
+											.custom-file
+												input.custom-file-input#coverLetter(type="file")
+												label.custom-file-label(for="coverLetter") Upload Cover Letter
+										.col-sm-9.offset-sm-3.mt-6.text-center.text-md-left
+											button.btn.btn-secondary.btn-icon.shadow.d-md-none(type="button" data-toggle="modal" data-target="#jobApplicationModal" disabled)
+												span Submit Application
+												i.i.i-sm.i-right-arrow
+											button.btn.btn-secondary.btn-icon.btn-lg.shadow.d-none.d-md-inline-block(type="button" data-toggle="modal" data-target="#jobApplicationModal")
+												span Submit Application
+												i.i.i-sm.i-right-arrow
+		+ExperienceRenovai()
+	.modal.fade#jobApplicationModal(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+		.modal-dialog.modal-dialog-centered.modal-xl
+			.modal-content.job-application-modal
+				.modal-header
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") &times;
+				.modal-body
+					.text-center
+						h1.h1.modal-brackets Thank you for submitting your application!
+						p.mb-5 We are excited that you are interested in joining our journey!
+							br
+							| In the meantime, we encourage you to explore our website to have a better understanding of what it is we do here and our company's DNA :)
+							br
+							| Thanks again, and we will be in touch shortly.
+							br
+							br
+							|
+							i - renovai's hiring team
+						a.btn.btn-light.btn-icon(href="#")
+							span Explore
+							i.i.i-sm.i-right-arrow

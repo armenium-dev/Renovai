@@ -1,0 +1,39 @@
+include ../../molecules/case-studies-media
+
+mixin CaseStudiesItemContent(isShowForm=false)
+	section.case-studies-item-content-section.sm-toggle-position
+		.container
+			.row.mb-9
+				if (isShowForm)
+					.col-12.d-lg-none
+						.h3.mb-10.text-white.text-center Get your case study here
+						form(action="case-studies-got-it.html")
+							.form-group.row
+								.col-12
+									input.form-control.form-control-sm(type="text" placeholder="Full Name")
+							.form-group.row
+								.col-12
+									input.form-control.form-control-sm(type="text" placeholder="Job Title")
+							.form-group.row
+								.col-12
+									input.form-control.form-control-sm(type="text" placeholder="Company Name")
+							.form-group.row
+								.col-12
+									input.form-control.form-control-sm(type="text" placeholder="Work Email")
+							.form-group.row
+								.col-4.pr-1
+									input.form-control.form-control-sm(type="text" placeholder="Country")
+								.col-8.pl-1
+									input.form-control.form-control-sm(type="text" placeholder="+000")
+							p.small.mb-5 We collect the information you provide here in order to send you your copy of the case study, don’t worry, we are not into spamming! You may unsubscribe from these communications at any time.
+							.form-group.row
+								.col-12
+									button.btn.btn-pink.w-100 Send to mail
+					.col-10.offset-1.col-lg-12.offset-lg-0.mt-6
+						h2.h2.text-center See more case studies
+				else
+					.col-10.offset-1.col-lg-12.offset-lg-0.text-white
+						h2.h2.text-center See more case studies
+			.row
+				+CaseStudiesMedia()
+				+CaseStudiesMedia()

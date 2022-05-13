@@ -1,0 +1,294 @@
+@media (min-width: 800px)
+	.animation
+		&-header
+			&-section
+				height: 100vh
+				min-height: 600px
+			&-text
+				font-size: 27px
+				line-height: 41px
+				top: 82px
+				left: initial
+	.pillar
+		&-left
+			width: 220px
+			height: 1000px
+			background-color: $secondary
+			border-radius: 192px 192px 0 0
+			position: absolute
+			left: 5.86%
+			top: 307px
+			animation: ease-out 26400ms infinite forwards pillarLeftKey800
+		&-center
+			width: 220px
+			height: 1500px
+			bottom: 73px
+			right: 12.89%
+			animation: ease-out 26400ms infinite forwards pillarCenterKey800
+		&-right
+			height: 1000px
+			width: 220px
+			bottom: 268px
+			right: -7.42%
+			animation: ease-out 26400ms infinite forwards pillarRightKey800
+
+	.properties-container
+		transition: width ease-out 300ms
+	.property
+		margin-bottom: 24px
+		height: 37px
+		padding-left: 25px
+		padding-right: 12px
+		font-size: 14px
+		&-text
+			padding-left: 10px
+		.i
+			height: 20px
+			width: 20px
+
+	.animation-plus
+		opacity: 0
+		animation: ease-out 26400ms infinite forwards animationPlus01Key
+
+	@keyframes animationPlus01Key
+		10.19%
+			opacity: 0
+		12.45%
+			opacity: 1
+		21.89%
+			opacity: 1
+		24.15%
+			opacity: 0
+		35.47%
+			opacity: 0
+		37.74%
+			opacity: 1
+		47.17%
+			opacity: 1
+		49.43%
+			opacity: 0
+		60.75%
+			opacity: 0
+		63.02%
+			opacity: 1
+		72.45%
+			opacity: 1
+		74.72%
+			opacity: 0
+		86.04%
+			opacity: 0
+		100%
+			opacity: 1
+
+	@keyframes pillarLeftKey800
+		21.89%
+			background-color: $secondary
+			top: 307px
+			left: 5.86%
+		24.15%
+			background-color: $purpleAnimation
+			top: 271px
+			left: 5.47%
+		35.47%
+			left: 5.47%
+		47.17%
+			top: 271px
+			background-color: $purpleAnimation
+			left: 5.47%
+		49.43%
+			top: 291px
+			background-color: $pinkAnimation
+			left: 5.99%
+
+		97.74%
+			top: 291px
+			left: 5.99%
+			background-color: $pinkAnimation
+		100%
+			top: 665px
+			left: 5.86%
+			background-color: $secondary
+
+	@keyframes pillarCenterKey800
+		4.53%
+			bottom: 73px
+			width: 220px
+			right: 12.89%
+		5.66%
+			bottom: 28px
+			right: 7.42%
+		10.19%
+			background-color: $pinkAnimation
+		12.45%
+			background-color: $white
+		21.89%
+			bottom: 28px
+			width: 220px
+			right: 7.42%
+			background-color: $white
+
+		24.15%
+			bottom: 89px
+			width: 190px
+			right: 11.46%
+			background-color: $secondary
+		28.68%
+			bottom: 89px
+			width: 190px
+			right: 11.46%
+		30.94%
+			bottom: 61px
+			width: 240px
+			right: 5.86%
+		35.47%
+			bottom: 61px
+			width: 240px
+			right: 5.86%
+			background-color: $secondary
+		37.74%
+			bottom: 29px
+			width: 190px
+			right: 4.87%
+			background-color: $white
+		47.17%
+			bottom: 29px
+			width: 190px
+			right: 4.87%
+			background-color: $white
+
+		49.43%
+			bottom: 45px
+			width: 230px
+			right: 7.66%
+			background-color: $purpleAnimation
+		53.96%
+			bottom: 45px
+			width: 230px
+			right: 7.66%
+		56.23%
+			bottom: 20px
+			width: 205px
+			right: 7.4%
+		60.75%
+			bottom: 20px
+			width: 205px
+			right: 7.4%
+			background-color: $purpleAnimation
+		63.02%
+			bottom: 20px
+			width: 200px
+			right: 7.64%
+			background-color: $white
+		72.45%
+			bottom: 20px
+			width: 200px
+			right: 7.64%
+			background-color: $white
+
+		74.72%
+			bottom: 220px
+			width: 220px
+			right: 5.86%
+			background-color: $secondary
+		79.25%
+			bottom: 220px
+			width: 220px
+			right: 5.86%
+		81.51%
+			bottom: 13px
+			width: 225px
+			right: 4.82%
+		86.04%
+			bottom: 13px
+			right: 4.82%
+			background-color: $secondary
+		88.3%
+			bottom: 29px
+			width: 225px
+			right: 8.33%
+			background-color: $white
+		97.74%
+			bottom: 29px
+			width: 225px
+			right: 8.33%
+			background-color: $white
+
+		100%
+			bottom: 74px
+			width: 220px
+			right: 12.89%
+			background-color: $pinkAnimation
+
+	@keyframes pillarRightKey800
+		4.53%
+			bottom: 268px
+		5.66%
+			bottom: 1024px
+		10.19%
+			bottom: 1024px
+		12.45%
+			bottom: 1024px
+			right: -7.42%
+		21.89%
+			bottom: 1024px
+			right: -8.85%
+		24.15%
+			bottom: 268px
+			background-color: $pinkAnimation
+		28.68%
+			bottom: 268px
+			background-color: $pinkAnimation
+		30.94%
+			bottom: 1024px
+			right: -8.85%
+		35.47%
+			bottom: 1024px
+		37.74%
+			bottom: 1024px
+			right: -8.85%
+			width: 220px
+		47.17%
+			bottom: 1024px
+			background-color: $secondary
+			width: 207px
+			right: -6.9%
+		49.43%
+			bottom: 268px
+		53.96%
+			bottom: 268px
+			background-color: $secondary
+			width: 207px
+			right: -6.9%
+		56.23%
+			bottom: 1024px
+		60.75%
+			bottom: 1024px
+		63.02%
+			bottom: 1024px
+		72.45%
+			bottom: 1024px
+			width: 226px
+			background-color: $pinkAnimation
+			right: -8.85%
+		74.72%
+			bottom: 268px
+		79.25%
+			bottom: 268px
+			width: 226px
+			background-color: $pinkAnimation
+			right: -8.85%
+		81.51%
+			bottom: 1024px
+		86.04%
+			bottom: 1024px
+		97.74%
+			bottom: 1024px
+		100%
+			bottom: 268px
+
+@media (min-width: 800px)
+	.animation
+		&-header
+			&-section
+				height: 100vh
+				min-height: 540px

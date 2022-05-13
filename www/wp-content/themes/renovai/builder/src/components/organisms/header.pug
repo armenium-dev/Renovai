@@ -1,0 +1,48 @@
+- let data = self.htmlWebpackPlugin.options.file
+
+header.d-flex.align-items-md-center.sm-toggle-menu.position-static.w-100.shadow(class= data.isHoverMenu ? 'black-header-menu': '')
+	.container
+		.row.justify-content-center
+			.col-12.col-xxl-9
+				nav.navbar.navbar-expand-md.p-0.headerNavBar.no-transition
+					a.header-logo(href="#")
+					button.navbar-toggler.collapsed.px-0(type="button" data-toggle="collapse" data-target=".headerNavBar" aria-controls="headerNavBar" aria-expanded="false")
+						i.i.i-menu-hamburger-fixed
+						i.i.i-menu-hamburger
+						i.i.i-menu-close
+					.collapse.navbar-collapse.no-transition.headerNavBar
+						ul.navbar-nav.header-nav.text-center.text-md-left.justify-content-center.justify-content-start
+							li.nav-item
+								a.nav-link.active.d-none.d-md-inline-block(href="#") Home
+							li.nav-item.dropdown
+								a.nav-link.dropdown-toggle(href="#") Resources
+								.dropdown-menu
+									a.dropdown-item(href="blog.html") Blog
+									a.dropdown-item(href="reports-white-papers.html") White Papers & Reports
+									a.dropdown-item(href="#") Data Sheets
+									a.dropdown-item(href="case-studies.html") Case Studies
+									a.dropdown-item(href="general-terms-and-conditions.html") General Terms & Conditions
+							li.nav-item.dropdown
+								a.nav-link.dropdown-toggle(href="#") Solutions
+								.dropdown-menu
+									a.dropdown-item(href="product-page.html") Virtual Designer
+									a.dropdown-item(href="product-page.html") Complete the Look
+									a.dropdown-item(href="product-page.html") Interactive Mood- Board
+									a.dropdown-item(href="product-page.html") Multi- Channel Remarketing
+									a.dropdown-item(href="product-page.html") Personal Scout
+									a.dropdown-item(href="product-page.html") 360 Product Display
+							li.nav-item.dropdown
+								a.nav-link.dropdown-toggle(href="#") Company
+								.dropdown-menu
+									a.dropdown-item(href="about.html") About
+									a.dropdown-item(href="news.html") News
+									a.dropdown-item(href="#") Contact
+									a.dropdown-item(href="careers.html") Careers
+							li.nav-item
+								a.nav-link(href="contact-us.html") Contact Us
+							li.nav-item.mr-0.pr-0.d-md-none.mt-3
+								a.btn.btn-primary.shadow(href="book-a-demo.html") Book a Demo
+							li.nav-item.btn-static.mr-0.pr-0
+								a.btn.btn-light.shadow(href="book-a-demo.html") Book a Demo
+							li.nav-item.btn-fixed.mr-0.pr-0
+								a.btn.btn-secondary.shadow(href="book-a-demo.html") Book a Demo

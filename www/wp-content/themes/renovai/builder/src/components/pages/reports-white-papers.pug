@@ -1,0 +1,61 @@
+extends ../templates/layout
+include ../organisms/experience-renovai
+
+block main
+	main
+		section.dark-blue-section.position-relative
+			.dark-blue-container
+				.container
+					.row.justify-content-center
+						.col-12.col-xxl-9
+							.row.justify-content-center
+								.col-12.text-center.dark-blue-content
+									.h1 The renovai report
+										br
+										| COMING SOON!
+									p After working with major lifestyle brands, we are putting together all our findings based on analysis conducted on millions of sessions, from best sellers through styles to complete room settings.
+									p.mb-6 Sign up to receive all the information, trends and the opportunities seized by leading retailers leveraging our solutions to engage life-long brand ambassadors.
+									a.btn.btn-light(href="#" data-toggle="modal" data-target="#reportsWhitePapersModal") Get early access
+			.dark-blue-bg-img(style="background-image: url(images/blog-header-item.jpg)")
+		+ExperienceRenovai()
+	.modal.fade#reportsWhitePapersModal(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+		.modal-dialog.modal-dialog-centered.modal-xl
+			.modal-content.job-application-modal
+				.modal-header
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") &times;
+				.modal-body
+					.row.align-items-center
+						.col-xl-6.text-center.text-lg-left
+							h1.h1.comfortaa The renovai report
+						.col-xl-6.text-center.text-lg-left
+							.h3 Sign up here:
+							form
+								.form-group.row
+									.col-12
+										input.form-control(type="text" placeholder="Full Name")
+								.form-group.row
+									.col-12
+										input.form-control(type="text" placeholder="Company Name")
+								.form-group.row
+									.col-12
+										input.form-control(type="text" placeholder="Email")
+								p.small.mb-5 We collect the information you provide here in order to send you your copy of the case study, don’t worry, we are not into spamming! You may unsubscribe from these communications at any time.
+								.form-group.row
+									.col-12
+										button.btn.btn-secondary.btn-lg.w-100.d-none.d-md-inline-block(type="button" data-toggle="modal" data-target="#reportsWhitePapersSendMailModal") Send to mail
+										button.btn.btn-secondary.w-100.d-md-none(type="button" data-toggle="modal" data-target="#reportsWhitePapersSendMailModal") Send to mail
+	.modal.fade#reportsWhitePapersSendMailModal(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+		.modal-dialog.modal-dialog-centered.modal-lg
+			.modal-content.job-application-modal
+				.modal-header
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") &times;
+				.modal-body
+					.text-center
+						h1.h1 Exited to share our findings with you!
+						p.mb-5 Our report will be delivered to your inbox soon, in the meantime we invite you to explore our solutions and join the world's innovative brands.
+						a.btn.btn-light(href="#")
+							span Explore
+							i.i.i-sm.i-right-arrow
+

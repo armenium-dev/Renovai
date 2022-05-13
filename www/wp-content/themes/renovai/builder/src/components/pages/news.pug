@@ -1,0 +1,11 @@
+extends ../templates/layout
+include ../organisms/experience-renovai
+include ../organisms/news/news-header
+include ../organisms/news/news-content
+
+
+block main
+	main
+		+NewsHeader()
+		+NewsContent()
+		+ExperienceRenovai()

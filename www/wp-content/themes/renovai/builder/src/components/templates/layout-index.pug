@@ -1,0 +1,14 @@
+block variables
+- let data = self.htmlWebpackPlugin.options.file
+
+doctype html
+html(lang="en")
+	include ../organisms/head
+	head
+		+head(data)
+		block head
+	body.d-flex.flex-column
+		include ../organisms/header-index
+		block main
+		include ../organisms/footer
+		block scripts

@@ -1,0 +1,181 @@
+.case-studies-header-img
+	display: block
+	position: absolute
+	z-index: 1
+	right: -65px
+	bottom: 0
+	width: 328px
+	height: 186px
+
+.case-studies
+	&-header
+		&-section
+			padding-top: 60px
+			padding-bottom: 153px
+			background-color: $secondary
+			font-family: 'moderat-light'
+			font-weight: normal
+			font-size: 16px
+			line-height: 25px
+			overflow: hidden
+			.h1
+				font-family: 'comfortaa'
+				font-weight: 700
+				font-size: 32px
+				line-height: 42px
+		&-content
+			position: relative
+			z-index: 2
+
+	&-item-header-section
+		padding-top: 81px
+		padding-bottom: 164px
+		background: url(../images/case-studies-item-bg.jpg) no-repeat top center
+		min-height: 604px
+		color: $white
+		font-family: 'moderat-light'
+		font-weight: normal
+		font-size: 18px
+		line-height: 28px
+		.h1
+			font-family: 'moderat-bold'
+			font-weight: normal
+			font-size: 30px
+			line-height: 45px
+			margin-bottom: 30px
+		.h3
+			font-family: 'moderat-medium'
+			font-weight: normal
+			font-size: 24px
+			line-height: 29px
+		.small
+			font-size: 14px
+			line-height: 17px
+
+	&-got-it
+		&-header-section
+			padding-top: 141px
+			padding-bottom: 257px
+			background: url(../images/case-studies-item-bg.jpg) no-repeat top center
+			min-height: 595px
+			color: $white
+			font-family: 'moderat-light'
+			font-weight: normal
+			font-size: 18px
+			line-height: 28px
+			.h1
+				font-family: 'moderat-bold'
+				font-weight: normal
+				font-size: 40px
+				line-height: 55px
+				margin-bottom: 16px
+			~ .case-studies-item-content-section
+				padding-top: 125px
+		&-container
+			position: relative
+			height: 304px
+			&:before
+				content: ""
+				display: block
+				background: url(../images/got-it-left-top.svg) no-repeat 0 0
+				width: 75px
+				height: 61px
+				position: absolute
+				top: 0
+				left: 0
+			&:after
+				content: ""
+				display: block
+				background: url(../images/got-it-right-bottom.svg) no-repeat 0 0
+				width: 75px
+				height: 61px
+				position: absolute
+				bottom: 0
+				right: 0
+
+@media (min-width: 768px)
+	.case-studies
+		&-header-section
+			padding-top: 221px
+			padding-bottom: 137px
+			font-size: 24px
+			line-height: 32px
+			.h1
+				font-size: 70px
+				line-height: 84px
+		&-got-it
+			&-header-section
+				padding-top: 265px
+				padding-bottom: 336px
+				min-height: 900px
+				font-size: 20px
+				line-height: 32px
+				.h1
+					font-size: 70px
+					line-height: 84px
+					margin-bottom: 16px
+				~ .case-studies-item-content-section
+					padding-top: 355px
+			&-container
+				height: 304px
+				&:before
+					width: 75px
+					height: 61px
+					left: 150px
+				&:after
+					width: 75px
+					height: 61px
+					right: 110px
+	.case-studies-header-img
+		width: 441px
+		height: 250px
+		right: 100px
+		bottom: 0
+
+@media (min-width: 992px)
+	.case-studies
+		&-item-header-section
+			padding-top: 197px
+			padding-bottom: 336px
+			min-height: 900px
+			font-size: 24px
+			line-height: 32px
+			.h1
+				font-size: 58px
+				line-height: 70px
+				margin-bottom: 30px
+			.h3
+				font-size: 24px
+				line-height: 29px
+			.small
+				font-size: 14px
+				line-height: 17px
+		&-got-it
+			&-container
+				&:before
+					left: 250px
+				&:after
+					right: 210px
+	.case-studies-header-img
+		width: 588px
+		height: 333px
+		right: 0
+		bottom: 0
+
+@media (min-width: 1200px)
+	.case-studies-header-img
+		width: 750px
+		height: 425px
+		right: 0
+		bottom: 0
+
+@media (min-width: 1400px)
+	.case-studies-header-img
+		width: 882px
+		height: 500px
+		right: 0
+		bottom: 0
+
+@media (min-width: 1600px)
+	.case-studies-header-img
+		right: 250px

@@ -1,0 +1,52 @@
+@media (min-width: 375px)
+	.animation
+		&-header
+			&-section
+				height: 100vh
+				min-height: 640px
+			&-text
+				line-height: 34px
+				top: 67px
+				left: 40px
+
+	.property
+		margin-right: auto
+		border-radius: 27px
+		height: 25px
+		padding-left: 25px
+		padding-right: 10px
+		font-size: 10px
+		.i
+			margin-left: -16px
+			margin-right: 5px
+			position: absolute
+			height: 12px
+			width: 12px
+
+	.pillar
+		&-center
+			width: 144px
+			height: 820px
+			background-color: $pinkAnimation
+			border-radius: 0 0 192px 192px
+			position: absolute
+			bottom: 286px
+			right: 19.47%
+			mix-blend-mode: screen
+		&-right
+			width: 139px
+			height: 800px
+			background-color: $purpleAnimation
+			border-radius: 0 0 192px 192px
+			position: absolute
+			bottom: 413px
+			right: -4.27%
+			mix-blend-mode: screen
+
+	.animation-plus
+		z-index: 10
+		position: absolute
+		background: url(../images/animation-plus.svg) no-repeat 0 0
+		background-size: contain
+		border-radius: 50%
+		box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25)

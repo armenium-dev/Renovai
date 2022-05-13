@@ -1,0 +1,115 @@
+.ren-carousel
+	.slick-dots
+		position: static
+	.slick-slide
+		margin-bottom: 0
+	.slick-arrow
+		top: 0
+	&-item
+		img,
+		video
+			min-height: calc(100vh - 20%)
+			background-color: $white
+	&-indicators
+		background-color: $primary
+		bottom: initial
+		margin: 0
+		li
+			border-radius: 50%
+			background-color: #999BAC
+			height: 10px
+			width: 10px
+			button
+				width: 10px
+				height: 10px
+				padding: 0
+			&.slick-active
+				background-color: $white
+	&-control
+		&-prev
+			height: calc(100vh - 20%)
+			position: absolute
+			cursor: pointer
+			left: -37px
+			opacity: 0
+			width: 75px
+			transition: opacity 300ms linear
+			z-index: 2
+			&-icon
+				position: absolute
+				top: 0
+				bottom: 0
+				margin: auto
+				padding: 17px 11px
+				height: 89px
+				background: rgba(255, 255, 255, 0.7) no-repeat 20px center
+				background-image: url(../images/icon-prev-review-hover.svg)
+				width: 75px
+				border-radius: 20px
+			&:hover
+				opacity: 1
+				.ren-carousel-control-prev-icon
+					background-image: url(../images/icon-prev-review-hover-pink.svg)
+		&-next
+			height: calc(100vh - 20%)
+			position: absolute
+			cursor: pointer
+			right: -37px
+			opacity: 0
+			width: 75px
+			transition: opacity 300ms linear
+			z-index: 2
+			&-icon
+				position: absolute
+				top: 0
+				bottom: 0
+				margin: auto
+				padding: 17px 11px
+				height: 89px
+				background: rgba(255, 255, 255, 0.7) no-repeat 28px center
+				background-image: url(../images/icon-next-review-hover.svg)
+				width: 75px
+				border-radius: 20px
+			&:hover
+				opacity: 1
+				.ren-carousel-control-next-icon
+					background-image: url(../images/icon-next-review-hover-pink.svg)
+
+.slider-navy
+	min-height: 100vh
+	.h2
+		font-size: 20px
+		line-height: 32px
+		font-family: 'moderat-bold'
+		font-weight: normal
+	.h5
+		font-size: 18px
+		line-height: 30px
+		font-family: 'moderat-light'
+		font-weight: normal
+
+@media (min-width: 768px)
+	.ren-carousel
+		&-indicators
+			position: relative
+
+		.slick-dots
+			z-index: 2
+			top: -56px
+			position: absolute
+			right: 20px
+			width: auto
+			text-align: left
+			display: inline-block
+		&-item
+			img,
+			video
+				border-radius: 30px
+
+	.slider-navy
+		.h2
+			font-size: 32px
+			line-height: 38px
+		.h5
+			font-size: 18px
+			line-height: 30px

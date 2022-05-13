@@ -1,0 +1,79 @@
+.blog-header
+	&-section
+		color: $white
+		font-family: 'moderat-light'
+		font-weight: normal
+		font-size: 16px
+		line-height: 25px
+		background-color: $secondary
+		&:after
+			content: ""
+			display: block
+			position: relative
+			z-index: 1
+			margin-top: -98px
+			width: 100%
+			height: 239px
+			background: url(../images/mold-ligth-blue-test-top.svg) no-repeat bottom center
+			background-size: cover
+		.h1
+			font-family: 'comfortaa'
+			font-weight: 700
+			font-size: 32px
+			line-height: 42px
+	&-container
+		padding-top: 92px
+		background-color: $secondary
+	&-content
+		position: relative
+		z-index: 2
+.blog-header-img
+	display: block
+	width: 277px
+	height: 184px
+	position: absolute
+	z-index: 1
+	right: 0
+	bottom: 0
+
+@media (min-width: 768px)
+	.blog-header
+		&-section
+			font-size: 24px
+			line-height: 32px
+			&:after
+				height: 443px
+				margin-top: -215px
+			.h1
+				font-size: 74px
+				line-height: 83px
+		&-container
+			padding-top: 183px
+	.blog-header-img
+		width: 391px
+		height: 276px
+		right: 0
+		bottom: 0
+
+@media (min-width: 992px)
+	.blog-header
+		&-section
+			font-size: 28px
+			line-height: 42px
+
+	.blog-header-img
+		width: 521px
+		height: 368px
+		right: 0
+		bottom: 0
+
+@media (min-width: 1400px)
+	.blog-header-img
+		width: 782px
+		height: 552px
+		right: 0
+		bottom: 0
+
+@media (min-width: 1600px)
+	.blog-header-img
+		right: 249px

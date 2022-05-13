@@ -1,0 +1,35 @@
+include ../molecules/animation-header-slide-01
+include ../molecules/animation-header-slide-02
+include ../molecules/animation-header-slide-03
+include ../molecules/animation-header-slide-04
+include ../molecules/animation-header-slide-05
+include ../molecules/animation-header-slide-06
+
+mixin AnimationHeaderSlides()
+	section.animation-header-section.bg-primary.position-relative.overflow-hidden
+		.container.position-relative
+			.animation-header-text AI Personal Designer
+				br
+				| for Retailers
+				br
+				.header-input-group.input-group.mt-2
+					input.form-control(placeholder="Enter work email*")
+					btn.btn.btn-secondary.shadow Book a Demo
+		.animation-header-container
+			.pillar-container.w-100.h-100.animation-header-slide
+				.pillar-left
+				.pillar-center
+				.pillar-right
+			.animation-scenes
+				//+AnimationHeaderSlide01()
+				+AnimationHeaderSlide02()
+				//+AnimationHeaderSlide03()
+				+AnimationHeaderSlide04()
+				+AnimationHeaderSlide05()
+				+AnimationHeaderSlide06()
+			.animation-plus-container
+				.animation-plus.s-1
+				.animation-plus.s-2
+				.animation-plus.s-3
+				.animation-plus.s-4
+				.animation-plus.s-5

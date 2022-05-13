@@ -1,0 +1,275 @@
+.blog-carousel
+	overflow: hidden
+	padding: 20px
+	&-section
+		&:after
+			content: ""
+			display: block
+			position: relative
+			z-index: -1
+			margin-top: -150px
+			width: 100%
+			height: 243px
+			background: url(../images/mold-ligth-pink-test-top.svg) no-repeat bottom center
+			background-size: cover
+		.col-md-6
+			margin-bottom: 48px
+		.media
+			//height: 100%
+			position: relative
+			background: $white
+			border-radius: 25px
+			&-body
+				padding: 8px 14px 26px 14px
+				font-size: 20px
+				line-height: 32px
+				font-family: 'moderat-regular'
+				font-weight: normal
+				color: $gray-300
+				.h3
+					font-family: 'moderat-bold'
+					font-weight: normal
+					font-size: 20px
+					line-height: 30px
+					color: $primary
+			.slide-item-white
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				border-radius: 12px
+				background-color: $white
+				z-index: -1
+			.slide-item-shadow
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				border-radius: 12px
+				box-shadow: 0 154.43px 123.544px rgba(0, 0, 0, 0.07), 0 64.5173px 51.6139px rgba(0, 0, 0, 0.0503198), 0 34.494px 27.5952px rgba(0, 0, 0, 0.0417275), 0 19.3371px 15.4697px rgba(0, 0, 0, 0.035), 0 10.2698px 8.21582px rgba(0, 0, 0, 0.0282725), 0 4.27348px 3.41879px rgba(0, 0, 0, 0.0196802)
+				z-index: -2
+			.avatar
+				font-family: 'moderat-bold'
+				font-weight: normal
+				font-size: 16px
+				line-height: 19px
+				color: $primary
+				display: none
+				img
+					margin-right: 12px
+			&.first-blog-item
+				margin-top: 60px
+				margin-bottom: 48px
+			//	margin-top: 120px
+			//	margin-bottom: 120px
+			//	height: auto
+			//	.media-body
+			//		padding: 0 60px 0 0
+			//		.h3
+			//			font-size: 32px
+			//			line-height: 48px
+			//	.blog-carousel-item-image
+			//		max-width: 598px
+			//		height: 514px
+			//		border-radius: 16px
+			//		box-shadow: 0 154.43px 123.544px rgba(0, 0, 0, 0.07), 0 64.5173px 51.6139px rgba(0, 0, 0, 0.0503198), 0 34.494px 27.5952px rgba(0, 0, 0, 0.0417275), 0 19.3371px 15.4697px rgba(0, 0, 0, 0.035), 0 10.2698px 8.21582px rgba(0, 0, 0, 0.0282725), 0 4.27348px 3.41879px rgba(0, 0, 0, 0.0196802)
+			//		.img
+			//			border-radius: 16px
+			//		&:before
+			//			border-radius: 16px
+	&-item
+		&-link
+			color: $secondary
+			font-size: 20px
+			line-height: 24px
+			&:after
+				content: ""
+				display: inline-block
+				background: url(../images/read-more.svg#mobile) no-repeat 0 0
+				width: 11px
+				height: 11px
+				background-size: contain
+				margin-left: 7px
+		&-date
+			font-family: 'moderat-mono-regular'
+			font-weight: normal
+			font-size: 8px
+			line-height: 19px
+			color: $gray-300
+		&-image
+			height: 176px
+			width: 100%
+			position: relative
+			.img
+				position: absolute
+				top: 0
+				right: 0
+				left: 0
+				bottom: 0
+				border-radius: 12px 12px 0 0
+				background: no-repeat center center
+				background-size: cover
+			&:before
+				content: ""
+				display: block
+				position: absolute
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				border-radius: 12px 12px 0 0
+				background: rgba(25,25,87,0.75)
+				z-index: 1
+			.title
+				display: flex
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				width: 100%
+				height: 100%
+				align-items: center
+				color: $white
+				font-family: 'moderat-bold'
+				font-weight: normal
+				font-size: 24px
+				line-height: 42px
+				z-index: 2
+				padding: 0 23px
+
+@media (min-width: 992px)
+	.blog-carousel
+		padding: 20px
+		&-section
+			&:after
+				//margin-top: 98px
+				width: 100%
+				height: 377px
+			.col-md-6
+				margin-bottom: 96px
+				&:nth-child(odd)
+					padding-right: 56px
+				&:nth-child(even)
+					padding-left: 56px
+			.media
+				height: 100%
+				border-radius: 25px
+				&-body
+					padding: 24px 35px
+					font-size: 20px
+					line-height: 32px
+					.h3
+						font-size: 28px
+						line-height: 42px
+				.slide-item-white
+					border-radius: 25px
+				.slide-item-shadow
+					border-radius: 25px
+				.avatar
+					display: block
+					font-size: 16px
+					line-height: 19px
+					img
+						margin-right: 12px
+				&.first-blog-item
+					margin-top: 120px
+					margin-bottom: 120px
+					height: auto
+					.media-body
+						padding: 0 60px 0 0
+						.h3
+							font-size: 32px
+							line-height: 48px
+					.blog-carousel-item-image
+						max-width: 450px
+						height: 514px
+						border-radius: 16px
+						box-shadow: 0 154.43px 123.544px rgba(0, 0, 0, 0.07), 0 64.5173px 51.6139px rgba(0, 0, 0, 0.0503198), 0 34.494px 27.5952px rgba(0, 0, 0, 0.0417275), 0 19.3371px 15.4697px rgba(0, 0, 0, 0.035), 0 10.2698px 8.21582px rgba(0, 0, 0, 0.0282725), 0 4.27348px 3.41879px rgba(0, 0, 0, 0.0196802)
+						.img
+							border-radius: 16px
+						&:before
+							border-radius: 16px
+
+@media (min-width: 1400px)
+	.blog-carousel
+		padding: 20px
+		&-section
+			&:after
+				//margin-top: 98px
+				width: 100%
+				height: 377px
+			.col-md-6
+				margin-bottom: 96px
+				&:nth-child(odd)
+					padding-right: 56px
+				&:nth-child(even)
+					padding-left: 56px
+			.media
+				height: 100%
+				border-radius: 25px
+				&-body
+					padding: 24px 35px
+					font-size: 20px
+					line-height: 32px
+					.h3
+						font-size: 28px
+						line-height: 42px
+				.slide-item-white
+					border-radius: 25px
+				.slide-item-shadow
+					border-radius: 25px
+				.avatar
+					display: block
+					font-size: 16px
+					line-height: 19px
+					img
+						margin-right: 12px
+				&.first-blog-item
+					margin-top: 120px
+					margin-bottom: 120px
+					height: auto
+					.media-body
+						padding: 0 60px 0 0
+						.h3
+							font-size: 32px
+							line-height: 48px
+					.blog-carousel-item-image
+						max-width: 598px
+						height: 514px
+						border-radius: 16px
+						box-shadow: 0 154.43px 123.544px rgba(0, 0, 0, 0.07), 0 64.5173px 51.6139px rgba(0, 0, 0, 0.0503198), 0 34.494px 27.5952px rgba(0, 0, 0, 0.0417275), 0 19.3371px 15.4697px rgba(0, 0, 0, 0.035), 0 10.2698px 8.21582px rgba(0, 0, 0, 0.0282725), 0 4.27348px 3.41879px rgba(0, 0, 0, 0.0196802)
+						.img
+							border-radius: 16px
+						&:before
+							border-radius: 16px
+		&-item
+			&-link
+				font-size: 20px
+				line-height: 24px
+				&:after
+					width: 11px
+					height: 11px
+					margin-left: 7px
+			&-date
+				font-size: 16px
+				line-height: 28px
+			&-image
+				height: 259px
+				width: 100%
+				.img
+					border-radius: 25px 25px 0 0
+				&:before
+					width: 100%
+					height: 100%
+					border-radius: 25px 25px 0 0
+				.title
+					width: 100%
+					height: 100%
+					font-size: 40px
+					line-height: 60px
+					padding: 0 36px
+
+

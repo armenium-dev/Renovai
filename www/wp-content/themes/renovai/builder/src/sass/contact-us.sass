@@ -1,0 +1,134 @@
+.contact-us
+	&-header
+		&-section
+			color: $white
+			//position: relative
+			&:after
+				content: ""
+				display: block
+				position: relative
+				z-index: 1
+				margin-top: -98px
+				width: 100%
+				height: 239px
+				background: url(../images/mold-ligth-primary-test-bottom.svg) no-repeat top center
+				background-size: cover
+			.h1
+				font-family: 'comfortaa'
+				font-weight: 700
+				font-size: 32px
+				line-height: 42px
+		&-container
+			font-family: 'moderat-light'
+			font-weight: normal
+			font-size: 16px
+			line-height: 25px
+			padding-top: 92px
+			background-color: $primary
+			//overflow: hidden
+			//position: relative
+			&:before
+				content: ""
+				display: block
+				background: $pink
+				width: 112px
+				height: 299px
+				border-radius: 394px
+				position: absolute
+				mix-blend-mode: screen
+				right: -69px
+				top: -124px
+				z-index: 2
+			&:after
+				content: ""
+				display: block
+				background: $purple3
+				width: 85px
+				height: 225px
+				border-radius: 191px
+				position: absolute
+				mix-blend-mode: screen
+				right: 15px
+				top: -140px
+				z-index: 2
+		&-content
+			position: relative
+			z-index: 2
+	&-content-section
+		font-family: 'moderat-light'
+		font-weight: normal
+		font-size: 18px
+		line-height: 28px
+		p
+			margin-bottom: 2rem
+		b, strong
+			font-family: 'moderat-bold'
+			font-weight: normal
+		&:before
+			content: ""
+			display: block
+			width: 100%
+			margin-top: -196px
+			min-height: 215px
+			background: $white
+
+@media (min-width: 768px)
+	.contact-us
+		&-header
+			&-section
+				&:after
+					height: 525px
+					margin-top: -315px
+				.h1
+					font-size: 74px
+					line-height: 83px
+					margin-bottom: 34px
+				&.thank-you
+					.contact-us
+						&-header
+							&-container
+								padding-top: 324px
+								padding-bottom: 300px
+			&-container
+				font-size: 24px
+				line-height: 32px
+				padding-top: 157px
+				&:before
+					width: 209px
+					height: 554px
+					border-radius: 394px
+					right: -13px
+					top: -171px
+				&:after
+					width: 128px
+					height: 340px
+					right: 132px
+					top: -110px
+					border-radius: 289px
+		&-content-section
+			font-size: 20px
+			line-height: 32px
+			&:before
+				margin-top: -431px
+				min-height: 1150px
+				margin-bottom: -600px
+
+@media (min-width: 1600px)
+	.contact-us
+		&-header
+			&-container
+				font-size: 24px
+				line-height: 32px
+				padding-top: 157px
+				&:before
+					width: 357px
+					height: 946px
+					border-radius: 394px
+					right: -30px
+					top: -428px
+				&:after
+					width: 249px
+					height: 662px
+					right: 202px
+					top: -397px
+					border-radius: 289px

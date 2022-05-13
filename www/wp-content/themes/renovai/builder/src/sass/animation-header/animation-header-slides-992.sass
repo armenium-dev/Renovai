@@ -1,0 +1,267 @@
+@media (min-width: 992px)
+	.animation
+		&-header
+			&-section
+				height: 100vh
+				min-height: 768px
+			&-text
+				font-size: 32px
+				line-height: 55px
+				top: 98px
+	.pillar
+		&-left
+			width: 235px
+			height: 1000px
+			background-color: $secondary
+			border-radius: 192px 192px 0 0
+			position: absolute
+			left: 18.26%
+			top: 406px
+			mix-blend-mode: screen
+			animation: ease-out 26400ms infinite forwards pillarLeftKey992
+		&-center
+			width: 235px
+			height: 1000px
+			bottom: 178px
+			right: 6.78%
+			animation: ease-out 26400ms infinite forwards pillarCenterKey992
+		&-right
+			width: 235px
+			height: 1000px
+			bottom: 423px
+			right: -8.49%
+			animation: ease-out 26400ms infinite forwards pillarRightKey992
+
+	.properties-container
+		transition: width ease-out 300ms
+	.property
+		margin-bottom: 24px
+		height: 37px
+		padding-left: 25px
+		padding-right: 12px
+		font-size: 14px
+		&-text
+			padding-left: 10px
+		.i
+			height: 20px
+			width: 20px
+
+	@keyframes pillarLeftKey992
+		21.89%
+			background-color: $secondary
+			top: 406px
+			left: 18.26%
+		24.15%
+			background-color: $purpleAnimation
+			top: 411px
+			left: 16.99%
+		35.47%
+			left: 16.99%
+		47.17%
+			background-color: $purpleAnimation
+			left: 16.99%
+		49.43%
+			background-color: $pinkAnimation
+			left: 10.64%
+		72.45%
+			top: 411px
+		74.72%
+			top: 376px
+			left: 10.64%
+		88.3%
+			top: 376px
+			left: 10.64%
+			background-color: $pinkAnimation
+		97.74%
+			top: 376px
+			left: 10.64%
+			background-color: $pinkAnimation
+		100%
+			top: 406px
+			left: 18.26%
+			background-color: $secondary
+
+	@keyframes pillarCenterKey992
+		4.53%
+			bottom: 178px
+			width: 235px
+			right: 6.78%
+		5.66%
+			bottom: 66px
+			width: 237px
+			right: 8.97%
+		10.19%
+			width: 237px
+			right: 8.97%
+			bottom: 66px
+			background-color: $pinkAnimation
+		12.45%
+			width: 237px
+			right: 9.05%
+			background-color: $white
+		21.89%
+			width: 237px
+			bottom: 66px
+			right: 9.05%
+			background-color: $white
+
+		24.15%
+			bottom: 187px
+			width: 229px
+			right: 13.38%
+			background-color: $secondary
+		28.68%
+			bottom: 187px
+			width: 229px
+			right: 13.38%
+		30.94%
+			bottom: 71px
+			width: 253px
+			right: 6.43%
+		35.47%
+			bottom: 71px
+			width: 253px
+			right: 6.43%
+			background-color: $secondary
+		37.74%
+			bottom: 47px
+			width: 224px
+			right: 4.82%
+			background-color: $white
+		47.17%
+			bottom: 47px
+			width: 224px
+			right: 4.82%
+			background-color: $white
+
+		49.43%
+			bottom: 80px
+			width: 277px
+			right: 9.36%
+			background-color: $purpleAnimation
+		53.96%
+			bottom: 80px
+			width: 277px
+			right: 9.36%
+		56.23%
+			bottom: 53px
+			width: 277px
+			right: 9.08%
+		60.75%
+			bottom: 53px
+			width: 277px
+			right: 9.08%
+			background-color: $purpleAnimation
+		63.02%
+			bottom: 85px
+			width: 234px
+			right: 7.5%
+			background-color: $white
+		72.45%
+			bottom: 85px
+			width: 234px
+			right: 7.5%
+			background-color: $white
+
+		74.72%
+			bottom: 229px
+			width: 275px
+			right: 8.16%
+			background-color: $secondary
+		79.25%
+			bottom: 229px
+			width: 275px
+			right: 8.16%
+		81.51%
+			bottom: 69px
+			width: 275px
+			right: 8.16%
+		86.04%
+			bottom: 54px
+			right: 8.16%
+			background-color: $secondary
+		88.3%
+			bottom: 51px
+			width: 275px
+			right: 7.37%
+			background-color: $white
+		97.74%
+			bottom: 51px
+			width: 275px
+			right: 7.37%
+			background-color: $white
+
+		100%
+			bottom: 178px
+			width: 235px
+			right: 6.78%
+			background-color: $pinkAnimation
+
+	@keyframes pillarRightKey992
+		4.53%
+			bottom: 423px
+		5.66%
+			bottom: 768px
+		10.19%
+			bottom: 968px
+			right: -8.49%
+		12.45%
+			bottom: 968px
+			right: -8.49%
+		21.89%
+			bottom: 968px
+			right: -1.88%
+		24.15%
+			bottom: 423px
+			background-color: $pinkAnimation
+		28.68%
+			bottom: 423px
+			background-color: $pinkAnimation
+		30.94%
+			bottom: 968px
+			right: -1.88%
+		35.47%
+			bottom: 968px
+		37.74%
+			bottom: 968px
+			right: -1.88%
+		47.17%
+			bottom: 968px
+			background-color: $secondary
+			width: 207px
+			right: -1.56%
+		49.43%
+			bottom: 445px
+		53.96%
+			bottom: 445px
+			background-color: $secondary
+			width: 207px
+			right: -1.56%
+		56.23%
+			bottom: 968px
+		60.75%
+			bottom: 968px
+		63.02%
+			bottom: 968px
+		72.45%
+			bottom: 968px
+			width: 226px
+			background-color: $pinkAnimation
+			right: -1.85%
+		74.72%
+			bottom: 512px
+		79.25%
+			bottom: 512px
+			width: 226px
+			background-color: $pinkAnimation
+			right: -1.85%
+		81.51%
+			bottom: 968px
+		86.04%
+			bottom: 968px
+		88.3%
+			bottom: 968px
+		97.74%
+			bottom: 968px
+		100%
+			bottom: 423px
