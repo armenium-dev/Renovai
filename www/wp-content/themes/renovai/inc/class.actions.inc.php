@@ -86,7 +86,7 @@ class Actions{
 		
 		add_action('init', [$self, 'init'], 10);
 		
-		add_action('wpcf7_before_send_mail', array($self, 'wpcf7_before_send_mail'), 10, 2);
+		add_action('wpcf7_before_send_mail', [$self, 'wpcf7_before_send_mail'], 10, 2);
 		
 	}
 	
@@ -252,12 +252,12 @@ class Actions{
 		#wp_enqueue_style('bootstrap', CSS_URI.'/bootstrap-admin.css');
 		#wp_enqueue_style(THEME_SHORT.'-animate', CSS_URI.'/animate.css', array(), '3.7.0', 'all');
 		#wp_enqueue_style('bootstrap-select', CSS_URI.'/bootstrap-select.css');
-		wp_enqueue_style(THEME_SHORT.'-admin-styles', CSS_URI.'/admin.css', array(), $script_version, false);
+		wp_enqueue_style(THEME_SHORT.'-admin-styles', CSS_URI.'/admin.css', [], $script_version, false);
 
 		#wp_enqueue_script('bootstrap', JS_URI.'/bootstrap.min.js', array('jquery'), '3.3.7', true);
 		#wp_enqueue_script('bootstrap-select', JS_URI.'/bootstrap-select.js', array('jquery'), '1.12.2', true);
 
-		$globals_atts = array(
+		$globals_atts = [
 			'device'   => Helper::$device,
 			'ajax_url' => admin_url('admin-ajax.php'),
 			'nonce'    => wp_create_nonce('wcpc-ajax-nonce'),
@@ -265,8 +265,8 @@ class Actions{
 			'lang' => [
 				'confirm' => esc_html__('Do you really want to delete this item?', THEME_TD)
 			],
-		);
-		wp_enqueue_script(THEME_SHORT.'-child-theme-js', JS_URI.'/backend.js', array('jquery'), $script_version, true);
+		];
+		wp_enqueue_script(THEME_SHORT.'-child-theme-js', JS_URI.'/backend.js', ['jquery'], $script_version, true);
 		wp_localize_script(THEME_SHORT.'-child-theme-js', 'globals', $globals_atts);
 	}
 

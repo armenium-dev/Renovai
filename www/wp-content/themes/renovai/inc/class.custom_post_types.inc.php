@@ -3,13 +3,13 @@ namespace Digidez;
 
 class Custom_Post_Types {
 
-	public static $post_types_taxonomies = array();
+	public static $post_types_taxonomies = [];
 
     public static function initialise(){
         $self = new self();
 
         // define all action hooks here and document if not self explanatory
-        add_action('init', array($self, 'postTypeFunction'), 0);
+        add_action('init', [$self, 'postTypeFunction'], 0);
     }
 
     private function createLabels($name, $plural_name = ''){
@@ -23,7 +23,7 @@ class Custom_Post_Types {
 		    }
 	    }
     	
-	    $labels = array(
+	    $labels = [
 		    'name'                  => _x($plural_name, 'Post Type General Name', THEME_TD),
 		    'singular_name'         => _x($name, 'Post Type Singular Name', THEME_TD),
 		    'menu_name'             => __($plural_name, THEME_TD),
@@ -51,7 +51,7 @@ class Custom_Post_Types {
 		    'items_list'            => __('Items list', THEME_TD),
 		    'items_list_navigation' => __('Items list navigation', THEME_TD),
 		    'filter_items_list'     => __('Filter items list', THEME_TD),
-	    );
+	    ];
 
 	    return $labels;
     }
@@ -69,11 +69,11 @@ class Custom_Post_Types {
 	public function create_testimonials_cpt(){
 		$cpt = 'testimonial';
 		$labels = $this->createLabels('Testimonial');
-		$args = array(
+		$args = [
 			'label'               => __('Testimonial', THEME_TD),
 			'description'         => __('Testimonials', THEME_TD),
 			'labels'              => $labels,
-			'supports'            => array('title', 'page-attributes'),
+			'supports'            => ['title', 'page-attributes'],
 			'hierarchical'        => false,
 			'public'              => false,
 			'publicly_queryable'  => false,
@@ -87,7 +87,7 @@ class Custom_Post_Types {
 			'has_archive'         => true,
 			'exclude_from_search' => true,
 			'capability_type'     => 'post',
-		);
+		];
 		
 		register_post_type($cpt, $args);
 		//self::$post_types_taxonomies[] = $cpt;
@@ -97,11 +97,11 @@ class Custom_Post_Types {
 		$cpt = 'client';
 		$name = 'Client';
 		$labels = $this->createLabels($name);
-		$args = array(
+		$args = [
 			'label'               => __($name, THEME_TD),
 			'description'         => __($name.'s', THEME_TD),
 			'labels'              => $labels,
-			'supports'            => array('title', 'page-attributes'),
+			'supports'            => ['title', 'page-attributes'],
 			'hierarchical'        => false,
 			'public'              => false,
 			'publicly_queryable'  => false,
@@ -115,7 +115,7 @@ class Custom_Post_Types {
 			'has_archive'         => true,
 			'exclude_from_search' => true,
 			'capability_type'     => 'post',
-		);
+		];
 		
 		register_post_type($cpt, $args);
 	}
@@ -124,11 +124,11 @@ class Custom_Post_Types {
 		$cpt = 'news';
 		$name = 'News';
 		$labels = $this->createLabels($name, $name);
-		$args = array(
+		$args = [
 			'label'               => __($name, THEME_TD),
 			'description'         => __($name, THEME_TD),
 			'labels'              => $labels,
-			'supports'            => array('title', 'page-attributes'),
+			'supports'            => ['title', 'page-attributes'],
 			'hierarchical'        => false,
 			'public'              => false,
 			'publicly_queryable'  => false,
@@ -142,7 +142,7 @@ class Custom_Post_Types {
 			'has_archive'         => true,
 			'exclude_from_search' => true,
 			'capability_type'     => 'post',
-		);
+		];
 		
 		register_post_type($cpt, $args);
 	}
@@ -150,11 +150,11 @@ class Custom_Post_Types {
 	public function create_maplocations_cpt(){
 		$cpt = 'map_location';
 		$labels = $this->createLabels('Map Location');
-		$args = array(
+		$args = [
 			'label'               => __('Map Location', THEME_TD),
 			'description'         => __('Map Locations and performances', THEME_TD),
 			'labels'              => $labels,
-			'supports'            => array('title', 'editor'),
+			'supports'            => ['title', 'editor'],
 			'hierarchical'        => false,
 			'public'              => false,
 			'show_ui'             => true,
@@ -168,7 +168,7 @@ class Custom_Post_Types {
 			'exclude_from_search' => false,
 			'publicly_queryable'  => true,
 			'capability_type'     => 'page',
-		);
+		];
 
 		register_post_type($cpt, $args);
 		//self::$post_types_taxonomies[] = $cpt;
@@ -177,11 +177,11 @@ class Custom_Post_Types {
 	public function create_partners_cpt(){
 		$cpt = 'partner';
 		$labels = $this->createLabels('Partner');
-		$args = array(
+		$args = [
 			'label'               => __('Partner', THEME_TD),
 			'description'         => __('Partners and performances', THEME_TD),
 			'labels'              => $labels,
-			'supports'            => array('title', 'thumbnail', 'page-attributes'),
+			'supports'            => ['title', 'thumbnail', 'page-attributes'],
 			'hierarchical'        => false,
 			'public'              => false,
 			'show_ui'             => true,
@@ -195,7 +195,7 @@ class Custom_Post_Types {
 			'exclude_from_search' => true,
 			'publicly_queryable'  => false,
 			'capability_type'     => 'page',
-		);
+		];
 
 		register_post_type($cpt, $args);
 		//self::$post_types_taxonomies[] = $cpt;
@@ -204,11 +204,11 @@ class Custom_Post_Types {
 	public function create_portfolio_cpt(){
 		$cpt = 'portfolio';
 		$labels = $this->createLabels('Portfolio');
-		$args = array(
+		$args = [
 			'label'               => __('Portfolio', THEME_TD),
 			'description'         => __('Portfolios', THEME_TD),
 			'labels'              => $labels,
-			'supports'            => array('title', 'thumbnail', 'page-attributes'),
+			'supports'            => ['title', 'thumbnail', 'page-attributes'],
 			'hierarchical'        => false,
 			'public'              => false,
 			'show_ui'             => true,
@@ -222,7 +222,7 @@ class Custom_Post_Types {
 			'exclude_from_search' => true,
 			'publicly_queryable'  => false,
 			'capability_type'     => 'page',
-		);
+		];
 
 		register_post_type($cpt, $args);
 		//self::$post_types_taxonomies[] = $cpt;
@@ -232,11 +232,11 @@ class Custom_Post_Types {
 		$cpt = 'job';
 		$name = 'Job';
 		$labels = $this->createLabels($name);
-		$args = array(
+		$args = [
 			'label'               => __($name, THEME_TD),
 			'description'         => __($name.'s', THEME_TD),
 			'labels'              => $labels,
-			'supports'            => array('title', 'page-attributes'),
+			'supports'            => ['title', 'page-attributes'],
 			'hierarchical'        => false,
 			'public'              => true,
 			'publicly_queryable'  => true,
@@ -254,10 +254,10 @@ class Custom_Post_Types {
 			'capability_type'     => 'post',
 			'map_meta_cap'        => true,
 			'query_var'           => true,
-			'taxonomies'          => array($cpt.'-cat'),
-			//'rewrite'             => array('slug' => $cpt.'s/%'.$cpt.'-cat%', 'with_front' => false, 'pages' => false, 'feeds' => false, 'feed' => false),
-			'rewrite'             => array('slug' => $cpt, 'with_front' => false, 'pages' => false, 'feeds' => false, 'feed' => false),
-		);
+			'taxonomies'          => [$cpt.'-cat'],
+			//'rewrite'             => ['slug' => $cpt.'s/%'.$cpt.'-cat%', 'with_front' => false, 'pages' => false, 'feeds' => false, 'feed' => false],
+			'rewrite'             => ['slug' => $cpt, 'with_front' => false, 'pages' => false, 'feeds' => false, 'feed' => false],
+		];
 
 		register_post_type($cpt, $args);
 		self::$post_types_taxonomies[$cpt.'-cat'] = ['cpt' => $cpt, 'label' => ['name' => 'Categories', 'singular_name' => 'Category'], 'args' => ['public' => false]];
@@ -266,11 +266,11 @@ class Custom_Post_Types {
 	public function create_content_slider_cpt(){
 		$cpt = 'content_slider';
 		$labels = $this->createLabels('Content Slider');
-		$args = array(
+		$args = [
 			'label'               => __('Content Slider', THEME_TD),
 			'description'         => __('Content Sliders', THEME_TD),
 			'labels'              => $labels,
-			'supports'            => array('title', 'page-attributes'),
+			'supports'            => ['title', 'page-attributes'],
 			'hierarchical'        => false,
 			'public'              => true,
 			'show_ui'             => true,
@@ -284,7 +284,7 @@ class Custom_Post_Types {
 			'exclude_from_search' => true,
 			'publicly_queryable'  => false,
 			'capability_type'     => 'post',
-		);
+		];
 
 		register_post_type($cpt, $args);
 		//self::$post_types_taxonomies[] = $cpt;
@@ -295,11 +295,11 @@ class Custom_Post_Types {
 		$name = 'Case Studies';
 		$plural_name = 'Case Studies';
 		$labels = $this->createLabels($name, $plural_name);
-		$args = array(
+		$args = [
 			'label'               => __($name, THEME_TD),
 			'description'         => __($plural_name, THEME_TD),
 			'labels'              => $labels,
-			'supports'            => array('title', 'page-attributes'),
+			'supports'            => ['title', 'page-attributes'],
 			'hierarchical'        => false,
 			'public'              => true,
 			'publicly_queryable'  => false,
@@ -317,10 +317,10 @@ class Custom_Post_Types {
 			'capability_type'     => 'post',
 			'map_meta_cap'        => true,
 			'query_var'           => true,
-			'taxonomies'          => array($cpt.'-cat'),
-			//'rewrite'             => array('slug' => $cpt.'s/%'.$cpt.'-cat%', 'with_front' => false, 'pages' => false, 'feeds' => false, 'feed' => false),
-			'rewrite'             => array('slug' => $cpt, 'with_front' => false, 'pages' => false, 'feeds' => false, 'feed' => false),
-		);
+			'taxonomies'          => [$cpt.'-cat'],
+			//'rewrite'             => ['slug' => $cpt.'s/%'.$cpt.'-cat%', 'with_front' => false, 'pages' => false, 'feeds' => false, 'feed' => false],
+			'rewrite'             => ['slug' => $cpt, 'with_front' => false, 'pages' => false, 'feeds' => false, 'feed' => false],
+		];
 		
 		register_post_type($cpt, $args);
 		//self::$post_types_taxonomies[$cpt.'-cat'] = ['cpt' => $cpt, 'label' => ['name' => 'Categories', 'singular_name' => 'Category'], 'args' => ['public' => false]];
@@ -352,8 +352,8 @@ class Custom_Post_Types {
 			'capability_type'     => 'post',
 			'map_meta_cap'        => true,
 			'query_var'           => true,
-			'taxonomies'          => array($cpt.'-cat'),
-			//'rewrite'             => array('slug' => $cpt.'s/%'.$cpt.'-cat%', 'with_front' => false, 'pages' => false, 'feeds' => false, 'feed' => false),
+			'taxonomies'          => [$cpt.'-cat'],
+			//'rewrite'             => ['slug' => $cpt.'s/%'.$cpt.'-cat%', 'with_front' => false, 'pages' => false, 'feeds' => false, 'feed' => false],
 			'rewrite'             => ['slug' => 'visual-ai-design-solutions', 'with_front' => false, 'pages' => false, 'feeds' => false, 'feed' => false],
 		];
 		
