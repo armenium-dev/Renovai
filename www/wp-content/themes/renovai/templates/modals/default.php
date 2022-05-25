@@ -30,7 +30,7 @@ if(isset($params['modal_params'])){
 		<div class="modal-content <?=$params['class'];?>">
 			<div class="modal-header">
 				<h5 class="modal-title" id="<?=$params['id'];?>Label"><?=$params['title'];?></h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
@@ -41,7 +41,7 @@ if(isset($params['modal_params'])){
 			<div class="modal-footer">
 				<?php foreach($params['buttons'] as $k => $button):?>
 					<?php if($button['display']):?>
-					<button type="button" class="<?=$button['class'];?>" <?php if($k == 'cancel'):?>data-dismiss="modal"<?php endif;?>><?=$button['title'];?></button>
+					<button type="button" class="<?=$button['class'];?>" <?php if($k == 'cancel'):?>data-bs-dismiss="modal"<?php endif;?>><?=$button['title'];?></button>
 					<?php endif;?>
 				<?php endforeach;?>
 			</div>

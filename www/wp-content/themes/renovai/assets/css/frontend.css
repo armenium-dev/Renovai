@@ -5,11 +5,15 @@
 
 .ff-moderat {font-family: 'moderat-regular';}
 
-.max-w-1140 {max-width: 1140px;}
 .max-w-420 {max-width: 420px;}
+.max-w-1100 {max-width: 1100px;}
+.max-w-1140 {max-width: 1140px;}
+.max-w-1180 {max-width: 1180px;}
 @media all and (min-width: 1441px){
 	.max-w-xl-550 {max-width: 550px;}
 }
+
+.overflow-x-auto {overflow-x: auto;}
 
 .js_data_loader {background: transparent url(../images/ajax-loader.gif) center center no-repeat; position: absolute; z-index: 2; left: 0; top: 0; width: 100%; height: 100%;}
 .js_data_loader:not(.show) {display: none;}
@@ -164,18 +168,12 @@
 	.jobs .tab-pane > .row:not(:last-child) {margin-bottom: 32px;}
 }
 
-@media all and (min-width: 768px){
-	.lp-col-content {/*height: 100%;*/}
-}
 
 .tbcfyw-item-circle.solid.blue {background-image: url(../images/circle2.svg);}
 /*.experience-renovai .title {line-height: 60px;}*/
 .without-bg.product-header:after {content: none;}
 /*.modal-content {background-image: url(../images/modal-bg.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;}*/
 
-.lp-col-content p {height: 100%;}
-.lp-col-content img {min-height: 75px;}
-.lp-col-content h3 {min-height: 80px;}
 
 .case-studies-item-modal .modal-header,
 .job-application-modal .modal-header {
@@ -936,3 +934,92 @@ textarea.other-choice {max-height: 108px; line-height: 24px;}
 
 .wp-block-embed__wrapper {position: relative; padding-bottom: 56%;}
 .wp-block-embed iframe {max-width: 100%; width: 100%; height: 100%; position: absolute;}
+
+#reviews-slider-section {background-repeat: no-repeat; background-position: center; background-size: cover; padding-top: 70px; padding-bottom: 70px;}
+#reviews-slider-section h2,
+#reviews-slider-section h3 {line-height: normal; color: #0D0D30;}
+#reviews-slider-section h2 {font-size: 45px; font-family: 'moderat-bold'; font-weight: bold; margin: 0;}
+#reviews-slider-section h3 {font-size: 18px; font-family: 'moderat-light'; font-weight: normal;}
+#reviews-slider-section .badges-carousel .slick-slide {justify-content: center;}
+#reviews-slider-section .badges-carousel .slick-slide > div {padding: 0 15px;}
+/*#reviews-slider-section .badges {overflow-x: auto;}
+#reviews-slider-section .badges img {margin: 0 15px;}
+#reviews-slider-section .badges img:first-child {margin-left: 0;}
+#reviews-slider-section .badges img:last-child {margin-right: 0;}*/
+#splideReviews {margin: 0 -10%; color: #fff;}
+#splideReviews .splide__slide .review-item {transition: transform .5s ease-out; transform: scale(0.9); overflow: hidden;}
+#splideReviews .splide__slide.is-active .review-item {transform: scale(1);}
+#splideReviews .splide__slide .review-img img {max-width: 100%; height: auto; border-radius: 24px;}
+#splideReviews .splide__slide .review-attrs {position: absolute; z-index: 1; left: 0; padding: 38px 60px; width: 100%; transition: all .5s ease-out;}
+#splideReviews .splide__slide .review-item[type="video"] .review-attrs {bottom: 0;}
+#splideReviews .splide__slide .review-item[type="image"] .review-attrs {bottom: -30%;}
+#splideReviews .splide__slide .review-item[type="image"] .review-content {opacity: 0; transition: all .5s ease-out; line-height: 28px;}
+#splideReviews .splide__slide.is-active .review-item[type="image"] .review-attrs {bottom: 0;}
+#splideReviews .splide__slide.is-active .review-item[type="image"] .review-content {opacity: 1;}
+#splideReviews .review-title {}
+#splideReviews .review-logo {margin-bottom: 16px;}
+#splideReviews .review-title + .review-logo {margin-bottom: 0;}
+#splideReviews .review-logo + .review-title {margin-bottom: 16px;}
+#splideReviews .splide__arrows .splide__arrow {background-color: transparent; background-position: center; background-repeat: no-repeat; width: 36px; height: 42px; overflow: hidden; text-indent: -100px; border-radius: 0; top: 30%;}
+#splideReviews .splide__arrows .splide__arrow--prev {background-image: url(../images/review-slide-arrow-l.svg); left: 0;}
+#splideReviews .splide__arrows .splide__arrow--next {background-image: url(../images/review-slide-arrow-r.svg); right: 0;}
+@media all and (max-width: 991px){
+	#splideReviews .splide__slide .review-img img {max-width: 570px;}
+	#splideReviews .splide__slide .review-attrs {padding: 20px 30px;}
+	#splideReviews .splide__slide .review-item[type="image"] .review-content {line-height: 20px; font-size: 14px;}
+	#splideReviews .review-logo,
+	#splideReviews .review-logo + .review-title {margin-bottom: 10px;}
+}
+@media all and (max-width: 767px){
+	#reviews-slider-section h2 {font-size: 30px; line-height: 45px;}
+	#splideReviews {margin: 0; color: #0D0D30;}
+	#splideReviews .splide__slide .review-item {transform: scale(1); overflow: visible; padding: 0 15px;}
+	#splideReviews .splide__slide .review-img {display: flex; align-items: center;}
+	#splideReviews .splide__slide .review-img img {max-width: 100%;}
+	#splideReviews .splide__slide .review-attrs {position: relative; left: auto; padding: 20px 0; width: auto; bottom: auto; text-align: center;}
+	#splideReviews .splide__slide .review-item[type="image"] .review-content {opacity: 1;}
+	#splideReviews .splide__slide.is-active .review-item[type="image"] .review-attrs {bottom: auto;}
+	#splideReviews .renovai-logo,
+	#splideReviews .review-logo {margin: 0 auto 10px;}
+}
+@media all and (min-width: 576px){
+	#splideReviews .splide__arrows .splide__arrow {top: 35%;}
+}
+@media all and (max-width: 414px){
+	#splideReviews .splide__arrows .splide__arrow {top: 25%;}
+}
+
+
+.blue-content-section h1 {font-family: 'moderat-bold'; font-size: 48px; line-height: 50px;}
+.blue-content-section .content {font-family: 'moderat-light'; font-size: 28px; line-height: 42px;}
+.blue-content-section .content p {margin: 0;}
+@media all and (max-width: 767px){
+	.blue-content-section h1 {font-size: 32px; line-height: 35px;}
+	.blue-content-section .content {font-size: 20px; line-height: 32px;}
+}
+
+.featured-in-section {padding: 32px 0 45px;}
+.featured-in-section h2 {margin: 0 0 45px; font-family: 'moderat-regular'; font-weight: 400; font-size: 40px; line-height: 54px; color: #0D0D30;}
+.featured-in-section .slick-slider .slick-track {align-items: center;}
+.featured-in-section .slick-slide {justify-content: center;}
+.featured-in-section .slick-slide > div {padding: 0 20px;}
+/*.featured-in-section img {margin: 0 21px;}
+.featured-in-section img:first-child {margin: 0 21px 0 0;}
+.featured-in-section img:last-child {margin: 0 0 0 21px;}*/
+@media all and (max-width: 767px){
+	.featured-in-section h2 {font-size: 24px; line-height: 29px;}
+}
+
+.video_intro_btn {width: 73px; font-size: 0; left: 0; right: 0; margin: auto; position: absolute; top: 0; bottom: 0; z-index: 2; display: flex; align-items: center; justify-content: center;}
+.video_intro_btn img {transform: scale(0.9); transition: .25s; height: 73px; width: 73px; opacity: 0.8;}
+.video_intro_btn:hover img {transform: scale(1); opacity: 1;}
+@media all and (max-width: 767px){
+	.video_intro_btn {top: auto; bottom: auto;}
+}
+
+.video-preview-modal {padding: 0; overflow: hidden;}
+.video-preview-modal .close {display: none; position: absolute; top: 0; right: 6px; z-index: 1; line-height: 26px; text-transform: uppercase;}
+.video-preview-modal video {background: transparent none repeat scroll 0 0; display: block; max-height: none; max-width: none; position: static; visibility: visible; width: 100%;}
+@media all and (min-width: 768px){
+	.video-preview-modal video {height: 100%; object-fit: fill;}
+}

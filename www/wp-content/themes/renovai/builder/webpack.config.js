@@ -22,7 +22,7 @@ module.exports = {
 
 	output: {
 		filename: 'js/index.js',
-		path: path.resolve(__dirname, '../assets')
+		path: path.resolve(__dirname, '../assets/')
 	},
 
 	module: {
@@ -39,7 +39,7 @@ module.exports = {
 				use: {
 					loader: 'file-loader',
 					options: {
-						name: 'images/[name].[ext]',
+						name: '[name].[ext]',
 						outputPath: 'images/',
 						publicPath: '../'
 					}
@@ -80,7 +80,7 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.sass$/,
+				test: /\.(sass|css)$/,
 				use: [
 					MiniCssExtractPlugin.loader,
 					// 'style-loader', // style nodes from js strings
@@ -91,7 +91,8 @@ module.exports = {
 		]
 	},
 
-	/*plugins: [
+	plugins: [
+		/*
 		new CopyWebpackPlugin({
 			patterns: configureCopy()
 		}),
@@ -209,11 +210,12 @@ module.exports = {
 			file: require('./src/data/white-menu.json'),
 			cache: false
 		}),
+		*/
 		new MiniCssExtractPlugin({
-			filename: 'css/style.css',
+			filename: 'css/custom.css',
 			chunkFilename: '[id].css'
 		})
-	],*/
+	],
 
 	optimization: {
 		minimizer: [new TerserPlugin()],

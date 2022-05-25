@@ -272,7 +272,8 @@ class Shortcodes{
 		
 		if(empty($attr['text'])){
 			$a = explode('.', $_SERVER['HTTP_HOST']);
-			$attr['text'] = '&copy; '.$a[0].' '.date('Y').' All Rights Reserved';
+			$host = $a[0] == 'www' ? $a[1] : $a[0];
+			$attr['text'] = '&copy; '.$host.' '.date('Y').' All Rights Reserved';
 		}
 		
 		$output[] = '<span>'.$attr['text'].'</span>';

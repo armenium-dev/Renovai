@@ -124,70 +124,28 @@ class Actions{
 		global $post;
 		$page_template = DataSource::get_page_template();
 		#Helper::_debug($page_template);
+		
 		if(WP_PRODUCTION_MODE){
-			$script_version = '1.0.0';
+			$script_version = '2.0.0';
 		}else{
 			$script_version = time();
 		}
 
-		#wp_enqueue_style('child-font-Sailec', get_stylesheet_directory_uri().'/assets/fonts/Sailec.css');
-		#wp_enqueue_style('child-font-Champion', 'https://cloud.typography.com/7838156/7276192/css/fonts.css');
-		#wp_enqueue_style('fullPage', get_stylesheet_directory_uri().'/assets/js/fullPage/jquery.fullPage.css');
-		#wp_enqueue_style('fonts-google', 'https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext');
 		wp_enqueue_style('fonts-google', 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
-		#wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0', false);
-
-		#wp_enqueue_style('Moderat', FONTS_URI.'/Moderat/custom.css', [], $script_version, 'all');
-		#wp_enqueue_style('Material-Icons', 'https://fonts.googleapis.com/icon?family=Material+Icons');
-		#wp_enqueue_style(THEME_SHORT.'-animate', CSS_URI.'/animate.css', array(), $script_version, 'all');
-		#wp_enqueue_style('bootstrap-select', CSS_URI.'/bootstrap-select.css');
-		#wp_enqueue_style('owl-main', CSS_URI.'/OwlCarousel2/owl.carousel.css');
-		#wp_enqueue_style('owl-theme', CSS_URI.'/OwlCarousel2/owl.theme.default.css');
-		#wp_enqueue_style('flickity', CSS_URI.'/flickity/flickity.min.css');
-		#wp_enqueue_style('slick', CSS_URI.'/slick/slick.css');
-		#wp_enqueue_style('slick-theme', CSS_URI.'/slick/slick-theme.css');
-		#wp_enqueue_style(THEME_SHORT.'-animate', CSS_URI.'/animate.min.css', array(), '3.7.0', 'all');
-		#wp_enqueue_style(THEME_SHORT.'-fontawesome', ICONS_URI.'/css/fontawesome-all.min.css', array(), '5', 'all');
-		
-		#wp_enqueue_style(THEME_SHORT.'-bootstrap', CSS_URI.'/bootstrap.css', [], $script_version, 'all');
-		#wp_enqueue_style(THEME_SHORT.'-theme-siw', CSS_URI.'/widgets-frontend.css', [], $script_version, 'all');
 		wp_enqueue_style(THEME_SHORT.'-theme', CSS_URI.'/style.css', [], $script_version, 'all');
 		wp_enqueue_style(THEME_SHORT.'-theme-2', CSS_URI.'/frontend.css', [], $script_version, 'all');
 		
-		#wp_enqueue_style('calendly-widget', CSS_URI.'/calendly-widget.css', [], $script_version, 'all');
-		#wp_enqueue_style('calendly-widget', 'https://assets.calendly.com/assets/external/widget.css', [], $script_version, 'all');
-		#wp_enqueue_script('calendly-widget', JS_URI.'/calendly-widget.js', [], $script_version, false);
-		#wp_enqueue_script('calendly-widget', 'https://assets.calendly.com/assets/external/widget.js', [], $script_version, false);
-		
-		
-		#wp_enqueue_script('tweenmax-script', get_stylesheet_directory_uri().'/assets/js/TweenMax.min.js', array(), '1.9.7', true);
-		#wp_enqueue_script('superscrollorama-script', get_stylesheet_directory_uri().'/assets/js/jquery.superscrollorama.js', array(), '1.9.7', true);
-		
-		//wp_enqueue_script('scrolloverflow-script', get_stylesheet_directory_uri().'/assets/js/fullPage/vendors/scrolloverflow.js', array(), '5.2.0', true);
-		//wp_enqueue_script('fullPage-script', get_stylesheet_directory_uri().'/assets/js/fullPage/jquery.fullPage.js', array(), '2.9.7', true);
-		//wp_enqueue_script('scrollify-script', get_stylesheet_directory_uri().'/assets/js/jquery.scrollify.js', array('jquery'), '1.0.19', true);
-		//wp_enqueue_script('flickity-script', get_stylesheet_directory_uri().'/assets/js/flickity.pkgd.min.js', array(), '2.0.10', true);
-		//$ft = filemtime(JS_DIR.'/main.js');
-		//wp_enqueue_script(THEME_SHORT.'-theme-js', JS_URI.'/main.js', array(), $ft, true);
-		
-		#wp_enqueue_script('jquery-easings', JS_URI.'/jquery.easing.min.js', ['jquery'], '1.4.1', true);
-		#wp_enqueue_script('jquery-easings', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js', ['jquery'], '1.4.1', true);
-		
-		#wp_enqueue_script('popper', JS_URI.'/popper.min.js', ['jquery'], '1.16.1', true);
-		#wp_enqueue_script('popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', ['jquery'], '1.16.1', true);
-		
-		#wp_enqueue_script('bootstrap', JS_URI.'/bootstrap.min.js', ['jquery', 'popper'], '4.5.2', true);
-		#wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', ['jquery', 'popper'], '4.5.2', true);
-		
-		#wp_enqueue_script('bootstrap-select', JS_URI.'/bootstrap-select.js', array('jquery'), '1.12.2', true);
-		#wp_enqueue_script('cookie', JS_URI.'/jquery.cookie.min.js', array('jquery'), '1.4.1', true);
-		#wp_enqueue_script('owl-script', JS_URI.'/OwlCarousel2/dist/owl.carousel.min.js', ['jquery'], '2.3.4', true);
-		#wp_enqueue_script('slick', JS_URI.'/slick/slick.min.js', ['jquery'], '1.9.0', true);
-		#wp_enqueue_script('flickity', JS_URI.'/flickity/flickity.pkgd.min.js', ['jquery'], '2.2.1', true);
-		#wp_enqueue_script('clipboard', JS_URI.'/clipboard.min.js', ['jquery'], '2.0.6', true);
-		#wp_enqueue_script('shuffle', JS_URI.'/shuffle.min.js', array(), '5.2.1', true);
-		#wp_enqueue_script('theta-carousel', JS_URI.'/theta-carousel/theta-carousel.min.js', array('jquery'), '1.6.4', true);
-		#wp_enqueue_script('mustache', JS_URI.'/theta-carousel/mustache.min.js', array('jquery'), '1.4.0', true);
+		wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', [], $script_version, false);
+		#wp_enqueue_script('popper', JS_URI.'/popper.min.js', ['jquery'], $script_version, true);
+		#wp_enqueue_script('popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js', ['jquery'], $script_version, true);
+		#wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js', ['jquery', 'popper'], $script_version, true);
+		wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', ['jquery'], $script_version, true);
+		wp_enqueue_script('slick', JS_URI.'/slick.js', ['jquery'], $script_version, true);
+		wp_enqueue_script('splide', JS_URI.'/splide.min.js', ['jquery'], $script_version, true);
+		wp_enqueue_script('scroll-toggle-menu', JS_URI.'/scroll-toggle-menu.js', ['jquery'], $script_version, true);
+		wp_enqueue_script('jquery-inputmask', JS_URI.'/jquery.inputmask.min.js', ['jquery'], $script_version, true);
+		wp_enqueue_script('ion-rangeSlider', JS_URI.'/ion.rangeSlider.min.js', ['jquery'], $script_version, true);
+		wp_enqueue_script(THEME_SHORT.'-common', JS_URI.'/common.js', ['jquery'], $script_version, true);
 
 		/*
 		$google  = get_field('google', 'option');
@@ -199,8 +157,6 @@ class Actions{
 		wp_enqueue_script(THEME_SHORT.'-google-map', JS_URI.'/acf-map.js', array('jquery', THEME_SHORT.'-google-map-api'));
 		*/
 
-		//wp_enqueue_script(THEME_SHORT.'-play-on-scroll-js', JS_URI.'/play-on-scroll.min.js', array('jquery', 'wpb_composer_front_js'), '1.0', true);
-		
 		if(!is_admin()){
 			if(is_singular() && comments_open() && (get_option('thread_comments') == 1)){
 				wp_enqueue_script('comment-reply');
@@ -222,22 +178,8 @@ class Actions{
 			'lang' => [],
 		];
 
-			wp_enqueue_script(THEME_SHORT.'-index', JS_URI.'/index.js', [], $script_version, true);
-			wp_localize_script(THEME_SHORT.'-index', 'globals', $globals_atts);
-		/*if(WP_PRODUCTION_MODE){
-		}else{
-			wp_enqueue_script(THEME_SHORT.'-index', JS_URI.'/index.js', ['jquery'], $script_version, true);
-			wp_enqueue_script(THEME_SHORT.'-bootstrap', JS_URI.'/bootstrap.min.js', ['jquery'], $script_version, true);
-			#wp_enqueue_script(THEME_SHORT.'-filedownload', JS_URI.'/jquery.fileDownload.js', ['jquery'], $script_version, true);
-			wp_enqueue_script(THEME_SHORT.'-inputmask', JS_URI.'/jquery.inputmask.min.js', ['jquery'], $script_version, true);
-			wp_enqueue_script(THEME_SHORT.'-theme', JS_URI.'/frontend.js', ['jquery', THEME_SHORT.'-index'], $script_version, true);
-			wp_localize_script(THEME_SHORT.'-theme', 'globals', $globals_atts);
-		}*/
-		
-		if($page_template == 'roi'){
-			#wp_enqueue_script(THEME_SHORT.'-ion-rangeSlider', JS_URI.'/ion.rangeSlider.min.js', [], $script_version, true);
-			#wp_enqueue_script(THEME_SHORT.'-roi-calc', JS_URI.'/roi-calc.js', [], $script_version, true);
-		}
+		wp_enqueue_script(THEME_SHORT.'-index', JS_URI.'/frontend.js', [], $script_version, true);
+		wp_localize_script(THEME_SHORT.'-index', 'globals', $globals_atts);
 	}
 
 	public function enqueueCssAndJavascriptAdmin(){
@@ -366,6 +308,11 @@ class Actions{
 				}
 				break;
 			case 'testimonial_job_title':
+				if(class_exists('ACF')){
+					echo get_field($column, $post->ID);
+				}
+				break;
+			case 'testimonial_company_name':
 				if(class_exists('ACF')){
 					echo get_field($column, $post->ID);
 				}

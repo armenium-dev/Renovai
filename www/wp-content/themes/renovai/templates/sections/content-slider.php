@@ -19,7 +19,7 @@ $section_data['section_items'] = DataSource::fill_cpt_cf($section_data['section_
 							<?php foreach($section_data['section_items'] as $k => $item): $class = ($k == 0 ? 'active' : '');?>
 								<div class="ren-carousel-item">
 									<div class="row text-center text-md-left">
-										<div class="col-12 order-1 order-md-0 h-100">
+										<div class="col-12 order-1 order-md-0 h--100">
 											<?php if($item->cf['media_type'] == 'image'):?>
 												<img src="<?=$item->cf['image'];?>" class="d-block w-100 mb-2" alt="<?=$item->post_title;?>" title="<?=$item->post_title;?>" />
 											<?php elseif($item->cf['media_type'] == 'video'):?>

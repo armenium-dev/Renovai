@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="311px" height="370px" viewBox="0 0 311 370" enable-background="new 0 0 311 370" xml:space="preserve">
+<filter  width="450.86" height="470.86" id="filter0_dddddd-0" filterUnits="userSpaceOnUse" y="0" x="0" color-interpolation-filters="sRGB">
+	<feFlood  result="BackgroundImageFix" flood-opacity="0"></feFlood>
+	<feColorMatrix  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" in="SourceAlpha"></feColorMatrix>
+	<feOffset  dy="2.76726"></feOffset>
+	<feGaussianBlur  stdDeviation="1.1069"></feGaussianBlur>
+	<feColorMatrix  values="0 0 0 0 0.196078 0 0 0 0 0.0156863 0 0 0 0 0.454902 0 0 0 0.0196802 0"></feColorMatrix>
+	<feBlend  mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"></feBlend>
+	<feColorMatrix  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" in="SourceAlpha"></feColorMatrix>
+	<feOffset  dy="6.6501"></feOffset>
+	<feGaussianBlur  stdDeviation="2.66004"></feGaussianBlur>
+	<feColorMatrix  values="0 0 0 0 0.196078 0 0 0 0 0.0156863 0 0 0 0 0.454902 0 0 0 0.0282725 0"></feColorMatrix>
+	<feBlend  mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow"></feBlend>
+	<feColorMatrix  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" in="SourceAlpha"></feColorMatrix>
+	<feOffset  dy="12.5216"></feOffset>
+	<feGaussianBlur  stdDeviation="5.00862"></feGaussianBlur>
+	<feColorMatrix  values="0 0 0 0 0.196078 0 0 0 0 0.0156863 0 0 0 0 0.454902 0 0 0 0.035 0"></feColorMatrix>
+	<feBlend  mode="normal" in2="effect2_dropShadow" result="effect3_dropShadow"></feBlend>
+	<feColorMatrix  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" in="SourceAlpha"></feColorMatrix>
+	<feOffset  dy="22.3363"></feOffset>
+	<feGaussianBlur  stdDeviation="8.93452"></feGaussianBlur>
+	<feColorMatrix  values="0 0 0 0 0.196078 0 0 0 0 0.0156863 0 0 0 0 0.454902 0 0 0 0.0417275 0"></feColorMatrix>
+	<feBlend  mode="normal" in2="effect3_dropShadow" result="effect4_dropShadow"></feBlend>
+	<feColorMatrix  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" in="SourceAlpha"></feColorMatrix>
+	<feOffset  dy="41.7776"></feOffset>
+	<feGaussianBlur  stdDeviation="16.711"></feGaussianBlur>
+	<feColorMatrix  values="0 0 0 0 0.196078 0 0 0 0 0.0156863 0 0 0 0 0.454902 0 0 0 0.0503198 0"></feColorMatrix>
+	<feBlend  mode="normal" in2="effect4_dropShadow" result="effect5_dropShadow"></feBlend>
+	<feColorMatrix  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" in="SourceAlpha"></feColorMatrix>
+	<feOffset  dy="100"></feOffset>
+	<feGaussianBlur  stdDeviation="40"></feGaussianBlur>
+	<feColorMatrix  values="0 0 0 0 0.196078 0 0 0 0 0.0156863 0 0 0 0 0.454902 0 0 0 0.07 0"></feColorMatrix>
+	<feBlend  mode="normal" in2="effect5_dropShadow" result="effect6_dropShadow"></feBlend>
+	<feBlend  mode="normal" in2="effect6_dropShadow" in="SourceGraphic" result="shape"></feBlend>
+</filter>
+<g transform="translate(-60.775 4.5705)" filter="url(#filter0_dddddd-0)">
+	<path fill="#61C0FA" d="M206.19,289.59c6.219,0.83,12.506,1.259,18.821,1.277h0.48c38.557-0.048,75.52-15.396,102.77-42.67
+		c27.258-27.278,42.574-64.259,42.59-102.82v-0.001c0-0.917-0.01-1.834-0.027-2.752c-0.212-10.968-1.663-21.827-4.295-32.38
+		c-0.174-0.412-0.395-0.805-0.654-1.169c-0.473-0.66-1.072-1.221-1.762-1.647c-0.689-0.426-1.458-0.712-2.26-0.84
+		c-0.801-0.127-1.62-0.094-2.408,0.097c-0.789,0.191-1.532,0.538-2.186,1.019s-1.205,1.087-1.623,1.783
+		c-0.418,0.695-0.692,1.467-0.81,2.271c-0.04,0.275-0.062,0.551-0.063,0.828c6.768,26.562,5.221,54.734-4.691,80.617
+		c-12.178,31.8-36.059,57.735-66.748,72.492c-30.689,14.755-65.859,17.211-98.302,6.863c-11.969-3.816-23.232-9.27-33.508-16.128
+		c-18.114-12.033-33.002-28.312-43.372-47.39c-0.775-0.901-1.802-1.565-2.962-1.897c-1.558-0.444-3.229-0.256-4.647,0.528
+		c-0.724,0.359-1.364,0.866-1.879,1.488c-0.516,0.622-0.895,1.345-1.114,2.123c-0.219,0.776-0.272,1.592-0.157,2.392
+		c0.083,0.571,0.25,1.126,0.496,1.646c0.186,0.338,0.372,0.676,0.56,1.013c12.622,22.607,31.052,41.436,53.385,54.539
+		c16.749,9.827,35.239,16.167,54.361,18.719H206.19z M85.88,186.39c0.191,0.404,0.427,0.786,0.703,1.142
+		c0.499,0.64,1.12,1.174,1.827,1.571c0.707,0.399,1.486,0.652,2.292,0.747c0.806,0.096,1.623,0.028,2.403-0.195
+		c0.78-0.224,1.508-0.601,2.141-1.107s1.16-1.135,1.548-1.847c0.389-0.713,0.632-1.495,0.716-2.303
+		c0.03-0.288,0.04-0.578,0.028-0.866c-8.941-29.916-7.12-62.12,5.301-90.949c13.475-31.273,38.402-56.206,69.671-69.688
+		c31.27-13.481,66.513-14.49,98.501-2.819c10.069,3.673,19.575,8.515,28.35,14.375c19.586,13.018,35.453,31.037,45.885,52.285
+		c0.734,0.914,1.723,1.606,2.853,1.98c1.538,0.509,3.216,0.389,4.665-0.336c0.737-0.33,1.398-0.81,1.938-1.41
+		c0.541-0.601,0.949-1.308,1.201-2.075c0.25-0.768,0.336-1.58,0.254-2.384c-0.059-0.574-0.203-1.136-0.428-1.665
+		c-1.937-3.906-4.053-7.733-6.344-11.469c-13.541-22.07-32.729-40.125-55.581-52.3C271.133,4.999,245.672-0.857,220.01,0.099
+		c-0.166,0.007-0.331,0.013-0.497,0.02c-0.042,0.002-0.084,0.004-0.125,0.005c-38.526,1.632-74.83,18.484-100.94,46.858
+		C92.337,75.357,78.55,112.935,80.12,151.461c0.001,0.021,0.002,0.039,0.002,0.06c0.497,11.842,2.438,23.549,5.76,34.867
+		L85.88,186.39z"/>
+</g>
+</svg>

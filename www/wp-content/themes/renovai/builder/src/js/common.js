@@ -140,6 +140,19 @@
 		initAnimation();
 	};
 
+	var initSplideSliders = function(){
+		$('.splide__list').owlCarousel();
+
+		/*var $splide = $('.splide');
+		if($splide.length){
+			$.each($splide, function(i, el){
+				var splideSliders = new Splide(el);
+				splideSliders.mount();
+			});
+		}*/
+	};
+
+
 	$(function () {
 		var $bookADemoCarousel = $('.book-a-demo-carousel');
 		var $slickLogos = $('.slick-logos');
@@ -215,6 +228,17 @@
 			});
 		}
 	});
+
+	$(document).ready(function(){
+			//initSplideSliders();
+		setTimeout(function(){
+
+		}, 5000);
+	});
+
+	document.addEventListener( 'DOMContentLoaded', function () {
+		//initSplideSliders();
+	} );
 
 	$(document).on('animationend', '.animation', function(){
 		var $this = $(this);

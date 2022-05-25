@@ -4,6 +4,7 @@
 	"dependencies": {
 		"@babel/core": "^7.17.10",
 		"@popperjs/core": "^2.11.5",
+		"@splidejs/splide": "^4.0.2",
 		"animate.css": "^4.1.1",
 		"babel-loader": ">=8.2.5",
 		"bootstrap": "^5.1.3",
@@ -16,6 +17,7 @@
 		"jquery-ui": "^1.13.1",
 		"leaflet": ">=1.8.0",
 		"material-design-icons": ">=3.0.1",
+		"owl.carousel": "^2.3.4",
 		"perfect-scrollbar": ">=1.5.5",
 		"popper.js": ">=1.16.1",
 		"slick-carousel": ">=1.8.1"

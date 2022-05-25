@@ -39,6 +39,7 @@
 			//this.Common.initScrollToLinks();
 			this.CF7.init();
 			this.ROI.init();
+			this.Reviews.init();
 			this.initEvents();
 			this.eventResizeWindow();
 		},
@@ -849,6 +850,24 @@
 					FJS.ROI.els.totalUpliftBox.addClass("roi-calculator-result__total-uplift--large-value");
 				}else if(FJS.ROI.els.totalUpliftBox.text().length <= 7){
 					FJS.ROI.els.totalUpliftBox.removeClass("roi-calculator-result__total-uplift--large-value");
+				}
+			},
+		},
+		Reviews: {
+			els: {
+				sliders: null
+			},
+			init: function(){
+				//this.initSliders();
+			},
+			initSliders: function(){
+				var $splide = $('.splide');
+				if($splide.length){
+					console.log(Splide);
+					$.each($splide, function(i, el){
+						FJS.Reviews.els.sliders[i] = new Splide(el);
+						FJS.Reviews.els.sliders[i].mount();
+					});
 				}
 			},
 		},

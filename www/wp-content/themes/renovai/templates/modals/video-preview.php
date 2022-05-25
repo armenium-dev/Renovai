@@ -31,17 +31,20 @@ if(isset($params['modal_params'])){
 <div class="modal fade" id="<?=$params['id'];?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" <?=$modal_params;?>>
 	<div class="modal-dialog modal-dialog-centered <?=$dialog_class;?>">
 		<div class="modal-content <?=$params['class'];?>">
-			<div class="modal-header">
-				<button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			</div>
-			<div class="modal-body">
-				<div class="text-center">
-					<h1 class="h1"><?=$params['title'];?></h1>
-					<p class="mb-5"><?=$params['content'];?></p>
-					<div class="mb-8"><?=Functions::render_section_button($params['button'], ['class' => 'btn btn-secondary btn-icon', 'icon' => '<i class="i i-sm i-right-arrow"></i>']);?></div>
-					<img src="<?=$params['logo'];?>" alt="" title="" class="mb-5">
-				</div>
-			</div>
+			<button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+			<video id=""
+			       src=""
+			       crossorigin="anonymous"
+			       poster=""
+			       aria-label="Video"
+			       controlslist="nodownload"
+			       controls="controls"
+			       playsinline="playsinline"
+			       preload="metadata"
+			       autoplay="autoplay"
+			       type="video/mp4"
+			       x-webkit-airplay="allow"
+			></video>
 		</div>
 	</div>
 </div>

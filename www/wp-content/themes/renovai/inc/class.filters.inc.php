@@ -232,6 +232,7 @@ class Filters {
 			'cb'          => '<input type="checkbox" />',
 			'testimonial_user_photo' => __('Photo', THEME_TD),
 			'title'       => __('Title', THEME_TD),
+			'testimonial_company_name'  => __('Company', THEME_TD),
 			'testimonial_job_title'  => __('Job title', THEME_TD),
 			'date'        => __('Date', THEME_TD),
 		];

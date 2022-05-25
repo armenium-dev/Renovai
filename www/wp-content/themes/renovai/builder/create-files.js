@@ -8,6 +8,8 @@ const dataIndexJs = 'import html from \'./components/pages/index.pug\';\n' +
 	'import popper from \'popper.js\';\n' +
 	'import bootstrap from \'bootstrap\';\n' +
 	'import slick from \'slick-carousel\';\n' +
+	'import owlc from \'owl.carousel\';\n' +
+	'import Splide from \'@splidejs/splide\';\n' +
 	'import L from \'leaflet\';\n' +
 	'\n' +
 	'import \'./js/common.js\';';
