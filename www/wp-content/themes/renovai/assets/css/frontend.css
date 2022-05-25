@@ -952,9 +952,9 @@ textarea.other-choice {max-height: 108px; line-height: 24px;}
 #splideReviews .splide__slide .review-img img {max-width: 100%; height: auto; border-radius: 24px;}
 #splideReviews .splide__slide .review-attrs {position: absolute; z-index: 1; left: 0; padding: 38px 60px; width: 100%; transition: all .5s ease-out;}
 #splideReviews .splide__slide .review-item[type="video"] .review-attrs {bottom: 0;}
-#splideReviews .splide__slide .review-item[type="image"] .review-attrs {bottom: -30%;}
+#splideReviews .splide__slide .review-item[type="image"] .review-attrs {bottom: -100%;}
 #splideReviews .splide__slide .review-item[type="image"] .review-content {opacity: 0; transition: all .5s ease-out; line-height: 28px;}
-#splideReviews .splide__slide.is-active .review-item[type="image"] .review-attrs {bottom: 0;}
+#splideReviews .splide__slide.is-active .review-item[type="image"] .review-attrs {bottom: 0 !important;}
 #splideReviews .splide__slide.is-active .review-item[type="image"] .review-content {opacity: 1;}
 #splideReviews .review-title {}
 #splideReviews .review-logo {margin-bottom: 16px;}
@@ -963,6 +963,9 @@ textarea.other-choice {max-height: 108px; line-height: 24px;}
 #splideReviews .splide__arrows .splide__arrow {background-color: transparent; background-position: center; background-repeat: no-repeat; width: 36px; height: 42px; overflow: hidden; text-indent: -100px; border-radius: 0; top: 30%;}
 #splideReviews .splide__arrows .splide__arrow--prev {background-image: url(../images/review-slide-arrow-l.svg); left: 0;}
 #splideReviews .splide__arrows .splide__arrow--next {background-image: url(../images/review-slide-arrow-r.svg); right: 0;}
+#splideReviews .splide__pagination {transform: translateY(40px);}
+#splideReviews .splide__pagination__page {background-color: #0D0D30; opacity: 0.3;}
+#splideReviews .splide__pagination__page.is-active {transform: scale(1); opacity: 1;}
 @media all and (max-width: 991px){
 	#splideReviews .splide__slide .review-img img {max-width: 570px;}
 	#splideReviews .splide__slide .review-attrs {padding: 20px 30px;}
@@ -978,7 +981,7 @@ textarea.other-choice {max-height: 108px; line-height: 24px;}
 	#splideReviews .splide__slide .review-img img {max-width: 100%;}
 	#splideReviews .splide__slide .review-attrs {position: relative; left: auto; padding: 20px 0; width: auto; bottom: auto; text-align: center;}
 	#splideReviews .splide__slide .review-item[type="image"] .review-content {opacity: 1;}
-	#splideReviews .splide__slide.is-active .review-item[type="image"] .review-attrs {bottom: auto;}
+	#splideReviews .splide__slide.is-active .review-item[type="image"] .review-attrs {bottom: auto !important;}
 	#splideReviews .renovai-logo,
 	#splideReviews .review-logo {margin: 0 auto 10px;}
 }

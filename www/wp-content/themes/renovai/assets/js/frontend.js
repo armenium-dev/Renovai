@@ -864,7 +864,7 @@
 					//snap: true,
 					//wheel: true,
 					arrows: false,
-					pagination: false,
+					pagination: true,
 					breakpoints: {
 						767: {perPage: 1, arrows: true,}
 					}
@@ -881,6 +881,19 @@
 						$.each($splide, function(i, el){
 							FJS.Reviews.els.sliders[i] = new Splide(el, FJS.Reviews.options);
 							FJS.Reviews.els.sliders[i].mount();
+						});
+						FJS.Reviews.fixSlideDescSize();
+					}
+				},
+				fixSlideDescSize: function(){
+					var $splide = $('.splide');
+					if($splide.length){
+						$splide.find('.review-item[type="image"]').each(function(i, el){
+							var $ra = $(this).find('.review-attrs'),
+								this_height = $(this).height(),
+								bottom = -1 * ($ra.height() * 100 / this_height - 18);
+
+							$ra.css('bottom', bottom+'%');
 						});
 					}
 				},
