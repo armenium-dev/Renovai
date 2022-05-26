@@ -136,10 +136,14 @@ class Actions{
 		wp_enqueue_style(THEME_SHORT.'-theme-2', CSS_URI.'/frontend.css', [], $script_version, 'all');
 		
 		wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', [], $script_version, false);
-		#wp_enqueue_script('popper', JS_URI.'/popper.min.js', ['jquery'], $script_version, true);
+		wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', ['jquery'], $script_version, true);
+
 		#wp_enqueue_script('popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js', ['jquery'], $script_version, true);
 		#wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js', ['jquery', 'popper'], $script_version, true);
-		wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', ['jquery'], $script_version, true);
+
+		#wp_enqueue_script('popper', JS_URI.'/popper.min.js', ['jquery'], $script_version, true);
+		#wp_enqueue_script('bootstrap', JS_URI.'/bootstrap.bundle.min.js', ['jquery'], $script_version, true);
+
 		wp_enqueue_script('slick', JS_URI.'/slick.js', ['jquery'], $script_version, true);
 		wp_enqueue_script('splide', JS_URI.'/splide.min.js', ['jquery'], $script_version, true);
 		wp_enqueue_script('scroll-toggle-menu', JS_URI.'/scroll-toggle-menu.js', ['jquery'], $script_version, true);

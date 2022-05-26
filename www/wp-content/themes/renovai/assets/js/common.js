@@ -266,6 +266,11 @@
 			$('#pillsTab li a').eq($(this).val()).tab('show');
 		});
 
+		$(document).on('click', '#pillsTab a', function(e){
+			e.preventDefault();
+			$(this).tab('show')
+		});
+
 		$(document).on('click', '.careers-grandmother-container', function(){
 			if(window.outerWidth > 425){
 				return;
