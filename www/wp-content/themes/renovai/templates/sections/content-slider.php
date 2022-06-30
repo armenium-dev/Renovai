@@ -28,6 +28,9 @@ $section_data['section_items'] = DataSource::fill_cpt_cf($section_data['section_
 													<video class="w-100" muted loop>
 														<source src="<?=$item->cf['video'];?>">
 													</video>
+                                                    <?php if(!empty($item->cf['json_scheme'])):?>
+													    <?=str_replace('{VIDEO_FILE_URL}', $item->cf['video'], $item->cf['json_scheme']);?>
+                                                    <?php endif;?>
 												</div>
 											<?php endif;?>
 										</div>

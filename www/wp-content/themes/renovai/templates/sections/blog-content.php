@@ -19,38 +19,33 @@ $posts = DataSource::get_blog_posts([
 ]);
 #Helper::_debug($posts->posts);
 ?>
-<section id="<?=$section_name;?>-section" class="blog-carousel-section sm-toggle-position">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12 col-xxl-9">
-				
-				<?php if($posts->found_posts):?>
-					<div class="row">
-						<?php Functions::get_template_part(PARTIALS_PATH.'/blog/item-first', ['_post' => $posts->posts[0]]);?>
-					</div>
-					<div id="posts_container" class="row align-self-stretch mb-xl-10" data-total="<?=$posts->found_posts;?>" data-offset="<?=$section_data['posts_per_page_first'];?>" data-parent_post_id="<?=$post->ID;?>">
-						<?php foreach($posts->posts as $k => $_post):?>
-							<?php if($k > 0):?>
-								<?php Functions::get_template_part(PARTIALS_PATH.'/blog/item', [
-									'_post' => $_post,
-									'subtitle_length' => $subtitle_length,
-									'excerpt_length' => $excerpt_length
-								]);?>
-							<?php endif;?>
-						<?php endforeach;?>
-					</div>
-					
-					<?php if($posts->found_posts > $section_data['posts_per_page_first']):?>
-						<div class="row">
-							<div class="col-12 text-center">
-								<button type="button" class="btn btn-info btn-lg" data-trigger="js_action_click" data-action="load_more_posts" data-target="#posts_container"><?=$section_data['button_label'];?></button>
-							</div>
-						</div>
-					<?php endif;?>
-				<?php endif;?>
-				
-			</div>
-		</div>
+<section id="<?=$section_name;?>-section" class="blog-posts-section sm-toggle-position">
+	<div class="container-1650">
+        <?php if($posts->found_posts):?>
+            <h2 class="section-latest-title text-center text-lg-left"><?=$section_data['latest_featured_blog_title'];?></h2>
+            <?php Functions::get_template_part(PARTIALS_PATH.'/blog/item-first', ['_post' => $posts->posts[0]]);?>
+            <h2 class="section-recent-title text-center text-lg-left"><?=$section_data['recent_blog_articles_title'];?></h2>
+            <p class="section-recent-subtitle text-center text-lg-left"><?=$section_data['recent_blog_articles_subtitle'];?></p>
+            <div id="posts_container" class="row mb-xl-10 posts-container" data-total="<?=$posts->found_posts;?>" data-offset="<?=$section_data['posts_per_page_first'];?>" data-parent_post_id="<?=$post->ID;?>">
+                <?php foreach($posts->posts as $k => $_post):?>
+                    <?php if($k > 0):?>
+                        <?php Functions::get_template_part(PARTIALS_PATH.'/blog/item', [
+                            '_post' => $_post,
+                            'subtitle_length' => $subtitle_length,
+                            'excerpt_length' => $excerpt_length
+                        ]);?>
+                    <?php endif;?>
+                <?php endforeach;?>
+            </div>
+
+            <?php if($posts->found_posts > $section_data['posts_per_page_first']):?>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <button type="button" class="btn btn-info btn-lg" data-trigger="js_action_click" data-action="load_more_posts" data-target="#posts_container"><?=$section_data['button_label'];?></button>
+                    </div>
+                </div>
+            <?php endif;?>
+        <?php endif;?>
 	</div>
 </section>
 

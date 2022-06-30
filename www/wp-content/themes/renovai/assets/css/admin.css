@@ -291,5 +291,5 @@ ul.ui-autocomplete {max-width: 300px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); b
 .siw-form .siw-sortable p {margin: 5px 0}
 .siw-form .siw-sortable .siw-remove {position: absolute;right: -8px;top: -8px;background: #e14d43;color: #fff;border-radius: 50%;font-size: 16px;height: 16px;line-height: 16px;width: 16px;cursor: pointer}
 
-
+.color-square {display: inline-block; padding: 3px 10px; border-radius: 25px; text-transform: uppercase;}
 

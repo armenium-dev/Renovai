@@ -51,7 +51,7 @@ class Actions{
 		//remove_action('wp_head','wp_shortlink_wp_head', 10, 0);
 
 		//add_action('init', array($self, 'delete_post_type'));
-		add_action('init', [$self, 'unregister_tags']);
+		#add_action('init', [$self, 'unregister_tags']);
 		add_action('widgets_init', [$self, 'sidebars_init']);
 		//add_action('after_setup_theme', array($self, 'footer_enqueue_scripts'));
 
@@ -91,8 +91,10 @@ class Actions{
 	}
 	
 	public function init(){
-		$this->blog_image_placeholder_id = get_field('blog_image_placeholder', 'option');
-		Functions::set_vars_on_init();
+		if(class_exists('ACF')){
+			$this->blog_image_placeholder_id = get_field('blog_image_placeholder', 'option');
+			Functions::set_vars_on_init();
+		}
 	}
 	
 	public function remove_from_cache($post_id = 0){
@@ -123,8 +125,8 @@ class Actions{
 	public function enqueueCssAndJavascript(){
 		global $post;
 		$page_template = DataSource::get_page_template();
-		#Helper::_debug($page_template);
-		
+		#Helper::_debug([$page_template, $post->post_type]);
+
 		if(WP_PRODUCTION_MODE){
 			$script_version = '2.0.0';
 		}else{
@@ -134,7 +136,11 @@ class Actions{
 		wp_enqueue_style('fonts-google', 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 		wp_enqueue_style(THEME_SHORT.'-theme', CSS_URI.'/style.css', [], $script_version, 'all');
 		wp_enqueue_style(THEME_SHORT.'-theme-2', CSS_URI.'/frontend.css', [], $script_version, 'all');
-		
+
+		if($page_template == 'blog' || $post->post_type == 'post'){
+			wp_enqueue_style(THEME_SHORT.'-theme-blog', CSS_URI.'/blog.css', [], $script_version, 'all');
+		}
+
 		wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', [], $script_version, false);
 		wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', ['jquery'], $script_version, true);
 

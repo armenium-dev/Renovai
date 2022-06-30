@@ -28,12 +28,14 @@
 				js_loader: $(".js_data_loader"),
 				cf7_form: $('.wpcf7-form'),
 				book_a_demo_section: $('#book-a-demo-section'),
+				js_featured_slick_carousel: $('.js_featured_slick_carousel'),
 			},
 			Init: function(){
 				//this.Common.initScrollToLinks();
 				this.CF7.init();
 				this.ROI.init();
 				this.Reviews.init();
+				this.Blog.init();
 				this.initEvents();
 				this.eventResizeWindow();
 			},
@@ -310,6 +312,9 @@
 				},
 			},
 			Blog: {
+				init: function(){
+					FJS.Blog.InitFeaturedCarousel();
+				},
 				loadMore: function($obj){
 					var $target = $($obj.data('target')),
 						parent_post_id = $target.data('parent_post_id'),
@@ -367,6 +372,24 @@
 						document.execCommand("copy");
 						$temp.remove();
 						$(".custom-toast").slideDown(250).delay(2500).slideUp(250)
+					}
+				},
+				InitFeaturedCarousel: function(){
+					if(FJS.els.js_featured_slick_carousel.length){
+						FJS.els.js_featured_slick_carousel.slick({
+							prevArrow: '<div class="carousel-control prev d-none d-md-flex"><span class="carousel-control-icon prev"></span></div>',
+							nextArrow: '<div class="carousel-control next d-none d-md-flex"><span class="carousel-control-icon next"></span></div>',
+							slidesToShow: 3,
+							slidesToScroll: 1,
+							infinite: true,
+							centerMode: false,
+							fade: false,
+							dots: false,
+							responsive: [
+								{breakpoint: 992, settings: {slidesToShow: 2}},
+								{breakpoint: 768, settings: {slidesToShow: 1, centerMode: true, centerPadding: '30px'}},
+							]
+						});
 					}
 				},
 			},

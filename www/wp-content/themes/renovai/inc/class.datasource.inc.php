@@ -180,6 +180,14 @@ class DataSource{
 			]];
 		}
 		
+		if(isset($params['tags'])){
+			$args['tax_query'] = [[
+				'taxonomy' => 'post_tag',
+				'field' => 'term_id',
+				'terms' => $params['tags'],
+			]];
+		}
+
 		$_posts = new WP_Query($args);
 		#Helper::_debug($_posts->posts);
 		
@@ -1031,9 +1039,10 @@ class DataSource{
 		}
 		
 		#Helper::_debug($user_social_links);
-		
-		
+
+
 		$user = get_user_by('ID', $author_id);
+		$user_description = get_user_meta($author_id, 'description', true);
 		$user_name = $user->display_name;
 		
 		
@@ -1050,7 +1059,119 @@ class DataSource{
 			}
 		}
 		
-		return ['avatar_src' => $avatar_src, 'name' => $user_name, 'position' => $user_position, 'social_links' => $user_social_links];
+		return ['avatar_src' => $avatar_src, 'name' => $user_name, 'position' => $user_position, 'social_links' => $user_social_links, 'description' => $user_description];
 	}
-	
+
+	public static function get_tag_cloud($args = []){
+		$defaults = [
+			'post_id' => 0,
+			'smallest' => 8,
+			'largest' => 22,
+			'unit' => 'pt',
+			'number' => 45,
+			'format' => 'flat',
+			'separator' => "\n",
+			'orderby' => 'count',
+			'order' => 'DESC',
+			'exclude' => '',
+			'include' => '',
+			'link' => 'view',
+			'taxonomy' => 'post_tag',
+			'post_type' => '',
+			'echo' => false,
+			'show_count' => 0
+		];
+
+		$args = wp_parse_args($args, $defaults);
+		#Helper::_debug($args);
+
+		if($args['post_id'] == 0){
+			$_tags = get_terms($args);
+		}else{
+			$_tags = wp_get_post_tags($args['post_id'], $args);
+		}
+
+		if(empty($_tags) || is_wp_error($_tags)){
+			return;
+		}
+
+		if($args['show_count']){
+			shuffle($_tags);
+		}
+
+		$i = 0;
+		$args['show_count'] = intval($args['show_count']);
+		$tags = [];
+		foreach($_tags as $key => $tag){
+			if($args['show_count'] > 0 && $i >= $args['show_count']){
+				continue;
+			}
+
+			$tags[$key] = $tag;
+
+			if('edit' === $args['link']){
+				$link = get_edit_term_link($tag, $tag->taxonomy, $args['post_type']);
+			}else{
+				$link = get_term_link($tag, $tag->taxonomy);
+			}
+
+			if(is_wp_error($link)){
+				return;
+			}
+
+			$tags[$key]->link = $link;
+			$tags[$key]->id = $tag->term_id;
+			$tags[$key]->bg_color = get_field('tag_bg_color', 'term_'.$tag->term_id);
+			$tags[$key]->fg_color = get_field('tag_fg_color', 'term_'.$tag->term_id);
+
+			$i++;
+		}
+
+		return $tags;
+	}
+
+	public static function get_post_tags_ids($args = []){
+		$defaults = [
+			'post_id' => 0,
+			'format' => 'flat',
+			'separator' => "\n",
+			'orderby' => 'count',
+			'order' => 'DESC',
+			'exclude' => '',
+			'include' => '',
+			'link' => 'view',
+			'taxonomy' => 'post_tag',
+			'post_type' => '',
+			'echo' => false,
+			'show_count' => 0
+		];
+
+		$args = wp_parse_args($args, $defaults);
+		#Helper::_debug($args);
+
+		if($args['post_id']){
+			$_tags = wp_get_post_tags($args['post_id'], $args);
+		}
+
+		if(empty($_tags) || is_wp_error($_tags)){
+			return [];
+		}
+
+		$i = 0;
+		$args['show_count'] = intval($args['show_count']);
+		$tags = [];
+		foreach($_tags as $key => $tag){
+			if($args['show_count'] > 0 && $i >= $args['show_count']){
+				continue;
+			}
+
+			$tags[] = $tag->term_id;
+
+			$i++;
+		}
+
+		return $tags;
+	}
+
+
 }

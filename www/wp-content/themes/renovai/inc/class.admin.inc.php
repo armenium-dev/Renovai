@@ -22,7 +22,7 @@ class Admin{
 	
 	public static function true_wp_admin_block(){
 		global $user_ID;
-		if(!current_user_can('administrator')){
+		if(!current_user_can('administrator') && !current_user_can('editor') && !current_user_can('wpseo_editor') && !current_user_can('wpseo_manager')){
 			header('HTTP/1.0 404 Not Found');
 			$user = get_userdata($user_ID);
 			echo "<h2>Hey, {$user->first_name} {$user->last_name}, you're not allowed here!</h2>";

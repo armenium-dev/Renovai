@@ -1,3 +1,11 @@
+<?php
+use Digidez\Functions;
+use Digidez\Helper;
+use Digidez\DataSource;
+
+$wp_tag_cloud = DataSource::get_tag_cloud();
+#Helper::_debug($wp_tag_cloud);
+?>
 <section id="<?=$section_name;?>-section" class="blog-header-section position-relative">
 	<div class="blog-header-container">
 		<div class="container">
@@ -15,3 +23,4 @@
 	</div>
 	<img class="blog-header-img" src="<?=$section_data['section_image'];?>" alt="" title="">
 </section>
+

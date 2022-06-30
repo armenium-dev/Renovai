@@ -4,8 +4,8 @@
         :target {display: block;}
     </style>
     <g id="mobile" class="hidden">
-        <path d="M1.12659 6.79736H11.9367" stroke="#00B9EB" stroke-width="1.5443" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M6.53162 1.39233L11.9367 6.7974L6.53162 12.2025" stroke="#00B9EB" stroke-width="1.5443" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1.12659 6.79736H11.9367" stroke="#61c0fa" stroke-width="1.5443" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.53162 1.39233L11.9367 6.7974L6.53162 12.2025" stroke="#61c0fa" stroke-width="1.5443" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
     <g id="desktop" class="hidden">
         <path d="M1.12659 6.79736H11.9367" stroke="#0D0D30" stroke-width="1.5443" stroke-linecap="round" stroke-linejoin="round"/>

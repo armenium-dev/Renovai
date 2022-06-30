@@ -27,6 +27,8 @@ class Filters {
 	    add_filter('manage_edit-client_columns', [$self, 'edit_columns_client']);
 	    add_filter('manage_edit-testimonial_columns', [$self, 'edit_columns_testimonial']);
 	    add_filter('manage_edit-news_columns', [$self, 'edit_columns_news']);
+	    add_filter('manage_post_tag_custom_column', [$self, 'manage_post_tag_custom_column'], 10, 3);
+	    add_filter('manage_edit-post_tag_columns', [$self, 'edit_post_tag_column']);
 
 
 	    //add_filter('acf/rest_api/field_settings/show_in_rest', '__return_true');
@@ -40,11 +42,25 @@ class Filters {
 
 	    add_filter('wpcf7_form_tag', [$self, 'wpcf7_form_tag'], 10, 1);
 
+	    #add_filter('wp_generate_tag_cloud_data', [$self, 'wp_generate_tag_cloud_data'], 10, 1);
+
 	    #add_filter('wpseo_opengraph_desc', [$self, 'wpseo_opengraph_desc'], 10, 2);
     }
 
-    /** CORE **/
-    
+    /** WP **/
+
+	public function wp_generate_tag_cloud_data($tags_data){
+		foreach($tags_data as $k => $term){
+			$tag_bg_color = get_field('tag_bg_color', 'term_'.$term['id']);
+			$tag_fg_color = get_field('tag_fg_color', 'term_'.$term['id']);
+			$tags_data[$k]['font_size'] = '14';
+			$tags_data[$k]['tag_bg_color'] = $tag_bg_color;
+			$tags_data[$k]['tag_fg_color'] = $tag_fg_color;
+		}
+		#Helper::_debug($tags_data);
+
+		return $tags_data;
+	}
 
 	/** TEMPLATES **/
 	
@@ -253,7 +269,32 @@ class Filters {
 		
 		return $columns;
 	}
-	
+
+	public function manage_post_tag_custom_column($value, $column_name, $term_id){
+		#Helper::_debug($column_name);
+		switch($column_name) {
+			#case 'tag_bg_color':
+			case 'tag_color':
+				$term = get_term($term_id, 'post_tag');
+				$tag_bg_color = get_field('tag_bg_color', $term);
+				$tag_fg_color = get_field('tag_fg_color', $term);
+				if(!empty($tag_bg_color) && !empty($tag_fg_color)){
+					$value = '<div class="color-square" style="background-color: '.$tag_bg_color.'; color: '.$tag_fg_color.';">'.$term->name.'</div>';
+				}
+				break;
+			default:
+				break;
+		}
+
+		return $value;
+	}
+
+	public function edit_post_tag_column($columns){
+		$columns['tag_color'] = 'Color';
+
+		return $columns;
+	}
+
 	/** CF7 **/
 	
 	public function wpcf7_form_tag($tag){

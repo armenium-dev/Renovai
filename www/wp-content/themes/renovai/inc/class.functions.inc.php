@@ -490,6 +490,39 @@ class Functions {
 		
 		return $ret;
 	}
+
+    public static function generateContentWithList($content){
+        $ret = ['list' => [], 'content' => ''];
+
+        $find_tags = ['h2', 'h3', 'h4', 'h5', 'h6'];
+
+        foreach($find_tags as $tag){
+			$found = [];
+			preg_match_all('#<'.$tag.'.*?>(.*?)</'.$tag.'>#i', $content, $found);
+
+            if(!empty($found[0])){
+                foreach($found[0] as $k => $v){
+                    $anchor = sanitize_title($found[1][$k]);
+					$new_v = str_replace('<'.$tag.'>', '<'.$tag.' id="'.$anchor.'">', $v);
+                    $content = str_replace($v, $new_v, $content);
+                    $ret['list'][] = [
+                        'title' => $found[1][$k],
+                        'anchor' => '#'.$anchor,
+                    ];
+                }
+            }
+
+			#Helper::_debug($found);
+		}
+
+		$content = apply_filters( 'the_content', $content );
+		$content = str_replace( ']]>', ']]&gt;', $content );
+
+		$ret['content'] = $content;
+        #Helper::_debug($ret);
+
+        return $ret;
+    }
 	
 	/** RENDERING **/
 	
@@ -915,7 +948,8 @@ class Functions {
 	
 	public static function breadcrumbs($options = [], $content = ''){
 		global $post;
-		//_debug($post);
+		#Helper::_debug($post);
+
 		$position = 1;
 		$output = '<nav aria-label="breadcrumb" class="breadcrumb-row" itemscope="" itemtype="http://schema.org/BreadcrumbList">';
 		$output .= '<ol class="breadcrumb">';
@@ -924,7 +958,7 @@ class Functions {
 			$position++;
 			$output .= '<li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/blog/" itemprop="item"><span itemprop="name">'.__('Blog', THEME_TD).'</span></a><meta itemprop="position" content="'.$position.'" /></li>';
 		}
-		if(is_page() || is_post_type_viewable($post->post_type)){
+		if(!is_tag() && (is_page() || is_post_type_viewable($post->post_type))){
 			$ancestors = get_post_ancestors($post);
 			foreach($ancestors as $ancestor){
 				$position++;
@@ -941,6 +975,12 @@ class Functions {
 		if(is_search()){
 			$position++;
 			$output .= '<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" aria-current="page"><a href="#content" itemprop="item"><span itemprop="name">'.__('Results for ', THEME_TD).get_search_query().'</span></a><meta itemprop="position" content="'.$position.'" /></li>';
+		}
+		if(is_tag()){
+			$position++;
+			$output .= '<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" aria-current="page"><a href="/blog/" itemprop="item"><span itemprop="name">'.__('Blog', THEME_TD).'</span></a><meta itemprop="position" content="'.$position.'" /></li>';
+			$position++;
+			$output .= '<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" aria-current="page"><a href="#content" itemprop="item"><span itemprop="name">'.__('Tag: ', THEME_TD).single_tag_title('', false).'</span></a><meta itemprop="position" content="'.$position.'" /></li>';
 		}
 		$output .= '</ol>';
 		$output .= '</nav>';
