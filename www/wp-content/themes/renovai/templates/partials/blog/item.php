@@ -30,6 +30,7 @@ $cols_class = !empty($cols_class) ? $cols_class : 'col-12 col-md-6 col-lg-4 col-
 				endif;
 				?>
             </div>
+            <div class="title"><?=$_post->post_title;?></div>
 		</div>
 		<div class="body d-flex flex-column">
 			<div class="h3"><?=Functions::create_excerpt($_post->cf['post_subtitle'], $subtitle_length);?></div>
@@ -40,7 +41,7 @@ $cols_class = !empty($cols_class) ? $cols_class : 'col-12 col-md-6 col-lg-4 col-
             <p><?=Functions::create_excerpt($_post->cf['post_excerpt'], $excerpt_length);?></p>
 			<div class="mt-auto d-flex justify-content-between align-items-center">
 				<div class="avatar"><img src="<?=$_post->post_author['avatar_src'];?>" alt="" title=""><b><?=$_post->post_author['name'];?></b></div>
-				<a class="text-decoration-underline item-link" href="<?=$link;?>" title="<?=$_post->post_title;?>" data-trigger="-ga"
+				<a class="item-link" href="<?=$link;?>" title="<?=$_post->post_title;?>" data-trigger="-ga"
 				   onclick="ga('send', 'event', 'Blog Post View', 'click', '<?=$_post->post_title;?>');">Read more</a>
 			</div>
 		</div>

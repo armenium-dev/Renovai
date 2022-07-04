@@ -13,6 +13,7 @@ $wp_tag_cloud = DataSource::get_tag_cloud(['post_id' => $_post->ID]);
 ?>
 <div class="media first-item align-items-stretch flex-column flex-lg-row">
     <div class="image">
+        <div class="title"><?=$_post->post_title;?></div>
         <div class="img" style="background-image: url(<?=$bg;?>);"></div>
     </div>
     <div class="body d-flex flex-column">
@@ -43,6 +44,8 @@ $wp_tag_cloud = DataSource::get_tag_cloud(['post_id' => $_post->ID]);
         <div class="mt-auto d-flex justify-content-between align-items-center">
             <div class="avatar"><img src="<?=$_post->post_author['avatar_src'];?>" alt="" title=""><b><?=$_post->post_author['name'];?></b></div>
             <div class="published"><?=get_post_time('d F, Y', false, $_post);?></div>
+            <a class="item-link" href="<?=$link;?>" title="<?=$_post->post_title;?>" data-trigger="-ga"
+               onclick="ga('send', 'event', 'Blog Post View', 'click', '<?=$_post->post_title;?>');">Read more</a>
         </div>
     </div>
 </div>
