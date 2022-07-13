@@ -1276,8 +1276,8 @@ class Functions {
 		return self::get_template_part($template, ['params' => $params], false);
 	}
 	
-	public static function render_section_button($section_button, $atts = []){
-		
+	public static function render_section_button($section_button, $atts = [], $return_link_only = false){
+		$link = '';
 		$atts = wp_parse_args($atts, [
 			'data' => [],
 			'class' => 'btn',
@@ -1306,6 +1306,7 @@ class Functions {
 					#$data_anchore = (substr($section_button['custom_link'], 0, 1) == '#') ? 'data-trigger="js_action_click" data-action="scroll_to_el" data-target="'.$section_button['custom_link'].'"' : '';
 					#$section_button['custom_link'] = 'javascript:void(0);';
 					$button = '<a role="button" class="'.$atts['class'].'" '.$data_anchore.' href="'.$section_button['custom_link'].'" target="'.$section_button['target'].'"><span>'.$section_button['text'].'</span>'.$atts['icon'].'</a>';
+					$link = $section_button['custom_link'];
 					break;
 				case "internal":
 					if(strstr($section_button['internal_link'], '/book-a-demo/') !== false){
@@ -1317,6 +1318,7 @@ class Functions {
 					}
 					$data_anchore = self::create_button_data_attributes($atts['data']);
 					$button = '<a role="button" class="'.$atts['class'].'" '.$data_anchore.' href="'.$section_button['internal_link'].'" target="'.$section_button['target'].'"><span>'.$section_button['text'].'</span>'.$atts['icon'].'</a>';
+					$link = $section_button['internal_link'];
 					break;
 				case "download":
 					$atts['data'][] = [
@@ -1326,6 +1328,7 @@ class Functions {
 					#Helper::_debug($atts['data']);
 					$data_anchore = self::create_button_data_attributes($atts['data']);
 					$button = '<a role="button" class="'.$atts['class'].'" '.$data_anchore.' href="'.$section_button['download_file'].'" download="'.basename($section_button['download_file']).'"><span>'.$section_button['text'].'</span>'.$atts['icon'].'</a>';
+					$link = $section_button['download_file'];
 					break;
 				case "shortcode":
 					$button = do_shortcode($section_button['shortcode']);
@@ -1336,7 +1339,7 @@ class Functions {
 			}
 		}
 		
-		return $button;
+		return $return_link_only ? $link : $button;
 	}
 	
 	public static function create_button_data_attributes($data){

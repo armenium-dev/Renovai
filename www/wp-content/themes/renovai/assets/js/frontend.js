@@ -248,8 +248,10 @@
 				},
 				downloadURI: function(uri, name){
 					var link = document.createElement("a");
-					link.setAttribute('download', name);
+					//link.setAttribute('download', name);
+					link.setAttribute('target', '_blank');
 					link.href = uri;
+					link.innerText = name;
 					document.body.appendChild(link);
 					link.click();
 					link.remove();

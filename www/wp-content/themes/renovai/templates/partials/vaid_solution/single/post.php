@@ -20,6 +20,7 @@ while(have_posts()):
 	#Helper::_debug($cf);
 	$style = $cf['section_first_item_style'] == 'dark' ? '' : 'row-chessboard-reverse';
 	$btn_style = $cf['section_first_item_style'] == 'dark' ? 'btn-light' : 'btn-primary';
+	$section_small_images_direct_link = (bool) $cf['section_small_images_direct_link'];
 ?>
 	<section id="vaids-<?=$post_id;?>" class="vaids-section bg-primary">
 		<div class="container lp-container text-center pb-5 pb-md-0">
@@ -44,7 +45,12 @@ while(have_posts()):
 							<div class="d-flex justify-content-between flex-column flex-md-row">
 								<?php foreach($cf['section_items'] as $k => $item):?>
 								<div class="text-center mb-5 lp-list-item">
+                                    <?php if($section_small_images_direct_link):
+									$link = Functions::render_section_button($item['button'], [], true);?>
+									<a role="link" href="<?=$link;?>">
+                                    <?php else:?>
 									<a role="button" data-trigger="js_action_click" data-action="scroll_to_el" data-target="#item_<?=$k;?>">
+									<?php endif;?>
 										<img class="img-fluid mb-3" src="<?=$item['small_image'];?>" alt="" title="">
 										<p><?=$item['small_image_caption'];?></p>
 									</a>
@@ -108,6 +114,7 @@ while(have_posts()):
 											<?php endif;?>
 										</div>
 									<?php endif;?>
+
 									<?php $btn_style = ($btn_style == 'btn-light') ? 'btn-primary' : 'btn-light';?>
 								<?php endforeach;?>
 							</div>
