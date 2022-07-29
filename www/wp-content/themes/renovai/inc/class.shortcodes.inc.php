@@ -229,12 +229,14 @@ class Shortcodes{
 			'url' => 'images/mobile-footer-logo.svg',
 			'wrap_class' => '',
 			'image_class' => '',
+			'width' => '',
+			'height' => '',
 		]);
 		
 		if(!empty($attr['wrap_class'])){
-			$output = '<div class="'.$attr['wrap_class'].'"><img class="'.$attr['image_class'].'" src="'.$attr['url'].'" alt="" title=""></div>';
+			$output = '<div class="'.$attr['wrap_class'].'"><img class="'.$attr['image_class'].'" src="'.$attr['url'].'" alt="" title="" width="'.$attr['width'].'" height="'.$attr['height'].'"></div>';
 		}else{
-			$output = '<img class="'.$attr['image_class'].'" src="'.$attr['url'].'" alt="" title="">';
+			$output = '<img class="'.$attr['image_class'].'" src="'.$attr['url'].'" alt="" title="" width="'.$attr['width'].'" height="'.$attr['height'].'">';
 		}
 		
 		return $output;

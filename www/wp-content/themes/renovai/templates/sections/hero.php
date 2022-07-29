@@ -40,14 +40,14 @@ if($section_data['hero_animation_type'] == 'css'){
 			<div class="animation-scenes">
 				<div class="animation-scene overflow-hidden w-100 h-100 animation-header-slide-02 animation">
 					<div class="s-wooman">
-						<img src="<?=IMAGES_URI?>/happy-afro-american-lady.png" alt="">
+						<img src="<?=IMAGES_URI?>/happy-afro-american-lady.png" alt="" class="w-auto h-auto" width="504" height="583">
 					</div>
 					<div class="s-properties">
-						<img src="<?=IMAGES_URI?>/Group-1619.svg">
+						<img src="<?=IMAGES_URI?>/Group-1619.svg" alt="" class="w-auto h-auto" width="154" height="122">
 					</div>
 					<div class="scene-02">
 						<div class="phone-animation-slide-02"></div>
-						<img class="s-chair-img" src="<?=IMAGES_URI?>/Group-1604.png">
+						<img class="s-chair-img w-auto h-auto" src="<?=IMAGES_URI?>/Group-1604.png" alt="" width="291" height="436">
 					</div>
 				</div>
 			</div>

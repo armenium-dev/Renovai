@@ -21,14 +21,14 @@ $section_data['section_items'] = DataSource::fill_cpt_cf($section_data['section_
 				<?php foreach($section_data['section_items'] as $k => $item):?>
 				<div class="col-12 col-md-6 col-lg-4 item d-flex justify-content-center">
 					<div class="lp-col-content text-center h-100 d-flex flex-column align-items-center">
-						<img class="img-fluid" src="<?=$item->cf['section_icon'];?>" alt="<?=$item->post_title;?>" title="<?=$item->post_title;?>">
+						<img class="img-fluid w-auto" width="49" height="40" src="<?=$item->cf['section_icon'];?>" alt="<?=$item->post_title;?>" title="<?=$item->post_title;?>">
 						<div class="lp-col-title">
 							<small>renovai</small>
 							<p><?=$item->post_title;?></p>
 						</div>
 						<h3 class="mb-2"><?=$item->cf['section_subtitle'];?></h3>
 						<p class="desc"><?=$item->cf['section_description'];?></p>
-						<a href="<?=get_permalink($item);?>">Learn more</a>
+						<a href="<?=get_permalink($item);?>" title="<?=$item->post_title;?>">Learn more</a>
 					</div>
 				</div>
 				<?php endforeach;?>

@@ -37,7 +37,7 @@ if(!empty($section_data['section_background'])){
 									<div class="review-img">
 										<?php if($item->cf['testimonial_user_quote_video']):?>
 										<a class="video_intro_btn" href="javascript:void(0);" data-trigger="js_action_click" data-action="open_video_modal" data-target="#videoPreviewModal" data-video="<?=$item->cf['testimonial_user_quote_video'];?>">
-											<img src="<?=IMAGES_URI;?>/icon-video-play.svg" alt="Play">
+											<img src="<?=IMAGES_URI;?>/icon-video-play.svg" alt="Play video" class="w-auto h-auto" width="77" height="77">
 										</a>
 										<?php endif;?>
 										<?=Functions::get_the_attachment_thumbnail($item->cf['testimonial_user_photo'], '722x403', ['alt' => $item->post_title, 'class' => 'd-none d-md-block'], true, false);?>
@@ -46,17 +46,17 @@ if(!empty($section_data['section_background'])){
 								<?php endif;?>
 								<div class="review-attrs">
 									<?php if($item->cf['testimonial_user_quote_video']):?>
-										<img src="<?=IMAGES_URI;?>/logo-renovai.svg" alt="" title="" class="renovai-logo d-block d-md-none">
+										<img src="<?=IMAGES_URI;?>/logo-renovai.svg" alt="" title="" class="renovai-logo d-block d-md-none w-auto h-auto" width="136" height="28">
 										<div class="review-title"><?=$item->post_title;?></div>
 									<?php endif;?>
 									<?php if($item->cf['testimonial_company_name']):?>
 										<div class="review-company"><?=$item->cf['testimonial_company_name'];?></div>
 									<?php endif;?>
 									<?php if($item->cf['testimonial_company_logo']):?>
-										<img src="<?=$item->cf['testimonial_company_logo'];?>" alt="" title="" class="review-logo d-none d-md-block">
+										<img src="<?=$item->cf['testimonial_company_logo'];?>" alt="" title="" class="review-logo d-none d-md-block w-auto h-auto" width="136" height="28">
 									<?php endif;?>
 									<?php if($item->cf['testimonial_company_logo_mobile']):?>
-										<img src="<?=$item->cf['testimonial_company_logo_mobile'];?>" alt="" title="" class="review-logo d-block d-md-none">
+										<img src="<?=$item->cf['testimonial_company_logo_mobile'];?>" alt="" title="" class="review-logo d-block d-md-none w-auto h-auto" width="136" height="28">
 									<?php endif;?>
 									<?php if(!$item->cf['testimonial_user_quote_video']):?>
 										<div class="review-title"><b><?=$item->post_title;?> /</b> <span><?=$item->cf['testimonial_job_title'];?></span></div>
@@ -75,8 +75,8 @@ if(!empty($section_data['section_background'])){
 		<div class="container-fluid mt-30 mt-md-100">
 			<div class="badges badges-carousel d-flex justify-content-between align-items-center flex-nowrap max-w-1100 m-auto">
 			<?php
-				$pattern_1 = '<a href="%s" target="_blank"><img src="%s" alt="" title=""></a>';
-				$pattern_2 = '<img src="%s" alt="" title="">';
+				$pattern_1 = '<a href="%s" target="_blank"><img src="%s" alt="" title="" width="158" height="152" class="w-auto h-auto"></a>';
+				$pattern_2 = '<img src="%s" alt="" title="" width="158" height="152" class="w-auto h-auto">';
 			?>
 			<?php foreach($section_data['section_badge_images'] as $item):?>
 				<?=(!empty($item['link']) ? sprintf($pattern_1, $item['link'], $item['image']) : sprintf($pattern_2, $item['image']));?>

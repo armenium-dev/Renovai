@@ -10,7 +10,7 @@ use Digidez\Helper;
 		<h2 class="text-center"><?=$section_data['section_title'];?></h2>
 		<div class="d-flex flex-nowrap justify-content-between align-items-center text-center featured-logos-carousel">
 			<?php foreach($section_data['section_items'] as $k => $url):?>
-				<img class="img-fluid m-logo" src="<?=$url;?>" alt="" title="">
+				<img class="img-fluid m-logo w-auto h-auto" src="<?=$url;?>" alt="" title="" width="116" height="27">
 			<?php endforeach;?>
 		</div>
 	</div>

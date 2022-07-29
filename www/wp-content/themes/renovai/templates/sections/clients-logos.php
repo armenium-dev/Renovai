@@ -15,7 +15,7 @@ $section_data['section_items'] = DataSource::fill_cpt_cf($section_data['section_
 					<?php if(!empty($item->cf['client_url'])):?>
 						<a href="<?=$item->cf['client_url'];?>" title="<?=$item->post_title;?>">
 					<?php endif;?>
-						<img class="w-100 w-md-auto" src="<?=$item->cf['client_logo'];?>" alt="<?=$item->post_title;?>">
+						<img class="w-100 w-md-auto" src="<?=$item->cf['client_logo'];?>" alt="<?=$item->post_title;?>" width="70" height="26">
 					<?php if(!empty($item->cf['client_url'])):?>
 						</a>
 					<?php endif;?>
