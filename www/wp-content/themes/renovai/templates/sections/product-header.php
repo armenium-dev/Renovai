@@ -5,6 +5,23 @@ use Digidez\Helper;
 #Helper::_debug($section_data);
 
 $section_class = ($section_data['section_desktop_illustration_type'] == 'nothing') ? 'without-bg product-header' : 'product-header';
+
+$option_h1_title_field = $section_data['option_h1_title_field'];
+switch($option_h1_title_field){
+	case "section_title":
+		$section_title_tag = 'h1';
+		$section_content_tag = 'p';
+		break;
+	case "section_content":
+		$section_title_tag = 'div';
+		$section_content_tag = 'h1';
+		break;
+	default:
+		$section_title_tag = 'h1';
+		$section_content_tag = 'p';
+		break;
+}
+
 ?>
 <section id="<?=$section_name;?>-section" class="<?=$section_class;?>">
 	<div class="container">
@@ -12,8 +29,8 @@ $section_class = ($section_data['section_desktop_illustration_type'] == 'nothing
 			<div class="col-12 col-xxl-9">
 				<div class="row justify-content-center">
 					<div class="col-lg-10 col-xxl-12 text-center">
-						<h1 class="h1"><?=$section_data['section_title'];?></h1>
-						<p><?=$section_data['section_content'];?></p>
+						<<?=$section_title_tag;?> class="h1"><?=$section_data['section_title'];?></<?=$section_title_tag;?>>
+						<<?=$section_content_tag;?> class="section-content"><?=$section_data['section_content'];?></<?=$section_content_tag;?>>
 						<div><?=Functions::render_section_button($section_data['section_button'], ['class' => 'btn btn-secondary shadow']);?></div>
 						<div class="mobile-content d-lg-none pt-6 pb-3">
 						<?php if($section_data['section_desktop_illustration_type'] != 'nothing'):?>

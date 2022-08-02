@@ -1038,3 +1038,14 @@ textarea.other-choice {max-height: 108px; line-height: 24px;}
 	.breadcrumbs-wrap {margin-top: 18px;}
 }
 
+
+.lp-container .subtitle {font-size: 20px; line-height: 30px;}
+@media all and (min-width: 768px) {
+	.lp-container .subtitle {font-size: 28px; line-height: 42px;}
+}
+
+.product-header .section-content {font-size: 16px; line-height: 24px; margin-bottom: 1rem;}
+@media all and (min-width: 992px) {
+	.product-header .section-content {font-size: 24px; line-height: 32px;}
+}
+

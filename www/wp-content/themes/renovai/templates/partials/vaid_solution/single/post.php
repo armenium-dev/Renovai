@@ -21,14 +21,28 @@ while(have_posts()):
 	$style = $cf['section_first_item_style'] == 'dark' ? '' : 'row-chessboard-reverse';
 	$btn_style = $cf['section_first_item_style'] == 'dark' ? 'btn-light' : 'btn-primary';
 	$section_small_images_direct_link = (bool) $cf['section_small_images_direct_link'];
+
+    $option_h1_title_field = $cf['option_h1_title_field'];
+    switch($option_h1_title_field){
+        case "page_title":
+			$page_title_tag = 'h1';
+			$sub_title_tag = 'p';
+            break;
+        case "subtitle":
+			$page_title_tag = 'div';
+			$sub_title_tag = 'h1';
+            break;
+        default:
+            $page_title_tag = 'h1';
+            $sub_title_tag = 'p';
+            break;
+    }
 ?>
 	<section id="vaids-<?=$post_id;?>" class="vaids-section bg-primary">
 		<div class="container lp-container text-center pb-5 pb-md-0">
 			<img class="img-fluid mb-6" src="<?=$cf['section_icon'];?>" alt="" title="">
-			<h1 class="h1 mb-3">
-				<small>renovai</small>
-				<span><?=$post_title;?></span></h1>
-			<p class="mb-8"><?=$cf['section_subtitle'];?></p>
+			<<?=$page_title_tag;?> class="h1 mb-3"><small>renovai</small><span><?=$post_title;?></span></<?=$page_title_tag;?>>
+			<<?=$sub_title_tag;?> class="mb-8 subtitle"><?=$cf['section_subtitle'];?></<?=$sub_title_tag;?>>
 			<?=Functions::render_section_button($cf['section_button'], ['class' => 'btn btn-light']);?>
 		</div>
 	</section>
