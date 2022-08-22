@@ -33753,6 +33753,11 @@ textarea.form-control {
 .row-chessboard.row-chessboard-reverse .col-chessboard:nth-child(4n+4):before {
 	background-color: #0d0d30;}
 
+.row-chessboard .collapse-btn {display: inline-block; margin-left: 4px; border: 0; background-color: transparent; line-height: 1; padding: 0;}
+.row-chessboard .collapse-btn:hover svg,
+.row-chessboard .collapse-btn.active svg {fill: #61C0FA;}
+.row-chessboard .collapse-btn.active svg {transform: rotate(180deg);}
+
 .lp-main-section h2 {
 	font-family: 'moderat-bold';
 	font-weight: normal;

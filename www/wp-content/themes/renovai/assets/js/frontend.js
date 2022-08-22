@@ -116,6 +116,9 @@
 					case "roi_calc_result":
 						FJS.ROI.calc($this);
 						break;
+					case "toggle_description":
+						FJS.Page.togglrDescription($this);
+						break;
 					default:
 						break;
 				}
@@ -932,6 +935,19 @@
 						$video.trigger('pause');
 					});
 					$video.trigger('play');
+				},
+			},
+			Page: {
+				togglrDescription: function($btn){
+					var $el = $btn.parent('p').next('.js_hidden_desc');
+
+					if($el.hasClass('d-none')){
+						$btn.addClass('active');
+						$el.removeClass('d-none');
+					}else{
+						$btn.removeClass('active');
+						$el.addClass('d-none');
+					}
 				},
 			},
 		};

@@ -50,23 +50,16 @@ $wp_tag_cloud = DataSource::get_tag_cloud(['post_id' => $post->ID]);
 			<div class="row justify-content-center">
 				<div class="col-12 col-xxl-9">
 
-                    <div class="mb-3 mb-md-4 d-flex align-items-start flex-row flex-nowrap justify-content-start">
-                        <img class="avatar" src="<?=$author['avatar_src'];?>" alt="<?=$author['name'];?>" title="<?=$author['name'];?>">
+                    <div class="mb-3 mb-md-1 d-flex align-items-start flex-row flex-nowrap justify-content-start">
                         <div class="flex-fill">
-                            <div class="author d-flex flex-row flex-nowrap justify-content-between align-items-center">
+                            <div class="d-flex flex-row flex-nowrap justify-content-between align-items-center">
                                 <div class="a-data">
-                                    <div class="a-name"><?=$author['name'];?></div>
-                                    <?php if(!empty($author['position'])):?>
-                                    <div class="a-position"><?=$author['position'];?></div>
-                                    <?php endif;?>
-                                    <div class="published d-md-none"><?=get_post_time('F jS, Y');?></div>
+                                    <div class="published"><?=get_post_time('F jS, Y');?></div>
                                 </div>
                                 <div class="d-none d-md-block">
                                     <?=Functions::get_social_shareing_html($post);?>
                                 </div>
                             </div>
-                            <div class="a-description"><?=$author['description'];?></div>
-                            <div class="published d-none d-md-block"><?=get_post_time('F jS, Y');?></div>
                         </div>
 					</div>
 
@@ -102,6 +95,24 @@ $wp_tag_cloud = DataSource::get_tag_cloud(['post_id' => $post->ID]);
                     <?php endif;?>
                     <?=$content_data['content'];?>
 					<?php #the_content();?>
+
+                    <div class="author-box d-flex align-items-start flex-row flex-nowrap justify-content-start">
+                        <img class="avatar" src="<?=$author['avatar_src'];?>" alt="<?=$author['name'];?>" title="<?=$author['name'];?>">
+                        <div class="flex-fill">
+                            <div class="author d-flex flex-row flex-nowrap justify-content-between align-items-center">
+                                <div class="a-data">
+                                    <div class="a-name"><?=$author['name'];?></div>
+									<?php if(!empty($author['position'])):?>
+                                        <div class="a-position"><?=$author['position'];?></div>
+									<?php endif;?>
+                                </div>
+                                <div class="d-none d-md-block">
+                                </div>
+                            </div>
+                            <div class="a-description"><?=$author['description'];?></div>
+                        </div>
+                    </div>
+
 
 				</div>
 			</div>

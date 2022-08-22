@@ -18,6 +18,7 @@ while(have_posts()):
 	$post_title = get_the_title();
 	$cf = get_fields($post_id);
 	#Helper::_debug($cf);
+	$color = $cf['section_first_item_style'] == 'dark' ? '#fff' : '#0D0D30';
 	$style = $cf['section_first_item_style'] == 'dark' ? '' : 'row-chessboard-reverse';
 	$btn_style = $cf['section_first_item_style'] == 'dark' ? 'btn-light' : 'btn-primary';
 	$section_small_images_direct_link = (bool) $cf['section_small_images_direct_link'];
@@ -85,6 +86,13 @@ while(have_posts()):
 						<div class="col-12">
 							<div class="row row-chessboard <?=$style;?>">
 								<?php foreach($cf['section_items'] as $k => $item):?>
+                                    <?php
+                                    $description = $item['description'];
+                                    if(!empty($item['collapsed_description'])){
+                                        $description = trim($description, '.');
+										$description .= '<button class="collapse-btn" data-trigger="js_action_click" data-action="toggle_description"><svg width="12" height="7" viewBox="0 0 12 7" fill="'.$color.'" xmlns="http://www.w3.org/2000/svg"><path fill="" fill-rule="evenodd" clip-rule="evenodd" d="M6.66989 6.62503L6 5.93078L5.33011 6.62503C5.70008 7.00845 6.29992 7.00845 6.66989 6.62503ZM5.7889 0.000165939H1.61726C0.922522 0.000165939 1.52252 0.000165939 0.277478 0.000165939C-0.0924926 0.383589 -0.0924926 1.00524 0.277478 1.38867L5.33011 6.62503L6 5.93078L6.66989 6.62503L11.7225 1.38867C12.0925 1.00524 12.0925 0.383589 11.7225 0.000165939C11.1225 0.000146866 11.1225 0.000146866 10.3827 0.000165939H5.7889Z"/></svg></button>';
+                                    }
+									?>
 									<?php if($k % 2 == 1):?>
 										<div class="col-12 col-md-6 col-chessboard">
 											<?php if($item['big_media_type'] == 'image'):?>
@@ -107,7 +115,10 @@ while(have_posts()):
 												<p class="sub-title"><?=$item['sub_title'];?></p>
 											<?php endif;?>
 										</h3>
-										<p><?=$item['description'];?></p>
+										<p class="mb-0"><?=$description;?></p>
+                                        <?php if(!empty($item['collapsed_description'])):?>
+										<p class="js_hidden_desc d-none"><?=$item['collapsed_description'];?></p>
+                                        <?php endif;?>
 										<div class="mt-3">
 											<?=Functions::render_section_button($item['button'], ['class' => 'btn '.$btn_style]);?>
 										</div>
@@ -129,6 +140,7 @@ while(have_posts()):
 										</div>
 									<?php endif;?>
 
+									<?php $color = ($color == '#fff') ? '#0D0D30' : '#fff';?>
 									<?php $btn_style = ($btn_style == 'btn-light') ? 'btn-primary' : 'btn-light';?>
 								<?php endforeach;?>
 							</div>

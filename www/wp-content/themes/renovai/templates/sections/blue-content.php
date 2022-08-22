@@ -1,7 +1,7 @@
 <?php
-use Digidez\Functions;
+use Digidez\Helper;
 
-#Functions::_debug($section_data);
+#Helper::_debug($section_data);
 
 ?>
 <section id="<?=$section_name;?>-section" class="<?=$section_name;?>-section bg-secondary py-5 py-md-7 sier">

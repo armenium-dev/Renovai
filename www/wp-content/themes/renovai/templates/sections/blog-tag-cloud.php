@@ -5,6 +5,13 @@ use Digidez\DataSource;
 
 $wp_tag_cloud = DataSource::get_tag_cloud();
 #Helper::_debug($wp_tag_cloud);
+if(!empty($section_data['tags_to_display'])){
+    foreach($wp_tag_cloud as $k => $tag){
+        if(!in_array($tag->term_id, $section_data['tags_to_display'])){
+            unset($wp_tag_cloud[$k]);
+        }
+    }
+}
 ?>
 <?php if(!empty($wp_tag_cloud)):?>
 	<section class="tags-wrap">

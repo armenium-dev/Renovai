@@ -1287,7 +1287,7 @@ class Functions {
 		$button = '';
 		
 		if(!empty($section_button)){
-			if($section_button['style'] == 'link'){
+			if(isset($section_button['style']) && $section_button['style'] == 'link'){
 				$atts['class'] = '';
 			}
 			

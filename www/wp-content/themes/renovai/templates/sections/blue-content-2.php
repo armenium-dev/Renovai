@@ -1,7 +1,8 @@
 <?php
 use Digidez\Functions;
+use Digidez\Helper;
 
-#Functions::_debug($section_data);
+#Helper::_debug($section_data);
 
 ?>
 <section id="<?=$section_name;?>-section" class="bg-secondary py-4 pt-lg-9 pb-lg-7 itmmb-section sm-toggle-position">
