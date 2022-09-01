@@ -939,7 +939,7 @@
 			},
 			Page: {
 				togglrDescription: function($btn){
-					var $el = $btn.parent('p').next('.js_hidden_desc');
+					var $el = $btn.parent('.js_dyn_desc').find('.js_hidden_desc');
 
 					if($el.hasClass('d-none')){
 						$btn.addClass('active');
