@@ -136,6 +136,7 @@ class Actions{
 		wp_enqueue_style('fonts-google', 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 		wp_enqueue_style(THEME_SHORT.'-theme', CSS_URI.'/style.css', [], $script_version, 'all');
 		wp_enqueue_style(THEME_SHORT.'-theme-2', CSS_URI.'/frontend.css', [], $script_version, 'all');
+		#wp_enqueue_style(THEME_SHORT.'-calendly', CSS_URI.'/calendly-widget.css', [], $script_version, 'all');
 
 		if($page_template == 'blog' || $post->post_type == 'post'){
 			wp_enqueue_style(THEME_SHORT.'-theme-blog', CSS_URI.'/blog.css', [], $script_version, 'all');
@@ -156,6 +157,8 @@ class Actions{
 		wp_enqueue_script('jquery-inputmask', JS_URI.'/jquery.inputmask.min.js', ['jquery'], $script_version, true);
 		wp_enqueue_script('ion-rangeSlider', JS_URI.'/ion.rangeSlider.min.js', ['jquery'], $script_version, true);
 		wp_enqueue_script(THEME_SHORT.'-common', JS_URI.'/common.js', ['jquery'], $script_version, true);
+		#wp_enqueue_script(THEME_SHORT.'-calendly', JS_URI.'/calendly-widget.js', ['jquery'], $script_version, true);
+		#wp_enqueue_script('calendly-widget', 'https://assets.calendly.com/assets/external/widget.js', [], $script_version, true);
 
 		/*
 		$google  = get_field('google', 'option');

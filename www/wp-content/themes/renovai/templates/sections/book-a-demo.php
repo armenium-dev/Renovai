@@ -20,6 +20,7 @@ use Digidez\Helper;
 					<div class="col-12 col-lg-5 offset-lg-1 order-0 order-lg-1 mb-6">
 						<div class="form-title"><?=$section_data['section_title'];?></div>
 						<?=do_shortcode($section_data['section_form']);?>
+                        <input type="hidden" id="js_calendly_link" value="<?=$section_data['section_calendly_calendar_link'];?>">
 					</div>
 				</div>
 			</div>
@@ -29,8 +30,10 @@ use Digidez\Helper;
 <?php
 echo Functions::render_modal_custom([
 	'template'     => MODALS_PATH.'/calendly',
-	'size'         => 3, // 1,2,3,4
+	'size'         => 4, // 1,2,3,4
 	'id'           => 'calendlyModal',
 	'class'        => 'calendly-modal',
-	'modal_params' => [],
+	'modal_params' => [
+        'calendly_link' => $section_data['section_calendly_calendar_link']
+    ],
 ]);

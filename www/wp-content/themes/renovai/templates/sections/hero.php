@@ -16,6 +16,7 @@ if($section_data['hero_animation_type'] == 'css'){
 			<span class="d-lg-none d-md-none d-sm-none"><?=strip_tags($section_data['section_title']);?></span>
 			<?php if($section_data['media_response_type'] == 'form'):?>
 				<?=do_shortcode($section_data['section_form']);?>
+                <input type="hidden" id="js_calendly_link" value="<?=$section_data['section_calendly_calendar_link'];?>">
 			<?php elseif($section_data['media_response_type'] == 'button'):?>
 				<?=Functions::render_section_button($section_data['section_button'], ['class' => 'btn btn-secondary shadow']);?>
 			<?php endif;?>
@@ -166,3 +167,13 @@ if($section_data['hero_animation_type'] == 'css'){
 		</div>
 	<?php endif;?>
 </section>
+<?php
+echo Functions::render_modal_custom([
+	'template'     => MODALS_PATH.'/calendly',
+	'size'         => 4, // 1,2,3,4
+	'id'           => 'calendlyModal',
+	'class'        => 'calendly-modal',
+	'modal_params' => [
+		'calendly_link' => $section_data['section_calendly_calendar_link']
+	],
+]);

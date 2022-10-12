@@ -483,6 +483,7 @@
 						after_send_action = "",
 						redirect_url = "",
 						display_modal = "",
+						display_calendly = "",
 						scheduler_modal = "",
 						download_file = "",
 						hide_modal = "";
@@ -494,6 +495,8 @@
 							redirect_url = el.value;
 						if(el.name == 'display_modal')
 							display_modal = el.value;
+						if(el.name == 'display_calendly')
+							display_calendly = el.value;
 						if(el.name == 'scheduler_modal')
 							scheduler_modal = el.value;
 						if(el.name == 'hide_modal')
@@ -526,6 +529,14 @@
 							if(display_modal != ""){
 								if($(display_modal).length){
 									$(display_modal).modal('show');
+									FJS.Loader.stop();
+								}
+							}
+							if(display_calendly != ""){
+								if($(display_calendly).length){
+									var link = $(display_calendly).val();
+									//Calendly.initPopupWidget({url: link});
+									FJS.Loader.stop();
 								}
 							}
 							if(download_file != ""){
