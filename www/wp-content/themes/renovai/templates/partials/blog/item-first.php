@@ -13,7 +13,10 @@ $wp_tag_cloud = DataSource::get_tag_cloud(['post_id' => $_post->ID]);
 ?>
 <div class="media first-item align-items-stretch flex-column flex-lg-row">
     <div class="image">
-        <div class="title"><?=$_post->post_title;?></div>
+        <div class="title">
+            <a href="<?=$link;?>" title="<?=$_post->post_title;?>"
+               onclick="ga('send', 'event', 'Blog Post View', 'click', '<?=$_post->post_title;?>');"><?=$_post->post_title;?></a>
+        </div>
         <div class="img" style="background-image: url(<?=$bg;?>);"></div>
     </div>
     <div class="body d-flex flex-column">

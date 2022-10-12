@@ -30,7 +30,10 @@ $cols_class = !empty($cols_class) ? $cols_class : 'col-12 col-md-6 col-lg-4 col-
 				endif;
 				?>
             </div>
-            <div class="title"><?=$_post->post_title;?></div>
+            <div class="title">
+                <a class="" href="<?=$link;?>" title="<?=$_post->post_title;?>" data-trigger="-ga"
+                   onclick="ga('send', 'event', 'Blog Post View', 'click', '<?=$_post->post_title;?>');"><?=$_post->post_title;?></a>
+            </div>
 		</div>
 		<div class="body d-flex flex-column">
 			<div class="h3"><?=Functions::create_excerpt($_post->cf['post_subtitle'], $subtitle_length);?></div>

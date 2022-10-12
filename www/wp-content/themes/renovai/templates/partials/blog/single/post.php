@@ -19,7 +19,10 @@ if(has_post_thumbnail($post)){
 $wp_tag_cloud = DataSource::get_tag_cloud(['post_id' => $post->ID]);
 
 ?>
-<?php while(have_posts()): the_post(); $author = DataSource::get_author_data(); $content_data = Functions::generateContentWithList(get_the_content());?>
+<?php while(have_posts()): the_post();
+    $author = DataSource::get_author_data();
+    $content_data = Functions::generateContentWithList(get_the_content());
+	#Helper::_debug($author);?>
 	<section class="blog-item-header-section position-relative">
 		<div class="blog-item-header-container">
 			<div class="container">
@@ -101,7 +104,13 @@ $wp_tag_cloud = DataSource::get_tag_cloud(['post_id' => $post->ID]);
                         <div class="flex-fill">
                             <div class="author d-flex flex-row flex-nowrap justify-content-between align-items-center">
                                 <div class="a-data">
-                                    <div class="a-name"><?=$author['name'];?></div>
+                                    <div class="a-name">
+                                        <?php if(!empty($author['user_linked_in_profile_link'])):?>
+                                            <?=sprintf('<a href="%s" target="%s">%s</a>', $author['user_linked_in_profile_link'], '_blank', $author['name'])?>
+                                        <?php else:?>
+                                            <?=$author['name'];?>
+                                        <?php endif;?>
+                                    </div>
 									<?php if(!empty($author['position'])):?>
                                         <div class="a-position"><?=$author['position'];?></div>
 									<?php endif;?>

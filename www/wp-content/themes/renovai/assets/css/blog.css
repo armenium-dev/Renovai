@@ -78,6 +78,7 @@
 .blog-posts-section .media .published {font-family: 'moderat-mono-regular'; font-size: 14px; line-height: 15px;}
 .blog-posts-section .media .body p {font-family: 'moderat-light'; font-size: 16px; line-height: 24px; color: #676879; margin-bottom: 18px;}
 .blog-posts-section .media .title {position: relative; top: 0; left: 0; right: 0; width: 100%; color: #fff; font-family: 'moderat-bold'; font-weight: normal; font-size: 28px; line-height: 42px; z-index: 2; padding: 0 28px;}
+.blog-posts-section .media .title a {color: #fff;}
 
 .blog-posts-section .media.first-item {margin-bottom: 80px; border-radius: 24px; border: 1px solid #E6E9EF; box-shadow: 0 14px 50px rgba(0, 0, 0, 0.03);}
 .blog-posts-section .media.first-item .image {width: 50%; height: auto;}
@@ -131,6 +132,7 @@
 }
 @media all and (max-width: 1366px) {
     .blog-posts-section {margin-top: 35px;}
+    .blog-posts-section .media .title {font-size: 24px; line-height: 34px; padding: 0 24px;}
 }
 @media all and (max-width: 1199px) {
     .blog-posts-section .media.first-item .body .h3 {font-size: 28px; line-height: 34px;}
@@ -260,6 +262,8 @@ body.single-post .breadcrumbs-wrap .breadcrumb-item a {font-size: 12px; line-hei
 .blog-content-section .author-box {border-width: 1px 0; border-color: #C5C7D0; border-style: solid; padding-top: 16px; padding-bottom: 25px; margin-top: 30px;}
 .blog-content-section .avatar {border-radius: 100%; width: 48px; height: 48px; margin-right: 11px;}
 .blog-content-section .a-name {font-family: 'moderat-bold'; font-weight: normal; font-size: 16px; line-height: 24px; margin-bottom: 4px;}
+.blog-content-section .a-name a {text-decoration: underline;}
+.blog-content-section .a-name a:hover {text-decoration: none;}
 .blog-content-section .a-position {font-family: 'moderat-medium'; font-weight: normal; font-size: 14px; line-height: 18px;}
 .blog-content-section .a-description {font-family: 'moderat-light'; font-weight: normal; font-size: 14px; line-height: 20px; margin-left: -59px; margin-top: 23px;}
 .blog-content-section .published {font-family: 'moderat-mono-light'; font-weight: normal; font-size: 14px; line-height: 22px; color: #828282;}

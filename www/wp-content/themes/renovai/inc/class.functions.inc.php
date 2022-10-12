@@ -499,11 +499,11 @@ class Functions {
         foreach($find_tags as $tag){
 			$found = [];
 			preg_match_all('#<'.$tag.'.*?>(.*?)</'.$tag.'>#i', $content, $found);
-
             if(!empty($found[0])){
+                #Helper::_debug($found[0]);
                 foreach($found[0] as $k => $v){
                     $anchor = sanitize_title($found[1][$k]);
-					$new_v = str_replace('<'.$tag.'>', '<'.$tag.' id="'.$anchor.'">', $v);
+					$new_v = str_replace('<'.$tag.'', '<'.$tag.' id="'.$anchor.'" ', $v);
                     $content = str_replace($v, $new_v, $content);
                     $ret['list'][] = [
                         'title' => $found[1][$k],

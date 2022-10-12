@@ -998,7 +998,8 @@ class DataSource{
 		$user_position = get_field('user_position', 'user_'.$author_id);
 		$user_avatar_id = get_field('user_avatar', 'user_'.$author_id);
 		$user_social_links = get_field('user_social_links', 'user_'.$author_id);
-		
+		$user_linked_in_profile_link = get_field('user_linked_in_profile_link', 'user_'.$author_id);
+
 		if(!empty($user_social_links)){
 			foreach($user_social_links as $k => $v){
 				if(empty($v['icon'])){
@@ -1059,7 +1060,14 @@ class DataSource{
 			}
 		}
 		
-		return ['avatar_src' => $avatar_src, 'name' => $user_name, 'position' => $user_position, 'social_links' => $user_social_links, 'description' => $user_description];
+		return [
+			'avatar_src' => $avatar_src,
+			'name' => $user_name,
+			'position' => $user_position,
+			'user_linked_in_profile_link' => $user_linked_in_profile_link,
+			'social_links' => $user_social_links,
+			'description' => $user_description
+		];
 	}
 
 	public static function get_tag_cloud($args = []){
