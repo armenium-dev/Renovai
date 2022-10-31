@@ -624,28 +624,30 @@
 									$(el).addClass('is-valid').removeClass('is-invalid');
 								}
 							}
-							if($(el).attr('type') == 'email' && $(el).hasClass('ignore-free-mail')){
+							if($(el).attr('type') == 'email'){
 								var $p = $(el).parent('.wpcf7-form-control-wrap');
 								var $e = $p.find('.error');
 								var index_at = el_val.indexOf('@');
 
 								if(index_at > -1){
-									var freeRegex = /^[\w-\.]+@([hotmail+\.]|[yahoo+\.]|[gmail+\.])+[\w-]{2,4}$/;
-									if(el_val.match(freeRegex)){
-										$(el).removeClass('is-valid');
-										FJS.CF7.vars.all_is_valid = false;
-										//var a = el_val.split('@');
-										//var domain = a[1];
-										var text = 'Please enter your business email address';
-										//console.log(text);
-										if(!$e.length){
-											$p.append('<div class="error wpcf7-not-valid-tip red">' + text + '</div>');
+									if($(el).hasClass('ignore-free-mail')){
+										var freeRegex = /^[\w-\.]+@([hotmail+\.]|[yahoo+\.]|[gmail+\.])+[\w-]{2,4}$/;
+										if(el_val.match(freeRegex)){
+											$(el).removeClass('is-valid');
+											FJS.CF7.vars.all_is_valid = false;
+											//var a = el_val.split('@');
+											//var domain = a[1];
+											var text = 'Please enter your business email address';
+											//console.log(text);
+											if(!$e.length){
+												$p.append('<div class="error wpcf7-not-valid-tip red">' + text + '</div>');
+											}else{
+												$e.text(text);
+											}
 										}else{
-											$e.text(text);
-										}
-									}else{
-										if($e.length){
-											$e.text('');
+											if($e.length){
+												$e.text('');
+											}
 										}
 									}
 								}

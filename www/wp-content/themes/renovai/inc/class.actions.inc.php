@@ -191,8 +191,8 @@ class Actions{
 			'lang' => [],
 		];
 
-		wp_enqueue_script(THEME_SHORT.'-index', JS_URI.'/frontend.js', [], $script_version, true);
-		wp_localize_script(THEME_SHORT.'-index', 'globals', $globals_atts);
+		wp_enqueue_script(THEME_SHORT.'-frontend', JS_URI.'/frontend.js', [], $script_version, true);
+		wp_localize_script(THEME_SHORT.'-frontend', 'globals', $globals_atts);
 	}
 
 	public function enqueueCssAndJavascriptAdmin(){
@@ -499,14 +499,20 @@ class Actions{
 	
 	public function wpcf7_before_send_mail($contact_form, &$abort){
 		$abort = false;
-		
+
 		$submission = WPCF7_Submission::get_instance();
 		$submited['posted_data'] = $submission->get_posted_data();
+
+		$exclude_forms_for_validating_business_emails = get_field('common_exclude_forms_for_validating_business_emails', 'option');
+		#Helper::_log($exclude_forms_for_validating_business_emails);
+		#Helper::_log($contact_form->id);
 		#Helper::_log($submited);
-		
+
 		if(isset($submited['posted_data']['your-email'])){
-			if(!Functions::is_business_email($submited['posted_data']['your-email'])){
-				$abort = true;
+			if(!in_array($contact_form->id, $exclude_forms_for_validating_business_emails)){
+				if(!Functions::is_business_email($submited['posted_data']['your-email'])){
+					$abort = true;
+				}
 			}
 		}
 		

@@ -26,6 +26,8 @@
 		var show = true;
 		var isTbcfywCarouselSlick = false;
 		var isSolutionCarouselSlick = false;
+		var mobileCarouselBreakpointValue = 767;
+
 
 		var startVideo = function(){
 			if($carouselNavy.exists()){
@@ -63,13 +65,15 @@
 		var initSolutionCarousel = function(){
 			var $solutionCarousel = $('.solution-carousel');
 			if($solutionCarousel.exists()){
-				if(window.outerWidth <= 425){
-					$solutionCarousel.slick({
-						autoplay: true,
-						autoplaySpeed: 1000,
-						arrows: false
-					});
-					isSolutionCarouselSlick = true;
+				if(window.outerWidth <= mobileCarouselBreakpointValue){
+					if(!isSolutionCarouselSlick){
+						$solutionCarousel.slick({
+							autoplay: true,
+							autoplaySpeed: 1000,
+							arrows: false
+						});
+						isSolutionCarouselSlick = true;
+					}
 				}else if(isSolutionCarouselSlick === true){
 					$solutionCarousel.slick('unslick');
 					isSolutionCarouselSlick = false;
@@ -80,13 +84,15 @@
 		var initTbcfywCarousel = function(){
 			var $tbcfywCarousel = $('.tbcfyw-carousel');
 			if($tbcfywCarousel.exists()){
-				if(window.outerWidth <= 425){
-					$tbcfywCarousel.slick({
-						autoplay: true,
-						autoplaySpeed: 1000,
-						arrows: false
-					});
-					isTbcfywCarouselSlick = true;
+				if(window.outerWidth <= mobileCarouselBreakpointValue){
+					if(!isTbcfywCarouselSlick){
+						$tbcfywCarousel.slick({
+							autoplay: true,
+							autoplaySpeed: 1000,
+							arrows: false
+						});
+						isTbcfywCarouselSlick = true;
+					}
 				}else if(isTbcfywCarouselSlick === true){
 					$tbcfywCarousel.slick('unslick');
 					isTbcfywCarouselSlick = false;
@@ -101,7 +107,7 @@
 			if(!$careersGrandmotherContainer.exists()){
 				return;
 			}
-			if(window.outerWidth > 425){
+			if(window.outerWidth > mobileCarouselBreakpointValue){
 				clearInterval(intervalGrandmother);
 				return;
 			}
