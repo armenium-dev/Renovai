@@ -1,0 +1,364 @@
+.talks-list {}
+
+.talk-item {
+    font-family: 'moderat-light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.talk-item-col-1 {
+    background: #0D0D30;
+    border-radius: 10px;
+    padding: 40px 52px 43px 77px;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+.talk-item-col-2 {
+    color: #0D0D30;
+}
+
+.talk-item-subtitle {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+}
+
+.talk-item-subtitle-bold {
+    font-family: 'moderat-bold';
+}
+
+.talk-item-subtitle-icon {
+    transform: translateY(-7px);
+    margin-left: 4px;
+    width: 13px;
+    height: 23px;
+}
+
+.talk-item-episode {
+    font-size: 16px;
+    line-height: 34px;
+}
+
+.talk-item-col-1-title {
+    font-family: 'moderat-bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    color: #FF86DD;
+}
+
+.talk-item-col-1-hr {
+    width: 75px;
+    height: 2px;
+    background-color: #ffffff;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+.talk-item-feature-medium {
+    font-family: 'moderat-medium';
+    line-height: 34px;
+    font-size: 16px;
+}
+
+.talk-item-feature-light {
+    font-family: 'moderat-light';
+    line-height: 19px;
+    font-size: 16px;
+}
+
+.talk-item-col-2 {
+    padding-left: 140px;
+}
+
+.talk-item-col-2-title {
+    font-family: 'moderat-bold';
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -0.02em;
+    color: #0D0D30;
+}
+
+.talk-item-col-2-title-box {
+    border-bottom: 1px solid #C5C7D0;
+}
+
+.talk-item-date {
+    font-family: 'moderat-medium';
+    font-size: 20px;
+    line-height: 32px;
+    color: #676879;
+    line-height: 50px;
+}
+
+.talk-item-description {
+    font-size: 20px;
+    line-height: 32px;
+    color: #0D0D30;
+}
+
+.talk-item-view-btn {
+    width: 186px;
+    height: 48px;
+    background-color: #0D0D30;
+    border-radius: 300px;
+    font-family: 'moderat-light';
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.talk-item-view-btn:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.talk-item-view-btn-icon {
+    transform: translateY(2px);
+}
+
+.talk-item-minutes {
+    font-family: 'moderat-light';
+    font-size: 16px;
+    line-height: 15px;
+    color: #828282;
+}
+
+.talk-item-minutes-icon {
+    transform: translateY(2px);
+}
+
+.talk-item-spotify-link {
+    font-family: 'moderat-medium';
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    color: #0D0D30;
+}
+
+.talk-item-spotify-icon {
+    transform: translateY(2px);
+}
+
+.talk-item-subtitle-dark-text {
+    color: #0D0D30;
+}
+
+.talk-item-subtitle-dark-text-icon {
+    transform: translateY(-5px);
+    margin-left: 4px;
+}
+
+.talk-item-img {
+    border-radius: 50%;
+    width: 308px;
+    height: 308px;
+}
+
+.renotalk-header-img {
+    z-index: 2;
+    width: 432px;
+    height: 495px;
+    right: 135px;
+}
+
+.talk-item-img-wrapper {
+    position: relative;
+}
+
+.talk-item-img-wrapper:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: 5px;
+    width: 328px;
+    height: 600px;
+    border: 3px solid #00B9EB;
+    border-radius: 172px;
+}
+
+@media screen and (max-width: 1649px) {
+    .talk-item-img-wrapper:after {
+        left: -5px;
+    }
+}
+
+@media screen and (max-width: 1599px) {
+    .talk-item-subtitle {
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+    .talk-item-episode {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .talk-item-col-1-title {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .talk-item-feature-medium {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .talk-item-feature-light {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .talk-item-col-2-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .talk-item-date {
+        font-size: 16px;
+    }
+
+    .talk-item-description {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .talk-item-view-btn {
+        width: 162px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .talk-item-spotify-link {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .talk-item-col-1 {
+        padding: 27px 33px 33px 48px;
+    }
+
+    .talk-item-img {
+        border-radius: 50%;
+        width: 195px;
+        height: 195px;
+    }
+
+    .talk-item-col-2 {
+        padding-left: 30px;
+    }
+
+    .talk-item-subtitle-icon {
+        width: 8px;
+        height: 15px;
+        transform: translateY(-4px);
+        margin-left: 0;
+    }
+
+    .blog-header-img {
+        width: 303px;
+        height: 348px;
+    }
+
+    .talk-item-img-wrapper {
+        position: relative;
+        width: 210px;
+    }
+
+    .talk-item-img-wrapper:after {
+        left: 0;
+        width: 210px;
+        border: 2px solid #00B9EB;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .talk-item-subtitle {
+        font-size: 8px;
+        line-height: 11px;
+    }
+
+    .talk-item-col-1-title {
+        font-size: 16px;
+        line-height: 17px;
+    }
+
+    .talk-item-col-1-hr {
+        width: 25px;
+    }
+
+    .talk-item-feature-medium {
+        font-size: 12px;
+    }
+
+    .talk-item-feature-light {
+        line-height: 14px;
+    }
+
+    .talk-item-img {
+        width: 103px;
+        height: 103px;
+    }
+
+    .talk-item-img-wrapper:after {
+        top: -8px;
+        left: 48px;
+        width: 113px;
+        border: 1px solid #00B9EB;
+    }
+
+    .talk-item-col-1 {
+        padding: 10px 18px 13px 27px;
+    }
+
+    .talk-item-col-2 {
+        padding-left: 0;
+    }
+
+    .talk-item-subtitle-medium {
+        font-size: 19px;
+        line-height: 26px;
+    }
+
+    .talk-item-subtitle-icon {
+        width: 5px;
+        height: 8px;
+        transform: translateY(0);
+    }
+
+    .talk-item-subtitle-icon-medium {
+        width: 11px;
+        height: 20px;
+        transform: translateY(-4px);
+    }
+
+    .talk-item-col-2-title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .talk-item-date {
+        line-height: 30px;
+    }
+
+    .renotalk-header-img {
+        width: 83px;
+        height: 102px;
+        right: 15px;
+        bottom: 0;
+    }
+
+    .blog-header-container {
+        padding-top: 75px;
+    }
+
+    .blog-header-section:after {
+        height: 195px;
+    }
+}
