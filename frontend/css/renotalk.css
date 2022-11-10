@@ -11,7 +11,7 @@
 .talk-item-col-1 {
     background: #0D0D30;
     border-radius: 10px;
-    padding: 40px 52px 43px 77px;
+    padding: 40px 52px 0 77px;
     color: #FFFFFF;
     overflow: hidden;
 }
@@ -160,13 +160,6 @@
     margin-left: 4px;
 }
 
-.talk-item-img {
-    border-radius: 50%;
-    width: 100%;
-    max-width: 308px;
-    height: auto;
-}
-
 .renotalk-header-img {
     z-index: 2;
     width: 432px;
@@ -175,26 +168,19 @@
 }
 
 .talk-item-img-wrapper {
-    position: relative;
-}
-
-.talk-item-img-wrapper:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -8px;
-    left: 5px;
-    width: 100%;
-    max-width: 328px;
-    height: 600px;
+    border-radius: 172px 172px 0 0;
     border: 3px solid #00B9EB;
-    border-radius: 172px;
+    border-bottom: none;
+    padding: 12px 9px 0 9px;
 }
 
-@media screen and (max-width: 1649px) {
-    .talk-item-img-wrapper:after {
-        left: -5px;
-    }
+.talk-item-img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.talk-item-content {
+    padding-bottom: 40px;
 }
 
 @media screen and (max-width: 1599px) {
@@ -249,14 +235,7 @@
     }
 
     .talk-item-col-1 {
-        padding: 27px 33px 33px 48px;
-    }
-
-    .talk-item-img {
-        border-radius: 50%;
-        width: 100%;
-        max-width: 185px;
-        height: auto;
+        padding: 27px 33px 0 48px;
     }
 
     .talk-item-col-2 {
@@ -275,30 +254,22 @@
         height: 348px;
     }
 
-    .talk-item-img-wrapper {
-        position: relative;
-        width: 100%;
-        max-width: 210px;
-    }
-
-    .talk-item-img-wrapper:after {
-        left: 0;
-        width: 100%;
-        max-width: 210px;
-        border: 2px solid #00B9EB;
+    .talk-item-content {
+        padding-bottom: 25px;
     }
 }
 
-@media screen and (max-width: 991px) {
-    .talk-item-img {
-        max-width: 160px;
+@media screen and (max-width: 1035px) {
+    .renotalk-header-img {
+        right: 40px;
     }
 }
 
-@media screen and (max-width: 869px) {
-    .talk-item-img {
-        max-width: 125px;
-    }    
+@media screen and (max-width: 1035px) {
+    .renotalk-header-img {
+        width: 240px;
+        bottom: -55px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -324,22 +295,8 @@
         line-height: 14px;
     }
 
-    .talk-item-img {
-        width: 100%;
-        max-width: 103px;
-        height: auto;
-    }
-
-    .talk-item-img-wrapper:after {
-        top: -8px;
-        left: 0;
-        width: 100%;
-        max-width: 113px;
-        border: 1px solid #00B9EB;
-    }
-
     .talk-item-col-1 {
-        padding: 10px 18px 13px 27px;
+        padding: 10px 18px 0 27px;
     }
 
     .talk-item-col-2 {
@@ -375,7 +332,7 @@
     .renotalk-header-img {
         width: 83px;
         height: 102px;
-        right: 15px;
+        right: 115px;
         bottom: 0;
     }
 
@@ -385,5 +342,15 @@
 
     .blog-header-section:after {
         height: 195px;
+    }
+
+    .talk-item-content {
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .renotalk-header-img {
+        right: 15px;
     }
 }
