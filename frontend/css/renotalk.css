@@ -257,11 +257,10 @@
     .talk-item-content {
         padding-bottom: 25px;
     }
-}
 
-@media screen and (max-width: 1035px) {
-    .renotalk-header-img {
-        right: 40px;
+    .talk-item-img-wrapper {
+        border: 2px solid #00B9EB;
+        padding: 7px 5px 0 5px;
     }
 }
 
@@ -346,6 +345,10 @@
 
     .talk-item-content {
         padding-bottom: 10px;
+    }
+
+    .talk-item-img-wrapper {
+        border: 1px solid #00B9EB;
     }
 }
 
