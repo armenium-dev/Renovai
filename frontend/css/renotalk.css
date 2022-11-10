@@ -120,6 +120,8 @@
 
 .talk-item-view-btn-icon {
     transform: translateY(2px);
+    width: 24px;
+    height: 24px;
 }
 
 .talk-item-minutes {
@@ -131,6 +133,8 @@
 
 .talk-item-minutes-icon {
     transform: translateY(2px);
+    width: 14px;
+    height: 14px;
 }
 
 .talk-item-spotify-link {
@@ -143,6 +147,8 @@
 
 .talk-item-spotify-icon {
     transform: translateY(2px);
+    width: 25px;
+    height: 25px;
 }
 
 .talk-item-subtitle-dark-text {
