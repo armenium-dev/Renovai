@@ -1,0 +1,17 @@
+*.log
+.idea
+*.zip
+/services-panel
+/www/wp-admin
+/www/wp-backups
+/www/wp-cache
+/www/wp-configs
+/www/wp-db
+/www/wp-downloads
+/www/wp-includes
+/www/wp-content/uploads
+/www/wp-content/plugins
+/www/wp-content/logs
+/www/wp-content/themes/renovai/html
+/www/wp-content/themes/renovai/master
+/www/wp-content/themes/renovai/builder/node_modules
