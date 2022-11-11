@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+	<meta name="description" content="">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&amp;display=swap" rel="stylesheet">
+	<title></title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<script defer src="js/index.js"></script>
+	<link href="css/style-new.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/frontend.css" rel="stylesheet">
+	<link href="css/renotalk.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column">
+	<header class="d-flex align-items-md-center sm-toggle-menu position-static w-100 shadow">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-xxl-9">
+					<nav class="navbar navbar-expand-md p-0 headerNavBar no-transition"><a class="header-logo"
+							href="#"></a>
+						<button class="navbar-toggler collapsed px-0" type="button" data-toggle="collapse"
+							data-target=".headerNavBar" aria-controls="headerNavBar" aria-expanded="false"><i
+								class="i i-menu-hamburger-fixed"></i><i class="i i-menu-hamburger"></i><i
+								class="i i-menu-close"></i></button>
+						<div class="collapse navbar-collapse no-transition headerNavBar">
+							<ul
+								class="navbar-nav header-nav text-center text-md-left justify-content-center justify-content-start">
+								<li class="nav-item"><a class="nav-link active d-none d-md-inline-block"
+										href="#">Home</a></li>
+								<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Resources</a>
+									<div class="dropdown-menu"><a class="dropdown-item" href="blog.html">Blog</a><a
+											class="dropdown-item" href="reports-white-papers.html">White Papers &
+											Reports</a><a class="dropdown-item" href="#">Data Sheets</a><a
+											class="dropdown-item" href="case-studies.html">Case Studies</a><a
+											class="dropdown-item" href="general-terms-and-conditions.html">General Terms
+											& Conditions</a></div>
+								</li>
+								<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Solutions</a>
+									<div class="dropdown-menu"><a class="dropdown-item" href="product-page.html">Virtual
+											Designer</a><a class="dropdown-item" href="product-page.html">Complete the
+											Look</a><a class="dropdown-item" href="product-page.html">Interactive Mood-
+											Board</a><a class="dropdown-item" href="product-page.html">Multi- Channel
+											Remarketing</a><a class="dropdown-item" href="product-page.html">Personal
+											Scout</a><a class="dropdown-item" href="product-page.html">360 Product
+											Display</a></div>
+								</li>
+								<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Company</a>
+									<div class="dropdown-menu"><a class="dropdown-item" href="about.html">About</a><a
+											class="dropdown-item" href="news.html">News</a><a class="dropdown-item"
+											href="#">Contact</a><a class="dropdown-item" href="careers.html">Careers</a>
+									</div>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+								<li class="nav-item mr-0 pr-0 d-md-none mt-3"><a class="btn btn-primary shadow"
+										href="book-a-demo.html">Book a Demo</a></li>
+								<li class="nav-item btn-static mr-0 pr-0"><a class="btn btn-light shadow"
+										href="book-a-demo.html">Book a Demo</a></li>
+								<li class="nav-item btn-fixed mr-0 pr-0"><a class="btn btn-secondary shadow"
+										href="book-a-demo.html">Book a Demo</a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="blog-header-section position-relative">
+			<div class="blog-header-container">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-12 col-xxl-9">
+							<div class="row">
+								<div class="col-12 col-lg-8 col-xl-6 blog-header-content text-center text-md-left">
+									<h1 class="h1">renoTalk</h1>
+									<p class="d-none d-md-block mb-1">Our blog brings you all the latest information and
+										insights on AI, Design, UX,
+										Marketing and all things e-commerce.</p>
+									<p class="d-block d-md-none mb-1">The latest coverage in the press</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<img class="blog-header-img renotalk-header-img" src="./images/renotalk-header-img.svg" alt="header-img">
+
+		</section>
+		<section class="breadcrumbs-wrap">
+			<div class="container-1650">
+				<!-- <?=Functions::breadcrumbs();?> -->
+			</div>
+		</section>
+
+		<section class="tags-wrap">
+			<div class="container-1650 tags-row">
+				<div class="tags-title" aria-label="Popular Tags">Popular Tags</div>
+				<div class="tag-cloud">
+					<!-- <?php
+					foreach($wp_tag_cloud as $tag):
+						printf('<a href="%1$s"%2$s class="%3$s" style="%4$s"%5$s>%6$s</a>',
+							esc_url(('#' !== $tag->link) ? $tag->link : '#'),
+							('#' !== $tag->link ? '' : ' role="button"'),
+							esc_attr('link tag-link-'.$tag->id),
+							sprintf('background-color: %s; color: %s;', $tag->bg_color, $tag->fg_color),
+							sprintf(' aria-label="%1$s"', esc_attr($tag->name)),
+							esc_html($tag->name)
+						);
+					endforeach;
+					?> -->
+				</div>
+			</div>
+		</section>
+
+		<section class="talks">
+			<div class="container-1650">
+				<div class="talks-list">
+					<div class="talk-item d-flex flex-column flex-md-row mb-7">
+						<div
+							class="d-flex d-md-none talk-item-col-2-title-box mb-2 justify-content-between align-items-end">
+							<h2 class="talk-item-col-2-title">How to keep lucrative<br /> customers</h2>
+							<div class="talk-item-date">Jun 25th 2022</div>
+						</div>
+						<div class="d-flex d-md-block tags-wrap mb-2 mb-md-4">
+							<div class="tag-cloud">
+								<!-- <?php
+										foreach($wp_tag_cloud as $tag):
+											printf('<a href="%1$s"%2$s class="%3$s" style="%4$s"%5$s>%6$s</a>',
+												esc_url(('#' !== $tag->link) ? $tag->link : '#'),
+												('#' !== $tag->link ? '' : ' role="button"'),
+												esc_attr('link tag-link-'.$tag->id),
+												sprintf('background-color: %s; color: %s;', $tag->bg_color, $tag->fg_color),
+												sprintf(' aria-label="%1$s"', esc_attr($tag->name)),
+												esc_html($tag->name)
+											);
+										endforeach;
+										?> -->
+							</div>
+						</div>
+						<div class="talk-item-col-1 d-flex flex-row w-100 w-md-50 mb-1 mb-md-0">
+							<div class="talk-item-content d-flex flex-column w-50 align-items-start">
+								<div>
+									<span class="talk-item-subtitle">reno<span
+											class="talk-item-subtitle-bold">Talk</span></span>
+									<img class="talk-item-subtitle-icon" src="./images/light-micro-icon.svg" alt="light micro icon">
+								</div>
+								<div class="talk-item-episode">Episode 01</div>
+								<h2 class="talk-item-col-1-title m-0">How to keep lucrative customers</h2>
+								<div class="my-1 my-xxl-2 talk-item-col-1-hr"></div>
+								<div class="talk-item-feature-medium">Featuring:</div>
+								<span class="talk-item-feature-light">
+									Michael Aylward, Andra Rubinstein & Big M
+								</span>
+							</div>
+							<div class="w-50 text-center">
+								<div class="talk-item-img-wrapper mt-1 mt-xxl-2 d-flex justify-content-center align-items-start h-100">
+									<img class="talk-item-img h-auto mb-2" src="./images/renotalk-spiker-avatar.svg" alt="renotalk spiker avatar">
+								</div>
+							</div>
+						</div>
+						<div class="talk-item-col-2 w-100 w-md-50">
+							<div class="d-none d-md-block tags-wrap mb-2 mb-md-4">
+								<div class="tag-cloud">
+									<!-- <?php
+											foreach($wp_tag_cloud as $tag):
+												printf('<a href="%1$s"%2$s class="%3$s" style="%4$s"%5$s>%6$s</a>',
+													esc_url(('#' !== $tag->link) ? $tag->link : '#'),
+													('#' !== $tag->link ? '' : ' role="button"'),
+													esc_attr('link tag-link-'.$tag->id),
+													sprintf('background-color: %s; color: %s;', $tag->bg_color, $tag->fg_color),
+													sprintf(' aria-label="%1$s"', esc_attr($tag->name)),
+													esc_html($tag->name)
+												);
+											endforeach;
+											?> -->
+								</div>
+							</div>
+							<div
+								class="d-none d-md-flex talk-item-col-2-title-box mb-2 justify-content-between align-items-end">
+								<h2 class="talk-item-col-2-title">How to keep lucrative<br /> customers</h2>
+								<div class="talk-item-date">Jun 25th 2022</div>
+							</div>
+
+							<p class="talk-item-description mb-3 mb-xxl-7">
+								Listen to Michael’s awful South African accent babble on about customer experience.
+								Listen to Michael’s awful South African accent babble on about customer experience.
+							</p>
+							<div class="d-flex justify-content-between align-items-center mb-2 mb-xxl-3">
+								<a href="#" class="talk-item-view-btn d-flex align-items-center justify-content-center">
+									<img class="talk-item-view-btn-icon mr-1" src="./images/light-youtube-icon.svg" alt="youtube icon">
+									<span>View episode</span>
+								</a>
+								<div class="talk-item-minutes d-flex align-items-center">
+									<img class="talk-item-minutes-icon mr-1" src="./images/oclock-icon.svg" alt="oclock icon">
+									<span>60 mins</span>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between align-items-center">
+								<a href="#" class="d-flex align-items-center">
+									<img class="talk-item-spotify-icon mr-1" src="./images/spotify-icon.svg" alt="spotify icon">
+									<span class="talk-item-spotify-link">Listen on spotify</span>
+								</a>
+								<div class="d-flex align-items-end">
+									<span
+										class="talk-item-subtitle talk-item-subtitle-dark-text talk-item-subtitle-medium">reno<span
+											class="talk-item-subtitle-bold">Talk</span></span>
+									<img class="talk-item-subtitle-icon talk-item-subtitle-icon-medium" src="./images/dark-micro-icon.svg" alt="dark micro icon">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+</body>
+
+</html>
