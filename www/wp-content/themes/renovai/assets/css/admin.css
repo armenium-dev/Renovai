@@ -82,6 +82,7 @@ a.badge-dark:focus, a.badge-dark.focus {outline: 0; box-shadow: 0 0 0 0.2rem rgb
 .column-testimonial_user_photo {width: 100px;}
 .column-testimonial_user_photo img {max-width: 100%; height: auto;}
 .column-news_post_image {width: 50px;}
+.column-renotalk_post_image {width: 50px;}
 .column-news_post_logo {max-width: 150px;}
 .column-news_post_logo img {max-height: 50px; max-width: 100%;}
 .column-client_logo {width: 130px;}

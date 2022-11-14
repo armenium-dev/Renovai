@@ -41,7 +41,7 @@ $wp_tag_cloud = DataSource::get_tag_cloud(['post_id' => $_post->ID, 'show_count'
         </div>
         <div class="w-50 text-center">
             <div class="talk-item-img-wrapper mt-1 mt-xxl-2 d-flex justify-content-center align-items-start h-100">
-                <?=Functions::get_the_attachment_thumbnail($_post->cf['image'], '294x294', ['class' => 'talk-item-img h-auto mb-2', 'alt' => 'renotalk spiker', 'title' => 'renotalk spiker']);?>
+                <?=Functions::get_the_attachment_thumbnail($_post->cf['renotalk_post_image'], '294x294', ['class' => 'talk-item-img h-auto mb-2', 'alt' => 'renotalk spiker', 'title' => 'renotalk spiker']);?>
             </div>
         </div>
     </div>

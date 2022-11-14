@@ -26,6 +26,7 @@ class Filters {
 	    add_filter('manage_edit-candidate_columns', [$self, 'edit_columns_candidate']);
 	    add_filter('manage_edit-client_columns', [$self, 'edit_columns_client']);
 	    add_filter('manage_edit-testimonial_columns', [$self, 'edit_columns_testimonial']);
+	    add_filter('manage_edit-renotalk_columns', [$self, 'edit_columns_renotalk']);
 	    add_filter('manage_edit-news_columns', [$self, 'edit_columns_news']);
 	    add_filter('manage_post_tag_custom_column', [$self, 'manage_post_tag_custom_column'], 10, 3);
 	    add_filter('manage_edit-post_tag_columns', [$self, 'edit_post_tag_column']);
@@ -267,6 +268,20 @@ class Filters {
 			'date'        => __('Date', THEME_TD),
 		];
 		
+		return $columns;
+	}
+
+	public function edit_columns_renotalk($columns){
+		$columns = [
+			'cb'          => '<input type="checkbox" />',
+			'renotalk_post_image' => __('Avatar', THEME_TD),
+			'title'       => __('Title', THEME_TD),
+			#'news_post_logo'  => __('Logo', THEME_TD),
+			'tags'  => __('Tags', THEME_TD),
+			'menu_order'  => __('Order', THEME_TD),
+			'date'        => __('Date', THEME_TD),
+		];
+
 		return $columns;
 	}
 

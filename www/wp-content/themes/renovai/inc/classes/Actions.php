@@ -78,6 +78,7 @@ class Actions{
 		add_action('manage_client_posts_custom_column', [$self, 'fetch_posts_columns']);
 		add_action('manage_testimonial_posts_custom_column', [$self, 'fetch_posts_columns']);
 		add_action('manage_news_posts_custom_column', [$self, 'fetch_posts_columns']);
+		add_action('manage_renotalk_posts_custom_column', [$self, 'fetch_posts_columns']);
 
 		add_action('admin_menu', [$self, 'change_admin_menu'], 999);
 
@@ -308,6 +309,7 @@ class Actions{
 				}
 				break;
 			case 'news_post_image':
+			case 'renotalk_post_image':
 				if(class_exists('ACF')){
 					echo '<a href="'.$editlink.'">';
 					$image_id = get_field($column, $post->ID);
