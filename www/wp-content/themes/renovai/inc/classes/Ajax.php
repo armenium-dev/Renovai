@@ -1,7 +1,7 @@
 <?php
 namespace Digidez;
 
-class Ajax_Actions{
+class Ajax{
 
 	public static function initialise(){
 		$self = new self();
@@ -14,6 +14,9 @@ class Ajax_Actions{
 
 		add_action('wp_ajax_load_more_posts', [$self, 'load_more_posts']);
 		add_action('wp_ajax_nopriv_load_more_posts', [$self, 'load_more_posts']);
+
+		add_action('wp_ajax_load_more_talks', [$self, 'load_more_talks']);
+		add_action('wp_ajax_nopriv_load_more_talks', [$self, 'load_more_talks']);
 
 	}
 
@@ -103,6 +106,50 @@ class Ajax_Actions{
 			$a = [];
 			foreach($posts->posts as $k => $_post){
 				$a[] = Functions::get_template_part(PARTIALS_PATH.'/blog/item', [
+					'_post' => $_post,
+					'subtitle_length' => $subtitle_length,
+					'excerpt_length' => $excerpt_length
+				], false);
+			}
+			$return['result'] = implode('', $a);
+		}
+
+		$return['offset'] = $offset + count($posts->posts);
+
+		die(json_encode($return));
+	}
+
+	public function load_more_talks(){
+		$return = ['error' => 0, 'message' => esc_attr__('Data received successfully', THEME_TD), 'result' => '', 'offset' => 0];
+
+		$offset = $_REQUEST['offset'];
+		$parent_post_id = $_REQUEST['parent_post_id'];
+
+		$parent_post_cf = DataSource::get_cpt_custom_fields($parent_post_id)['section_renotalk_content'];
+		#Helper::_debug($parent_post_cf);
+		$subtitle_length = get_field('blog_subtitle_length', 'option');
+		$excerpt_length = get_field('blog_excerpt_length', 'option');
+
+		$order = explode('-', $parent_post_cf['order']);
+		$posts = DataSource::get_blog_posts([
+			'post_type' => 'renotalk',
+			'include_custom_fields' => true,
+			'include_author_data' => true,
+			'remove_post_content' => true,
+			'posts_per_page' => $parent_post_cf['posts_per_page'],
+			'orderby' => $order[0],
+			'order' => strtoupper($order[1]),
+			'offset' => $offset,
+		]);
+
+		#Helper::_debug($posts->posts);
+
+		$return['found_posts'] = count($posts->posts);
+
+		if(count($posts->posts)){
+			$a = [];
+			foreach($posts->posts as $k => $_post){
+				$a[] = Functions::get_template_part(PARTIALS_PATH.'/talk/item', [
 					'_post' => $_post,
 					'subtitle_length' => $subtitle_length,
 					'excerpt_length' => $excerpt_length

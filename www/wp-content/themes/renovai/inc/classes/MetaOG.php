@@ -4,7 +4,7 @@
 namespace Digidez;
 
 
-class Meta_OG {
+class MetaOG {
 	
 	private static $keys = [
 		'_yoast_wpseo_opengraph-image',

@@ -1,7 +1,7 @@
 <?php
 namespace Digidez;
 
-class Custom_Post_Types {
+class PostTypes {
 
 	public static $post_types_taxonomies = [];
 
@@ -64,6 +64,7 @@ class Custom_Post_Types {
 		self::create_jobs_cpt();
 		self::create_case_studies_cpt();
 		self::create_vaid_solution_cpt();
+		self::create_renotalk_cpt();
 	}
 	
 	public function create_testimonials_cpt(){
@@ -360,5 +361,33 @@ class Custom_Post_Types {
 		register_post_type($cpt, $args);
 		#self::$post_types_taxonomies[$cpt.'-cat'] = ['cpt' => $cpt, 'label' => ['name' => 'Categories', 'singular_name' => 'Category'], 'args' => ['public' => false]];
 	}
-	
+
+	public function create_renotalk_cpt(){
+		$cpt = 'renotalk';
+		$name = 'renoTalk';
+		$labels = $this->createLabels($name, $name);
+		$args = [
+			'label'               => __($name, THEME_TD),
+			'description'         => __($name, THEME_TD),
+			'labels'              => $labels,
+			'supports'            => ['title', 'page-attributes', 'excerpt'],
+			'hierarchical'        => false,
+			'public'              => false,
+			'publicly_queryable'  => false,
+			'show_ui'             => true,
+			'show_in_menu'        => true,
+			'menu_position'       => 20,
+			'menu_icon'           => 'dashicons-admin-post',
+			'show_in_admin_bar'   => true,
+			'show_in_nav_menus'   => true,
+			'can_export'          => true,
+			'has_archive'         => true,
+			'exclude_from_search' => true,
+			'capability_type'     => 'post',
+			'taxonomies'          => ['post_tag'],
+		];
+
+		register_post_type($cpt, $args);
+	}
+
 }

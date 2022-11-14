@@ -6,7 +6,7 @@ namespace Digidez;
 
 use Paginate_Navigation_Builder;
 
-class Admin{
+class Backend {
 
 	protected $screen_hook_suffix = null;
 	public $upload_dir;

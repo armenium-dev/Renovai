@@ -103,7 +103,7 @@ class Actions{
 	}
 	
 	public function sidebars_init(){
-		$sidebars = include_once "options/sidebars.php";
+		$sidebars = include_once __DIR__."/../options/sidebars.php";
 		
 		foreach($sidebars as $sidebar){
 			if(in_array($sidebar['id'], $this->active_sidebars)){
@@ -138,8 +138,11 @@ class Actions{
 		wp_enqueue_style(THEME_SHORT.'-theme-2', CSS_URI.'/frontend.css', [], $script_version, 'all');
 		#wp_enqueue_style(THEME_SHORT.'-calendly', CSS_URI.'/calendly-widget.css', [], $script_version, 'all');
 
-		if($page_template == 'blog' || $post->post_type == 'post'){
+		if($page_template == 'blog' || $post->post_type == 'post' || $page_template == 'talk'){
 			wp_enqueue_style(THEME_SHORT.'-theme-blog', CSS_URI.'/blog.css', [], $script_version, 'all');
+		}
+		if($page_template == 'talk'){
+			wp_enqueue_style(THEME_SHORT.'-theme-talk', CSS_URI.'/renotalk.css', [], $script_version, 'all');
 		}
 
 		wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', [], $script_version, false);
@@ -494,7 +497,7 @@ class Actions{
 	}
 	
 	public function update_post_meta_fields($post_id, $post){
-		Meta_OG::update_post_meta_fields($post_id, $post);
+		MetaOG::update_post_meta_fields($post_id, $post);
 	}
 	
 	public function wpcf7_before_send_mail($contact_form, &$abort){

@@ -20,7 +20,7 @@ $posts = DataSource::get_blog_posts([
 #Helper::_debug($posts->posts);
 ?>
 <section id="<?=$section_name;?>-section" class="blog-posts-section sm-toggle-position">
-	<div class="container-1650">
+	<div class="container">
         <?php if($posts->found_posts):?>
             <h2 class="section-latest-title text-center text-lg-left"><?=$section_data['latest_featured_blog_title'];?></h2>
             <?php Functions::get_template_part(PARTIALS_PATH.'/blog/item-first', ['_post' => $posts->posts[0]]);?>

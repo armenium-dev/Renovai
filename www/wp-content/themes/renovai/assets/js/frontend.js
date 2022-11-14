@@ -21,6 +21,7 @@
 				load_countries_list: 'load_countries_list',
 				load_more_news: 'load_more_news',
 				load_more_posts: 'load_more_posts',
+				load_more_talks: 'load_more_talks',
 			},
 			els: {
 				body: $("body"),
@@ -94,6 +95,9 @@
 						break;
 					case "load_more_posts":
 						FJS.Blog.loadMore($this);
+						break;
+					case "load_more_talks":
+						FJS.Talks.loadMore($this);
 						break;
 					case "scroll_to_el":
 						FJS.Common.scrollTo($this);
@@ -448,6 +452,40 @@
 					FJS.Common.downloadURI(download_file, download_file_name);
 
 					return false;
+				},
+			},
+			Talks: {
+				loadMore: function($obj){
+					var $target = $($obj.data('target')),
+						parent_post_id = $target.data('parent_post_id'),
+						total = $target.data('total'),
+						offset = $target.data('offset');
+
+					$obj.attr('disabled', true);
+
+					$.ajax({
+						type: "POST",
+						url: globals.ajax_url,
+						data: {
+							'action': FJS.routes.load_more_talks,
+							'nonce': globals.nonce,
+							'offset': offset,
+							'parent_post_id': parent_post_id
+						},
+						dataType: "json"
+					}).done(function(responce){
+						if(responce.error == 0){
+							$target.data('offset', responce.offset).append(responce.result);
+							if(responce.offset >= total){
+								$obj.addClass('d-none');
+							}
+						}
+						$obj.attr('disabled', false);
+					}).fail(function(){
+						console.log("SYSTEM TECHNICAL ERROR");
+						$obj.attr('disabled', false);
+					});
+
 				},
 			},
 			CF7: {

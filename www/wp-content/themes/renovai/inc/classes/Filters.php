@@ -320,7 +320,7 @@ class Filters {
 	
 	public function wpseo_opengraph_desc($description, $presentation){
 		#$description = $GLOBALS['og']['description'];
-		#$description = Meta_OG::get('description');
+		#$description = MetaOG::get('description');
 		
 		return $description;
 	}

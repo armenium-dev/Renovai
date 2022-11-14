@@ -4,7 +4,7 @@ namespace Digidez;
 
 use \Digidez\Functions;
 
-class API {
+class Api {
 
 	private static $token = '';
 	private static $slug = 'digidez-api';

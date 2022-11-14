@@ -15,7 +15,7 @@ if(!empty($section_data['tags_to_display'])){
 ?>
 <?php if(!empty($wp_tag_cloud)):?>
 	<section class="tags-wrap">
-		<div class="container-1650 tags-row">
+		<div class="container tags-row">
 			<div class="tags-title" aria-label="Popular Tags">Popular Tags</div>
 			<div class="tag-cloud">
 				<?php

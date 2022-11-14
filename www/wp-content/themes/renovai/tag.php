@@ -16,7 +16,7 @@ get_header();?>
 <?=Functions::get_template_part(SECTIONS_PATH.'/breadcrumbs', ['section_name' => 'breadcrumbs_main', 'section_data' => $parent_cf['section_breadcrumbs']], false);?>
 <?=Functions::get_template_part(SECTIONS_PATH.'/blog-tag-cloud', ['section_name' => 'tag_cloud', 'section_data' => $parent_cf['section_blog_tag_cloud']], false);?>
 <section class="blog-posts-section sm-toggle-position">
-	<div class="container-1650">
+	<div class="container">
         <h2 class="section-recent-title text-center text-lg-left"><?=single_tag_title('',false);?></h2>
         <p class="section-recent-subtitle text-center text-lg-left"><?=tag_description();?></p>
         <div id="posts_container" class="row mb-xl-10 posts-container">

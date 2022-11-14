@@ -8,7 +8,7 @@ class Widgets{
 		$self = new self();
 		
 		#include_once 'widgets/social_icons.php';
-		include_once 'widgets/nav_menu.php';
+		#include_once 'widgets/nav_menu.php';
 		
 		add_action('widgets_init', [$self, 'widgets_init']);
 	}

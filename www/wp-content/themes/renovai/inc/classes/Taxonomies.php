@@ -1,7 +1,7 @@
 <?php
 namespace Digidez;
 
-class Custom_Taxonomies {
+class Taxonomies {
 	
 	/*
 	 * Static function must be called after require within functions.inc.php
@@ -60,7 +60,7 @@ class Custom_Taxonomies {
 			//'query_var'             => true,
 		];
 		
-		$post_types_taxonomies = Custom_Post_Types::$post_types_taxonomies;
+		$post_types_taxonomies = PostTypes::$post_types_taxonomies;
 		if(!empty($post_types_taxonomies)){
 			foreach($post_types_taxonomies as $post_type_cat => $post_type){
 				$args = wp_parse_args($post_type['args'], $defaults);

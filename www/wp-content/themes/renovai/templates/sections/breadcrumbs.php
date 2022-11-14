@@ -1,6 +1,6 @@
 <?php use Digidez\Functions;?>
 <section class="breadcrumbs-wrap">
-	<div class="container-1650">
+	<div class="container">
 		<?=Functions::breadcrumbs();?>
 	</div>
 </section>
