@@ -106,7 +106,7 @@ $wp_tag_cloud = DataSource::get_tag_cloud(['post_id' => $post->ID]);
                                 <div class="a-data">
                                     <div class="a-name">
                                         <?php if(!empty($author['user_linked_in_profile_link'])):?>
-                                            <?=sprintf('<a href="%s" target="%s">%s</a>', $author['user_linked_in_profile_link'], '_blank', $author['name'])?>
+                                            <?=sprintf('<a href="%s" target="%s" rel="nofollow">%s</a>', $author['user_linked_in_profile_link'], '_blank', $author['name'])?>
                                         <?php else:?>
                                             <?=$author['name'];?>
                                         <?php endif;?>

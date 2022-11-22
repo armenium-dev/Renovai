@@ -1078,9 +1078,9 @@ class Functions {
 			}
 			$link = str_replace(['%POST_URL%', '%POST_TITLE%', '%POST_EXCERPT%'], [$post_link, $popst_title, $post_excerpt], $option['link']);
 			if($option['type'] == 'repost'){
-				$html .= '<a class="mr-2 shraing-service" href="javascript:;" data-trigger="js_action_click" data-action="'.$action.'" data-url="'.$link.'" data-service="'.$option['service'].'">'.$icon.'</a>';
+				$html .= '<a class="mr-2 shraing-service" href="javascript:;" data-trigger="js_action_click" data-action="'.$action.'" data-url="'.$link.'" data-service="'.$option['service'].'" rel="nofollow">'.$icon.'</a>';
 			}elseif($option['type'] == 'direct'){
-				$html .= '<a class="mr-2" href="'.$link.'" title="'.$option['service'].'" target="_blank">'.$icon.'</a>';
+				$html .= '<a class="mr-2" href="'.$link.'" title="'.$option['service'].'" target="_blank" rel="nofollow">'.$icon.'</a>';
 			}
 		}
 		$html .= '<div class="c-share__copied-message text-white rounded custom-toast">URL copied to your clipboard!</div>';
@@ -1145,7 +1145,7 @@ class Functions {
 			}
 			
 			if(empty($display_only_items) || in_array($option['service'], $display_only_items))
-				$html .= '<a class="'.$icon_class.'" href="'.$option['link'].'" title="'.$option['service'].'" target="_blank">'.$icon.'</a>';
+				$html .= '<a class="'.$icon_class.'" href="'.$option['link'].'" title="'.$option['service'].'" target="_blank" rel="nofollow">'.$icon.'</a>';
 		}
 		
 		if(!empty($attr['wrap_class']))
