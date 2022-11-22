@@ -68,7 +68,7 @@ $wp_tag_cloud = DataSource::get_tag_cloud(['post_id' => $_post->ID, 'show_count'
             <h2 class="talk-item-col-2-title"><?=$_post->post_title;?></h2>
             <div class="talk-item-date"><?=get_post_time('M jS, Y', false, $_post);?></div>
         </div>
-        <p class="talk-item-description"><?=Functions::create_excerpt($_post->post_excerpt, $excerpt_length);?></p>
+        <p class="talk-item-description"><?=$_post->post_excerpt;?></p>
         <div class="d-flex justify-content-between align-items-center mb-2 mb-xxl-3">
             <?php if(!empty($_post->cf['episode_youtube_link'])):?>
                 <a href="<?=$_post->cf['episode_youtube_link'];?>" target="_blank" class="talk-item-view-btn d-flex align-items-center justify-content-center light-youtube-icon">
