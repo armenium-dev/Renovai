@@ -24,11 +24,11 @@ $section_data['section_items'] = DataSource::fill_cpt_cf($section_data['section_
 						<img class="img-fluid w-auto" width="49" height="40" src="<?=$item->cf['section_icon'];?>" alt="<?=$item->post_title;?>" title="<?=$item->post_title;?>">
 						<div class="lp-col-title">
 							<small>renovai</small>
-							<p><?=$item->post_title;?></p>
+                            <p><a href="<?=get_permalink($item);?>" title="<?=$item->post_title;?>"><?=$item->post_title;?></a></p>
 						</div>
 						<h3 class="mb-2"><?=$item->cf['section_subtitle'];?></h3>
 						<p class="desc"><?=$item->cf['section_description'];?></p>
-						<a href="<?=get_permalink($item);?>" title="<?=$item->post_title;?>">Learn more</a>
+						<?php /* <a href="<?=get_permalink($item);?>" title="<?=$item->post_title;?>" class="readmore">Learn more</a>*/?>
 					</div>
 				</div>
 				<?php endforeach;?>

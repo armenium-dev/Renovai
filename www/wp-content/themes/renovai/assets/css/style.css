@@ -33812,13 +33812,14 @@ textarea.form-control {
 .lp-col-content h3 {font-family: 'moderat-bold'; font-weight: normal; font-size: 20px; line-height: 24px; margin-bottom: 16px;}
 .lp-col-content p {font-family: 'moderat-light'; font-weight: normal; font-size: 14px; line-height: 19px;}
 .lp-col-content p.desc {display: none;}
-.lp-col-content a {display: inline-flex; align-items: center; color: #ff86dd; font-size: 12px; line-height: 14px;}
-.lp-col-content a:after {content: ""; margin-left: 7px; display: inline-block; width: 14px; height: 14px; background: url(../images/icon-right-arrow-pink2.svg) no-repeat center center; background-size: contain;}
+.lp-col-content a.readmore {display: inline-flex; align-items: center; color: #ff86dd; font-size: 12px; line-height: 14px;}
+.lp-col-content a.readmore:after {content: ""; margin-left: 7px; display: inline-block; width: 14px; height: 14px; background: url(../images/icon-right-arrow-pink2.svg) no-repeat center center; background-size: contain;}
 .lp-col-content img {height: 40px; margin-bottom: 13px;}
 
 .lp-col-title {margin-bottom: 16px;}
 .lp-col-title small {font-family: 'comfortaa-regular'; font-weight: normal; font-size: 14px; line-height: 16px; margin-bottom: 5px; display: block;}
 .lp-col-title p {font-family: 'comfortaa-bold'; font-weight: normal; font-size: 20px; line-height: 22px; margin: 0;}
+/*.lp-col-title p a:hover {text-decoration: none;}*/
 
 @media all and (min-width: 768px){
 	.row-chessboard .col-chessboard {
@@ -33886,7 +33887,7 @@ textarea.form-control {
 	.lp-main-section .item {margin: 20px 0;}
 	.lp-col-content img {margin-bottom: 19px;}
 	.lp-col-content h3 {font-size: 16px; line-height: 19px; min-height: 42px; margin-bottom: 8px;}
-	.lp-col-content a {font-size: 16px; line-height: 19px;}
+	.lp-col-content a.readmore {font-size: 16px; line-height: 19px;}
 	.lp-col-title {margin-bottom: 10px;}
 	.lp-col-title small {font-size: 18px; line-height: 20px; margin-bottom: 10px;}
 	.lp-col-title p {font-size: 25px; line-height: 28px;}
