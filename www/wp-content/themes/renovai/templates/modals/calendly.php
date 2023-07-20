@@ -35,7 +35,7 @@ if(isset($params['modal_params'])){
 				<button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
 			<div class="modal-body">
-				<?=do_shortcode('[calendly url="https://calendly.com/michael-aylward-renovai/30min" type="1" form_height="800"]');?>
+				<?=do_shortcode('[calendly url="'.$params['modal_params']['calendly_link'].'" type="1" form_height="800"]');?>
 			</div>
 		</div>
 	</div>
