@@ -34,9 +34,11 @@ switch($option_h1_title_field){
 						<div><?=Functions::render_section_button($section_data['section_button'], ['class' => 'btn btn-secondary shadow']);?></div>
 
 						<?php if($section_data['section_desktop_illustration_type'] != 'nothing'):?>
-							<div class="mobile-content d-lg-none pt-6 pb-3">
-								<img class="w-100 h-auto" src="<?=$section_data['section_mobile_image'];?>" alt="" title="">
-							</div>
+							<?php if(!empty($section_data['section_mobile_image'])):?>
+								<div class="mobile-content d-lg-none pt-6 pb-3">
+									<img class="w-100 h-auto" src="<?=$section_data['section_mobile_image'];?>" alt="" title="">
+								</div>
+							<?php endif;?>
 						<?php endif;?>
 
 						<?php if($section_data['section_desktop_illustration_type'] == 'image'):?>

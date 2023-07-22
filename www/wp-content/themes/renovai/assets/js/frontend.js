@@ -1004,7 +1004,7 @@
 							fade: false,
 							dots: false,
 							variableWidth: false,
-							autoplay: false,
+							autoplay: true,
 							autoplaySpeed: 5000,
 							centerPadding: '70px',
 							customPaging: '32px',
