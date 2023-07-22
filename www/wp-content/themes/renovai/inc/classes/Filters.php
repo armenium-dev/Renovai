@@ -202,12 +202,15 @@ class Filters {
 	public function edit_columns_review($columns){
 		$columns = [
 			'cb'          => '<input type="checkbox" />',
+			'review_avatar' => __('Avatar', THEME_TD),
 			'title'       => __('Name', THEME_TD),
-			'user_avatar' => __('User avatar', THEME_TD),
-			'user_name'   => __('User name', THEME_TD),
-			'review_date' => __('Review date', THEME_TD),
+			//'user_name'   => __('User name', THEME_TD),
+			//'review_date' => __('Review date', THEME_TD),
+			'review_job_title' => __('Position', THEME_TD),
+			'review_company' => __('Company', THEME_TD),
 			'review_rate' => __('Review rate', THEME_TD),
-			'review-cat'  => __('Categories', THEME_TD),
+			'review_message' => __('Review', THEME_TD),
+			//'review-cat'  => __('Categories', THEME_TD),
 			//'author'      => __('Author', THEME_TD),
 			//'date'        => __('Date', THEME_TD),
 		];

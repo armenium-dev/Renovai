@@ -74,7 +74,11 @@ class Helper {
 	 *
 	 * @return array|mixed|string
 	 */
-	public static function _debug($data = array(), $show_for_users = false, $format = 'html', $echo = true, $strip_tags = true){
+	public static function _dd($data = [], $show_for_users = false, $format = 'html', $echo = true, $strip_tags = true){
+		die(self::_debug($data, $show_for_users, $format, true, $strip_tags));
+	}
+	
+	public static function _debug($data = [], $show_for_users = false, $format = 'html', $echo = true, $strip_tags = true){
 		if(current_user_can('manage_options') || $show_for_users){
 			$count = 0;
 			if(is_array($data) || is_object($data)){

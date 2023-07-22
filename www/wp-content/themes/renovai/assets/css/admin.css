@@ -87,8 +87,10 @@ a.badge-dark:focus, a.badge-dark.focus {outline: 0; box-shadow: 0 0 0 0.2rem rgb
 .column-news_post_logo img {max-height: 50px; max-width: 100%;}
 .column-client_logo {width: 130px;}
 .column-client_logo img {max-width: 130px; max-height: 130px; width: 100%; height: 100%;}
+.column-review_avatar {width: 40px;}
 .column-featured-image,
 .column-thumbnail {width: 80px;}
+.column-review_avatar img,
 .column-featured-image img,
 .column-thumbnail img {max-width: 80px; max-height: 80px; width: 100%; height: 100%;}
 .column-language {width: 10%;}
@@ -96,6 +98,7 @@ a.badge-dark:focus, a.badge-dark.focus {outline: 0; box-shadow: 0 0 0 0.2rem rgb
 .column-template {width: 20%;}
 .column-layout_template {width: 10%;}
 .column-slider_type {width: 10%;}
+.column-review_message {width: 50%;}
 
 .faq-table{margin:20px 0;background-color:#fff;}
 .faq-table th,

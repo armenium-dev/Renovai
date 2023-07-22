@@ -390,6 +390,14 @@ class Actions{
 					echo '</a>';
 				}
 				break;
+			case 'review_avatar':
+				if(class_exists('ACF')){
+					echo '<a href="'.$editlink.'">';
+					$user_avatar = get_post_meta($post->ID, 'review_avatar', true);
+					echo Functions::get_the_attachment_thumbnail($user_avatar, '100x100', [], true);
+					echo '</a>';
+				}
+				break;
 			case 'user_name':
 				if(class_exists('ACF')){
 					echo get_field('user_name', $post->ID);
@@ -403,6 +411,21 @@ class Actions{
 			case 'review_rate':
 				if(class_exists('ACF')){
 					echo get_field('review_rate', $post->ID);
+				}
+				break;
+			case 'review_company':
+				if(class_exists('ACF')){
+					echo get_field('review_company', $post->ID);
+				}
+				break;
+			case 'review_job_title':
+				if(class_exists('ACF')){
+					echo get_field('review_job_title', $post->ID);
+				}
+				break;
+			case 'review_message':
+				if(class_exists('ACF')){
+					echo get_field('review_message', $post->ID);
 				}
 				break;
 			case 'template':

@@ -17,6 +17,11 @@ $section_display_image = $section_data['section_display_image'];
 								<div class="h1 mb-4">
 									<p><?=$section_data['section_title'];?></p>
 								</div>
+								<?php if(!empty($section_data['section_subtitle'])):?>
+								<div class="subtitle mb-4">
+									<p><?=$section_data['section_subtitle'];?></p>
+								</div>
+								<?php endif;?>
 								<?=Functions::render_section_button($section_data['section_button'], ['class' => 'btn-lg d-none d-md-inline-block shadow btn btn-primary']);?>
 								<?=Functions::render_section_button($section_data['section_button'], ['class' => 'd-md-none shadow btn btn-primary']);?>
 							</div>
@@ -35,6 +40,9 @@ $section_display_image = $section_data['section_display_image'];
 	<?php else:?>
 		<div class="container max-w-420 max-w-xl-550 m-auto text-center wrapper">
 			<div class="h1 mb-4"><p><?=$section_data['section_title'];?></p></div>
+			<?php if(!empty($section_data['section_subtitle'])):?>
+			<div class="subtitle mb-4"><p><?=$section_data['section_subtitle'];?></p></div>
+			<?php endif;?>
 			<?=Functions::render_section_button($section_data['section_button'], ['class' => 'btn-lg d-none d-md-inline-block shadow btn btn-primary']);?>
 			<?=Functions::render_section_button($section_data['section_button'], ['class' => 'd-md-none shadow btn btn-primary']);?>
 		</div>

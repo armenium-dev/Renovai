@@ -57,6 +57,7 @@ class PostTypes {
     }
 
 	public function postTypeFunction(){
+		self::create_reviews_cpt();
 		self::create_testimonials_cpt();
 		self::create_clients_cpt();
 		self::create_news_cpt();
@@ -65,6 +66,33 @@ class PostTypes {
 		self::create_case_studies_cpt();
 		self::create_vaid_solution_cpt();
 		self::create_renotalk_cpt();
+	}
+	
+	public function create_reviews_cpt(){
+		$cpt = 'review';
+		$labels = $this->createLabels('Review');
+		$args = [
+			'label'               => __('Review', THEME_TD),
+			'description'         => __('Reviews', THEME_TD),
+			'labels'              => $labels,
+			'supports'            => ['title', 'page-attributes'],
+			'hierarchical'        => false,
+			'public'              => false,
+			'publicly_queryable'  => false,
+			'show_ui'             => true,
+			'show_in_menu'        => true,
+			'menu_position'       => 20,
+			'menu_icon'           => 'dashicons-admin-post',
+			'show_in_admin_bar'   => true,
+			'show_in_nav_menus'   => true,
+			'can_export'          => true,
+			'has_archive'         => true,
+			'exclude_from_search' => true,
+			'capability_type'     => 'post',
+		];
+		
+		register_post_type($cpt, $args);
+		//self::$post_types_taxonomies[] = $cpt;
 	}
 	
 	public function create_testimonials_cpt(){

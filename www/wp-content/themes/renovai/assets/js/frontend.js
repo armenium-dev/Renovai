@@ -123,6 +123,9 @@
 					case "toggle_description":
 						FJS.Page.togglrDescription($this);
 						break;
+					case "generate_lifestyle_image":
+						FJS.Page.generateLifestyleImage($this);
+						break;
 					default:
 						break;
 				}
@@ -953,6 +956,7 @@
 				},
 				init: function(){
 					this.initSliders();
+					this.initSlickCarousel();
 				},
 				initSliders: function(){
 					var $splide = $('.splide');
@@ -987,8 +991,34 @@
 					});
 					$video.trigger('play');
 				},
+				initSlickCarousel: function(){
+					const $js_slick_carousel = $('#js_slick_carousel');
+
+					if($js_slick_carousel.length){
+						$js_slick_carousel.slick({
+							arrows: false,
+							slidesToShow: 4,
+							slidesToScroll: 1,
+							infinite: true,
+							centerMode: true,
+							fade: false,
+							dots: false,
+							variableWidth: false,
+							autoplay: false,
+							autoplaySpeed: 5000,
+							centerPadding: '70px',
+							customPaging: '32px',
+							responsive: [
+								{breakpoint: 1680, settings: {slidesToShow: 3}},
+								{breakpoint: 1290, settings: {slidesToShow: 2}},
+								{breakpoint: 992, settings: {slidesToShow: 1, centerMode: true, centerPadding: '30px'}},
+							]
+						});
+					}
+				},
 			},
 			Page: {
+				lifestyle_dst_img_counter: 0,
 				togglrDescription: function($btn){
 					var $el = $btn.parent('.js_dyn_desc').find('.js_hidden_desc');
 
@@ -999,6 +1029,23 @@
 						$btn.removeClass('active');
 						$el.addClass('d-none');
 					}
+				},
+				generateLifestyleImage: function($btn){
+					let $js_lifestyle_generator = $('#js_lifestyle_generator');
+					const $js_dst_images = $('#js_dst_images');
+
+					const $images = $js_dst_images.find('img');
+
+					if(FJS.Page.lifestyle_dst_img_counter >= $images.length)
+						FJS.Page.lifestyle_dst_img_counter = 0;
+
+					$images.removeClass('show');
+
+					$js_lifestyle_generator.addClass('show');
+
+					$images.eq(FJS.Page.lifestyle_dst_img_counter).addClass('show');
+
+					FJS.Page.lifestyle_dst_img_counter++;
 				},
 			},
 		};

@@ -1383,5 +1383,14 @@ class Functions {
 		
 		return $link;
 	}
-
+	
+	public static function render_review_stars($rate){
+		$html = [];
+		
+		if($rate > 0)
+			for($i = 1; $i <= $rate; $i++)
+				$html[] = '<img src="'.IMAGES_URI.'/icon-star-green.svg" alt="" title="">';
+		
+		return implode('', $html);
+	}
 }

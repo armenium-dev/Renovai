@@ -31497,7 +31497,7 @@ textarea.form-control {
 	font-family: 'comfortaa';
 	font-weight: 700;
 	font-size: 27px;
-	line-height: 40px;}
+	line-height: 40px; margin-bottom: 20px;}
 
 .product-header .tablet-container {
 	background-color: #fff;
@@ -31646,7 +31646,8 @@ textarea.form-control {
 
 .product-content .img-static {
 	width: 287px;
-	padding-left: 31px;}
+	/*padding-left: 31px;*/
+}
 
 .product-content .solution-carousel ~ .img-static {
 	display: none;}
@@ -31672,7 +31673,8 @@ textarea.form-control {
 
 	.product-content .img-static {
 		width: 502px;
-		padding-left: 31px;}
+		/*padding-left: 31px;*/
+	}
 
 	.product-content .h2 {
 		font-size: 50px;
