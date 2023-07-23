@@ -1148,30 +1148,35 @@ textarea.other-choice {max-height: 108px; line-height: 24px;}
 	.solutions.ai-scenemaker .itmmb-section .text-white .subtitle {font-size: 40px; line-height: 70px;}
 }
 
-.lifestyle-btn {display: flex; flex-flow: row nowrap; margin: 80px auto 0; padding: 16px 24px; align-items: center; gap: 16px; border: 6px solid #9747FF; border-radius: 41px; background-color: #9747FF; backdrop-filter: blur(10px); color: #fff; transition: all 0.2s ease-in-out;}
+.lifestyle-btn {display: flex; flex-flow: row nowrap; margin: 20px auto 0; padding: 16px 24px; align-items: center; gap: 16px; border: 6px solid #9747FF; border-radius: 41px; background-color: #9747FF; backdrop-filter: blur(10px); color: #fff; transition: all 0.2s ease-in-out;}
 .lifestyle-btn:hover {background-color: #B57CFF; border-color: #B57CFF;}
+.lifestyle-btn:focus,
 .lifestyle-btn:active {background-color: #9747FF; border-color: #B074FF;}
 
-.lifestyle-generator {margin-top: 100px; margin-bottom: 74px; position: relative;}
+.lifestyle-generator {margin-top: 40px; margin-bottom: 74px; position: relative;}
 .lifestyle-generator * {transition: all 0.5s ease-in-out;}
-.lifestyle-generator .dst-images {position: relative; margin: auto; width: 342px; height: 342px; border: 8px solid #F7F7F7; background: lightgray 50% / cover no-repeat; box-shadow: 0 40px 80px -20px rgba(16, 24, 40, 0.18);}
+.lifestyle-generator .dst-images {position: relative; margin: auto; width: 342px; height: 342px; border: 8px solid #F7F7F7; background: #fff url(../images/new-renovai-loading-roi.gif) no-repeat center; background-size: 50%; box-shadow: 0 40px 80px -20px rgba(16, 24, 40, 0.18);}
 .lifestyle-generator:not(.show) .dst-images {opacity: 0;}
 .lifestyle-generator .dst-images img {position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 1; width: 100%; height: 100%;}
 .lifestyle-generator .source-images {justify-content: center; flex-flow: row nowrap; position: absolute; z-index: 1; top: 0; width: 100%; margin: auto; gap: 48px;}
-.lifestyle-generator .source-images img {max-width: 326px; max-height: 326px; width: 100%; padding: 22px; border: 6px solid #F7F7F7; background-color: #FFF; box-shadow: 0 29px 59px -14px rgba(16, 24, 40, 0.18); transition: all 0.2s ease-in-out;}
+.lifestyle-generator .source-images img {max-width: 326px; max-height: 326px; width: 100%; min-width: 0; padding: 22px; border: 6px solid #F7F7F7; background-color: #FFF; box-shadow: 0 29px 59px -14px rgba(16, 24, 40, 0.18); transition: all 0.2s ease-in-out;}
 .lifestyle-generator .dst-images img:not(.show) {opacity: 0;}
-.lifestyle-generator.show .source-images {display: flex; width: 278px; top: 54%; left: 0; right: 0; gap: 15px;}
+.lifestyle-generator.loaded .dst-images {background-image: none;}
+.lifestyle-generator.show .source-images {display: flex; width: 278px; top: 56%; left: 0; right: 0; gap: 15px;}
 .lifestyle-generator.show .source-images img {padding: 5px;}
+.lifestyle-generator.show .lifestyle-btn {margin-top: 60px;}
 @media all and (min-width: 992px) {
 	.lifestyle-generator .dst-images {width: 500px; height: 500px;}
 	.lifestyle-generator .source-images {display: flex; top: 10%;}
-	.lifestyle-generator.show .source-images {width: 406px; top: 60%; gap: 23px;}
+	.lifestyle-generator .source-images img {/*width: 33.33%;*/}
+	.lifestyle-generator.show .source-images {width: 406px; top: 61%; gap: 23px;}
 	.lifestyle-generator.show .source-images img {padding: 7px;}
 }
 @media all and (max-width: 991px) {
 	.lifestyle-generator:not(.show) .source-images {width: 342px; height: 342px; left: 0; right: 0;}
-	.lifestyle-generator:not(.show) .source-images img {max-width: 183px; max-height: 183px; position: absolute; margin: auto;}
+	.lifestyle-generator:not(.show) .source-images img {max-width: 183px; max-height: 183px; width: 100%; position: absolute; margin: auto;}
 	.lifestyle-generator:not(.show) .source-images img.img-0 {z-index: 2; top: 0; left: 0;}
-	.lifestyle-generator:not(.show) .source-images img.img-2 {z-index: 1; right: 0; top: 40px;}
 	.lifestyle-generator:not(.show) .source-images img.img-1 {z-index: 3; left: 50px; bottom: 10px;}
+	.lifestyle-generator:not(.show) .source-images img.img-2 {z-index: 1; right: 0; top: 40px;}
+	.lifestyle-generator.show .source-images img {/*width: 33.33%;*/}
 }

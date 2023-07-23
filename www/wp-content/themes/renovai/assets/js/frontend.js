@@ -1005,7 +1005,7 @@
 							dots: false,
 							variableWidth: false,
 							autoplay: true,
-							autoplaySpeed: 5000,
+							autoplaySpeed: 3000,
 							centerPadding: '70px',
 							customPaging: '32px',
 							responsive: [
@@ -1018,6 +1018,9 @@
 				},
 			},
 			Page: {
+				ls_ti: null,
+				ls_interval: 3000,
+				ls_loaded: false,
 				lifestyle_dst_img_counter: 0,
 				togglrDescription: function($btn){
 					var $el = $btn.parent('.js_dyn_desc').find('.js_hidden_desc');
@@ -1031,9 +1034,17 @@
 					}
 				},
 				generateLifestyleImage: function($btn){
+					if(FJS.Page.ls_loaded) return;
+
+					let $js_lifestyle_generator = $('#js_lifestyle_generator');
+
+					$js_lifestyle_generator.addClass('show');
+
+					FJS.Page.ls_ti = setInterval(FJS.Page._startLifestyleAnimation, FJS.Page.ls_interval);
+				},
+				_startLifestyleAnimation: function(){
 					let $js_lifestyle_generator = $('#js_lifestyle_generator');
 					const $js_dst_images = $('#js_dst_images');
-
 					const $images = $js_dst_images.find('img');
 
 					if(FJS.Page.lifestyle_dst_img_counter >= $images.length)
@@ -1041,11 +1052,11 @@
 
 					$images.removeClass('show');
 
-					$js_lifestyle_generator.addClass('show');
-
 					$images.eq(FJS.Page.lifestyle_dst_img_counter).addClass('show');
 
 					FJS.Page.lifestyle_dst_img_counter++;
+
+					$js_lifestyle_generator.addClass('loaded');
 				},
 			},
 		};
