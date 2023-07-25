@@ -37,6 +37,7 @@
 				this.ROI.init();
 				this.Reviews.init();
 				this.Blog.init();
+				this.Page.init();
 				this.initEvents();
 				this.eventResizeWindow();
 			},
@@ -125,6 +126,9 @@
 						break;
 					case "generate_lifestyle_image":
 						FJS.Page.generateLifestyleImage($this);
+						break;
+					case "goto_page":
+						FJS.Page.gotoPage($this);
 						break;
 					default:
 						break;
@@ -1022,6 +1026,13 @@
 				ls_interval: 3000,
 				ls_loaded: false,
 				lifestyle_dst_img_counter: 0,
+				init: function(){
+					setTimeout(FJS.Page.generateLifestyleImage, FJS.Page.ls_interval);
+				},
+				gotoPage: function($btn){
+					const url = $btn.data('url');
+					window.location.href = url;
+				},
 				togglrDescription: function($btn){
 					var $el = $btn.parent('.js_dyn_desc').find('.js_hidden_desc');
 
@@ -1034,13 +1045,15 @@
 					}
 				},
 				generateLifestyleImage: function($btn){
-					if(FJS.Page.ls_loaded) return;
+					if(FJS.Page.ls_loaded) return false;
 
 					let $js_lifestyle_generator = $('#js_lifestyle_generator');
 
 					$js_lifestyle_generator.addClass('show');
 
 					FJS.Page.ls_ti = setInterval(FJS.Page._startLifestyleAnimation, FJS.Page.ls_interval);
+
+					//$btn.find('span').text('Book a Demo');
 				},
 				_startLifestyleAnimation: function(){
 					let $js_lifestyle_generator = $('#js_lifestyle_generator');
@@ -1057,6 +1070,7 @@
 					FJS.Page.lifestyle_dst_img_counter++;
 
 					$js_lifestyle_generator.addClass('loaded');
+					FJS.Page.ls_loaded = true;
 				},
 			},
 		};

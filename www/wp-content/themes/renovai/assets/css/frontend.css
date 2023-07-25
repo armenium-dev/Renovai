@@ -1090,7 +1090,8 @@ textarea.other-choice {max-height: 108px; line-height: 24px;}
 	.section-reviews-carousel .review-rate img {width: 14px; height: 14px;}
 }
 
-.solutions.ai-scenemaker .product-content .img-static {width: auto !important; height: auto !important;}
+.solutions.ai-scenemaker .product-content .img-static,
+.solutions.virtual-stylist .product-content .img-static {width: auto !important; height: auto !important;}
 @media all and (max-width: 991px) {
 	.solutions.ai-scenemaker .itmmb-section {font-size: 24px; line-height: 30px;}
 	.solutions.ai-scenemaker .itmmb-section p {margin: 0;}
@@ -1148,10 +1149,10 @@ textarea.other-choice {max-height: 108px; line-height: 24px;}
 	.solutions.ai-scenemaker .itmmb-section .text-white .subtitle {font-size: 40px; line-height: 70px;}
 }
 
-.lifestyle-btn {display: flex; flex-flow: row nowrap; margin: 20px auto 0; padding: 16px 24px; align-items: center; gap: 16px; border: 6px solid #9747FF; border-radius: 41px; background-color: #9747FF; backdrop-filter: blur(10px); color: #fff; transition: all 0.2s ease-in-out;}
-.lifestyle-btn:hover {background-color: #B57CFF; border-color: #B57CFF;}
+.lifestyle-btn {display: inline-block; flex-flow: row nowrap; margin: 20px auto 0; padding: 16px 24px; align-items: center; gap: 16px; border: 6px solid #9747FF; border-radius: 41px; background-color: #9747FF; backdrop-filter: blur(10px); color: #fff; transition: all 0.2s ease-in-out;}
+.lifestyle-btn:hover {background-color: #B57CFF; border-color: #B57CFF; text-decoration: none;}
 .lifestyle-btn:focus,
-.lifestyle-btn:active {background-color: #9747FF; border-color: #B074FF;}
+.lifestyle-btn:active {background-color: #9747FF; border-color: #B074FF; text-decoration: none;}
 
 .lifestyle-generator {margin-top: 40px; margin-bottom: 74px; position: relative;}
 .lifestyle-generator * {transition: all 0.5s ease-in-out;}
