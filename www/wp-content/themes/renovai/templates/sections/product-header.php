@@ -46,7 +46,7 @@ switch($option_h1_title_field){
 								<img class="w-100 h-auto" src="<?=$section_data['section_desktop_image'];?>" alt="" title="">
 							</div>
 						<?php elseif($section_data['section_desktop_illustration_type'] == 'video'):?>
-							<div class="tablet-container d-none d-lg-inline-block">
+							<div class="tablet-container d--none d-lg-inline-block">
 								<div class="video-carousel play">
 									<div class="poster" style="background-image: url(<?=$section_data['section_desktop_video_poster'];?>);"></div>
 									<video class="w-100" autoplay muted loop controls>

@@ -129,7 +129,7 @@ class Actions{
 		#Helper::_debug([$page_template, $post->post_type]);
 
 		if(WP_PRODUCTION_MODE){
-			$script_version = '2.2.0';
+			$script_version = '2.2.3';
 		}else{
 			$script_version = time();
 		}

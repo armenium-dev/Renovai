@@ -5,7 +5,7 @@ use Digidez\Helper;
 #Helper::_debug($section_data);
 
 ?>
-<section id="<?=$section_name;?>-section" class="product-content py-8 py-lg-10">
+<section id="<?=$section_name;?>-section" class="product-content py-6 py-lg-10">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-12 col-xxl-9">

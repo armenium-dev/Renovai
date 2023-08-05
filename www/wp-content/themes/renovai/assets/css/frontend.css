@@ -1062,7 +1062,7 @@ textarea.other-choice {max-height: 108px; line-height: 24px;}
 .gap-20 {gap: 20px;}
 .gap-48 {gap: 48px;}
 
-.product-content .item-row {padding: 60px 0;}
+.product-content .item-row {padding: 0 0 40px;}
 .product-content .btn-wrap {padding-top: 50px;}
 .product-content .item-content ul li {font-family: "moderat-light"; font-size: 18px; line-height: 40px; margin-bottom: 15px;}
 
@@ -1075,6 +1075,7 @@ textarea.other-choice {max-height: 108px; line-height: 24px;}
 /*.section-reviews-carousel .review-item-wrap {padding: 4px 12px;}*/
 .section-reviews-carousel .review-item {padding: 24px; background-color: #fff; box-shadow: 0 1px 2px -1px rgba(16, 24, 40, 0.10), 0 1px 3px 0 rgba(16, 24, 40, 0.10);}
 @media all and (min-width: 992px) {
+	.product-content .item-row {padding: 60px 0;}
 	.product-content .item-content ul li {font-size: 24px;}
 	.section-reviews-carousel .slick-slide {padding: 8px 32px;}
 	/*.section-reviews-carousel .review-item-wrap {padding: 8px 32px;}*/
@@ -1090,63 +1091,63 @@ textarea.other-choice {max-height: 108px; line-height: 24px;}
 	.section-reviews-carousel .review-rate img {width: 14px; height: 14px;}
 }
 
-.solutions.ai-scenemaker .product-content .img-static,
-.solutions.virtual-stylist .product-content .img-static {width: auto !important; height: auto !important;}
+.solutions.scenemaker-photorealistic-content-creation-ai-scale .product-content .img-static,
+.solutions.ai-personal-recommendation-bot .product-content .img-static {width: auto !important; height: auto !important;}
 @media all and (max-width: 991px) {
-	.solutions.ai-scenemaker .itmmb-section {font-size: 24px; line-height: 30px;}
-	.solutions.ai-scenemaker .itmmb-section p {margin: 0;}
+	.solutions.scenemaker-photorealistic-content-creation-ai-scale .itmmb-section {font-size: 24px; line-height: 30px;}
+	.solutions.scenemaker-photorealistic-content-creation-ai-scale .itmmb-section p {margin: 0;}
 	
-	.solutions.ai-scenemaker .product-content .order-0,
-	.solutions.ai-scenemaker .product-content .order-2 {order: 1;}
-	.solutions.ai-scenemaker .product-content .order-1,
-	.solutions.ai-scenemaker .product-content .order-3 {order: 0; margin-bottom: 48px !important;}
-	.solutions.virtual-stylist .product-content .order-0,
-	.solutions.virtual-stylist .product-content .order-2 {order: 1;}
-	.solutions.virtual-stylist .product-content .order-1,
-	.solutions.virtual-stylist .product-content .order-3 {order: 0; margin-bottom: 48px !important;}
+	.solutions.scenemaker-photorealistic-content-creation-ai-scale .product-content .order-0,
+	.solutions.scenemaker-photorealistic-content-creation-ai-scale .product-content .order-2 {order: 1;}
+	.solutions.scenemaker-photorealistic-content-creation-ai-scale .product-content .order-1,
+	.solutions.scenemaker-photorealistic-content-creation-ai-scale .product-content .order-3 {order: 0; margin-bottom: 10px !important;}
+	.solutions.ai-personal-recommendation-bot .product-content .order-0,
+	.solutions.ai-personal-recommendation-bot .product-content .order-2 {order: 1;}
+	.solutions.ai-personal-recommendation-bot .product-content .order-1,
+	.solutions.ai-personal-recommendation-bot .product-content .order-3 {order: 0; margin-bottom: 10px !important;}
 }
 
 .purple-section .subtitle {font-family: "moderat-light"; font-size: 24px; font-weight: 300; line-height: 45px; letter-spacing: -1px;}
 
-.solutions.virtual-stylist .experience-renovai .max-w-420 {max-width: none;}
-.solutions.ai-scenemaker .experience-renovai .max-w-420 {max-width: 670px;}
-.solutions.virtual-stylist .experience-renovai .wrapper {padding-top: 140px; padding-bottom: 140px;}
-.solutions.ai-scenemaker .experience-renovai .wrapper {padding-top: 100px; padding-bottom: 100px;}
-.solutions.virtual-stylist .experience-renovai .h1,
-.solutions.ai-scenemaker .experience-renovai .h1 {font-size: 32px; line-height: 46px; letter-spacing: -0.6px; margin-bottom: 24px !important;}
-.solutions.virtual-stylist .experience-renovai .subtitle,
-.solutions.ai-scenemaker .experience-renovai .subtitle {font-family: "moderat-light"; font-size: 24px; font-weight: 300; line-height: 40px; margin-bottom: 24px !important;}
-.solutions.ai-scenemaker .experience-renovai .h1 p,
-.solutions.ai-scenemaker .experience-renovai .subtitle p,
-.solutions.virtual-stylist .experience-renovai .h1 p,
-.solutions.virtual-stylist .experience-renovai .subtitle p {margin: 0;}
+.solutions.ai-personal-recommendation-bot .experience-renovai .max-w-420 {max-width: none;}
+.solutions.scenemaker-photorealistic-content-creation-ai-scale .experience-renovai .max-w-420 {max-width: 670px;}
+.solutions.ai-personal-recommendation-bot .experience-renovai .wrapper {padding-top: 140px; padding-bottom: 140px;}
+.solutions.scenemaker-photorealistic-content-creation-ai-scale .experience-renovai .wrapper {padding-top: 100px; padding-bottom: 100px;}
+.solutions.ai-personal-recommendation-bot .experience-renovai .h1,
+.solutions.scenemaker-photorealistic-content-creation-ai-scale .experience-renovai .h1 {font-size: 32px; line-height: 46px; letter-spacing: -0.6px; margin-bottom: 24px !important;}
+.solutions.ai-personal-recommendation-bot .experience-renovai .subtitle,
+.solutions.scenemaker-photorealistic-content-creation-ai-scale .experience-renovai .subtitle {font-family: "moderat-light"; font-size: 24px; font-weight: 300; line-height: 40px; margin-bottom: 24px !important;}
+.solutions.scenemaker-photorealistic-content-creation-ai-scale .experience-renovai .h1 p,
+.solutions.scenemaker-photorealistic-content-creation-ai-scale .experience-renovai .subtitle p,
+.solutions.ai-personal-recommendation-bot .experience-renovai .h1 p,
+.solutions.ai-personal-recommendation-bot .experience-renovai .subtitle p {margin: 0;}
 @media all and (min-width: 992px) {
-	.solutions.virtual-stylist .experience-renovai .wrapper {padding-top: 208px; padding-bottom: 424px;}
-	.solutions.ai-scenemaker .experience-renovai .wrapper {padding-top: 128px; padding-bottom: 364px;}
-	.solutions.ai-scenemaker .experience-renovai .h1,
-	.solutions.virtual-stylist .experience-renovai .h1 {font-size: 40px; line-height: 60px; letter-spacing: -0.8px;}
+	.solutions.ai-personal-recommendation-bot .experience-renovai .wrapper {padding-top: 208px; padding-bottom: 424px;}
+	.solutions.scenemaker-photorealistic-content-creation-ai-scale .experience-renovai .wrapper {padding-top: 128px; padding-bottom: 364px;}
+	.solutions.scenemaker-photorealistic-content-creation-ai-scale .experience-renovai .h1,
+	.solutions.ai-personal-recommendation-bot .experience-renovai .h1 {font-size: 40px; line-height: 60px; letter-spacing: -0.8px;}
 }
 @media all and (max-width: 991px) {
-	.solutions.ai-scenemaker .item-content,
-	.solutions.virtual-stylist .item-content {text-align: left;}
-	.solutions.ai-scenemaker .product-header .h1,
-	.solutions.virtual-stylist .product-header .h1 {font-size: 40px; font-style: normal; font-weight: 700; line-height: normal; margin-bottom: 20px;}
-	.solutions.virtual-stylist .product-header .section-content {font-size: 18px; font-weight: 300; line-height: 40px;}
-	.solutions.ai-scenemaker .product-header .section-content {font-size: 18px; font-weight: 300; line-height: 22px;}
+	.solutions.scenemaker-photorealistic-content-creation-ai-scale .item-content,
+	.solutions.ai-personal-recommendation-bot .item-content {text-align: left;}
+	.solutions.scenemaker-photorealistic-content-creation-ai-scale .product-header .h1,
+	.solutions.ai-personal-recommendation-bot .product-header .h1 {font-size: 40px; font-style: normal; font-weight: 700; line-height: normal; margin-bottom: 20px;}
+	.solutions.ai-personal-recommendation-bot .product-header .section-content {font-size: 18px; font-weight: 300; line-height: 40px;}
+	.solutions.scenemaker-photorealistic-content-creation-ai-scale .product-header .section-content {font-size: 18px; font-weight: 300; line-height: 22px;}
 }
-.solutions.ai-scenemaker .experience-renovai.bg-experience-renovai,
-.solutions.virtual-stylist .experience-renovai.bg-experience-renovai {background: #fff url(../images/bg-experience-renovai.svg) no-repeat bottom center;}
-.solutions.virtual-stylist .product-header .tablet-container {background: none;}
+.solutions.scenemaker-photorealistic-content-creation-ai-scale .experience-renovai.bg-experience-renovai,
+.solutions.ai-personal-recommendation-bot .experience-renovai.bg-experience-renovai {background: #fff url(../images/bg-experience-renovai.svg) no-repeat bottom center;}
+.solutions.ai-personal-recommendation-bot .product-header .tablet-container {background: none;}
 
-.solutions.ai-scenemaker .itmmb-section,
-.solutions.virtual-stylist .itmmb-section {padding-top: 88px !important; padding-bottom: 88px !important;}
-.solutions.virtual-stylist .itmmb-section .text-white .title {font-family: "moderat-regular"; font-size: 40px; font-weight: 500; line-height: normal; letter-spacing: -1px;}
-.solutions.virtual-stylist .itmmb-section .text-white .subtitle {font-family: "moderat-light"; font-size: 24px; font-weight: 300; line-height: 40px;}
-.solutions.ai-scenemaker .itmmb-section .text-white .title {font-family: "moderat-light"; font-size: 24px; font-weight: 300; line-height: 30px; letter-spacing: -1px;}
-.solutions.ai-scenemaker .itmmb-section .text-white .subtitle {font-family: "moderat-bold"; font-size: 24px; font-weight: 700; line-height: 30px; letter-spacing: -1px;}
+.solutions.scenemaker-photorealistic-content-creation-ai-scale .itmmb-section,
+.solutions.ai-personal-recommendation-bot .itmmb-section {padding-top: 88px !important; padding-bottom: 88px !important;}
+.solutions.ai-personal-recommendation-bot .itmmb-section .text-white .title {font-family: "moderat-regular"; font-size: 40px; font-weight: 500; line-height: normal; letter-spacing: -1px;}
+.solutions.ai-personal-recommendation-bot .itmmb-section .text-white .subtitle {font-family: "moderat-light"; font-size: 24px; font-weight: 300; line-height: 40px;}
+.solutions.scenemaker-photorealistic-content-creation-ai-scale .itmmb-section .text-white .title {font-family: "moderat-light"; font-size: 24px; font-weight: 300; line-height: 30px; letter-spacing: -1px;}
+.solutions.scenemaker-photorealistic-content-creation-ai-scale .itmmb-section .text-white .subtitle {font-family: "moderat-bold"; font-size: 24px; font-weight: 700; line-height: 30px; letter-spacing: -1px;}
 @media all and (min-width: 992px) {
-	.solutions.ai-scenemaker .itmmb-section .text-white .title,
-	.solutions.ai-scenemaker .itmmb-section .text-white .subtitle {font-size: 40px; line-height: 70px;}
+	.solutions.scenemaker-photorealistic-content-creation-ai-scale .itmmb-section .text-white .title,
+	.solutions.scenemaker-photorealistic-content-creation-ai-scale .itmmb-section .text-white .subtitle {font-size: 40px; line-height: 70px;}
 }
 
 .lifestyle-btn {display: inline-block; flex-flow: row nowrap; margin: 20px auto 0; padding: 16px 24px; align-items: center; gap: 16px; border: 6px solid #9747FF; border-radius: 41px; background-color: #9747FF; backdrop-filter: blur(10px); color: #fff; transition: all 0.2s ease-in-out;}
@@ -1182,7 +1183,9 @@ textarea.other-choice {max-height: 108px; line-height: 24px;}
 	.lifestyle-generator.show .source-images img {/*width: 33.33%;*/}
 }
 
-.solutions.virtual-stylist .product-header .tablet-container video {border-radius: 9px;
+.solutions.ai-personal-recommendation-bot .product-header .tablet-container video {border-radius: 9px;
 	border: 4px solid #020704;
 	background: #fff url(../images/new-renovai-loading-roi.gif) no-repeat center; background-size: 20%;
-	box-shadow: 0 18px 37px -9px rgba(16, 24, 40, 0.18);}
+	box-shadow: 0 18px 37px -9px rgba(16, 24, 40, 0.18);
+}
+
